@@ -1,10 +1,9 @@
 import React from 'react'
 import * as ReactBootStrap from "react-bootstrap"
-import{Link} from "react-router-dom"
+// import{Link} from "react-router-dom"
 
 const NavBar = () => {
     return (
-  
         <ReactBootStrap.Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <ReactBootStrap.Navbar.Brand href="/">Read By Humans</ReactBootStrap.Navbar.Brand>
         <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
