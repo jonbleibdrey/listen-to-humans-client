@@ -1,22 +1,19 @@
 import React, { useState, useEffect } from "react";
+import axios from 'axios'
 
 const Home = () => {
+  const [audible, setAudible] = useState([]);
+
   useEffect(() => {
-    fetchItems();
-  }, []);
-
-  const [items, setItems] = useState([])
-
-  const fetchItems = async () => {
-    const data = await fetch("http://localhost:3001/audibles");
-
-    const items = await data.json()
-    console.log(items);
-  };
+    axios.get('http://localhost:3001/audibles')
+    .then(resp => console.log(resp))
+    .catch(resp => console.log(resp))
+  }, [audible.length])
 
   return (
     <div>
       <h1>Home page</h1>
+      
     </div>
   );
 };
