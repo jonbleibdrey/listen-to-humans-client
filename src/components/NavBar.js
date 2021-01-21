@@ -1,14 +1,10 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-} from "react-router-dom";
 import * as ReactBootStrap from "react-bootstrap"
+import{Links} from "react-router-dom"
 
 const NavBar = () => {
     return (
-      <Router>
+  
         <ReactBootStrap.Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <ReactBootStrap.Navbar.Brand href="#home">Read By Humans</ReactBootStrap.Navbar.Brand>
         <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -23,7 +19,6 @@ const NavBar = () => {
           </ReactBootStrap.Nav>
         </ReactBootStrap.Navbar.Collapse>
       </ReactBootStrap.Navbar>
-    </Router>
     )
 }
 export default NavBar
