@@ -6,14 +6,15 @@ const Home = () => {
 
   useEffect(() => {
     axios.get('http://localhost:3001/audibles')
-    .then(resp => console.log(resp))
-    .catch(resp => console.log(resp))
-  }, [audible.length])
+    .then(resp => setAudible(resp.data))
+  }, [])
 
   return (
     <div>
       <h1>Home page</h1>
-      
+      <div>{audible.map((audible) => (
+          <div key={audible.id}> {audible.title}</div>
+      ))} </div>
     </div>
   );
 };
