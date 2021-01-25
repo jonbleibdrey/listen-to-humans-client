@@ -23,7 +23,7 @@ const Home = () => {
             <li>Title: {audible.title}</li>
             <li>By: {audible.by}</li>
             <li>Language: {audible.language}</li>
-            <li>Audio: {audible.audio}</li>
+            <li>Audio: {audible.audio_file}</li>
           </ul>
         ))}
       </div>

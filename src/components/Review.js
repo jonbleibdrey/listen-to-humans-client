@@ -22,9 +22,7 @@ const Review = () => {
                 <li>Title: {review.title}</li>
                 <li>Description: {review.description}</li>
                 <li>Rating: {review.rating}</li>
-
             </ul>
-
         ))}</p>
       </Container>
     </Jumbotron>
