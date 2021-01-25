@@ -1,24 +1,16 @@
-import React from 'react'
-import {
-    Form,
-    FormGroup,
-    Label,
-    Input,
-    Button
-
-} from 'reactstrap'
+import React from "react";
+import { Form, FormGroup, FormLabel, FormControl, Button } from "react-bootstrap";
 
 const AddAudible = () => {
-    return (
-        <Form>
-            <FormGroup>
-                <Label> Title </Label>
-                <Input type="text" placeholder="enter Title" ></Input>
-            </FormGroup>
-            <Button type="submit"> Submit </Button>
+  return (
+    <Form>
+      <FormGroup>
+        <FormLabel> Title </FormLabel>
+        <FormControl type="text" placeholder="enter Title"></FormControl>
+      </FormGroup>
+      <Button type="submit"> Submit </Button>
+    </Form>
+  );
+};
 
-        </Form>
-    )
-}
-
-export default AddAudible
+export default AddAudible;
