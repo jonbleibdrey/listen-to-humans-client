@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { Component } from "react";
 import {
   Form,
@@ -24,38 +25,43 @@ export class AddAudible extends Component {
     });
   };
 
-  // handleOnSubmit = (e) => {
-  //   e.preventDefault();
-  //   this.props.addPart(this.state);
-  //   this.setState({
-  //     name: "",
-  //     damage: "",
-  //     ability: "",
-  //     weight: "",
-  //   });
-  // };
+  handleOnSubmit = (e) => {
+    e.preventDefault();
+    // const data = {
+      
+    // }
+    axios.post("http://localhost:3001/audibles", {
+      title:this.state.title,
+      by:this.state.by,
+      language:this.state.language,
+      audio_file:this.state.audio_file
+    })
+      .then (res => console.log(res))
+      .then (data => this.props.history.push('/'))
+      .catch(err => console.log(err));
+  };
 
 
   render() {
     return (
       <div>
-        <Form >
+        <Form onSubmit={this.handleOnSubmit}>
           <FormGroup>
             <FormLabel> Title </FormLabel>
-            <FormControl type="text" placeholder="Enter Title" value={this.state.name} onChange={this.handleOnChange} name="name"></FormControl>
+            <FormControl type="text" placeholder="Enter Title" value={this.state.title} onChange={this.handleOnChange} name="title"></FormControl>
             <FormLabel> By: </FormLabel>
-            <FormControl type="text" placeholder="Created By" value={this.state.name} onChange={this.handleOnChange} name="name"></FormControl>
+            <FormControl type="text" placeholder="Created By" value={this.state.by} onChange={this.handleOnChange} name="by"></FormControl>
             <FormLabel> Language: </FormLabel>
             <FormControl
               type="text"
               placeholder="Language read in"
-              value={this.state.name} onChange={this.handleOnChange} name="name"
+              value={this.state.language} onChange={this.handleOnChange} name="language"
             ></FormControl>
             <FormLabel> Audible: </FormLabel>
             <FormControl
               type="text"
               placeholder="Audio file here"
-              value={this.state.name} onChange={this.handleOnChange} name="name"
+              value={this.state.audio_file} onChange={this.handleOnChange} name="audio_file"
             ></FormControl>
           </FormGroup>
           <Button type="submit"> Submit </Button>
