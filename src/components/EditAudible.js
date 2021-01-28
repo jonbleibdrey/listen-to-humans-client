@@ -1,9 +1,12 @@
-import React from "react";
+import React, {Component} from "react";
 import { Form, FormControl, FormGroup, Button, FormLabel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const EditAudible = () => {
+class EditAudible extends React.Component {
+
+render(){
   return (
+    <>
     <Form>
       <FormGroup>
         <FormLabel> Title: </FormLabel>
@@ -20,7 +23,8 @@ const EditAudible = () => {
         Cancel
       </Link>
     </Form>
+    </>
   );
-};
+}};
 
 export default EditAudible;
