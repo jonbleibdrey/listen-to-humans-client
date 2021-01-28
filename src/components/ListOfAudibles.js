@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
+
 export const ListOfAudibles = ({ title, by, language, audio_file, id }) => {
   return (
     <div>
@@ -14,7 +15,6 @@ export const ListOfAudibles = ({ title, by, language, audio_file, id }) => {
           className="btn btn-warning mr-1"
           to={`/edit/${id}`}
         >
-          {" "}
           edit
         </Link>
         <Button color="danger"> Delete</Button>
