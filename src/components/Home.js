@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
-import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
 
+import { ListOfAudibles } from "./ListOfAudibles";
 
 const Home = () => {
   const [audible, setAudible] = useState([]);
@@ -22,20 +22,14 @@ const Home = () => {
           <h1>Home page</h1>
           <div>
             {audible.map((audible) => (
-              <ul key={audible.id}>
-                <li>Title: {audible.title}</li>
-                <li>By: {audible.by}</li>
-                <li>Language: {audible.language}</li>
-                <li>Audio: {audible.audio_file}</li>
-                <Link
-                  className="btn btn-warning mr-1"
-                  to={`/edit/${audible.id}`}
-                >
-                  {" "}
-                  edit
-                </Link>
-                <Button color="danger"> Delete</Button>
-              </ul>
+              <ListOfAudibles
+                key={audible.id}
+                id={audible.id}
+                title={audible.title}
+                by={audible.by}
+                language={audible.language}
+                audio={audible.audio_file}
+              />
             ))}
           </div>
         </Container>
