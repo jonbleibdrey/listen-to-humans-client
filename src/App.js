@@ -14,15 +14,7 @@ function App() {
     <Router>
       <NavBar />
       <div style={{maxWidth: "30rem", margin:"4rem auto"}}>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/review" component={Review} />
-        <Route path="/add" component={AddAudible} />
-        <Route path="/edit/:id" component={EditAudible} />
-
-
-      </Switch>
+      <RoutesTo/>
       </div>
     </Router>
   );
