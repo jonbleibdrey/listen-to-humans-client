@@ -7,13 +7,13 @@ const EditAudible = () => {
     <Form>
       <FormGroup>
         <FormLabel> Title: </FormLabel>
-        <FormControl type="text" placeholder="Enter Title"></FormControl>
+        <FormControl type="text" placeholder="Enter Title" ></FormControl>
         <FormLabel> By: </FormLabel>
-        <FormControl type="text" placeholder="Created By"></FormControl>
+        <FormControl type="text" placeholder="Created By" ></FormControl>
         <FormLabel> Language: </FormLabel>
-        <FormControl type="text" placeholder="Language read in"></FormControl>
+        <FormControl type="text" placeholder="Language read in" ></FormControl>
         <FormLabel> Audible: </FormLabel>
-        <FormControl type="text" placeholder="Audio file here"></FormControl>
+        <FormControl type="text" placeholder="Audio file here" ></FormControl>
       </FormGroup>
       <Button type="submit"> Edit </Button>
       <Link to="/" className="btn btn-danger ml-2">

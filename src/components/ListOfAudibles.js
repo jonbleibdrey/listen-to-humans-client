@@ -10,7 +10,10 @@ export const ListOfAudibles = ({ title, by, language, audio_file, id }) => {
         <li>By: {by}</li>
         <li>Language: {language}</li>
         <li>Audio: {audio_file}</li>
-        <Link className="btn btn-warning mr-1" to={`/edit/${id}`}>
+        <Link
+          className="btn btn-warning mr-1"
+          to={`/edit/${id}`}
+        >
           {" "}
           edit
         </Link>
