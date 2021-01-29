@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Jumbotron from "react-bootstrap/Jumbotron";
-import Container from "react-bootstrap/Container";
 import { ListOfAudibles } from "./ListOfAudibles";
+
 
 
 const Home = () => {
@@ -16,11 +15,9 @@ const Home = () => {
   }, []);
 
   return (
-    <>
-      <Jumbotron style={{ width: '35rem', margin: '40px'}}>
-        <Container>
-          <h1>Home page</h1>
-          <div>
+    < >
+          <h1 className="card text-center ">Home page</h1>
+          <div style={{ width: "50rem" }}>
             {audible.map((audible) => (
               <ListOfAudibles
                 key={audible.id}
@@ -31,13 +28,11 @@ const Home = () => {
                 audio={audible.audio_file}
               />
             ))}
-          </div>
-        </Container>
-        <Link to="/add" className="btn btn-primary ml-2">
+        <Link to="/add" className="btn btn-primary ml-25 btn-lg ">
           {" "}
           add book{" "}
         </Link>
-      </Jumbotron>
+        </div>
     </>
   );
 };
