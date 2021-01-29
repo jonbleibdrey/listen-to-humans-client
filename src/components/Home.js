@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <>
-      <Jumbotron>
+      <Jumbotron style={{ width: '35rem', margin: '40px'}}>
         <Container>
           <h1>Home page</h1>
           <div>
