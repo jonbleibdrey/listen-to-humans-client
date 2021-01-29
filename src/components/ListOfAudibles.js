@@ -17,10 +17,6 @@ export const ListOfAudibles = ({ title, by, language, audio, id }) => {
         >
           edit
         </Link>
-        <Link to="/add" className="btn btn-danger ml-2">
-          {" "}
-          Delete{" "}
-          </Link>
       </ul>
     </div>
   );
