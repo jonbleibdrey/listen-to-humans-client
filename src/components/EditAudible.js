@@ -16,7 +16,7 @@ export class EditAudible extends Component {
     const id = this.props.match.params.id
     axios
       .get(`http://localhost:3001/audibles/${id}`)
-      .then((resp) => resp.data)
+      .then((resp) => (resp.data))
       .then(data => this.setState({
         title: data.title,
         by: data.by,
