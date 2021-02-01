@@ -5,6 +5,8 @@ import EditAudible from "./EditAudible";
 import About from "./About";
 import Home from "./Home";
 import Review from "./Review";
+import NoFlyZone from "./NoFlyZone";
+
 
 const RoutesTo = () => {
   return (
@@ -14,6 +16,7 @@ const RoutesTo = () => {
       <Route path="/review" component={Review} />
       <Route path="/add" component={AddAudible} />
       <Route path="/edit/:id" component={EditAudible} />
+      <Route path="/*" component={NoFlyZone} />
     </Switch>
   );
 };
