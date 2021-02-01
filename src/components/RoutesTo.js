@@ -16,7 +16,7 @@ const RoutesTo = () => {
       <Route path="/review" component={Review} />
       <Route path="/add" component={AddAudible} />
       <Route path="/edit/:id" component={EditAudible} />
-      <Route path="/*" component={NoFlyZone} />
+      <Route component={NoFlyZone} />
     </Switch>
   );
 };
