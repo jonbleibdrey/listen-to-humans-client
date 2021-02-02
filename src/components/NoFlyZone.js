@@ -6,9 +6,10 @@ const NoFlyZone = () => {
     return (
         <div className="noFlyZone">
             <h1>
-            NO FLY ZONE 
+            NO FLY ZONE!
             </h1>
-            <Link to="/"> would you like to go back to the 
+            <hr/>
+            <Link to="/">...would you like to go back to the 
             home page?</Link>
 
         </div>
