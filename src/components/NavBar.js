@@ -14,7 +14,7 @@ const NavBar = () => {
               <ReactBootStrap.NavDropdown.Item href="/">Home</ReactBootStrap.NavDropdown.Item>
               <ReactBootStrap.NavDropdown.Item href="/about">About</ReactBootStrap.NavDropdown.Item>
               <ReactBootStrap.NavDropdown.Item href="/add">Add Audible</ReactBootStrap.NavDropdown.Item>
-              <ReactBootStrap.NavDropdown.Item href="/review">Review</ReactBootStrap.NavDropdown.Item>
+              <ReactBootStrap.NavDropdown.Item href="/review">Review's</ReactBootStrap.NavDropdown.Item>
             </ReactBootStrap.NavDropdown>
           </ReactBootStrap.Nav>
         </ReactBootStrap.Navbar.Collapse>
