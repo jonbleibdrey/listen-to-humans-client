@@ -14,6 +14,7 @@ export class AddReview extends Component {
     title: "",
     description: "",
     rating: "",
+    audible_id: "",
     audible:[]
   };
 
@@ -25,17 +26,19 @@ export class AddReview extends Component {
     });
   };
 
+  handleSelectOnChange = (e) => {
+    this.setState({
+        audible_id: e.target.value,
+    })
+  }
+ 
   handleOnSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/reviews", {
-        title: this.state.title,
-        description: this.state.description,
-        rating: this.state.rating,
-        audible_id: this.state.audible_id,
-      })
+      .post("http://localhost:3001/reviews",this.state)
       .then((res) => console.log(res))
-      .then((data) => console.log(data));
+      .then((data) => this.props.history.push("/reviews"))
+      .catch((err) => console.log(err));
   };
 
   componentDidMount = () => {
@@ -51,6 +54,13 @@ export class AddReview extends Component {
       <div>
         <Form onSubmit={this.handleOnSubmit}>
           <FormGroup>
+            <FormLabel> audible to review: </FormLabel>
+            <Form.Control as="select" onChange={this.handleSelectOnChange} custom>
+                {this.state.audible.map((audible) => 
+                    <option key={audible.id} value={audible.id}>{audible.title}</option>
+                )}
+           
+            </Form.Control>
             <FormLabel> Title </FormLabel>
             <FormControl
               type="text"
@@ -75,13 +85,14 @@ export class AddReview extends Component {
               onChange={this.handleOnChange}
               name="rating"
             ></FormControl>
-            <FormLabel> audible to review: </FormLabel>
-            <Form.Control as="select" custom>
-                {this.state.audible.map((audible) => 
-                    <option key={audible.id} value={audible.id}>{audible.title}</option>
-                )}
-           
-            </Form.Control>
+            <FormControl
+            className="invisible"
+              type="text"
+              placeholder="rating"
+              value={this.state.audible_id}
+              onChange={this.handleOnChange}
+              name="audible_id"
+            ></FormControl>
           </FormGroup>
           <Button type="submit"> Submit </Button>
           <Link to="/" className="btn btn-danger ml-2">
