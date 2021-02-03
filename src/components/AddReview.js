@@ -14,8 +14,9 @@ export class AddReview extends Component {
     title: "",
     description: "",
     rating: "",
-    audible_id: "",
+    audible:[]
   };
+
 
   handleOnChange = (e) => {
     const { name, value } = e.target;
@@ -27,15 +28,22 @@ export class AddReview extends Component {
   handleOnSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/audibles", {
+      .post("http://localhost:3001/reviews", {
         title: this.state.title,
-        by: this.state.by,
-        language: this.state.language,
-        audio_file: this.state.audio_file,
+        description: this.state.description,
+        rating: this.state.rating,
+        audible_id: this.state.audible_id,
       })
       .then((res) => console.log(res))
-      .then((data) => this.props.history.push("/"))
-      .catch((err) => console.log(err));
+      .then((data) => console.log(data));
+  };
+
+  componentDidMount = () => {
+    axios.get("http://localhost:3001/audibles").then((resp) => {
+        const audible = resp.data;
+        this.setState({audible})
+
+    });
   };
 
   render() {
@@ -46,35 +54,34 @@ export class AddReview extends Component {
             <FormLabel> Title </FormLabel>
             <FormControl
               type="text"
-              placeholder="Enter Title"
+              placeholder="Enter review title"
               value={this.state.title}
               onChange={this.handleOnChange}
               name="title"
             ></FormControl>
-            <FormLabel> By: </FormLabel>
+            <FormLabel> Description: </FormLabel>
             <FormControl
               type="text"
-              placeholder="Created By"
-              value={this.state.by}
+              placeholder="Description"
+              value={this.state.description}
               onChange={this.handleOnChange}
-              name="by"
+              name="description"
             ></FormControl>
-            <FormLabel> Language: </FormLabel>
+            <FormLabel> rating: </FormLabel>
             <FormControl
               type="text"
-              placeholder="Language read in"
-              value={this.state.language}
+              placeholder="rating"
+              value={this.state.rating}
               onChange={this.handleOnChange}
-              name="language"
+              name="rating"
             ></FormControl>
-            <FormLabel> Audible: </FormLabel>
-            <FormControl
-              type="text"
-              placeholder="Audio file here"
-              value={this.state.audio_file}
-              onChange={this.handleOnChange}
-              name="audio_file"
-            ></FormControl>
+            <FormLabel> audible to review: </FormLabel>
+            <Form.Control as="select" custom>
+                {this.state.audible.map((audible) => 
+                    <option key={audible.id} value={audible.id}>{audible.title}</option>
+                )}
+           
+            </Form.Control>
           </FormGroup>
           <Button type="submit"> Submit </Button>
           <Link to="/" className="btn btn-danger ml-2">

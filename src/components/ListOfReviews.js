@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardDeck} from "react-bootstrap";
+import { Card} from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const ListOfReview = ({id, title, description, rating, audibleId}) => {
