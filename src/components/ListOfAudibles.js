@@ -19,11 +19,12 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
             Audio: {audio}
           </Card.Text>
           <hr/>
+            <h1>Review's</h1>
           <Card.Text>
             {all.reviews.map((review) => 
-            <Link> {review.title}</Link> )}
+            <Link key={review.id} to={"/review"}> {review.title}</Link> )}
           </Card.Text>
-         
+         <hr/>
           <Link
             className="btn btn-warning mr-1 btn-lg btn-block"
             to={`/edit/${id}`}
