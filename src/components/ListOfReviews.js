@@ -6,14 +6,15 @@ const ListOfReview = ({id, title, description, rating, audibleId}) => {
     return (
         <Card style={{ width: "25rem", margin: "40px" }}>
         <Card.Body className="card text-center">
-          <Card.Title> title of review: {title}</Card.Title>
+          <Card.Title> title of review: <Link to={"/"}> {title}</Link> </Card.Title>
           <hr/>
           <Card.Subtitle className="mb-2 text-muted">
-            description: {description}
+          rating: {rating}
+            
           </Card.Subtitle>
           <hr/>
           <Card.Text>
-            rating: {rating}
+          description: {description}
             <br />
           </Card.Text>
           <hr/>
