@@ -37,7 +37,7 @@ export class AddReview extends Component {
     axios
       .post("http://localhost:3001/reviews",this.state)
       .then((res) => console.log(res))
-      .then((data) => this.props.history.push("/reviews"))
+      .then((data) => this.props.history.push("/review"))
       .catch((err) => console.log(err));
   };
 
@@ -52,6 +52,7 @@ export class AddReview extends Component {
   render() {
     return (
       <div>
+          <h1>Add your Review</h1>
         <Form onSubmit={this.handleOnSubmit}>
           <FormGroup>
             <FormLabel> audible to review: </FormLabel>
@@ -71,7 +72,8 @@ export class AddReview extends Component {
             ></FormControl>
             <FormLabel> Description: </FormLabel>
             <FormControl
-              type="text"
+              as="textarea"
+              rows={5}
               placeholder="Description"
               value={this.state.description}
               onChange={this.handleOnChange}

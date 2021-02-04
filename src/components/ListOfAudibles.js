@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Card} from "react-bootstrap";
 
-export const ListOfAudibles = ({ title, by, language, audio, id }) => {
+export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
   return (
   
       <Card style={{ width: "25rem", margin: "40px" }}>
@@ -19,6 +19,11 @@ export const ListOfAudibles = ({ title, by, language, audio, id }) => {
             Audio: {audio}
           </Card.Text>
           <hr/>
+          <Card.Text>
+            {all.reviews.map((review) => 
+            <Link> {review.title}</Link> )}
+          </Card.Text>
+         
           <Link
             className="btn btn-warning mr-1 btn-lg btn-block"
             to={`/edit/${id}`}

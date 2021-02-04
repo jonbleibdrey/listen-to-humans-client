@@ -26,6 +26,7 @@ const Home = () => {
                 by={audible.by}
                 language={audible.language}
                 audio={audible.audio_file}
+                all={audible}
               />
             ))}
         <Link to="/add" className="btn btn-primary ml-25 btn-lg ">
