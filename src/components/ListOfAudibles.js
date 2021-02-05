@@ -1,38 +1,49 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Card} from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import Accordion from "react-bootstrap/Accordion";
 
 export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
   return (
-  
-      <Card style={{ width: "25rem", margin: "40px" }}>
+    <Accordion defaultActiveKey="0">
+      <Card style={{ width: "25rem", margin: "40px"}}>
         <Card.Body className="card text-center">
           <Card.Title> title of book: {title}</Card.Title>
-          <hr/>
+          <hr />
           <Card.Subtitle className="mb-2 text-muted">
             Created by: {by}
           </Card.Subtitle>
-          <hr/>
+          <hr />
           <Card.Text>
             Language: {language}
             <br />
             Audio: {audio}
           </Card.Text>
-          <hr/>
-            <h1>Review's</h1>
-          <Card.Text>
-            {all.reviews.map((review) => 
-            <Link key={review.id} to={"/review"}> {review.title}</Link> )}
-          </Card.Text>
-         <hr/>
-          <Link
-            className="btn btn-warning mr-1 btn-lg btn-block"
-            to={`/edit/${id}`}
-          >
-            edit
-          </Link>
+          <hr />
+          
+            <Accordion.Toggle as={Card.Header} eventKey="1">
+              <h4>Review's</h4>
+            </Accordion.Toggle>
+          
+          <Accordion.Collapse eventKey="1">
+            <Card.Body>
+              {all.reviews.map((review) => (
+                <Link key={review.id} to={"/review"}>
+                  {" "}
+                  {review.title}
+                </Link>
+              ))}
+
+            </Card.Body>
+          </Accordion.Collapse>
+              <Link
+                className="btn btn-warning mr-1 btn-lg btn-block"
+                to={`/edit/${id}`}
+              >
+                edit
+              </Link>
         </Card.Body>
       </Card>
-
+    </Accordion>
   );
 };
