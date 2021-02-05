@@ -16,27 +16,27 @@ export class EditReview extends Component {
     rating: "",
   };
   
+  
+  componentDidMount() {
+      const id = this.props.match.params.id;
+      axios
+      .get(`http://localhost:3001/reviews/${id}`)
+      .then((resp) => resp.data)
+      .then((data) =>
+      this.setState({
+          title: data.title,
+          description: data.description,
+          rating: data.rating,
+        })
+        );
+    }
+    
     handleOnChange = (e) => {
       const { name, value } = e.target;
       this.setState({
         [name]: value,
       });
     };
-
-  componentDidMount() {
-    const id = this.props.match.params.id;
-    axios
-      .get(`http://localhost:3001/review/${id}`)
-      .then((resp) => resp.data)
-      .then((data) =>
-        this.setState({
-          title: data.title,
-          description: data.description,
-          rating: data.rating,
-        })
-      );
-  }
-
   handleOnSubmit = (e) => {
     e.preventDefault();
     const id = this.props.match.params.id;
