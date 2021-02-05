@@ -97,7 +97,7 @@ export class AddReview extends Component {
             ></FormControl>
           </FormGroup>
           <Button type="submit"> Submit </Button>
-          <Link to="/" className="btn btn-danger ml-2">
+          <Link to="/review" className="btn btn-danger ml-2">
             Cancel
           </Link>
         </Form>

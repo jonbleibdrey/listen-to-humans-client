@@ -20,7 +20,7 @@ const ListOfReview = ({id, title, description, rating, audibleId}) => {
           <hr/>
           <Link
             className="btn btn-warning mr-1 btn-lg btn-block"
-            to={`/edit/${id}`}
+            to={`/editReview/${id}`}
           >
             edit
           </Link>
