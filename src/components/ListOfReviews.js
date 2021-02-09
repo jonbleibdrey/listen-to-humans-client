@@ -14,7 +14,7 @@ const ListOfReview = ({id, title, description, rating, audibleId}) => {
           </Card.Subtitle>
           <hr/>
           <Card.Text>
-          description: {description}
+          description's: {description}
             <br />
           </Card.Text>
           <hr/>
