@@ -9,7 +9,7 @@ const ListOfReview = ({id, title, description, rating, audibleId}) => {
           <Card.Title> title of review: <Link to={"/"}> {title}</Link> </Card.Title>
           <hr/>
           <Card.Subtitle className="mb-2 text-muted">
-          rating: {rating}
+          rating's: {rating}
             
           </Card.Subtitle>
           <hr/>
