@@ -17,7 +17,7 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
           <Card.Text>
             Language: {language}
             <br />
-            Audio: {audio}
+            Audio file: {audio}
           </Card.Text>
           <hr />
 
