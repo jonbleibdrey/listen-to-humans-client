@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+
 import { Link } from "react-router-dom";
 import { ListOfAudibles } from "./ListOfAudibles";
+import { Container, Row } from "react-bootstrap";
 
 const Home = () => {
   const [audible, setAudible] = useState([]);
@@ -15,7 +17,8 @@ const Home = () => {
   return (
     <>
       <h1 className="card text-center ">Home page</h1>
-      <div style={{ width: "50rem" }}>
+        <Container >
+          <Row >
         {audible.map((audible) => (
           <ListOfAudibles
             key={audible.id}
@@ -31,7 +34,8 @@ const Home = () => {
           {" "}
           add book{" "}
         </Link>
-      </div>
+      </Row>
+      </Container>
     </>
   );
 };

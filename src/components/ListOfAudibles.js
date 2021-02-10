@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Card } from "react-bootstrap";
+import { Card, Col } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 
 export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
   return (
+    <Col xs={12} xl={3}>
     <Accordion defaultActiveKey="0">
       <Card style={{ width: "25rem", margin: "40px" }}>
         <Card.Body className="card text-center">
@@ -45,5 +46,6 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
         </Card.Body>
       </Card>
     </Accordion>
+    </Col>
   );
 };
