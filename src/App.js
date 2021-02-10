@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <div style={{ maxWidth: "30rem", margin: "4rem auto" }}>
+      <div>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />

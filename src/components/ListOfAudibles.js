@@ -5,7 +5,7 @@ import Accordion from "react-bootstrap/Accordion";
 
 export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
   return (
-    <Col xs={12} xl={3}>
+    <Col xs={12} lg={4}>
     <Accordion defaultActiveKey="0">
       <Card style={{ width: "25rem", margin: "40px" }}>
         <Card.Body className="card text-center">
