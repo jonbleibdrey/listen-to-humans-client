@@ -1,10 +1,11 @@
 import React from 'react'
-import { Card} from "react-bootstrap";
+import { Card, Col} from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const ListOfReview = ({id, title, description, rating, audibleId}) => {
     return (
-        <Card style={{ width: "25rem", margin: "40px" }}>
+      <Col xs={12} lg={4}>
+        <Card style={{ display: "flex", margin: "40px", marginRight: "100px", width: "90%", height:"45vmin"}}>
         <Card.Body className="card text-center">
           <Card.Title> title of review: <Link to={"/"}> {title}</Link> </Card.Title>
           <hr/>
@@ -26,6 +27,7 @@ const ListOfReview = ({id, title, description, rating, audibleId}) => {
           </Link>
         </Card.Body>
       </Card>
+      </Col>
     )
 }
 

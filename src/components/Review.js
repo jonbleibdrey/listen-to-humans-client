@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import ListOfReviews from "./ListOfReviews";
+import { Container, Row } from "react-bootstrap";
 
 const Review = () => {
 
@@ -16,7 +17,8 @@ const Review = () => {
   return (
    <>
         <h1 className="card text-center ">review page</h1>
-        <div style={{ width: "50rem" }}>
+        <Container>
+        <Row>
           {review.map((review) => (
             <ListOfReviews
             key={review.id}
@@ -27,11 +29,13 @@ const Review = () => {
             audibleId={review.audible_id}
             />
             
-            ))}</div>
-            <Link to="/addReview" className="btn btn-primary ml-25 btn-lg ">
+            ))}
+            <Link to="/addReview" style={{ display: "flex", margin: "50px", marginLeft: "100px", width: "100%"}} className="btn btn-primary ml-25 btn-lg ">
             {" "}
             add review{" "}
           </Link>
+          </Row>
+          </Container>
      </>
   );
 };
