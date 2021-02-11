@@ -30,7 +30,7 @@ const Home = () => {
               all={audible}
             />
           ))}
-          <Link to="/add" className="btn btn-primary ml-25 btn-lg ">
+          <Link to="/add" style={{ display: "flex", margin: "50px", marginLeft: "100px", width: "100%"}} className="btn btn-primary btn-lg ">
             {" "}
             add book{" "}
           </Link>

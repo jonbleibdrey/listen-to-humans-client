@@ -7,7 +7,7 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
   return (
     <Col xs={12} lg={4}>
     <Accordion defaultActiveKey="0" >
-      <Card style={{ display: "flex", margin: "40px", marginRight: "100px", width: "90%", height:"100%"}}>
+      <Card style={{ display: "flex", margin: "40px", marginRight: "100px", width: "90%", height:"45vmin"}}>
         <Card.Body className="card text-center">
           <Card.Title> title of book: {title}</Card.Title>
           <hr />
