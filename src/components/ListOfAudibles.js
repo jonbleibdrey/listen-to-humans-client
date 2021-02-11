@@ -6,8 +6,8 @@ import Accordion from "react-bootstrap/Accordion";
 export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
   return (
     <Col xs={12} lg={4}>
-    <Accordion defaultActiveKey="0">
-      <Card style={{ width: "25rem", margin: "40px" }}>
+    <Accordion defaultActiveKey="0" >
+      <Card style={{ margin: "40px", marginRight: "100px", width: "100%", height: "" }}>
         <Card.Body className="card text-center">
           <Card.Title> title of book: {title}</Card.Title>
           <hr />
@@ -22,7 +22,7 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
           </Card.Text>
           <hr />
 
-          <Accordion.Toggle as={Card.Header} eventKey="1">
+          <Accordion.Toggle as={Card.Header} eventKey="1" >
             <h4>Review's</h4>
           </Accordion.Toggle>
 

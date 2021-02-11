@@ -15,7 +15,6 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <div>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
@@ -26,7 +25,6 @@ function App() {
           <Route path="/editReview/:id" component={EditReview} />
           <Route path="*" component={NoFlyZone} />
         </Switch>
-      </div>
     </Router>
   );
 }
