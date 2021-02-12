@@ -6,18 +6,21 @@ import { Card } from "react-bootstrap";
 const About = () => {
   const [people, setPeople] = useState([
     {
+      id: 1,
       name: "tiffany",
       occupation: "student",
       bio:
         " i really like this website it helps me share my college books with others",
     },
     {
+      id: 2,
       name: "franky",
       occupation: "lawyer",
       bio:
         " I use this sight to help my peers learn all the law books in our library.",
     },
     {
+      id: 3,
       name: "lang",
       occupation: "doctor",
       bio:
@@ -48,7 +51,7 @@ const About = () => {
         </p>
         <div>
           {people.map((peeps) => (
-            <Card>
+            <Card key={peeps.id} style={{ display: "flex", margin: "20px", width: "90%", height:"40%"}}>
               <Card.Body className="card text-center">
                 <Card.Title> Name: {peeps.name}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
