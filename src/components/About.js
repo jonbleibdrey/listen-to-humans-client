@@ -1,25 +1,41 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
+import { Card } from "react-bootstrap";
 
 const About = () => {
-    const [people, setPeople] = useState([{
+  const [people, setPeople] = useState([
+    {
       name: "tiffany",
-      occupation:"student",
-      bio:" i really like this website it helps me share my college books with others",
-    },{
+      occupation: "student",
+      bio:
+        " i really like this website it helps me share my college books with others",
+    },
+    {
       name: "franky",
-      occupation:"lawyer",
-      bio:" I use this sight to help my peers learn all the law books in our library.",
-    },{
+      occupation: "lawyer",
+      bio:
+        " I use this sight to help my peers learn all the law books in our library.",
+    },
+    {
       name: "lang",
-      occupation:"doctor",
-      bio:" i come back and forth to this website to listen to all the medical books others have recorded before me.", 
-    }])
+      occupation: "doctor",
+      bio:
+        " i come back and forth to this website to listen to all the medical books others have recorded before me.",
+    },
+  ]);
 
-    
   return (
-    <Jumbotron style={{ display: "flex", margin: "40px", marginRight: "100px", width: "100%", height:"100%", backgroundColor:"white"}}>
+    <Jumbotron
+      style={{
+        display: "flex",
+        margin: "40px",
+        marginRight: "100px",
+        width: "100%",
+        height: "100%",
+        backgroundColor: "white",
+      }}
+    >
       <Container>
         <h1> About page</h1>
         <p>
@@ -31,7 +47,17 @@ const About = () => {
           challenging sometimes to find these books in audible form.{" "}
         </p>
         <div>
-        
+          {people.map((peeps) => (
+            <Card>
+              <Card.Body className="card text-center">
+                <Card.Title> Name: {peeps.name}</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">
+                  occupation: {peeps.occupation}
+                </Card.Subtitle>
+                <Card.Text>Testimonial: {peeps.bio}</Card.Text>
+              </Card.Body>
+            </Card>
+          ))}
         </div>
       </Container>
     </Jumbotron>
@@ -39,3 +65,20 @@ const About = () => {
 };
 
 export default About;
+
+{
+  /* <Card style={{ display: "flex", margin: "40px", marginRight: "100px", width: "90%", height:"45vmin"}}>
+<Card.Body className="card text-center">
+  <Card.Title> title of book: {title}</Card.Title>
+  <hr />
+  <Card.Subtitle className="mb-2 text-muted">
+    Created by: {by}
+  </Card.Subtitle>
+  <hr />
+  <Card.Text>
+    Language: {language}
+    <br />
+    Audio file: {audio}
+  </Card.Text>
+  <hr /> */
+}
