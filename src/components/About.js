@@ -49,7 +49,6 @@ const About = () => {
           people. where i see this shining is college students. It can be
           challenging sometimes to find these books in audible form.{" "}
         </p>
-        <div>
           {people.map((peeps) => (
             <Card
               key={peeps.id}
@@ -57,8 +56,7 @@ const About = () => {
                 display: "flex",
                 margin: "50px",
                 width: "90%",
-                height: "40%",
-                borderRadius: "50px",
+                height: "25%",
               }}
             >
               <Card.Body className="card text-center">
@@ -70,7 +68,6 @@ const About = () => {
               </Card.Body>
             </Card>
           ))}
-        </div>
       </Container>
     </Jumbotron>
   );

@@ -54,11 +54,17 @@ export class AddReview extends Component {
 
   render() {
     return (
-      <Container>
+      <Container style={{  width:"100%",
+      height: "auto",
+      bottom: "20px",
+      top: "200px",
+      left: "50px",
+      right: "50px",
+      position: "absolute"}}>
           <h1>Add your Review</h1>
-        <Row>
-          <Col>
-        <Form onSubmit={this.handleOnSubmit}>
+        <Row >
+          <Col xs={12} >
+        <Form onSubmit={this.handleOnSubmit} >
           <FormGroup>
             <FormLabel> audible to review: </FormLabel>
             <Form.Control as="select" onChange={this.handleSelectOnChange} custom>

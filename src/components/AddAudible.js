@@ -43,10 +43,16 @@ export class AddAudible extends Component {
 
   render() {
     return (
-      <Container>
-        <h1>Add Audible</h1>
-        <Row>
-          <Col>
+      <Container style={{  width:"100%",
+      height: "auto",
+      bottom: "20px",
+      top: "200px",
+      left: "50px",
+      right: "50px",
+      position: "absolute"}}>
+        <h1 >Add Audible</h1>
+        <Row >
+          <Col xs={12} >
         <Form onSubmit={this.handleOnSubmit} >
           <FormGroup >
             <FormLabel> Title </FormLabel>
