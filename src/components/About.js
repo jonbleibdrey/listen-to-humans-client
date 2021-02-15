@@ -51,7 +51,16 @@ const About = () => {
         </p>
         <div>
           {people.map((peeps) => (
-            <Card key={peeps.id} style={{ display: "flex", margin: "20px", width: "90%", height:"40%"}}>
+            <Card
+              key={peeps.id}
+              style={{
+                display: "flex",
+                margin: "50px",
+                width: "90%",
+                height: "40%",
+                borderRadius: "50px",
+              }}
+            >
               <Card.Body className="card text-center">
                 <Card.Title> Name: {peeps.name}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
