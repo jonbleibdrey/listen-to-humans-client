@@ -7,6 +7,8 @@ import { Container, Row } from "react-bootstrap";
 
 const Home = () => {
   const [audible, setAudible] = useState([]);
+  const [search, setSearch] = useState('')
+
 
   useEffect(() => {
     axios
@@ -18,6 +20,7 @@ const Home = () => {
     <>
       <h1 className="card text-center ">Home page</h1>
       <Container>
+      <input type="text" placeholder="search" onChange={ e => setSearch(e.target.value)}/>
         <Row>
           {audible.map((audible) => (
             <ListOfAudibles
