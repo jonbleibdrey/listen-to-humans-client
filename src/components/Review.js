@@ -20,9 +20,10 @@ const Review = () => {
 
   return (
     <>
-      <h1 className="card text-center ">review page</h1>
+      <h1 className="card text-center ">review page
+      <input type="text" className="text-center m-5" placeholder="search" onChange={ e => setSearch(e.target.value)}/>
+      </h1>
       <Container>
-      <input type="text" placeholder="search" onChange={ e => setSearch(e.target.value)}/>
         <Row>
           {filteredReview.map((review) => (
             <ListOfReviews

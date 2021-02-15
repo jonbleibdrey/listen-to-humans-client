@@ -22,9 +22,10 @@ const Home = () => {
 
   return (
     <>
-      <h1 className="card text-center ">Home page</h1>
+      <h1 className="card text-center ">Home page
+      <input type="text" className="text-center m-5" placeholder="search" onChange={ e => setSearch(e.target.value)}/>
+      </h1>
       <Container>
-      <input type="text" placeholder="search" onChange={ e => setSearch(e.target.value)}/>
         <Row>
           {filteredAudibles.map((audible) => (
             <ListOfAudibles
