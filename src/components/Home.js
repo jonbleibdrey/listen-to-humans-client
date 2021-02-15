@@ -16,13 +16,17 @@ const Home = () => {
       .then((resp) => setAudible(resp.data));
   }, []);
 
+  const filteredAudibles = audible.filter( aud => {
+    return aud.title.toLowerCase().includes(search.toLowerCase())
+  } )
+
   return (
     <>
       <h1 className="card text-center ">Home page</h1>
       <Container>
       <input type="text" placeholder="search" onChange={ e => setSearch(e.target.value)}/>
         <Row>
-          {audible.map((audible) => (
+          {filteredAudibles.map((audible) => (
             <ListOfAudibles
               key={audible.id}
               id={audible.id}
