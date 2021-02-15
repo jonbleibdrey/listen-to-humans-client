@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AddAudible from "./components/AddAudible";
 import EditAudible from "./components/EditAudible";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/editReview/:id" component={EditReview} />
           <Route path="*" component={NoFlyZone} />
         </Switch>
+        <Footer/>
     </Router>
   );
 }
