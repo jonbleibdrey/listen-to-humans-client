@@ -6,6 +6,9 @@ import {
   FormLabel,
   FormControl,
   Button,
+  Container,
+  Row,
+  Col,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -51,8 +54,10 @@ export class AddReview extends Component {
 
   render() {
     return (
-      <div>
+      <Container>
           <h1>Add your Review</h1>
+        <Row>
+          <Col>
         <Form onSubmit={this.handleOnSubmit}>
           <FormGroup>
             <FormLabel> audible to review: </FormLabel>
@@ -101,7 +106,9 @@ export class AddReview extends Component {
             Cancel
           </Link>
         </Form>
-      </div>
+        </Col>
+        </Row>
+        </Container>
     );
   }
 }

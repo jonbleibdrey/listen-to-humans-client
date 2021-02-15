@@ -6,6 +6,9 @@ import {
   FormLabel,
   FormControl,
   Button,
+  Container,
+  Row,
+  Col,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -40,10 +43,12 @@ export class AddAudible extends Component {
 
   render() {
     return (
-      <div>
+      <Container>
         <h1>Add Audible</h1>
-        <Form onSubmit={this.handleOnSubmit}>
-          <FormGroup>
+        <Row>
+          <Col>
+        <Form onSubmit={this.handleOnSubmit} >
+          <FormGroup >
             <FormLabel> Title </FormLabel>
             <FormControl
               type="text"
@@ -82,7 +87,9 @@ export class AddAudible extends Component {
             Cancel
           </Link>
         </Form>
-      </div>
+        </Col>
+        </Row>
+        </Container>
     );
   }
 }
