@@ -8,11 +8,12 @@ const Footer = () => {
         expand="lg"
         bg="dark"
         variant="dark"
+        position= "sticky"
       >
         <ReactBootStrap.Navbar.Brand href="/">
           Read By Humans
         </ReactBootStrap.Navbar.Brand>
-        <h1 style={{justifyContent: 'end'}}> made by: Jonathan  Bleibdrey </h1>
+        <h1> made by: Jonathan  Bleibdrey </h1>
       </ReactBootStrap.Navbar>
        
     )

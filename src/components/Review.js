@@ -6,6 +6,7 @@ import { Container, Row } from "react-bootstrap";
 
 const Review = () => {
   const [review, setReview] = useState([]);
+  const [search, setSearch] = useState('')
 
   useEffect(() => {
     axios
@@ -13,12 +14,17 @@ const Review = () => {
       .then((resp) => setReview(resp.data));
   }, []);
 
+  const filteredReview = review.filter( rev => {
+    return rev.title.toLowerCase().includes(search.toLowerCase())
+  } )
+
   return (
     <>
       <h1 className="card text-center ">review page</h1>
       <Container>
+      <input type="text" placeholder="search" onChange={ e => setSearch(e.target.value)}/>
         <Row>
-          {review.map((review) => (
+          {filteredReview.map((review) => (
             <ListOfReviews
               key={review.id}
               id={review.id}
