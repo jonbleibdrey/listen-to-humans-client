@@ -8,7 +8,6 @@ const Footer = () => {
         expand="lg"
         bg="dark"
         variant="dark"
-        position= "sticky"
       >
         <ReactBootStrap.Navbar.Brand href="/">
           Read By Humans

@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import { Card } from "react-bootstrap";
 
 const About = () => {
-  const [people, setPeople] = useState([
+  const [people] = useState([
     {
       id: 1,
       name: "tiffany",
@@ -56,8 +56,10 @@ const About = () => {
                 display: "flex",
                 margin: "50px",
                 width: "90%",
-                height: "25%",
+                height: "25%"
+                
               }}
+              
             >
               <Card.Body className="card text-center">
                 <Card.Title> Name: {peeps.name}</Card.Title>
@@ -75,19 +77,3 @@ const About = () => {
 
 export default About;
 
-{
-  /* <Card style={{ display: "flex", margin: "40px", marginRight: "100px", width: "90%", height:"45vmin"}}>
-<Card.Body className="card text-center">
-  <Card.Title> title of book: {title}</Card.Title>
-  <hr />
-  <Card.Subtitle className="mb-2 text-muted">
-    Created by: {by}
-  </Card.Subtitle>
-  <hr />
-  <Card.Text>
-    Language: {language}
-    <br />
-    Audio file: {audio}
-  </Card.Text>
-  <hr /> */
-}
