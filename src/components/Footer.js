@@ -7,12 +7,12 @@ const Footer = () => {
       expand="lg"
       bg="dark"
       variant="dark"
-      style={{ position: "absolute", left: 0, right: 0}}
+      style={{ position: "absolute", left: 0, right: 0 , textAlign: "center" }}
     >
       <ReactBootStrap.Navbar.Brand href="/">
         Read By Humans
       </ReactBootStrap.Navbar.Brand>
-      <h1> made by: Jonathan Bleibdrey </h1>
+      <h6 style={{marginLeft:"80%", color:"white"}}> made by: Jonathan Bleibdrey </h6>
     </ReactBootStrap.Navbar>
   );
 };
