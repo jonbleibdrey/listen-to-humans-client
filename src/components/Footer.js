@@ -8,6 +8,7 @@ const Footer = () => {
         expand="lg"
         bg="dark"
         variant="dark"
+        style={{position:"absolute", left: 0, right: 0, bottom: 0}}
       >
         <ReactBootStrap.Navbar.Brand href="/">
           Read By Humans
