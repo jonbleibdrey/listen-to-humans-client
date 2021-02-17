@@ -11,11 +11,14 @@ import Home from "./components/Home";
 import Review from "./components/Review";
 import NoFlyZone from "./components/NoFlyZone";
 import AddReview from "./components/AddReview";
+import Information from "./components/Information";
+
 
 function App() {
   return (
     <Router>
       <NavBar />
+      <Information/>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
