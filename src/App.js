@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
-// import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AddAudible from "./components/AddAudible";
 import EditAudible from "./components/EditAudible";
@@ -12,6 +11,7 @@ import Review from "./components/Review";
 import NoFlyZone from "./components/NoFlyZone";
 import AddReview from "./components/AddReview";
 import Information from "./components/Information";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
           <Route path="*" component={NoFlyZone} />
         </Switch>
     </Router>
-       
+       <Footer/>
     </>
   );
 }

@@ -4,7 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { ListOfAudibles } from "./ListOfAudibles";
 import { Container, Row } from "react-bootstrap";
-import Footer from "./Footer";
+
 
 const Home = () => {
   const [audible, setAudible] = useState([]);
@@ -37,13 +37,13 @@ const Home = () => {
               all={audible}
             />
           ))}
-          <Link to="/add" style={{ display: "flex", margin: "50px", marginLeft: "100px", width: "100%"}} className="btn btn-primary btn-lg ">
+          <Link to="/add" style={{ display: "flex", margin: "50px", marginLeft: "100px", marginBottom:"100px" , width: "100%"}} className="btn btn-primary btn-lg ">
             {" "}
             add book{" "}
           </Link>
         </Row>
       </Container>
-      <Footer/>
+     
     </>
   );
 };
