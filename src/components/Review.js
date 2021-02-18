@@ -6,7 +6,7 @@ import { Container, Row } from "react-bootstrap";
 
 const Review = () => {
   const [review, setReview] = useState([]);
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     axios
@@ -14,13 +14,31 @@ const Review = () => {
       .then((resp) => setReview(resp.data));
   }, []);
 
-  const filteredReview = review.filter( rev => {
-    return rev.title.toLowerCase().includes(search.toLowerCase())
-  } )
+  const filteredReview = review.filter((rev) => {
+    return rev.title.toLowerCase().includes(search.toLowerCase());
+  });
 
   return (
     <>
-      <input type="text" style={{width:"50%", marginLeft:"25%", marginTop:"50px", marginBottom:"40px"}} className="text-center" placeholder="search for review" onChange={ e => setSearch(e.target.value)}/>
+      <div>
+        <p>
+          This is for the Review section, We want the books to be great and
+          readable. so we set up a system to do just that. Plain and simple nyou
+          can review any book you want. You can also search for any review you would like.
+        </p>
+      </div>
+      <input
+        type="text"
+        style={{
+          width: "50%",
+          marginLeft: "25%",
+          marginTop: "50px",
+          marginBottom: "40px",
+        }}
+        className="text-center"
+        placeholder="search for review"
+        onChange={(e) => setSearch(e.target.value)}
+      />
       <Container>
         <Row>
           {filteredReview.map((review) => (
@@ -35,7 +53,14 @@ const Review = () => {
           ))}
           <Link
             to="/addReview"
-            style={{ display: "flex", margin: "50px", marginLeft: "100px", marginBottom:"100px" , width: "100%"}} className="btn btn-primary btn-lg "
+            style={{
+              display: "flex",
+              margin: "50px",
+              marginLeft: "100px",
+              marginBottom: "100px",
+              width: "100%",
+            }}
+            className="btn btn-primary btn-lg "
           >
             {" "}
             add review{" "}
