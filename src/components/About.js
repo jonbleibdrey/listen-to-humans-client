@@ -42,23 +42,24 @@ const About = () => {
         <h1> About page</h1>
         <p>
           {" "}
-          This is a webpage for people to create librarys of read books. Where
-          it differs from audible is that you the user could take a book and
-          read it. You could create/read any book. then share it with other
-          people. where i see this shining is college students. It can be
-          challenging sometimes to find these books in audible form.{" "}
+          This is a page to hear about some testimonials. We
+          differ from audible in that you the ordinary user could take a book,
+          read it, and record it. Then share it with other
+          people. where i see this shining is college students, It can be
+          challenging sometimes to find certain books in audible form. Dont take it from me read below.{" "}
         </p>
-        <img src="../logo192.png" alt="logo" style={{marginLeft:"40%",marginTop:"1%"}}></img>
+        <img src="../logo192.png" alt="logo" style={{marginLeft:"40%",marginTop:"5%"}}></img>
           </Jumbotron>
-        <Container>
+       <div style={{margin:"10%", marginTop:"1%"}}>
           {people.map((peeps) => (
             <Card
               key={peeps.id}
               style={{
                 display: "flex",
                 margin: "50px",
+                marginLeft:"19%",
                 marginBottom:"25px",
-                width: "90%",
+                width: "60%",
                 height: "25%"
                 
               }}
@@ -73,7 +74,7 @@ const About = () => {
               </Card.Body>
             </Card>
           ))}
-      </Container>
+      </div>
       </>
   );
 };
