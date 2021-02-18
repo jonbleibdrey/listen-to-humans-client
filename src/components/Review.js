@@ -30,7 +30,8 @@ const Review = () => {
           backgroundColor: "white",
           border: "1px solid gray",
           fontFamily: "monospace",
-          boxShadow:"10px 20px"
+          boxShadow:"10px 20px",
+          borderRadius:"20px"
         }}
       >
         <h2>Review section</h2>

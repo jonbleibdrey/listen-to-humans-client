@@ -39,7 +39,8 @@ const About = () => {
         backgroundColor: "white",
         border: "1px solid gray",
         fontFamily:"monospace",
-        boxShadow:"10px 20px"
+        boxShadow:"10px 20px",
+        borderRadius:"20px"
       }}
     >
         <h1> About page</h1>

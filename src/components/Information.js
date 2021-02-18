@@ -11,7 +11,7 @@ const Information = () => {
         border: "1px solid gray",
         fontFamily: "monospace",
         boxShadow: "10px 20px",
-        borderRadius
+        borderRadius:"20px"
       }}
     >
       <img

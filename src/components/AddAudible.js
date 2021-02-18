@@ -54,7 +54,8 @@ export class AddAudible extends Component {
             backgroundColor: "white",
             border: "1px solid gray",
             fontFamily: "monospace",
-            boxShadow:"10px 20px"
+            boxShadow:"10px 20px",
+            borderRadius:"20px"
           }}
         >
           <h1>Add Audible</h1>
@@ -121,6 +122,8 @@ export class AddAudible extends Component {
             backgroundColor: "white",
             border: "1px solid gray",
             fontFamily: "monospace",
+            boxShadow:"5px 10px",
+            borderRadius:"20px"
           }}>
         <h1>Record audio</h1>
           <p>
