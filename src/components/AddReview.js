@@ -11,6 +11,7 @@ import {
   Col,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Information from "./Information";
 
 export class AddReview extends Component {
   state = {
@@ -54,14 +55,24 @@ export class AddReview extends Component {
 
   render() {
     return (
-      <Container style={{  width:"100%",
-      height: "auto",
-      bottom: "20px",
-      top: "200px",
-      left: "50px",
-      right: "50px",
-      position: "absolute"}}>
-          <h1>Add your Review</h1>
+      <>
+      <div style={{
+            margin: "35px",
+            padding: "3%",
+            marginLeft: "20%",
+            width: "60%",
+            backgroundColor: "white",
+            border: "1px solid gray",
+            fontFamily: "monospace",
+            boxShadow:"10px 20px"
+          }}>
+      <h1>Add your Review</h1>
+      <p>
+          We like to hear what other people like to say. We want it to stay freindly so please do so. here is the add review section
+      </p>
+      </div>
+      <Container style={{  margin: "5%", marginLeft: "380px" 
+      }}>
         <Row >
           <Col xs={12} >
         <Form onSubmit={this.handleOnSubmit} >
@@ -115,6 +126,7 @@ export class AddReview extends Component {
         </Col>
         </Row>
         </Container>
+        </>
     );
   }
 }

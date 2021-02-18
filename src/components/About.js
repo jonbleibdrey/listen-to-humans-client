@@ -38,7 +38,8 @@ const About = () => {
         height: "100%",
         backgroundColor: "white",
         border: "1px solid gray",
-        fontFamily:"monospace"
+        fontFamily:"monospace",
+        boxShadow:"10px 20px"
       }}
     >
         <h1> About page</h1>
