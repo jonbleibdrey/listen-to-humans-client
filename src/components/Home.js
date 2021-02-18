@@ -4,6 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { ListOfAudibles } from "./ListOfAudibles";
 import { Container, Row } from "react-bootstrap";
+import Footer from "./Footer";
 
 const Home = () => {
   const [audible, setAudible] = useState([]);
@@ -42,6 +43,7 @@ const Home = () => {
           </Link>
         </Row>
       </Container>
+      <Footer/>
     </>
   );
 };
