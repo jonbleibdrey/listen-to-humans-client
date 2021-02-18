@@ -4,6 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { ListOfAudibles } from "./ListOfAudibles";
 import { Container, Row } from "react-bootstrap";
+import Information from "./Information";
 
 
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
 
   return (
     <>
+    <Information/>
       <input type="text" style={{width:"50%", marginLeft:"25%", marginTop:"5px", marginBottom:"40px"}} className="text-center" placeholder="search for audible" onChange={ e => setSearch(e.target.value)}/>
       <Container>
         <Row>

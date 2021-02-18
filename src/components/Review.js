@@ -20,9 +20,7 @@ const Review = () => {
 
   return (
     <>
-      <h1 className="card text-center ">review page
-      <input type="text" className="text-center m-5" placeholder="search" onChange={ e => setSearch(e.target.value)}/>
-      </h1>
+      <input type="text" style={{width:"50%", marginLeft:"25%", marginTop:"50px", marginBottom:"40px"}} className="text-center" placeholder="search for review" onChange={ e => setSearch(e.target.value)}/>
       <Container>
         <Row>
           {filteredReview.map((review) => (
@@ -37,13 +35,7 @@ const Review = () => {
           ))}
           <Link
             to="/addReview"
-            style={{
-              display: "flex",
-              margin: "50px",
-              marginLeft: "100px",
-              width: "100%",
-            }}
-            className="btn btn-primary ml-25 btn-lg "
+            style={{ display: "flex", margin: "50px", marginLeft: "100px", marginBottom:"100px" , width: "100%"}} className="btn btn-primary btn-lg "
           >
             {" "}
             add review{" "}

@@ -10,7 +10,6 @@ import Home from "./components/Home";
 import Review from "./components/Review";
 import NoFlyZone from "./components/NoFlyZone";
 import AddReview from "./components/AddReview";
-import Information from "./components/Information";
 import Footer from "./components/Footer";
 
 
@@ -18,7 +17,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <Information/>
+     
     <Router>
         <Switch>
           <Route exact path="/" component={Home} />

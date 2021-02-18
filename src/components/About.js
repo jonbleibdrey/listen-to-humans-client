@@ -29,17 +29,16 @@ const About = () => {
   ]);
 
   return (
+    <>
     <Jumbotron
       style={{
-        display: "flex",
         margin: "40px",
-        marginRight: "100px",
-        width: "100%",
+        marginLeft: "20%",
+        width: "60%",
         height: "100%",
         backgroundColor: "white",
       }}
     >
-      <Container>
         <h1> About page</h1>
         <p>
           {" "}
@@ -49,12 +48,16 @@ const About = () => {
           people. where i see this shining is college students. It can be
           challenging sometimes to find these books in audible form.{" "}
         </p>
+        <img src="../logo192.png" alt="logo" style={{marginLeft:"40%",marginTop:"1%"}}></img>
+          </Jumbotron>
+        <Container>
           {people.map((peeps) => (
             <Card
               key={peeps.id}
               style={{
                 display: "flex",
                 margin: "50px",
+                marginBottom:"25px",
                 width: "90%",
                 height: "25%"
                 
@@ -71,7 +74,7 @@ const About = () => {
             </Card>
           ))}
       </Container>
-    </Jumbotron>
+      </>
   );
 };
 
