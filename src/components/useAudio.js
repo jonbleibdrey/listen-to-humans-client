@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-const useAudio = (url) => {
-  const [audio, setAudio] = useState("");
+
+const useAudio = () => {
+  //const [audio, setAudio] = useState("");
 
   function getIt() {
-    const audio = document.getElementById("record");
+    const audioFun = document.getElementById("record");
 
     navigator.mediaDevices
       .getUserMedia({
@@ -12,16 +13,77 @@ const useAudio = (url) => {
         video: true,
       })
       .then((stream) => {
-        audio.srcObject = stream;
+        audioFun.srcObject = stream;
       })
       .catch(console.error);
   }
 
+  function getItToStop() {
+
+    navigator.mediaDevices.getUserMedia({video: true, audio: true})
+    .then(mediaStream => {
+      const tracks = mediaStream.getAudioTracks()
+    })
+    
+  }
+
+
+
+
   return (
     <div>
-        <button style={{backgroundColor:"green", margin:"20px"}} onClick={getIt}>record audio</button>
-      <video id="record" controls>
-      </video>
+      <button
+        style={{
+          margin: "40px",
+          padding: "3%",
+          marginLeft: "20%",
+          width: "60%",
+          height: "100%",
+          backgroundColor: "white",
+          border: "1px solid gray",
+          fontFamily: "monospace",
+          boxShadow: "10px 20px",
+          borderRadius: "20px",
+        }}
+        onClick={getIt}
+      >
+        click to activate recorder
+      </button>
+
+      <video
+        style={{
+          margin: "40px",
+          padding: "3%",
+          marginLeft: "20%",
+          width: "60%",
+          height: "100%",
+          backgroundColor: "white",
+          border: "1px solid gray",
+          fontFamily: "monospace",
+          boxShadow: "10px 20px",
+          borderRadius: "20px",
+        }}
+        id="record"
+        autoPlay
+      ></video>
+
+      <button
+        style={{
+          margin: "40px",
+          padding: "3%",
+          marginLeft: "20%",
+          width: "60%",
+          height: "100%",
+          backgroundColor: "white",
+          border: "1px solid gray",
+          fontFamily: "monospace",
+          boxShadow: "10px 20px",
+          borderRadius: "20px",
+        }}
+        onClick={getItToStop}
+      >
+        click to stop recorder
+      </button>
     </div>
   );
 };

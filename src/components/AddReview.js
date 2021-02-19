@@ -11,7 +11,7 @@ import {
   Col,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Information from "./Information";
+
 
 export class AddReview extends Component {
   state = {
