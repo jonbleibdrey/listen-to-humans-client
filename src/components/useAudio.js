@@ -19,7 +19,7 @@ const useAudio = (url) => {
 
   return (
     <div>
-        <button onClick={getIt}>record audio</button>
+        <button style={{backgroundColor:"green", margin:"20px"}} onClick={getIt}>record audio</button>
       <video id="record" controls>
       </video>
     </div>
