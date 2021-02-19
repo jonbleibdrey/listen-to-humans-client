@@ -62,6 +62,19 @@ export class EditAudible extends Component {
   render() {
     return (
       <>
+      <div style={{
+            margin: "35px",
+            padding: "3%",
+            marginLeft: "20%",
+            width: "60%",
+            backgroundColor: "white",
+            border: "1px solid gray",
+            fontFamily: "monospace",
+            boxShadow:"10px 20px",
+            borderRadius:"20px"
+          }}>
+      <h1>Edit Audible</h1>
+      </div>
         <Form onSubmit={this.handleOnSubmit}>
           <FormGroup>
             <FormLabel> Title: </FormLabel>

@@ -37,12 +37,14 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
               ))}
             </Card.Body>
           </Accordion.Collapse>
+            <div>
           <Link
             className="btn btn-warning mr-1 btn-lg btn-block"
             to={`/edit/${id}`}
           >
             edit
           </Link>
+          </div>
         </Card.Body>
       </Card>
     </Accordion>

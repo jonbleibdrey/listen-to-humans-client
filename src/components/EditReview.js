@@ -5,6 +5,9 @@ import {
   FormGroup,
   Button,
   FormLabel,
+  Row,
+  Container,
+  Col,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -60,6 +63,23 @@ export class EditReview extends Component {
   render() {
     return (
       <>
+      <div style={{
+            margin: "35px",
+            padding: "3%",
+            marginLeft: "20%",
+            width: "60%",
+            backgroundColor: "white",
+            border: "1px solid gray",
+            fontFamily: "monospace",
+            boxShadow:"10px 20px",
+            borderRadius:"20px"
+          }}>
+      <h1>Edit Review</h1>
+      </div>
+      <Container style={{  margin: "5%", marginLeft: "380px" 
+      }}>
+        <Row >
+          <Col xs={12} >
         <Form onSubmit={this.handleOnSubmit}>
           <FormGroup>
             <FormLabel> Title: </FormLabel>
@@ -93,6 +113,9 @@ export class EditReview extends Component {
             Cancel
           </Link>
         </Form>
+        </Col>
+        </Row>
+        </Container>
       </>
     );
   }
