@@ -11,7 +11,7 @@ import {
   Col,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Mic from "./Mic";
+import UseAudio from "./useAudio";
 
 export class AddAudible extends Component {
   state = {
@@ -131,7 +131,7 @@ export class AddAudible extends Component {
             {" "}
             Here we can record our book, then simply add to the new audible. This feature is coming soon!
           </p>
-        <Mic/>
+        <UseAudio/>
         </div>
       </>
     );
