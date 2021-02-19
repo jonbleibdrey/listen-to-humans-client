@@ -26,7 +26,7 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
             <h3>Review's</h3>
           </Accordion.Toggle>
 
-          <Accordion.Collapse style={{backgroundColor:"#AC8887"}} eventKey="1">
+          <Accordion.Collapse style={{backgroundColor:"#fffbfff"}} eventKey="1">
             <Card.Body>
               {all.reviews.map((review) => (
                 <Link style={{color:"black"}} key={review.id} to={"/review"}>
