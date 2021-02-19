@@ -5,6 +5,9 @@ import {
   FormGroup,
   Button,
   FormLabel,
+  Row,
+  Container,
+  Col,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -75,6 +78,10 @@ export class EditAudible extends Component {
           }}>
       <h1>Edit Audible</h1>
       </div>
+      <Container style={{  margin: "5%", marginLeft: "380px" 
+      }}>
+        <Row>
+          <Col xs={12} >
         <Form onSubmit={this.handleOnSubmit}>
           <FormGroup>
             <FormLabel> Title: </FormLabel>
@@ -116,6 +123,9 @@ export class EditAudible extends Component {
             Cancel
           </Link>
         </Form>
+        </Col>
+        </Row>
+        </Container>
       </>
     );
   }

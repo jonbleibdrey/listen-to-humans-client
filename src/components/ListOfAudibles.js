@@ -7,7 +7,7 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
   return (
     <Col xs={12} lg={4}>
     <Accordion defaultActiveKey="0" >
-      <Card style={{ display: "flex", margin: "40px", marginRight: "100px", width: "90%", height:"45vmin"}}>
+      <Card style={{ display: "flex", margin: "40px", marginRight: "100px", marginBottom:"20%", width: "90%", height:"45vmin"}}>
         <Card.Body className="card text-center">
           <Card.Title> title of book: {title}</Card.Title>
           <hr />
@@ -22,14 +22,14 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
           </Card.Text>
           <hr />
 
-          <Accordion.Toggle as={Card.Header} eventKey="1" >
-            <h4>Review's</h4>
+          <Accordion.Toggle as={Card.Header}  eventKey="1" >
+            <h3>Review's</h3>
           </Accordion.Toggle>
 
-          <Accordion.Collapse eventKey="1">
+          <Accordion.Collapse style={{backgroundColor:"#AC8887"}} eventKey="1">
             <Card.Body>
               {all.reviews.map((review) => (
-                <Link key={review.id} to={"/review"}>
+                <Link style={{color:"black"}} key={review.id} to={"/review"}>
                   <ul>
                     <li>{review.title}</li>
                   </ul>
@@ -37,15 +37,15 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
               ))}
             </Card.Body>
           </Accordion.Collapse>
-            <div>
+            
+        
+        </Card.Body>
           <Link
             className="btn btn-warning mr-1 btn-lg btn-block"
             to={`/edit/${id}`}
           >
             edit
           </Link>
-          </div>
-        </Card.Body>
       </Card>
     </Accordion>
     </Col>
