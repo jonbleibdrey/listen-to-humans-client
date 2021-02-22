@@ -1,31 +1,25 @@
-import React, { useEffect, useState} from "react";
-
+import React, { useEffect, useState } from "react";
 
 const useAudio = () => {
-  const [audio, setAudio] = useState({audio: true,
-    video: true,});
+  //   const [audio, setAudio] = useState({audio: true,
+  //     video: true,});
 
-  useEffect(()=>{
-    const audioFun = document.getElementById("record");
+  //   useEffect(()=>{
+  //     const audioFun = document.getElementById("record");
 
-    navigator.mediaDevices
-      .getUserMedia(
-      audio
-      )
-      .then((stream) => {
-        audioFun.srcObject = stream;
-      })
-      .catch(console.error);
-  }, [] ) 
+  //     navigator.mediaDevices
+  //       .getUserMedia(
+  //       audio
+  //       )
+  //       .then((stream) => {
+  //         audioFun.srcObject = stream;
+  //       })
+  //       .catch(console.error);
+  //   }, [] )
 
-  function getItToStop() {
+  //   function getItToStop() {
 
-   
-    
-  }
-
-
-
+  //   }
 
   return (
     <div>
@@ -47,7 +41,7 @@ const useAudio = () => {
         click to activate recorder
       </button> */}
 
-      <video
+      {/* <video
         style={{
           margin: "40px",
           padding: "3%",
@@ -62,7 +56,7 @@ const useAudio = () => {
         }}
         id="record"
         autoPlay
-      ></video>
+      ></video> */}
 
       <button
         style={{
@@ -77,9 +71,30 @@ const useAudio = () => {
           boxShadow: "10px 20px",
           borderRadius: "20px",
         }}
-        onClick={getItToStop}
+        id="stopRecord"
+        disabled
+        // onClick={getItToStop}
       >
-        click to stop recorder
+        click to stop
+      </button>
+
+      <button
+        style={{
+          margin: "40px",
+          padding: "3%",
+          marginLeft: "20%",
+          width: "60%",
+          height: "100%",
+          backgroundColor: "white",
+          border: "1px solid gray",
+          fontFamily: "monospace",
+          boxShadow: "10px 20px",
+          borderRadius: "20px",
+        }}
+        id="record"
+        // onClick={getItToStop}
+      >
+        click to record
       </button>
     </div>
   );
