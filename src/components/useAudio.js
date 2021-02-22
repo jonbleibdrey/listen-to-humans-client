@@ -1,29 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState} from "react";
 
 
 const useAudio = () => {
-  //const [audio, setAudio] = useState("");
+  const [audio, setAudio] = useState({audio: true,
+    video: true,});
 
-  function getIt() {
+  useEffect(()=>{
     const audioFun = document.getElementById("record");
 
     navigator.mediaDevices
-      .getUserMedia({
-        audio: true,
-        video: true,
-      })
+      .getUserMedia(
+      audio
+      )
       .then((stream) => {
         audioFun.srcObject = stream;
       })
       .catch(console.error);
-  }
+  }, [] ) 
 
   function getItToStop() {
 
-    navigator.mediaDevices.getUserMedia({video: true, audio: true})
-    .then(mediaStream => {
-      const tracks = mediaStream.getAudioTracks()
-    })
+   
     
   }
 
@@ -32,7 +29,7 @@ const useAudio = () => {
 
   return (
     <div>
-      <button
+      {/* <button
         style={{
           margin: "40px",
           padding: "3%",
@@ -48,7 +45,7 @@ const useAudio = () => {
         onClick={getIt}
       >
         click to activate recorder
-      </button>
+      </button> */}
 
       <video
         style={{
