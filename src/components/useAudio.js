@@ -1,40 +1,40 @@
-import React, { useEffect, useState} from "react";
-
+import React, { useEffect, useState } from "react";
 
 const useAudio = () => {
-  const [audio, setAudio] = useState({audio: true,
-    video: true});
+  const [audio, setAudio] = useState({ audio: true, video: true });
+  const [tracks, setTracks] = useState(null)
 
-  useEffect(() => {
-    const audioFun = document.getElementById("record");
+    function handleClick(){
+      if (tracks){
+        getItToStop()
+      }else{
+        getIt()
+      }
+    }
 
-    navigator.mediaDevices
-      .getUserMedia(
-      audio
-      )
-      .then((stream) => {
-        audioFun.srcObject = stream;
-      })
-      .catch(console.error);
-    }) 
-    
-  
+  function getIt() {
+      const audioFun = document.getElementById("record");
+      console.log("useEFFECT")
+
+      navigator.mediaDevices
+        .getUserMedia(
+        audio
+        )
+        .then((stream) => {
+          setTracks(stream.getTracks())
+          audioFun.srcObject = stream;
+        })
+        .catch(console.error);
+      }
 
   function getItToStop() {
-    
-    navigator.mediaDevices.getUserMedia(audio)
-    .then(mediaStream => mediaStream.getTracks().forEach(track => console.log(track))
-
-)
-    
+    tracks.forEach(track => track.stop())
+    setTracks(null)
   }
-
-
-
 
   return (
     <div>
-      {/* <button
+      <button
         style={{
           margin: "40px",
           padding: "3%",
@@ -47,10 +47,10 @@ const useAudio = () => {
           boxShadow: "10px 20px",
           borderRadius: "20px",
         }}
-        onClick={getIt}
+        onClick={handleClick}
       >
         click to activate recorder
-      </button> */}
+      </button>
 
       <video
         style={{
@@ -82,7 +82,7 @@ const useAudio = () => {
           boxShadow: "10px 20px",
           borderRadius: "20px",
         }}
-        onClick={getItToStop}
+        onClick={handleClick}
       >
         click to stop recorder
       </button>
