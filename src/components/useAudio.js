@@ -19,18 +19,38 @@ const useAudio = () => {
   }
 
   function recording(){
+    const videoRecording = document.getElementById("video");
     const playback = document.getElementById("videoPlayBack");
+    const start = document.getElementById("start");
+    const stop = document.getElementById("stop");
+    let mediaRecorder = new mediaRecorder(tracks)
+
+    start.addEventListener('click', (ev)=> {
+      mediaRecorder.start()
+    })
+    stop.addEventListener('click', (ev)=> {
+      mediaRecorder.stop()
+    })
+    mediaRecorder.ondataavailable = function(ev){
+      setChunks.push(ev.data)
+    }
+    mediaRecorder.onstop = (ev)=>{
+      let blob = new Blob(chunks,{'type': 'video/mp4'})
+      // setChunks([])
+      let videoUrl = window.URL.createObjectURL(blob)
+      playback.src = videoUrl
+    }
   }
 
 
   function getIt() {
-    const audioFun = document.getElementById("video");
+    const videoRecord = document.getElementById("video");
     
     navigator.mediaDevices
       .getUserMedia(audio)
       .then((stream) => {
         setTracks(stream.getTracks());
-        audioFun.srcObject = stream;
+        videoRecord.srcObject = stream;
       })
       .catch(console.error);
   }
@@ -55,7 +75,8 @@ const useAudio = () => {
           boxShadow: "10px 20px",
           borderRadius: "20px",
         }}
-        onClick={handleClick}
+        id="start"
+        onClick={() => {handleClick()}}
       >
         click to activate recorder
       </button>
@@ -77,6 +98,7 @@ const useAudio = () => {
         autoPlay
         controls
       ></video>
+
       <video
         style={{
           margin: "40px",
@@ -108,7 +130,8 @@ const useAudio = () => {
           boxShadow: "10px 20px",
           borderRadius: "20px",
         }}
-        onClick={handleClick}
+        id="stop"
+        onClick={() => {handleClick()}}
       >
         click to stop recording completely
       </button>
