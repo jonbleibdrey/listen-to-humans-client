@@ -8,7 +8,7 @@ const useAudio = () => {
     video: true,
   });
   const [tracks, setTracks] = useState(null);
-  const [] = useState()
+  const [chunks, setChunks] = useState([])
 
   function handleClick() {
     if (tracks) {
@@ -18,9 +18,14 @@ const useAudio = () => {
     }
   }
 
-  function getIt() {
-    const audioFun = document.getElementById("record");
+  function recording(){
+    const playback = document.getElementById("videoPlayBack");
+  }
 
+
+  function getIt() {
+    const audioFun = document.getElementById("video");
+    
     navigator.mediaDevices
       .getUserMedia(audio)
       .then((stream) => {
@@ -68,9 +73,27 @@ const useAudio = () => {
           boxShadow: "10px 20px",
           borderRadius: "20px",
         }}
-        id="record"
+        id="video"
         autoPlay
+        controls
       ></video>
+      <video
+        style={{
+          margin: "40px",
+          padding: "3%",
+          marginLeft: "20%",
+          width: "60%",
+          height: "100%",
+          backgroundColor: "white",
+          border: "1px solid gray",
+          fontFamily: "monospace",
+          boxShadow: "10px 20px",
+          borderRadius: "20px",
+        }}
+        id="videoPlayBack"
+        controls
+      ></video>
+
 
       <button
         style={{
@@ -87,7 +110,7 @@ const useAudio = () => {
         }}
         onClick={handleClick}
       >
-        click to stop recorder
+        click to stop recording completely
       </button>
     </div>
   );
