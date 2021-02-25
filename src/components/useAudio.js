@@ -19,7 +19,7 @@ const useAudio = () => {
   }
 
   function recording(){
-    const videoRecording = document.getElementById("video");
+    
     const playback = document.getElementById("videoPlayBack");
     const start = document.getElementById("start");
     const stop = document.getElementById("stop");
@@ -36,7 +36,7 @@ const useAudio = () => {
     }
     mediaRecorder.onstop = (ev)=>{
       let blob = new Blob(chunks,{'type': 'video/mp4'})
-      // setChunks([])
+      setChunks([])
       let videoUrl = window.URL.createObjectURL(blob)
       playback.src = videoUrl
     }
@@ -54,6 +54,7 @@ const useAudio = () => {
       })
       .catch(console.error);
   }
+  
 
   function getItToStop() {
     tracks.forEach((track) => track.stop());
