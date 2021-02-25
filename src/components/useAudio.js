@@ -1,35 +1,38 @@
 import React, { useEffect, useState } from "react";
 
 const useAudio = () => {
-  const [audio, setAudio] = useState({ audio: true, video: true });
-  const [tracks, setTracks] = useState(null)
+  const [audio, setAudio] = useState({
+    audio: {
+      echoCancellation: true,
+    },
+    video: true,
+  });
+  const [tracks, setTracks] = useState(null);
+  const [] = useState()
 
-    function handleClick(){
-      if (tracks){
-        getItToStop()
-      }else{
-        getIt()
-      }
+  function handleClick() {
+    if (tracks) {
+      getItToStop();
+    } else {
+      getIt();
     }
+  }
 
   function getIt() {
-      const audioFun = document.getElementById("record");
-      console.log("useEFFECT")
+    const audioFun = document.getElementById("record");
 
-      navigator.mediaDevices
-        .getUserMedia(
-        audio
-        )
-        .then((stream) => {
-          setTracks(stream.getTracks())
-          audioFun.srcObject = stream;
-        })
-        .catch(console.error);
-      }
+    navigator.mediaDevices
+      .getUserMedia(audio)
+      .then((stream) => {
+        setTracks(stream.getTracks());
+        audioFun.srcObject = stream;
+      })
+      .catch(console.error);
+  }
 
   function getItToStop() {
-    tracks.forEach(track => track.stop())
-    setTracks(null)
+    tracks.forEach((track) => track.stop());
+    setTracks(null);
   }
 
   return (
