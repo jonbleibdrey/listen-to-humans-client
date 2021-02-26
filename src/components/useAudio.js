@@ -1,64 +1,18 @@
 import React, { useEffect, useState } from "react";
 
 const useAudio = () => {
-  const [audio, setAudio] = useState({
-    audio: {
-      echoCancellation: true,
-    },
-    video: true,
-  });
-  const [tracks, setTracks] = useState(null);
-  const [chunks, setChunks] = useState([])
-
-  function handleClick() {
-    if (tracks) {
-      getItToStop();
-    } else {
-      getIt();
-    }
-  }
-
-  function recording(){
-    
-    const playback = document.getElementById("videoPlayBack");
-    const start = document.getElementById("start");
-    const stop = document.getElementById("stop");
-    let mediaRecorder = new mediaRecorder(tracks)
-
-    start.addEventListener('click', (ev)=> {
-      mediaRecorder.start()
-    })
-    stop.addEventListener('click', (ev)=> {
-      mediaRecorder.stop()
-    })
-    mediaRecorder.ondataavailable = function(ev){
-      setChunks.push(ev.data)
-    }
-    mediaRecorder.onstop = (ev)=>{
-      let blob = new Blob(chunks,{'type': 'video/mp4'})
-      setChunks([])
-      let videoUrl = window.URL.createObjectURL(blob)
-      playback.src = videoUrl
-    }
-  }
-
-
-  function getIt() {
-    const videoRecord = document.getElementById("video");
-    
-    navigator.mediaDevices
-      .getUserMedia(audio)
-      .then((stream) => {
-        setTracks(stream.getTracks());
-        videoRecord.srcObject = stream;
-      })
-      .catch(console.error);
-  }
   
+  const [media, setMedia] = useState({
+    audio: true,
+    video: true
+  })
 
-  function getItToStop() {
-    tracks.forEach((track) => track.stop());
-    setTracks(null);
+  function startRecording(){
+    const output = document.getElementById('video')
+
+    navigator.mediaDevices.getUserMedia(media)
+    .then(flow => {output.srcObject = flow})
+    .catch(console.error)
   }
 
   return (
@@ -77,7 +31,7 @@ const useAudio = () => {
           borderRadius: "20px",
         }}
         id="start"
-        onClick={() => {handleClick()}}
+        onClick={startRecording}
       >
         click to activate recorder
       </button>
@@ -117,7 +71,6 @@ const useAudio = () => {
         controls
       ></video>
 
-
       <button
         style={{
           margin: "40px",
@@ -132,7 +85,7 @@ const useAudio = () => {
           borderRadius: "20px",
         }}
         id="stop"
-        onClick={() => {handleClick()}}
+        // onClick={stopRecording}
       >
         click to stop recording completely
       </button>
