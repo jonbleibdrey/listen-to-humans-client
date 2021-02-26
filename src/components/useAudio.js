@@ -1,18 +1,47 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const useAudio = () => {
   
-  const [media, setMedia] = useState({
-    audio: true,
+  const [media] = useState({
+    audio: false,
     video: true
   })
+  const [chunk, setChunk] = useState(null)
+  const [medRecorder, setMedRecorder] = useState([])
 
   function startRecording(){
+    console.log("we are starting the recording")
     const output = document.getElementById('video')
 
     navigator.mediaDevices.getUserMedia(media)
-    .then(flow => {output.srcObject = flow})
+    .then(flow => {
+      output.srcObject = flow
+      const rec = new MediaRecorder(flow)
+      rec.start()
+      setMedRecorder(rec)
+
+      rec.ondataavailable = function(event) {
+        console.log("event data--->",event.data)
+        setChunk(event.data)
+
+      }})
     .catch(console.error)
+  }
+  
+ 
+  function stopRecording(){
+    console.log("we made it to the stop recording")
+    console.log("-->chunk", chunk)
+    const medSave = document.getElementById('video2')
+    medRecorder.stop()
+    medRecorder.onstop = function(e) {
+      console.log("we made it to the stop")
+      let blob = new Blob([chunk],{'type': 'video/webm; codecs=vp8'})
+      let videoUrl = window.URL.createObjectURL(blob);
+      console.log(videoUrl)
+      medSave.src = videoUrl
+      
+    }
   }
 
   return (
@@ -51,7 +80,6 @@ const useAudio = () => {
         }}
         id="video"
         autoPlay
-        controls
       ></video>
 
       <video
@@ -67,7 +95,8 @@ const useAudio = () => {
           boxShadow: "10px 20px",
           borderRadius: "20px",
         }}
-        id="videoPlayBack"
+        id="video2"
+        autoPlay
         controls
       ></video>
 
@@ -85,7 +114,7 @@ const useAudio = () => {
           borderRadius: "20px",
         }}
         id="stop"
-        // onClick={stopRecording}
+        onClick={stopRecording}
       >
         click to stop recording completely
       </button>
