@@ -12,6 +12,7 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import UseAudio from "./useAudio";
+import VideoP from "./VideoP";
 
 export class AddAudible extends Component {
   state = {
@@ -132,6 +133,7 @@ export class AddAudible extends Component {
             Here we can record our book, then simply add to the new audible. This feature is coming soon!
           </p>
         <UseAudio/>
+        <VideoP/>
         </div>
       </>
     );

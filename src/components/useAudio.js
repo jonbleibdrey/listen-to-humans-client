@@ -1,25 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 
 const useAudio = () => {
   
   const [media] = useState({
-    audio: false,
+    audio: true,
     video: true
   })
   const [chunk, setChunk] = useState(null)
   const [medRecorder, setMedRecorder] = useState([])
   const [tracks, setTracks] = useState(null)
+  const [playBack, setPlayBack] = useState(null)
   
-  
+
 
   function startRecording(){
     console.log("starting the recording")
 
     navigator.mediaDevices.getUserMedia(media)
     .then(flow => {
-      //to get camera to go
+      //sets tracks so we can stop them
       setTracks(flow.getTracks())
+      //to get camera to go
       const output = document.getElementById('video')
       output.srcObject = flow
       //to start media recorder to start
@@ -36,22 +38,23 @@ const useAudio = () => {
   
  
   function stopRecording(){
-    //stop recording
+    //stop recording video stream
     tracks.forEach((track) => {
       track.stop()
     })
-
+    
+    //stop recording mediaRecorder
     medRecorder.stop()
     medRecorder.onstop = function(e) {
-      // //gets the data and makes a new blob or binary large object we pass in the chunk array and define what kinda of data it is
-      // var blob = new Blob([chunk],{'type': 'video/webm; codecs=vp8'})
-      // //let blob = new MediaSource([chunk],{'type': 'video/webm; codecs=vp8'})
-      // //then we take the blob we created and we convert it to object url
-      // var vidUrl = window.URL.createObjectURL(blob);
-      // // then grab the video tag and we attach videourl to medSave src or video playback
-      const medSave = document.getElementById('video2')
-      medSave.src = ""
-      
+      console.log("we hit the stopped function horray")
+      //gets the data and makes a new blob or binary large object we pass in the chunk array and define what kinda of data it is
+      const blob = new Blob([chunk],{'type': 'video/webm'})
+      //const blob = new MediaSource([chunk],{'type': 'video/webm; codecs=vp8'})
+      //then we take the blob we created and we convert it to object url
+      const vidUrl = window.URL.createObjectURL(blob);
+      // then grab the video tag and we attach videourl to medSave src or video playback
+      setPlayBack(vidUrl)
+     
     }
   }
 
@@ -109,10 +112,9 @@ const useAudio = () => {
         }}
         autoPlay
         controls
-        > 
-        <source
-        id="video2">
-        </source> 
+        src={playBack}
+        id="video2"
+        >
         </video>
 
       <button
