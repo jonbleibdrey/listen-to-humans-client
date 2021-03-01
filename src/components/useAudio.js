@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 
 const useAudio = () => {
@@ -11,7 +11,6 @@ const useAudio = () => {
   const [medRecorder, setMedRecorder] = useState([])
   const [tracks, setTracks] = useState(null)
   const [playBack, setPlayBack] = useState(null)
-  
 
 
   function startRecording(){
@@ -26,13 +25,13 @@ const useAudio = () => {
       output.srcObject = flow
       //to start media recorder to start
       const rec = new MediaRecorder(flow)
-      rec.start()
       setMedRecorder(rec)
-      //the data recorded from video
+      rec.start()
       rec.ondataavailable = function(event) {
-        setChunk(event.data)
-
+        const blob = new Blob([event.data],{'type': 'video/webm'})
+        setChunk(blob)
       }})
+      //the data recorded from video
     .catch(console.error)
   }
   
@@ -48,12 +47,12 @@ const useAudio = () => {
     medRecorder.onstop = function(e) {
       console.log("we hit the stopped function horray")
       //gets the data and makes a new blob or binary large object we pass in the chunk array and define what kinda of data it is
-      const blob = new Blob([chunk],{'type': 'video/webm'})
+      setPlayBack(URL.createObjectURL(chunk))
       //const blob = new MediaSource([chunk],{'type': 'video/webm; codecs=vp8'})
       //then we take the blob we created and we convert it to object url
-      const vidUrl = window.URL.createObjectURL(blob);
+      // const vidUrl = URL.createObjectURL(blob);
+      // console.log("vid url ->",vidUrl)
       // then grab the video tag and we attach videourl to medSave src or video playback
-      setPlayBack(vidUrl)
      
     }
   }
