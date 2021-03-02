@@ -10,7 +10,7 @@ const useAudio = () => {
   const [chunk, setChunk] = useState(null)
   const [medRecorder, setMedRecorder] = useState([])
   const [tracks, setTracks] = useState(null)
-  const [playBack, setPlayBack] = useState(null)
+  const [playBack, setPlayBack] = useState(["blob:http://localhost:3000/59371ff9-c754-48af-a837-3b4ccdf5e5a4"])
 
 
   function startRecording(){
@@ -33,28 +33,21 @@ const useAudio = () => {
         setChunk(blob)
       }})
       //the data recorded from video
-    .catch(console.error)
-  }
-  
- 
-  function stopRecording(){
-    //stop recording video stream
-    tracks.forEach((track) => {
-      track.stop()
-    })
+      .catch(console.error)
+    }
     
-    //stop recording mediaRecorder
-    medRecorder.stop()
-    medRecorder.onstop = function(e) {
-      console.log("we hit the stopped function horray")
-      //gets the data and makes a new blob or binary large object we pass in the chunk array and define what kinda of data it is
-      setPlayBack(window.URL.createObjectURL(chunk))
     
-      //const blob = new MediaSource([chunk],{'type': 'video/webm; codecs=vp8'})
-      //then we take the blob we created and we convert it to object url
-      // const vidUrl = URL.createObjectURL(blob);
-  
-      // then grab the video tag and we attach videourl to medSave src or video playback
+    function stopRecording(){
+      //stop recording video stream
+      tracks.forEach((track) => {
+        track.stop()
+      })
+      //stop recording mediaRecorder
+      medRecorder.stop()
+      medRecorder.onstop = function(e) {
+        console.log("we hit the stopped function horray")
+        setPlayBack(window.URL.createObjectURL(chunk))
+      
      
     }
   }
