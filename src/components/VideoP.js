@@ -1,16 +1,67 @@
-import React from 'react'
+import React, { Component } from 'react'
+import MicRecorder from 'mic-recorder-to-mp3';
 
-const VideoP = () => {
-    return (
-        <div>
-            <video>
-                {/* <source src="https://storage.googleapis.com/web-dev-assets/video-and-source-tags/chrome.mp4" type="video/mp4">
-                </source> */}
-                <source src="" type="video/webm">
-                </source>
-            </video>
-        </div>
-    )
+const Mp3Recorder = new MicRecorder({ bitRate: 128 });
+
+class VideoP extends Component {
+    constructor(){
+        super()
+        this.state = {
+            isRecording: false,
+            blobURL: '',
+            isBlocked: false
+        }
+    }
+
+componentDidMount(){
+    navigator.getUserMedia({ audio: true },
+        () => {
+          console.log('Permission Granted');
+          this.setState({ isBlocked: false });
+        },
+        () => {
+          console.log('Permission Denied');
+          this.setState({ isBlocked: true })
+        },)
 }
 
-export default VideoP
+start = () => {
+    if (this.state.isBlocked) {
+      console.log('Permission Denied');
+    } else {
+      Mp3Recorder
+        .start()
+        .then(() => {
+          this.setState({ isRecording: true });
+        }).catch((e) => console.error(e));
+    }
+  };
+
+  stop = () => {
+    Mp3Recorder
+      .stop()
+      .getMp3()
+      .then(([buffer, blob]) => {
+        const blobURL = URL.createObjectURL(blob)
+        this.setState({ blobURL, isRecording: false });
+      }).catch((e) => console.log(e));
+  };
+
+
+    render() {
+        return (
+            <div>
+               <button onClick={this.start} disabled={this.state.isRecording} >
+                Record!
+               </button>
+
+               <button onClick={this.stop} disabled={!this.state.isRecording} >
+                   Stop!
+               </button>
+
+               <audio src={this.state.blobURL} controls="controls" />
+            </div>
+        )
+    }
+}
+export default VideoP;
