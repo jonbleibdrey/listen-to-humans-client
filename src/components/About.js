@@ -42,7 +42,7 @@ const About = () => {
         borderRadius:"20px"
       }}
     >
-        <h1> About page</h1>
+        <h1 className="animate__animated animate__bounce"> About page</h1>
         <p>
           {" "}
           This is a page to hear about some testimonials. We

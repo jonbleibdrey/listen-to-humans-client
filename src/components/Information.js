@@ -14,12 +14,12 @@ const Information = () => {
         borderRadius:"20px"
       }}
     >
-      <img
+      <img className="animate__animated animate__bounce"
         src="../logo192.png"
         alt="logo"
         style={{ width: "50px", height: "50px", float: "left" }}
       />
-      <h4>
+      <h4 className="animate__animated animate__bounce">
         This is a website to listen to audio books from all walks of life.
       </h4>
       <br />

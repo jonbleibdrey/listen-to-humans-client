@@ -67,7 +67,7 @@ export class AddReview extends Component {
             boxShadow:"10px 20px",
             borderRadius:"20px"
           }}>
-      <h1>Add your Review</h1>
+      <h1 className="animate__animated animate__bounce">Add your Review</h1>
       <p>
           We like to hear what other people like to say. We want it to stay freindly so please do so. here is the add review section
       </p>
