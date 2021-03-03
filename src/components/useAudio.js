@@ -1,55 +1,43 @@
 import React, { useState } from "react";
 
-
 const useAudio = () => {
-  
   const [media] = useState({
     audio: true,
-    video: true
-  })
-  const [chunk, setChunk] = useState(null)
-  const [medRecorder, setMedRecorder] = useState([])
-  const [tracks, setTracks] = useState(null)
-  const [playBack, setPlayBack] = useState(["blob:http://localhost:3000/59371ff9-c754-48af-a837-3b4ccdf5e5a4"])
+    video: true,
+  });
 
+  const [playBack, setPlayBack] = useState(null);
 
-  function startRecording(){
-    console.log("starting the recording")
+  function startRecording() {
+    console.log("starting the recording");
+    const output = document.getElementById("video");
+    const start = document.getElementById("start");
+    const stop = document.getElementById("stop");
+    const chunks = [];
 
-    navigator.mediaDevices.getUserMedia(media)
-    .then(flow => {
-      //sets tracks so we can stop them
-      setTracks(flow.getTracks())
-      //to get camera to go
-      const output = document.getElementById('video')
-      output.srcObject = flow
-      //to start media recorder to start
-      const rec = new MediaRecorder(flow)
-      setMedRecorder(rec)
-      rec.start()
-      rec.ondataavailable = function(event) {
-        const chunk = [event.data]
-        const blob = new Blob(chunk,{'type': 'video/webm'})
-        setChunk(blob)
-      }})
-      //the data recorded from video
-      .catch(console.error)
-    }
-    
-    
-    function stopRecording(){
-      //stop recording video stream
-      tracks.forEach((track) => {
-        track.stop()
+    navigator.mediaDevices
+      .getUserMedia(media)
+      .then((flow) => {
+        output.srcObject = flow;
+        const rec = new MediaRecorder(flow);
+        rec.start();
+        console.log("start happened", rec.state);
+        rec.ondataavailable = function(event) {
+          chunks.push(event.data);
+        };
+
+        stop.addEventListener("click", (ev) => {
+          rec.stop();
+          console.log("stop happened", rec.state);
+          rec.onstop = function(event) {
+            const blob = new Blob(chunks, { type: "video/webm" });
+            let videoUrl = window.URL.createObjectURL(blob);
+            setPlayBack(videoUrl);
+          };
+        });
       })
-      //stop recording mediaRecorder
-      medRecorder.stop()
-      medRecorder.onstop = function(e) {
-        console.log("we hit the stopped function horray")
-        setPlayBack(window.URL.createObjectURL(chunk))
-      
-     
-    }
+      //the data recorded from video
+      .catch(console.error);
   }
 
   return (
@@ -68,7 +56,6 @@ const useAudio = () => {
           borderRadius: "20px",
         }}
         id="start"
-        onClick={startRecording}
       >
         click to activate recorder
       </button>
@@ -108,8 +95,7 @@ const useAudio = () => {
         controls
         src={playBack}
         id="video2"
-        >
-        </video>
+      ></video>
 
       <button
         style={{
@@ -125,7 +111,6 @@ const useAudio = () => {
           borderRadius: "20px",
         }}
         id="stop"
-        onClick={stopRecording}
       >
         click to stop recording completely
       </button>
