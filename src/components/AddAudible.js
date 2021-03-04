@@ -11,7 +11,7 @@ import {
   Col,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-//import UseAudio from "./useAudio";
+import DropZone from "./DropZone";
 import VideoP from "./VideoP";
 
 export class AddAudible extends Component {
@@ -114,6 +114,7 @@ export class AddAudible extends Component {
             </Col>
           </Row>
         </Container>
+        <DropZone/>
         <div style={{
             margin: "40px",
             padding: "3%",
