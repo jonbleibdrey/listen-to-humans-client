@@ -1,26 +1,65 @@
-import React from 'react'
+import React, {useMemo} from 'react'
 import {useDropzone} from 'react-dropzone';
 
-const DropZone = () => {
-    const {acceptedFiles, getRootProps, getInputProps} = useDropzone();
+
     
-      const files = acceptedFiles.map(file => (
-        <li key={file.name}>
-          {file.name} - {file.size} bytes
-        </li>
-      ));
+const baseStyle = {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: '20px',
+    borderWidth: 2,
+    borderRadius: 2,
+    borderColor: '#eeeeee',
+    borderStyle: 'dashed',
+    backgroundColor: '#fafafa',
+    color: '#bdbdbd',
+    outline: 'none',
+    transition: 'border .24s ease-in-out'
+  };
+  
+  const activeStyle = {
+    borderColor: '#2196f3'
+  };
+  
+  const acceptStyle = {
+    borderColor: '#00e676'
+  };
+  
+  const rejectStyle = {
+    borderColor: '#ff1744'
+  };
+  
+  function DropZone(props) {
+    const {
+      getRootProps,
+      getInputProps,
+      isDragActive,
+      isDragAccept,
+      isDragReject
+    } = useDropzone({accept: 'image/*'});
+  
+    const style = useMemo(() => ({
+      ...baseStyle,
+      ...(isDragActive ? activeStyle : {}),
+      ...(isDragAccept ? acceptStyle : {}),
+      ...(isDragReject ? rejectStyle : {})
+    }), [
+      isDragActive,
+      isDragReject,
+      isDragAccept
+    ]);
+  
     return (
-        <section className="container">
-      <div {...getRootProps({className: 'dropzone disabled'})}>
-        <input {...getInputProps()} />
-        <p>Drag 'n' drop some files here, or click to select files</p>
+      <div className="container">
+        <div {...getRootProps({style})}>
+          <input {...getInputProps()} />
+          <p>Drag 'n' drop some files here, or click to select files</p>
+        </div>
       </div>
-      <aside>
-        <h4>Files</h4>
-        <ul>{files}</ul>
-      </aside>
-    </section>
-    )
-}
+    );
+  }
+
 
 export default DropZone
