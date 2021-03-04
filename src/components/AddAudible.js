@@ -60,7 +60,7 @@ export class AddAudible extends Component {
             borderRadius:"20px"
           }}
         >
-          <h1 className="animate__animated animate__bounce">Add Audible</h1>
+          <h1 className="animate__animated animate__bounceInLeft">Add Audible</h1>
           <p>
             {" "}
             Here we clearly, add new audibles. its simple you can either import
@@ -127,7 +127,7 @@ export class AddAudible extends Component {
             boxShadow:"5px 10px",
             borderRadius:"20px"
           }}>
-        <h1 className="animate__animated animate__bounce">Record audio</h1>
+        <h1 className="animate__animated animate__bounceInRight">Record audio</h1>
           <p>
             {" "}
             Here we can record our book, then simply add to the new audible. This feature is coming soon!

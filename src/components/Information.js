@@ -14,14 +14,16 @@ const Information = () => {
         borderRadius:"20px"
       }}
     >
-      <img className="animate__animated animate__bounce"
+      <div>
+      <img className="animate__animated animate__tada"
         src="../logo192.png"
         alt="logo"
-        style={{ width: "50px", height: "50px", float: "left" }}
+        style={{ width: "50px", height: "50px", float: "left", margin: "20px", marginRight:"50px" }}
       />
-      <h4 className="animate__animated animate__bounce">
-        This is a website to listen to audio books from all walks of life.
-      </h4>
+      </div>
+      <h2 className="animate__animated animate__backInDown">
+        A website to listen and create audio books, even if you don't sound like morgan freeman.
+      </h2>
       <br />
       <p>
         if you're a college student trying to find a book, if your a doctor
