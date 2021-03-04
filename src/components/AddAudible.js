@@ -11,8 +11,8 @@ import {
   Col,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import DropZone from "./DropZone";
 import VideoP from "./VideoP";
+//import DropZone from "./DropZone";
 
 export class AddAudible extends Component {
   state = {
@@ -20,6 +20,7 @@ export class AddAudible extends Component {
     by: "",
     language: "",
     audio_file: "",
+    track:""
   };
 
   handleOnChange = (e) => {
@@ -29,8 +30,21 @@ export class AddAudible extends Component {
     });
   };
 
+  handleFileUpload = (e) => {
+    this.setState({
+      image: e.target.files[0]
+   })
+  }
+
   handleOnSubmit = (e) => {
     e.preventDefault();
+    const formData = new FormData()
+    
+    for (const property in this.state) {
+      formData.append(
+        property, this.state[property]
+      )}
+
     axios
       .post("http://localhost:3001/audibles", {
         title: this.state.title,
@@ -42,6 +56,7 @@ export class AddAudible extends Component {
       .then((data) => this.props.history.push("/"))
       .catch((err) => console.log(err));
   };
+
 
   render() {
     return (
@@ -100,11 +115,20 @@ export class AddAudible extends Component {
                   <FormLabel> Audible: </FormLabel>
                   <FormControl
                     type="text"
-                    placeholder="Audio file here"
+                    placeholder="Delete me after track works"
                     value={this.state.audio_file}
                     onChange={this.handleOnChange}
                     name="audio_file"
-                  ></FormControl>
+                    ></FormControl>
+                  <FormLabel> Tracks: </FormLabel>
+                  <FormControl
+                    type="file"
+                    accept=".mp3,audio/*"
+                    placeholder="Audio file here"
+                    value={this.state.track}
+                    onChange={this.handleFileUpload}
+                    name="audio_file"
+                    ></FormControl>
                 </FormGroup>
                 <Button type="submit"> Submit </Button>
                 <Link to="/" className="btn btn-danger ml-2">
@@ -114,26 +138,26 @@ export class AddAudible extends Component {
             </Col>
           </Row>
         </Container>
-        <DropZone/>
         <div style={{
-            margin: "40px",
-            padding: "3%",
-            marginLeft: "20%",
-            marginBottom:"9%" ,
-            width: "60%",
-            height: "100%",
-            backgroundColor: "white",
-            border: "1px solid gray",
-            fontFamily: "monospace",
-            boxShadow:"5px 10px",
-            borderRadius:"20px"
-          }}>
+          margin: "40px",
+          padding: "3%",
+          marginLeft: "20%",
+          marginBottom:"9%" ,
+          width: "60%",
+          height: "100%",
+          backgroundColor: "white",
+          border: "1px solid gray",
+          fontFamily: "monospace",
+          boxShadow:"5px 10px",
+          borderRadius:"20px"
+        }}>
         <h1 className="animate__animated animate__bounceInRight">Record audio</h1>
           <p>
             {" "}
             Here we can record our book, then simply add to the new audible. This feature is coming soon!
           </p>
         <VideoP/>
+        {/* <DropZone/> */}
         </div>
       </>
     );

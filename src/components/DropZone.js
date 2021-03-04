@@ -2,14 +2,13 @@ import React, {useMemo} from 'react'
 import {useDropzone} from 'react-dropzone';
 
 
-    
 const baseStyle = {
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     padding: '20px',
-    borderWidth: 2,
+    borderWidth: 3,
     borderRadius: 2,
     borderColor: '#000',
     borderStyle: 'dashed',
@@ -30,6 +29,7 @@ const baseStyle = {
   const rejectStyle = {
     borderColor: '#ff1744'
   };
+
   
   function DropZone(props) {
     const {
@@ -38,8 +38,10 @@ const baseStyle = {
       isDragActive,
       isDragAccept,
       isDragReject,
-      acceptedFiles
-    } = useDropzone({accept: 'audio/*'});
+      acceptedFiles,
+      open
+    } = useDropzone({accept: 'audio/*', noClick: true,
+    noKeyboard: true});
   
     const style = useMemo(() => ({
       ...baseStyle,
@@ -62,9 +64,13 @@ const baseStyle = {
       <div className="container">
         <div {...getRootProps({style})}>
           <input {...getInputProps()} />
-          <p>Drag 'n' drop some files here, or click to select files</p>
+          <p>Drag 'n' drop file here</p>
+          <button type="button" onClick={open}>
+          Open File 
+        </button>
         </div>
         <aside>
+            <br/>
         <h4>Files</h4>
         <ul>{files}</ul>
       </aside>
