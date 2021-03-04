@@ -11,7 +11,7 @@ const baseStyle = {
     padding: '20px',
     borderWidth: 2,
     borderRadius: 2,
-    borderColor: '#eeeeee',
+    borderColor: '#000',
     borderStyle: 'dashed',
     backgroundColor: '#fafafa',
     color: '#bdbdbd',
@@ -37,8 +37,9 @@ const baseStyle = {
       getInputProps,
       isDragActive,
       isDragAccept,
-      isDragReject
-    } = useDropzone({accept: 'image/*'});
+      isDragReject,
+      acceptedFiles
+    } = useDropzone({accept: 'audio/*'});
   
     const style = useMemo(() => ({
       ...baseStyle,
@@ -51,12 +52,22 @@ const baseStyle = {
       isDragAccept
     ]);
   
+  const files = acceptedFiles.map(file => (
+    <li key={file.path}>
+      {file.path} - {file.size} bytes
+    </li>
+  ));
+  
     return (
       <div className="container">
         <div {...getRootProps({style})}>
           <input {...getInputProps()} />
           <p>Drag 'n' drop some files here, or click to select files</p>
         </div>
+        <aside>
+        <h4>Files</h4>
+        <ul>{files}</ul>
+      </aside>
       </div>
     );
   }
