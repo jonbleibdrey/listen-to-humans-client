@@ -11,7 +11,8 @@ import {
   Col,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import VideoP from "./VideoP";
+import AudioP from "./AudioP";
+
 //import DropZone from "./DropZone";
 
 export class AddAudible extends Component {
@@ -31,28 +32,38 @@ export class AddAudible extends Component {
   };
 
   handleFileUpload = (e) => {
+    console.log("handle file", e)
     this.setState({
-      image: e.target.files[0]
+      track: e.target.files[0]
    })
   }
 
   handleOnSubmit = (e) => {
     e.preventDefault();
+    console.log(this.state.track)
+  
+
     const formData = new FormData()
-    
-    for (const property in this.state) {
-      formData.append(
-        property, this.state[property]
-      )}
+
+    formData.append('title', this.state.title);
+    formData.append('by', this.state.by);
+    formData.append('language', this.state.language);
+    formData.append('audio_file', this.state.audio_file);
+    formData.append('track', this.state.track);
+
+    // let data = {
+    //   title: this.state.title,
+    //   by: this.state.by,
+    //   language: this.state.language,
+    //   audio_file: this.state.audio_file,
+    //   track: this.state.track
+    // }
+    // formData.append('audible', JSON.stringify(data))
+
 
     axios
-      .post("http://localhost:3001/audibles", {
-        title: this.state.title,
-        by: this.state.by,
-        language: this.state.language,
-        audio_file: this.state.audio_file,
-      })
-      .then((res) => console.log(res))
+      .post("http://localhost:3001/audibles", formData)
+      .then((res) => console.log(res,formData))
       .then((data) => this.props.history.push("/"))
       .catch((err) => console.log(err));
   };
@@ -121,14 +132,14 @@ export class AddAudible extends Component {
                     name="audio_file"
                     ></FormControl>
                   <FormLabel> Tracks: </FormLabel>
-                  <FormControl
-                    type="file"
+                  <Form.File id="formcheck-api-regular">
+                <Form.File.Input  type="file"
                     accept=".mp3,audio/*"
                     placeholder="Audio file here"
-                    value={this.state.track}
+
                     onChange={this.handleFileUpload}
-                    name="audio_file"
-                    ></FormControl>
+                    name="track"/>
+                </Form.File>
                 </FormGroup>
                 <Button type="submit"> Submit </Button>
                 <Link to="/" className="btn btn-danger ml-2">
@@ -156,7 +167,7 @@ export class AddAudible extends Component {
             {" "}
             Here we can record our book, then simply add to the new audible. This feature is coming soon!
           </p>
-        <VideoP/>
+        <AudioP/>
         {/* <DropZone/> */}
         </div>
       </>

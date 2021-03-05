@@ -3,7 +3,7 @@ import MicRecorder from 'mic-recorder-to-mp3';
 
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
 
-class VideoP extends Component {
+class AudioP extends Component {
     constructor(){
         super()
         this.state = {
@@ -16,11 +16,11 @@ class VideoP extends Component {
 componentDidMount(){
     navigator.getUserMedia({ audio: true },
         () => {
-          console.log('Permission Granted');
+          console.log('Audio Granted');
           this.setState({ isBlocked: false });
         },
         () => {
-          console.log('Permission Denied');
+          console.log('Audio Denied');
           this.setState({ isBlocked: true })
         },)
 }
@@ -64,4 +64,4 @@ start = () => {
         )
     }
 }
-export default VideoP;
+export default AudioP;
