@@ -74,7 +74,7 @@ export class EditReview extends Component {
             boxShadow:"10px 20px",
             borderRadius:"20px"
           }}>
-      <h1>Edit Review</h1>
+      <h1 style={{marginLeft:"35%"}}>Edit Review</h1>
       </div>
       <Container style={{  margin: "5%", marginLeft: "380px" 
       }}>

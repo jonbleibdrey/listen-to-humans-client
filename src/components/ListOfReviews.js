@@ -7,11 +7,12 @@ const ListOfReview = ({ id, title, description, rating, audibleId }) => {
     <Col xs={12} lg={4}>
       <Card
         style={{
-          display: "flex",
-          margin: "40px",
-          marginRight: "100px",
-          width: "90%",
-          height: "45vmin",
+          flex: 1,
+            display: "inline-block",
+            margin: "40px",
+            marginRight: "100px",
+            width: "90%",
+            height: "auto",
         }}
       >
         <Card.Body className="card text-center">
@@ -34,13 +35,13 @@ const ListOfReview = ({ id, title, description, rating, audibleId }) => {
             <br />
           </Card.Text>
           <hr />
-        </Card.Body>
         <Link
           className="btn btn-warning mr-1 btn-lg btn-block"
           to={`/editReview/${id}`}
         >
           edit
         </Link>
+        </Card.Body>
       </Card>
     </Col>
   );
