@@ -51,11 +51,11 @@ export class AddAudible extends Component {
     //formData.append("audible", JSON.stringify(data));
     const formData = new FormData();
 
-    formData.append('audible[title]', this.state.title);
-    formData.append('audible[by]', this.state.by);
-    formData.append('audible[language]', this.state.language);
-    formData.append('audible[audio_file]', this.state.audio_file);
-    formData.append('audible[track]', this.state.track);
+    formData.append("audible[title]", this.state.title);
+    formData.append("audible[by]", this.state.by);
+    formData.append("audible[language]", this.state.language);
+    formData.append("audible[audio_file]", this.state.audio_file);
+    formData.append("audible[track]", this.state.track);
 
     axios
       .post("http://localhost:3001/audibles", formData)

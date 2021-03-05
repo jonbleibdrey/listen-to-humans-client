@@ -8,26 +8,21 @@ const NavBar = () => {
       expand="lg"
       bg="dark"
       variant="dark"
-      style={{padding:"50px"}}
-      
+      style={{ padding: "50px" }}
     >
-      <ReactBootStrap.Navbar.Brand href="/" >
-      <img
-        alt=""
-        src="/logo192.png"
-        width="30"
-        height="30"
-        align="left"
-        className="col-sm-3"
-      />
-        <h4>
-          Read By Humans.
-          </h4>
-          
-        
+      <ReactBootStrap.Navbar.Brand href="/">
+        <img
+          alt=""
+          src="/logo192.png"
+          width="30"
+          height="30"
+          align="left"
+          className="col-sm-3"
+        />
+        <h4>Read By Humans.</h4>
       </ReactBootStrap.Navbar.Brand>
       <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav" >
+      <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
         <ReactBootStrap.Nav className="mr-auto">
           <ReactBootStrap.NavDropdown title="More" id="collasible-nav-dropdown">
             <ReactBootStrap.NavDropdown.Item href="/">

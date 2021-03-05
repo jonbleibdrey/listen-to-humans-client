@@ -11,18 +11,26 @@ const Information = () => {
         border: "1px solid gray",
         fontFamily: "monospace",
         boxShadow: "10px 20px",
-        borderRadius:"20px"
+        borderRadius: "20px",
       }}
     >
       <div>
-      <img className="animate__animated animate__bounceInDown"
-        src="../logo192.png"
-        alt="logo"
-        style={{ width: "50px", height: "50px", float: "left", margin: "20px", marginRight:"50px" }}
-      />
+        <img
+          className="animate__animated animate__bounceInDown"
+          src="../logo192.png"
+          alt="logo"
+          style={{
+            width: "50px",
+            height: "50px",
+            float: "left",
+            margin: "20px",
+            marginRight: "50px",
+          }}
+        />
       </div>
       <h2 className="animate__animated animate__bounceInDown">
-        A website to listen and create audio books, even if you don't sound like morgan freeman.
+        A website to listen and create audio books, even if you don't sound like
+        morgan freeman.
       </h2>
       <br />
       <p>

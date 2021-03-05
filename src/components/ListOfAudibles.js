@@ -32,26 +32,23 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
               Audio file: {audio}
             </Card.Text>
             <hr />
-              <h3>Review's</h3>
-              <Card.Body>
-                {all.reviews.map((review) => (
-                  <Link
-                    style={{ color: "black" }}
-                    key={review.id}
-                    to={"/review"}
-                  >
-                    <ul>
-                      <li>{review.title}</li>
-                    </ul>
-                  </Link>
-                ))}
-          <Link style={{display: "inline-block"}}
-            className="btn btn-warning mr-1 btn-lg btn-block"
-            to={`/edit/${id}`}
-          >
-            edit
-          </Link>
-              </Card.Body>
+            <h3>Review's</h3>
+            <Card.Body>
+              {all.reviews.map((review) => (
+                <Link style={{ color: "black" }} key={review.id} to={"/review"}>
+                  <ul>
+                    <li>{review.title}</li>
+                  </ul>
+                </Link>
+              ))}
+              <Link
+                style={{ display: "inline-block" }}
+                className="btn btn-warning mr-1 btn-lg btn-block"
+                to={`/edit/${id}`}
+              >
+                edit
+              </Link>
+            </Card.Body>
           </Card.Body>
         </Card>
       </Accordion>

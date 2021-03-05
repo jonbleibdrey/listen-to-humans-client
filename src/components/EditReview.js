@@ -18,28 +18,27 @@ export class EditReview extends Component {
     description: "",
     rating: "",
   };
-  
-  
+
   componentDidMount() {
-      const id = this.props.match.params.id;
-      axios
+    const id = this.props.match.params.id;
+    axios
       .get(`http://localhost:3001/reviews/${id}`)
       .then((resp) => resp.data)
       .then((data) =>
-      this.setState({
+        this.setState({
           title: data.title,
           description: data.description,
           rating: data.rating,
         })
-        );
-    }
-    
-    handleOnChange = (e) => {
-      const { name, value } = e.target;
-      this.setState({
-        [name]: value,
-      });
-    };
+      );
+  }
+
+  handleOnChange = (e) => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value,
+    });
+  };
   handleOnSubmit = (e) => {
     e.preventDefault();
     const id = this.props.match.params.id;
@@ -63,7 +62,8 @@ export class EditReview extends Component {
   render() {
     return (
       <>
-      <div style={{
+        <div
+          style={{
             margin: "35px",
             padding: "3%",
             marginLeft: "20%",
@@ -71,50 +71,56 @@ export class EditReview extends Component {
             backgroundColor: "white",
             border: "1px solid gray",
             fontFamily: "monospace",
-            boxShadow:"10px 20px",
-            borderRadius:"20px"
-          }}>
-      <h1 style={{marginLeft:"35%"}}>Edit Review</h1>
-      </div>
-      <Container style={{  margin: "5%", marginLeft: "380px" 
-      }}>
-        <Row >
-          <Col xs={12} >
-        <Form onSubmit={this.handleOnSubmit}>
-          <FormGroup>
-            <FormLabel> Title: </FormLabel>
-            <FormControl
-              type="text"
-              placeholder="Enter Title"
-              value={this.state.title}
-              onChange={this.handleOnChange}
-              name="title"
-            ></FormControl>
-            <FormLabel> description: </FormLabel>
-            <FormControl
-              type="text"
-              placeholder="description"
-              value={this.state.description}
-              onChange={this.handleOnChange}
-              name="description"
-            ></FormControl>
-            <FormLabel> rating: </FormLabel>
-            <FormControl
-              type="text"
-              placeholder="rating"
-              value={this.state.rating}
-              onChange={this.handleOnChange}
-              name="rating"
-            ></FormControl>
-          </FormGroup>
-          <Button type="submit"> Edit </Button>
-          <Button onClick={this.handleOnDelete} className="btn btn-danger ml-2"> Delete </Button>
-          <Link to="/review" className="btn btn-danger ml-2">
-            Cancel
-          </Link>
-        </Form>
-        </Col>
-        </Row>
+            boxShadow: "10px 20px",
+            borderRadius: "20px",
+          }}
+        >
+          <h1 style={{ marginLeft: "35%" }}>Edit Review</h1>
+        </div>
+        <Container style={{ margin: "5%", marginLeft: "380px" }}>
+          <Row>
+            <Col xs={12}>
+              <Form onSubmit={this.handleOnSubmit}>
+                <FormGroup>
+                  <FormLabel> Title: </FormLabel>
+                  <FormControl
+                    type="text"
+                    placeholder="Enter Title"
+                    value={this.state.title}
+                    onChange={this.handleOnChange}
+                    name="title"
+                  ></FormControl>
+                  <FormLabel> description: </FormLabel>
+                  <FormControl
+                    type="text"
+                    placeholder="description"
+                    value={this.state.description}
+                    onChange={this.handleOnChange}
+                    name="description"
+                  ></FormControl>
+                  <FormLabel> rating: </FormLabel>
+                  <FormControl
+                    type="text"
+                    placeholder="rating"
+                    value={this.state.rating}
+                    onChange={this.handleOnChange}
+                    name="rating"
+                  ></FormControl>
+                </FormGroup>
+                <Button type="submit"> Edit </Button>
+                <Button
+                  onClick={this.handleOnDelete}
+                  className="btn btn-danger ml-2"
+                >
+                  {" "}
+                  Delete{" "}
+                </Button>
+                <Link to="/review" className="btn btn-danger ml-2">
+                  Cancel
+                </Link>
+              </Form>
+            </Col>
+          </Row>
         </Container>
       </>
     );

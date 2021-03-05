@@ -30,11 +30,13 @@ const Review = () => {
           backgroundColor: "white",
           border: "1px solid gray",
           fontFamily: "monospace",
-          boxShadow:"10px 20px",
-          borderRadius:"20px"
+          boxShadow: "10px 20px",
+          borderRadius: "20px",
         }}
       >
-        <h2 className="animate__animated animate__bounceInRight" >Review section</h2>
+        <h2 className="animate__animated animate__bounceInRight">
+          Review section
+        </h2>
         <p>
           We want the books to be great and readable. so we set up a system to
           do just that. Plain and simple nyou can review any book you want. You

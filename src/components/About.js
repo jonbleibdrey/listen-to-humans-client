@@ -32,77 +32,67 @@ const About = () => {
 
   return (
     <>
-    <Jumbotron
-      style={{
-        margin: "40px",
-        padding:"2%",
-        marginLeft: "20%",
-        width: "60%",
-        height: "auto",
-        backgroundColor: "white",
-        border: "1px solid gray",
-        fontFamily:"monospace",
-        boxShadow:"10px 20px",
-        borderRadius:"20px",
-      }}
-    >
-      <div >
-        <h1 className="animate__animated animate__bounceInLeft" > About page</h1>
-        <p>
-          {" "}
-          This is a page to hear about some testimonials. We
-          differ from audible in that you the ordinary user could take a book,
-          read it, and record it. Then share it with other
-          people. where i see this shining is college students, It can be
-          challenging sometimes to find certain books in audible form. Dont take it from me read below.{" "}
-        </p>
-
+      <Jumbotron
+        style={{
+          margin: "40px",
+          padding: "2%",
+          marginLeft: "20%",
+          width: "60%",
+          height: "auto",
+          backgroundColor: "white",
+          border: "1px solid gray",
+          fontFamily: "monospace",
+          boxShadow: "10px 20px",
+          borderRadius: "20px",
+        }}
+      >
+        <div>
+          <h1 className="animate__animated animate__bounceInLeft">
+            {" "}
+            About page
+          </h1>
+          <p>
+            {" "}
+            This is a page to hear about some testimonials. We differ from
+            audible in that you the ordinary user could take a book, read it,
+            and record it. Then share it with other people. where i see this
+            shining is college students, It can be challenging sometimes to find
+            certain books in audible form. Dont take it from me read below.{" "}
+          </p>
+        </div>
+      </Jumbotron>
+      <div style={{ margin: "10%", marginTop: "1%" }}>
+        {people.map((peeps) => (
+          <Card
+            key={peeps.id}
+            style={{
+              display: "flex",
+              margin: "50px",
+              marginLeft: "19%",
+              marginBottom: "25px",
+              width: "60%",
+              height: "25%",
+            }}
+          >
+            <Card.Body className="card text-center">
+              <Card.Img src={peeps.image} style={{ variant: "top" }} />
+              <hr />
+              <Card.Title>
+                <h1>Name: {peeps.name}</h1>
+              </Card.Title>
+              <Card.Subtitle className="mb-2 text-muted">
+                <h4>occupation: {peeps.occupation}</h4>
+              </Card.Subtitle>
+              <Card.Text>
+                <h6>Testimonial:</h6>
+                <p>{peeps.bio}</p>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        ))}
       </div>
-          </Jumbotron>
-       <div style={{margin:"10%", marginTop:"1%"}}>
-          {people.map((peeps) => (
-            <Card
-              key={peeps.id}
-              style={{
-                display: "flex",
-                margin: "50px",
-                marginLeft:"19%",
-                marginBottom:"25px",
-                width: "60%",
-                height: "25%"
-                
-              }}
-              
-            >
-              <Card.Body className="card text-center">
-              <Card.Img src={peeps.image}  style={{variant:"top"}}/>
-              <hr/>
-                <Card.Title> 
-                  <h1>
-                  Name: {peeps.name}
-                  </h1>
-                  </Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                  <h4>
-                  occupation: {peeps.occupation}
-                  </h4>
-                </Card.Subtitle>
-                <Card.Text>
-                  <h6>
-                  Testimonial: 
-                  </h6>
-                  <p>
-
-                  {peeps.bio}
-                  </p>
-                  </Card.Text>
-              </Card.Body>  
-            </Card>
-          ))}
-      </div>
-      </>
+    </>
   );
 };
 
 export default About;
-
