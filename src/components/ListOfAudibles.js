@@ -9,12 +9,12 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
       <Accordion defaultActiveKey="0">
         <Card
           style={{
-            display: "flex",
+            flex: 1,
+            display: "inline-block",
             margin: "40px",
             marginRight: "100px",
-            marginBottom: "20%",
             width: "90%",
-            height: "45vmin",
+            height: "auto",
           }}
         >
           <Card.Body className="card text-center">
@@ -45,14 +45,14 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
                     </ul>
                   </Link>
                 ))}
-              </Card.Body>
-          </Card.Body>
-          <Link
+          <Link style={{display: "inline-block"}}
             className="btn btn-warning mr-1 btn-lg btn-block"
             to={`/edit/${id}`}
           >
             edit
           </Link>
+              </Card.Body>
+          </Card.Body>
         </Card>
       </Accordion>
     </Col>
