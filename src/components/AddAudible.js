@@ -21,7 +21,7 @@ export class AddAudible extends Component {
     by: "",
     language: "",
     audio_file: "",
-    track:""
+    track: "",
   };
 
   handleOnChange = (e) => {
@@ -32,42 +32,37 @@ export class AddAudible extends Component {
   };
 
   handleFileUpload = (e) => {
-    console.log("handle file", e)
     this.setState({
-      track: e.target.files[0]
-   })
-  }
+      track: e.target.files[0],
+    });
+  };
 
   handleOnSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.track)
-  
-
-    const formData = new FormData()
-
-    formData.append('title', this.state.title);
-    formData.append('by', this.state.by);
-    formData.append('language', this.state.language);
-    formData.append('audio_file', this.state.audio_file);
-    formData.append('track', this.state.track);
+    console.log(this.state.track);
 
     // let data = {
     //   title: this.state.title,
     //   by: this.state.by,
     //   language: this.state.language,
     //   audio_file: this.state.audio_file,
-    //   track: this.state.track
-    // }
-    // formData.append('audible', JSON.stringify(data))
+    //   track: this.state.track,
+    // };
+    //formData.append("audible", JSON.stringify(data));
+    const formData = new FormData();
 
+    formData.append('audible[title]', this.state.title);
+    formData.append('audible[by]', this.state.by);
+    formData.append('audible[language]', this.state.language);
+    formData.append('audible[audio_file]', this.state.audio_file);
+    formData.append('audible[track]', this.state.track);
 
     axios
       .post("http://localhost:3001/audibles", formData)
-      .then((res) => console.log(res,formData))
+      .then((res) => console.log(res, formData))
       .then((data) => this.props.history.push("/"))
       .catch((err) => console.log(err));
   };
-
 
   render() {
     return (
@@ -82,11 +77,13 @@ export class AddAudible extends Component {
             backgroundColor: "white",
             border: "1px solid gray",
             fontFamily: "monospace",
-            boxShadow:"10px 20px",
-            borderRadius:"20px"
+            boxShadow: "10px 20px",
+            borderRadius: "20px",
           }}
         >
-          <h1 className="animate__animated animate__bounceInLeft">Add Audible</h1>
+          <h1 className="animate__animated animate__bounceInLeft">
+            Add Audible
+          </h1>
           <p>
             {" "}
             Here we clearly, add new audibles. its simple you can either import
@@ -130,16 +127,17 @@ export class AddAudible extends Component {
                     value={this.state.audio_file}
                     onChange={this.handleOnChange}
                     name="audio_file"
-                    ></FormControl>
+                  ></FormControl>
                   <FormLabel> Tracks: </FormLabel>
-                  <Form.File id="formcheck-api-regular">
-                <Form.File.Input  type="file"
-                    accept=".mp3,audio/*"
-                    placeholder="Audio file here"
-
-                    onChange={this.handleFileUpload}
-                    name="track"/>
-                </Form.File>
+                  <Form.File>
+                    <Form.File.Input
+                      type="file"
+                      accept=".mp3,audio/*"
+                      placeholder="Audio file here"
+                      onChange={this.handleFileUpload}
+                      name="track"
+                    />
+                  </Form.File>
                 </FormGroup>
                 <Button type="submit"> Submit </Button>
                 <Link to="/" className="btn btn-danger ml-2">
@@ -149,26 +147,31 @@ export class AddAudible extends Component {
             </Col>
           </Row>
         </Container>
-        <div style={{
-          margin: "40px",
-          padding: "3%",
-          marginLeft: "20%",
-          marginBottom:"9%" ,
-          width: "60%",
-          height: "100%",
-          backgroundColor: "white",
-          border: "1px solid gray",
-          fontFamily: "monospace",
-          boxShadow:"5px 10px",
-          borderRadius:"20px"
-        }}>
-        <h1 className="animate__animated animate__bounceInRight">Record audio</h1>
+        <div
+          style={{
+            margin: "40px",
+            padding: "3%",
+            marginLeft: "20%",
+            marginBottom: "9%",
+            width: "60%",
+            height: "100%",
+            backgroundColor: "white",
+            border: "1px solid gray",
+            fontFamily: "monospace",
+            boxShadow: "5px 10px",
+            borderRadius: "20px",
+          }}
+        >
+          <h1 className="animate__animated animate__bounceInRight">
+            Record audio
+          </h1>
           <p>
             {" "}
-            Here we can record our book, then simply add to the new audible. This feature is coming soon!
+            Here we can record our book, then simply add to the new audible.
+            This feature is coming soon!
           </p>
-        <AudioP/>
-        {/* <DropZone/> */}
+          <AudioP />
+          {/* <DropZone/> */}
         </div>
       </>
     );
