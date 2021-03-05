@@ -32,15 +32,7 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
               Audio file: {audio}
             </Card.Text>
             <hr />
-
-            <Accordion.Toggle as={Card.Header} eventKey="1">
               <h3>Review's</h3>
-            </Accordion.Toggle>
-
-            <Accordion.Collapse
-              style={{ backgroundColor: "#fffbfff", zIndex:"revert" }}
-              eventKey="1"
-            >
               <Card.Body>
                 {all.reviews.map((review) => (
                   <Link
@@ -54,7 +46,6 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
                   </Link>
                 ))}
               </Card.Body>
-            </Accordion.Collapse>
           </Card.Body>
           <Link
             className="btn btn-warning mr-1 btn-lg btn-block"
