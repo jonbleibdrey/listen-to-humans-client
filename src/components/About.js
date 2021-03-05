@@ -6,6 +6,7 @@ const About = () => {
   const [people] = useState([
     {
       id: 1,
+      image: "../face2.jpg",
       name: "tiffany",
       occupation: "student",
       bio:
@@ -13,6 +14,7 @@ const About = () => {
     },
     {
       id: 2,
+      image: "../face1.jpg",
       name: "franky",
       occupation: "lawyer",
       bio:
@@ -20,6 +22,7 @@ const About = () => {
     },
     {
       id: 3,
+      image: "../face3.jpg",
       name: "lang",
       occupation: "doctor",
       bio:
@@ -32,17 +35,19 @@ const About = () => {
     <Jumbotron
       style={{
         margin: "40px",
+        padding:"2%",
         marginLeft: "20%",
         width: "60%",
-        height: "100%",
+        height: "auto",
         backgroundColor: "white",
         border: "1px solid gray",
         fontFamily:"monospace",
         boxShadow:"10px 20px",
-        borderRadius:"20px"
+        borderRadius:"20px",
       }}
     >
-        <h1 className="animate__animated animate__bounceInDown"> About page</h1>
+      <div >
+        <h1 className="animate__animated animate__bounceInLeft" > About page</h1>
         <p>
           {" "}
           This is a page to hear about some testimonials. We
@@ -51,7 +56,8 @@ const About = () => {
           people. where i see this shining is college students, It can be
           challenging sometimes to find certain books in audible form. Dont take it from me read below.{" "}
         </p>
-        <img src="../logo192.png" alt="logo" style={{marginLeft:"40%",marginTop:"5%"}}></img>
+
+      </div>
           </Jumbotron>
        <div style={{margin:"10%", marginTop:"1%"}}>
           {people.map((peeps) => (
@@ -69,12 +75,28 @@ const About = () => {
               
             >
               <Card.Body className="card text-center">
-                <Card.Title> Name: {peeps.name}</Card.Title>
+              <Card.Img src={peeps.image}  style={{variant:"top"}}/>
+              <hr/>
+                <Card.Title> 
+                  <h1>
+                  Name: {peeps.name}
+                  </h1>
+                  </Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
+                  <h4>
                   occupation: {peeps.occupation}
+                  </h4>
                 </Card.Subtitle>
-                <Card.Text>Testimonial: {peeps.bio}</Card.Text>
-              </Card.Body>
+                <Card.Text>
+                  <h6>
+                  Testimonial: 
+                  </h6>
+                  <p>
+
+                  {peeps.bio}
+                  </p>
+                  </Card.Text>
+              </Card.Body>  
             </Card>
           ))}
       </div>

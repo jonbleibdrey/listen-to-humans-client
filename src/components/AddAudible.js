@@ -81,7 +81,7 @@ export class AddAudible extends Component {
             borderRadius: "20px",
           }}
         >
-          <h1 className="animate__animated animate__bounceInLeft">
+          <h1 className="animate__animated animate__bounceInDown">
             Add Audible
           </h1>
           <p>
@@ -162,7 +162,7 @@ export class AddAudible extends Component {
             borderRadius: "20px",
           }}
         >
-          <h1 className="animate__animated animate__bounceInRight">
+          <h1 className="animate__animated animate__bounceInDown">
             Record audio
           </h1>
           <p>

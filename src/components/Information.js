@@ -15,13 +15,13 @@ const Information = () => {
       }}
     >
       <div>
-      <img className="animate__animated animate__tada"
+      <img className="animate__animated animate__bounceInDown"
         src="../logo192.png"
         alt="logo"
         style={{ width: "50px", height: "50px", float: "left", margin: "20px", marginRight:"50px" }}
       />
       </div>
-      <h2 className="animate__animated animate__backInDown">
+      <h2 className="animate__animated animate__bounceInDown">
         A website to listen and create audio books, even if you don't sound like morgan freeman.
       </h2>
       <br />

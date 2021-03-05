@@ -23,7 +23,7 @@ const Review = () => {
       <div
         style={{
           margin: "40px",
-          padding: "4%",
+          padding: "2%",
           marginLeft: "20%",
           width: "60%",
           height: "100%",
@@ -34,7 +34,7 @@ const Review = () => {
           borderRadius:"20px"
         }}
       >
-        <h2 className="animate__animated animate__backInLeft" >Review section</h2>
+        <h2 className="animate__animated animate__bounceInRight" >Review section</h2>
         <p>
           We want the books to be great and readable. so we set up a system to
           do just that. Plain and simple nyou can review any book you want. You
