@@ -40,6 +40,7 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all, track }) =
               Language: {language}
               <br />
               Audio file: 
+              <audio controls="controls" src={link} type="audio/mp3" />
             </Card.Text>
             <hr />
             <h3>Review's</h3>
