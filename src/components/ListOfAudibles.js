@@ -2,16 +2,42 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Card, Col } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
+//import Mp3 from "../mp3/160656b9-3554-4c2c-a492-4ea3c3c25e11.mp3"
 
-export const ListOfAudibles = ({ title, by, language, audio, id, all, track }) => {
-
-  const trackUrl = {track}
-  const link = `http://localhost:3000${trackUrl}`
+export const ListOfAudibles = ({
+  title,
+  by,
+  language,
+  audio,
+  id,
+  all,
+  track,
+}) => {
+ 
+  const link = `http://localhost:3001${track}`;
 
   useEffect(() => {
-    console.log("this is the url", trackUrl)
-  })
+    console.log("this is the url to blob --->", link);
+    // const a = document.getElementById("audioP")
+    // a.play()
+  });
 
+  // const handlePlay = () => {
+  //   const aud = new Audio(link)
+  //   console.log(aud)
+  //       aud
+  //         .then(go => {
+  //           // Automatic playback started!
+  //           // Show playing UI.
+  //           console.log("worked", go);
+  //         })
+  //         .catch(error => {
+  //           // Auto-play was prevented
+  //           // Show paused UI.
+  //           console.log(error);
+  //         });
+      
+  // }
 
 
   return (
@@ -39,8 +65,11 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all, track }) =
             <Card.Text>
               Language: {language}
               <br />
-              Audio file: 
-              <audio controls="controls" src={link} type="audio/mp3" />
+              Audio file: {audio}
+            </Card.Text>
+            <hr/>
+            <Card.Text>
+              <audio src={link} controls> play</audio>
             </Card.Text>
             <hr />
             <h3>Review's</h3>
