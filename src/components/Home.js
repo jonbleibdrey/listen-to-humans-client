@@ -45,6 +45,7 @@ const Home = () => {
               by={audible.by}
               language={audible.language}
               audio={audible.audio_file}
+              track={audible.track}
               all={audible}
             />
           ))}

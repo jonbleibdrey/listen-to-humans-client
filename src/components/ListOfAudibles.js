@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Card, Col } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 
-export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
+export const ListOfAudibles = ({ title, by, language, audio, id, all, track }) => {
+
+  const trackUrl = {track}
+  const link = `http://localhost:3000${trackUrl}`
+
+  useEffect(() => {
+    console.log("this is the url", trackUrl)
+  })
+
+
+
   return (
     <Col xs={12} lg={4}>
       <Accordion defaultActiveKey="0">
@@ -29,7 +39,7 @@ export const ListOfAudibles = ({ title, by, language, audio, id, all }) => {
             <Card.Text>
               Language: {language}
               <br />
-              Audio file: {audio}
+              Audio file: 
             </Card.Text>
             <hr />
             <h3>Review's</h3>
