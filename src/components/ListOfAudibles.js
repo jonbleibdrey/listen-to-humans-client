@@ -48,7 +48,7 @@ export const ListOfAudibles = ({
             flex: 1,
             display: "inline-block",
             margin: "40px",
-            marginRight: "100px",
+            marginRight: "50%",
             width: "90%",
             height: "auto",
           }}
@@ -68,8 +68,8 @@ export const ListOfAudibles = ({
               Audio file name: {audio}
             </Card.Text>
             <hr/>
-            <Card.Text>
-              <audio src={link} style={{}} controls> play</audio>
+            <Card.Text >
+              <audio src={link} style={{ filter: "drop-shadow(2px 3px 3px #333)", inlineSize:"100%" }} controls> play</audio>
             </Card.Text>
             <hr />
             <h3>Review's</h3>
