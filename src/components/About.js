@@ -32,6 +32,7 @@ const About = () => {
 
   return (
     <>
+    <div id="about">
       <Jumbotron
         style={{
           margin: "40px",
@@ -90,6 +91,7 @@ const About = () => {
             </Card.Body>
           </Card>
         ))}
+      </div>
       </div>
     </>
   );

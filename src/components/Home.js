@@ -22,7 +22,8 @@ const Home = () => {
 
   return (
     <>
-      <Information />
+    <div id="home">
+      <Information/>
       <input
         type="text"
         style={{
@@ -65,6 +66,7 @@ const Home = () => {
           </Link>
         </Row>
       </Container>
+      </div>
     </>
   );
 };

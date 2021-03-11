@@ -11,13 +11,14 @@ import Review from "./components/Review";
 import NoFlyZone from "./components/NoFlyZone";
 import AddReview from "./components/AddReview";
 import Footer from "./components/Footer";
+import OtherNavBar from "./components/OtherNavBar";
 
 
 function App() {
   return (
     <>
-      <NavBar />
-     
+    {/* <NavBar /> */}
+    <OtherNavBar/>
     <Router>
         <Switch>
           <Route exact path="/" component={Home} />
