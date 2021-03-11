@@ -65,11 +65,11 @@ export const ListOfAudibles = ({
             <Card.Text>
               Language: {language}
               <br />
-              Audio file: {audio}
+              Audio file name: {audio}
             </Card.Text>
             <hr/>
             <Card.Text>
-              <audio src={link} controls> play</audio>
+              <audio src={link} style={{}} controls> play</audio>
             </Card.Text>
             <hr />
             <h3>Review's</h3>
