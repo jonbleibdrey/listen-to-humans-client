@@ -56,6 +56,7 @@ export class AddReview extends Component {
   render() {
     return (
       <>
+      <div id="addReview">
       <div style={{
             margin: "35px",
             padding: "3%",
@@ -127,6 +128,7 @@ export class AddReview extends Component {
         </Col>
         </Row>
         </Container>
+        </div>
         </>
     );
   }

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, animatedScroll as scroll} from "react-scroll"
+import {Link} from "react-scroll"
 
 const OtherNavBar = () => {
     return (
@@ -12,6 +12,14 @@ const OtherNavBar = () => {
         offset={-70}
         duration={500}
       >Home</Link>
+        <Link
+          activeClass="active"
+          to="addAudible"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >addaudible</Link>
       <Link
         activeClass="active"
         to="about"
@@ -22,7 +30,7 @@ const OtherNavBar = () => {
       >about</Link>
       <Link
         activeClass="active"
-        to=""
+        to="review"
         spy={true}
         smooth={true}
         offset={-70}
@@ -30,12 +38,12 @@ const OtherNavBar = () => {
       >review</Link>
       <Link
         activeClass="active"
-        to=""
+        to="addReview"
         spy={true}
         smooth={true}
         offset={-70}
         duration={500}
-      >addaudible</Link>
+      >add review</Link>
         </div>
     )
 }

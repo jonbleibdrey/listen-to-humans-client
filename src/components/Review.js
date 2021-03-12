@@ -20,7 +20,8 @@ const Review = () => {
 
   return (
     <>
-      <div
+    <div id="review">
+      <div 
         style={{
           margin: "40px",
           padding: "2%",
@@ -39,7 +40,7 @@ const Review = () => {
         </h2>
         <p>
           We want the books to be great and readable. so we set up a system to
-          do just that. Plain and simple nyou can review any book you want. You
+          do just that. Plain and simple, you can review any book you want. You
           can also search for any review you would like.
         </p>
       </div>
@@ -83,6 +84,7 @@ const Review = () => {
           </Link>
         </Row>
       </Container>
+      </div>
     </>
   );
 };

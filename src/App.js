@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import NavBar from "./components/NavBar";
+//import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AddAudible from "./components/AddAudible";
 import EditAudible from "./components/EditAudible";
@@ -20,8 +20,13 @@ function App() {
     {/* <NavBar /> */}
     <OtherNavBar/>
     <Router>
+    <Home name="home"/>
+    <AddAudible name="addAudible" />
+    <About name="about"/>
+    <Review name="review"/>
+    <AddReview name="addReview"/>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/review" component={Review} />
           <Route path="/add" component={AddAudible} />
