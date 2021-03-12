@@ -20,14 +20,14 @@ const OtherNavBar = () => {
           offset={-70}
           duration={500}
         >addaudible</Link>
-      <Link
-        activeClass="active"
-        to="about"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-      >about</Link>
+        <Link
+          activeClass="active"
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >about</Link>
       <Link
         activeClass="active"
         to="review"
