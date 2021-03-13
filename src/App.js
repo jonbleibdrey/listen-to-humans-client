@@ -19,21 +19,20 @@ function App() {
     <>
     <NavBar />
     <Router>
-    <Home name="home"/>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route  path="/about" component={About} />
+          <Route  path="/review" component={Review} />
+          <Route  path="/add" component={AddAudible} />
+          <Route  path="/addReview" component={AddReview} />
+          <Route  path="/edit/:id" component={EditAudible} />
+          <Route  path="/editReview/:id" component={EditReview} />
+          <Route  path="*" component={NoFlyZone} />
+        </Switch>
     <AddAudible name="addAudible" />
     <About name="about"/>
     <Review name="review"/>
     <AddReview name="addReview"/>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/review" component={Review} />
-          <Route exact path="/add" component={AddAudible} />
-          <Route exact path="/addReview" component={AddReview} />
-          <Route exact path="/edit/:id" component={EditAudible} />
-          <Route exact path="/editReview/:id" component={EditReview} />
-          <Route exact path="*" component={NoFlyZone} />
-        </Switch>
     </Router>
        <Footer/>
     </>
