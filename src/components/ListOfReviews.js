@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import {  animateScroll as scroll } from "react-scroll";
 
 const ListOfReview = ({ id, title, description, rating, audibleId }) => {
   return (
@@ -37,6 +38,7 @@ const ListOfReview = ({ id, title, description, rating, audibleId }) => {
           <Link
             className="btn btn-warning mr-1 btn-lg btn-block"
             to={`/editReview/${id}`}
+            onClick={ scroll.scrollToTop()}
           >
             edit
           </Link>

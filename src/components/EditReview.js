@@ -10,6 +10,7 @@ import {
   Col,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import {  animateScroll as scroll } from "react-scroll";
 import axios from "axios";
 
 export class EditReview extends Component {
@@ -31,6 +32,7 @@ export class EditReview extends Component {
           rating: data.rating,
         })
       );
+      scroll.scrollToTop();
   }
 
   handleOnChange = (e) => {
@@ -62,6 +64,7 @@ export class EditReview extends Component {
   render() {
     return (
       <>
+      <div style={{backgroundColor:"#f2f2eb"}}>
         <div
           style={{
             margin: "35px",
@@ -122,6 +125,7 @@ export class EditReview extends Component {
             </Col>
           </Row>
         </Container>
+        </div>
       </>
     );
   }

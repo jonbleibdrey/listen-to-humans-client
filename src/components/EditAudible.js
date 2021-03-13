@@ -10,6 +10,7 @@ import {
   Col,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import {  animateScroll as scroll } from "react-scroll";
 import axios from "axios";
 
 export class EditAudible extends Component {
@@ -33,6 +34,7 @@ export class EditAudible extends Component {
           audio_file: data.audio_file,
         })
       );
+      scroll.scrollToTop();
   }
 
   handleOnChange = (e) => {
@@ -65,6 +67,7 @@ export class EditAudible extends Component {
   render() {
     return (
       <>
+      <div style={{backgroundColor:"#f2f2eb"}}>
         <div
           style={{
             margin: "35px",
@@ -133,6 +136,7 @@ export class EditAudible extends Component {
             </Col>
           </Row>
         </Container>
+        </div>
       </>
     );
   }
