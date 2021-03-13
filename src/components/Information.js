@@ -6,6 +6,7 @@ const Information = () => {
       style={{
         margin: "4%",
         padding: "40px",
+        backgroundColor:"white",
         marginLeft: "22%",
         width: "60%",
         border: "1px solid gray",

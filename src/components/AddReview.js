@@ -56,7 +56,7 @@ export class AddReview extends Component {
   render() {
     return (
       <>
-      <div id="addReview">
+      <div id="addReview" style={{backgroundColor:"#f2f2eb", padding:"3%"}}>
       <div style={{
             margin: "35px",
             padding: "3%",

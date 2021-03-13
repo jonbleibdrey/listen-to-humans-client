@@ -11,7 +11,7 @@ import Review from "./components/Review";
 import NoFlyZone from "./components/NoFlyZone";
 import AddReview from "./components/AddReview";
 import Footer from "./components/Footer";
-import OtherNavBar from "./components/OtherNavBar";
+
 
 
 function App() {
@@ -19,7 +19,6 @@ function App() {
     <>
     <NavBar />
     <Router>
-    {/* <OtherNavBar/> */}
     <Home name="home"/>
     <AddAudible name="addAudible" />
     <About name="about"/>

@@ -32,7 +32,7 @@ const About = () => {
 
   return (
     <>
-    <div id="about">
+    <div id="about" style={{backgroundColor:"#f2f2eb", padding:"3%"}}>
       <Jumbotron
         style={{
           margin: "40px",
