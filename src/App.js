@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-//import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AddAudible from "./components/AddAudible";
 import EditAudible from "./components/EditAudible";
@@ -17,9 +17,9 @@ import OtherNavBar from "./components/OtherNavBar";
 function App() {
   return (
     <>
-    {/* <NavBar /> */}
+    <NavBar />
     <Router>
-    <OtherNavBar/>
+    {/* <OtherNavBar/> */}
     <Home name="home"/>
     <AddAudible name="addAudible" />
     <About name="about"/>

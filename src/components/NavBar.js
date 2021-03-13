@@ -1,5 +1,6 @@
 import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
+import { Link } from "react-scroll";
 
 const NavBar = () => {
   return (
@@ -26,19 +27,64 @@ const NavBar = () => {
         <ReactBootStrap.Nav className="mr-auto">
           <ReactBootStrap.NavDropdown title="More" id="collasible-nav-dropdown">
             <ReactBootStrap.NavDropdown.Item href="/">
-              Home
+            <Link
+        activeClass="active"
+        to="home"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        Home
+      </Link>
             </ReactBootStrap.NavDropdown.Item>
             <ReactBootStrap.NavDropdown.Item href="/review">
-              Review's
+            <Link
+        activeClass="active"
+        to="review"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        review
+      </Link>
             </ReactBootStrap.NavDropdown.Item>
             <ReactBootStrap.NavDropdown.Item href="/about">
-              About
+            <Link
+        activeClass="active"
+        to="about"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        about
+      </Link>
             </ReactBootStrap.NavDropdown.Item>
             <ReactBootStrap.NavDropdown.Item href="/add">
-              Add Audible
+            <Link
+        activeClass="active"
+        to="addAudible"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        addaudible
+      </Link>
             </ReactBootStrap.NavDropdown.Item>
             <ReactBootStrap.NavDropdown.Item href="/addReview">
-              Add Review
+            <Link
+        activeClass="active"
+        to="addReview"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        add review
+      </Link>
             </ReactBootStrap.NavDropdown.Item>
           </ReactBootStrap.NavDropdown>
         </ReactBootStrap.Nav>

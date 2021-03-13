@@ -1,33 +1,47 @@
-import React from 'react'
-import {Link} from "react-scroll"
+import React from "react";
+import { Link } from "react-scroll";
 
 const OtherNavBar = () => {
-    return (
-        <div className="navbar">
-              <Link
+  return (
+    <div style={{padding:"5%",color:"white", backgroundColor:"black", margin:"30px"}}>
+        <ul>
+      <li>
+          <Link
         activeClass="active"
         to="home"
         spy={true}
         smooth={true}
         offset={-70}
         duration={500}
-      >Home</Link>
-        <Link
-          activeClass="active"
-          to="addAudible"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >addaudible</Link>
-        <Link
-          activeClass="active"
-          to="about"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >about</Link>
+      >
+        Home
+      </Link>
+      </li>
+      <li>
+      <Link
+        activeClass="active"
+        to="addAudible"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        addaudible
+      </Link>
+      </li>
+      <li>
+      <Link
+        activeClass="active"
+        to="about"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        about
+      </Link>
+      </li>
+      <li>
       <Link
         activeClass="active"
         to="review"
@@ -35,7 +49,11 @@ const OtherNavBar = () => {
         smooth={true}
         offset={-70}
         duration={500}
-      >review</Link>
+      >
+        review
+      </Link>
+      </li>
+      <li>
       <Link
         activeClass="active"
         to="addReview"
@@ -43,9 +61,13 @@ const OtherNavBar = () => {
         smooth={true}
         offset={-70}
         duration={500}
-      >add review</Link>
-        </div>
-    )
-}
+      >
+        add review
+      </Link>
+      </li>
+      </ul>
+    </div>
+  );
+};
 
-export default OtherNavBar
+export default OtherNavBar;
