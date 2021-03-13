@@ -21,51 +21,51 @@ const Home = () => {
   });
 
   return (
-    < >
-    <div id="home" style={{backgroundColor:"#f2f2eb", padding:"3%"}}>
-      <Information/>
-      <input
-        type="text"
-        style={{
-          width: "50%",
-          marginLeft: "25%",
-          marginTop: "5px",
-          marginBottom: "40px",
-        }}
-        className="text-center"
-        placeholder="search for audible"
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <Container>
-        <Row>
-          {filteredAudibles.map((audible) => (
-            <ListOfAudibles
-              key={audible.id}
-              id={audible.id}
-              title={audible.title}
-              by={audible.by}
-              language={audible.language}
-              audio={audible.audio_file}
-              track={audible.track}
-              all={audible}
-            />
-          ))}
-          <Link
-            to="/add"
-            style={{
-              display: "flex",
-              margin: "50px",
-              marginLeft: "100px",
-              marginBottom: "100px",
-              width: "100%",
-            }}
-            className="btn btn-primary btn-lg "
-          >
-            {" "}
-            add book{" "}
-          </Link>
-        </Row>
-      </Container>
+    <>
+      <div id="home" style={{ backgroundColor: "#f2f2eb", padding: "3%" }}>
+        <Information />
+        <input
+          type="text"
+          style={{
+            width: "50%",
+            marginLeft: "25%",
+            marginTop: "5px",
+            marginBottom: "40px",
+          }}
+          className="text-center"
+          placeholder="search for audible"
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <Container>
+          <Row>
+            {filteredAudibles.map((audible) => (
+              <ListOfAudibles
+                key={audible.id}
+                id={audible.id}
+                title={audible.title}
+                by={audible.by}
+                language={audible.language}
+                audio={audible.audio_file}
+                track={audible.track}
+                all={audible}
+              />
+            ))}
+            <Link
+              to="/add"
+              style={{
+                display: "flex",
+                margin: "50px",
+                marginLeft: "100px",
+                marginBottom: "100px",
+                width: "100%",
+              }}
+              className="btn btn-primary btn-lg "
+            >
+              {" "}
+              add book{" "}
+            </Link>
+          </Row>
+        </Container>
       </div>
     </>
   );

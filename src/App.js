@@ -12,29 +12,27 @@ import NoFlyZone from "./components/NoFlyZone";
 import AddReview from "./components/AddReview";
 import Footer from "./components/Footer";
 
-
-
 function App() {
   return (
     <>
-    <NavBar />
-    <Router>
+      <NavBar />
+      <Router>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route  path="/about" component={About} />
-          <Route  path="/review" component={Review} />
-          <Route  path="/add" component={AddAudible} />
-          <Route  path="/addReview" component={AddReview} />
-          <Route  path="/edit/:id" component={EditAudible} />
-          <Route  path="/editReview/:id" component={EditReview} />
-          <Route  path="*" component={NoFlyZone} />
+          <Route path="/about" component={About} />
+          <Route path="/review" component={Review} />
+          <Route path="/add" component={AddAudible} />
+          <Route path="/addReview" component={AddReview} />
+          <Route path="/edit/:id" component={EditAudible} />
+          <Route path="/editReview/:id" component={EditReview} />
+          <Route path="*" component={NoFlyZone} />
         </Switch>
-    <AddAudible name="addAudible" />
-    <About name="about"/>
-    <Review name="review"/>
-    <AddReview name="addReview"/>
-    </Router>
-       <Footer/>
+        <AddAudible name="addAudible" />
+        <About name="about" />
+        <Review name="review" />
+        <AddReview name="addReview" />
+      </Router>
+      <Footer />
     </>
   );
 }

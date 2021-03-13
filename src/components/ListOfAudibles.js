@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-
 import { Card, Col } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
-
 
 export const ListOfAudibles = ({
   title,
@@ -14,32 +12,12 @@ export const ListOfAudibles = ({
   all,
   track,
 }) => {
- 
   const link = `http://localhost:3001${track}`;
 
   useEffect(() => {
     console.log("this is the url to blob --->", link);
-    // const a = document.getElementById("audioP")
-    // a.play()
   });
-
-  // const handlePlay = () => {
-  //   const aud = new Audio(link)
-  //   console.log(aud)
-  //       aud
-  //         .then(go => {
-  //           // Automatic playback started!
-  //           // Show playing UI.
-  //           console.log("worked", go);
-  //         })
-  //         .catch(error => {
-  //           // Auto-play was prevented
-  //           // Show paused UI.
-  //           console.log(error);
-  //         });
-      
-  // }
-
+  
 
   return (
     <Col xs={12} lg={4}>
@@ -68,9 +46,19 @@ export const ListOfAudibles = ({
               <br />
               Audio file name: {audio}
             </Card.Text>
-            <hr/>
-            <Card.Text >
-              <audio src={link} style={{ filter: "drop-shadow(2px 3px 3px #333)", inlineSize:"100%" }} controls> play</audio>
+            <hr />
+            <Card.Text>
+              <audio
+                src={link}
+                style={{
+                  filter: "drop-shadow(2px 3px 3px #333)",
+                  inlineSize: "100%",
+                }}
+                controls
+              >
+                {" "}
+                play
+              </audio>
             </Card.Text>
             <hr />
             <h3>Review's</h3>
