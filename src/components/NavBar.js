@@ -9,7 +9,7 @@ const NavBar = () => {
       expand="lg"
       bg="dark"
       variant="dark"
-      style={{ padding: "50px" }}
+      style={{ padding: "3%", justifyContent:"space-evenly" }}
     >
       <ReactBootStrap.Navbar.Brand href="/">
         <img
@@ -22,11 +22,8 @@ const NavBar = () => {
         />
         <h4>Read By Humans.</h4>
       </ReactBootStrap.Navbar.Brand>
-      <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
-        <ReactBootStrap.Nav className="mr-auto">
-          <ReactBootStrap.NavDropdown title="More" id="collasible-nav-dropdown">
-            <ReactBootStrap.NavDropdown.Item href="/">
+      
+            <ReactBootStrap.Navbar.Brand href="/">
             <Link
         activeClass="active"
         to="home"
@@ -35,34 +32,10 @@ const NavBar = () => {
         offset={-70}
         duration={500}
       >
-        Home
+        audible
       </Link>
-            </ReactBootStrap.NavDropdown.Item>
-            <ReactBootStrap.NavDropdown.Item href="/review">
-            <Link
-        activeClass="active"
-        to="review"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-      >
-        review
-      </Link>
-            </ReactBootStrap.NavDropdown.Item>
-            <ReactBootStrap.NavDropdown.Item href="/about">
-            <Link
-        activeClass="active"
-        to="about"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-      >
-        about
-      </Link>
-            </ReactBootStrap.NavDropdown.Item>
-            <ReactBootStrap.NavDropdown.Item href="/add">
+            </ReactBootStrap.Navbar.Brand>
+            <ReactBootStrap.Navbar.Brand href="/add">
             <Link
         activeClass="active"
         to="addAudible"
@@ -73,8 +46,32 @@ const NavBar = () => {
       >
         addaudible
       </Link>
-            </ReactBootStrap.NavDropdown.Item>
-            <ReactBootStrap.NavDropdown.Item href="/addReview">
+            </ReactBootStrap.Navbar.Brand>
+            <ReactBootStrap.Navbar.Brand href="/about">
+            <Link
+        activeClass="active"
+        to="about"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        about
+      </Link>
+            </ReactBootStrap.Navbar.Brand>
+            <ReactBootStrap.Navbar.Brand href="/review">
+            <Link
+        activeClass="active"
+        to="review"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        review
+      </Link>
+            </ReactBootStrap.Navbar.Brand>
+            <ReactBootStrap.Navbar.Brand href="/addReview">
             <Link
         activeClass="active"
         to="addReview"
@@ -85,10 +82,7 @@ const NavBar = () => {
       >
         add review
       </Link>
-            </ReactBootStrap.NavDropdown.Item>
-          </ReactBootStrap.NavDropdown>
-        </ReactBootStrap.Nav>
-      </ReactBootStrap.Navbar.Collapse>
+            </ReactBootStrap.Navbar.Brand>
     </ReactBootStrap.Navbar>
   );
 };

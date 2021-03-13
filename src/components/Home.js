@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     < >
-    <div id="home">
+    <div id="home" style={{backgroundColor:"#f4f5eb"}}>
       <Information/>
       <input
         type="text"
