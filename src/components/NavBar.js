@@ -68,8 +68,8 @@ const NavBar = () => {
         to="review"
         spy={true}
         smooth={true}
-        offset={100}
-        duration={1000}
+        offset={-20}
+        duration={4000}
       >
         review
       </Link>
@@ -80,8 +80,8 @@ const NavBar = () => {
         to="addReview"
         spy={true}
         smooth={true}
-        offset={100}
-        duration={1000}
+        offset={0}
+        duration={3000}
       >
         add review
       </Link>

@@ -55,7 +55,7 @@ export class AddReview extends Component {
       <>
         <div
           id="addReview"
-          style={{ backgroundColor: "#f2f2eb", padding: "3%" }}
+          style={{ backgroundColor: "#f2f2eb", padding: "50px"}}
         >
           <div
             style={{
@@ -78,7 +78,7 @@ export class AddReview extends Component {
               freindly so please do so. here is the add review section
             </p>
           </div>
-          <Container style={{ margin: "5%", marginLeft: "380px" }}>
+          <Container style={{ marginBottom:"20%", marginTop:"10%" }}>
             <Row>
               <Col xs={12}>
                 <Form onSubmit={this.handleOnSubmit}>
