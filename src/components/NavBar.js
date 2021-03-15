@@ -32,8 +32,8 @@ const NavBar = () => {
         to="home"
         spy={true}
         smooth={true}
-        offset={-70}
-        duration={500}
+        offset={125}
+        duration={1000}
       >
         audible
       </Link>
@@ -44,8 +44,8 @@ const NavBar = () => {
         to="addAudible"
         spy={true}
         smooth={true}
-        offset={-70}
-        duration={500}
+        offset={-2}
+        duration={2000}
       >
         addaudible
       </Link>
@@ -56,8 +56,8 @@ const NavBar = () => {
         to="about"
         spy={true}
         smooth={true}
-        offset={-70}
-        duration={500}
+        offset={96}
+        duration={3000}
       >
         about
       </Link>
@@ -68,8 +68,8 @@ const NavBar = () => {
         to="review"
         spy={true}
         smooth={true}
-        offset={-70}
-        duration={500}
+        offset={100}
+        duration={1000}
       >
         review
       </Link>
@@ -80,8 +80,8 @@ const NavBar = () => {
         to="addReview"
         spy={true}
         smooth={true}
-        offset={-70}
-        duration={500}
+        offset={100}
+        duration={1000}
       >
         add review
       </Link>
