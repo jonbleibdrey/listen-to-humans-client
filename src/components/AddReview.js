@@ -78,7 +78,7 @@ export class AddReview extends Component {
               freindly so please do so. here is the add review section
             </p>
           </div>
-          <Container style={{ marginBottom:"20%", marginTop:"10%" }}>
+          <Container style={{ marginBottom:"15%", marginTop:"10%" }}>
             <Row>
               <Col xs={12}>
                 <Form onSubmit={this.handleOnSubmit}>
@@ -134,6 +134,7 @@ export class AddReview extends Component {
                     Cancel
                   </Link>
                 </Form>
+            
               </Col>
             </Row>
           </Container>
