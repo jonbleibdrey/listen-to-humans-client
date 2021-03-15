@@ -14,13 +14,16 @@ const NavBar = () => {
       <ReactBootStrap.Navbar.Brand href="/">
         <img
           alt=""
-          src="/logo192.png"
+          src="/logo1.PNG"
           width="30"
-          height="30"
+          height="auto"
           align="left"
           className="col-sm-3"
         />
+        <div style={{marginLeft:"25%", marginTop:"10%"}}>
         <h4>Read By Humans.</h4>
+
+        </div>
       </ReactBootStrap.Navbar.Brand>
       
             <ReactBootStrap.Navbar.Brand href="/">

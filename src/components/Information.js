@@ -18,11 +18,11 @@ const Information = () => {
       <div>
         <img
           className="animate__animated animate__bounceInDown"
-          src="../logo192.png"
+          src="../logo1.PNG"
           alt="logo"
           style={{
-            width: "50px",
-            height: "50px",
+            width: "10%",
+            height: "auto",
             float: "left",
             margin: "20px",
             marginRight: "50px",
