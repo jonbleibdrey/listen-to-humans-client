@@ -20,7 +20,7 @@ const Review = () => {
 
   return (
     <>
-      <div id="review">
+      <div id="review" style={{ marginBottom:"9%", marginTop:"9%"}}>
         <div
           style={{
             margin: "40px",

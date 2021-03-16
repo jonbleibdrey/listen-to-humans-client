@@ -11,13 +11,14 @@ const ListOfReview = ({ id, title, description, rating, audibleId }) => {
           flex: 1,
           display: "inline-block",
           margin: "40px",
-          marginRight: "100px",
+          marginRight: "50%",
           width: "90%",
-          height: "auto",
+          height: "40vw",
           fontFamily: "monospace",
+         
         }}
       >
-        <Card.Body className="card text-center">
+        <Card.Body >
           <Card.Title>
             <h4>
               Title of Review:
@@ -36,15 +37,25 @@ const ListOfReview = ({ id, title, description, rating, audibleId }) => {
             <br />
           </Card.Text>
           <hr />
+        </Card.Body>
+      </Card>
           <Link
+          style={{ display: "inline-block",  margin: "4%",
+          padding: "40px",
+          backgroundColor: "white",
+          color:"black",
+          marginLeft: "25%",
+          width: "60%",
+          border: "1px solid gray",
+          fontFamily: "monospace",
+          boxShadow: "10px 20px black",
+        }}
             className="btn btn-primary mr-1 btn-lg btn-block"
             to={`/editReview/${id}`}
             onClick={scroll.scrollToTop()}
           >
             edit
           </Link>
-        </Card.Body>
-      </Card>
     </Col>
   );
 };

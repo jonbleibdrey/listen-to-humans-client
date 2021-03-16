@@ -52,15 +52,19 @@ class AudioP extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.start} disabled={this.state.isRecording}>
+        <audio style={{marginBottom:"2%"
+              }} src={this.state.blobURL} controls="controls" />
+        <br/>
+        <button style={{boxShadow: "10px 10px black",
+              borderRadius: "20px", marginLeft:"5%"}} onClick={this.start} disabled={this.state.isRecording}>
           Record!
         </button>
 
-        <button onClick={this.stop} disabled={!this.state.isRecording}>
+        <button style={{boxShadow: "10px 10px black",
+              borderRadius: "20px", marginLeft:"3%"}} onClick={this.stop} disabled={!this.state.isRecording}>
           Stop!
         </button>
 
-        <audio src={this.state.blobURL} controls="controls" />
       </div>
     );
   }
