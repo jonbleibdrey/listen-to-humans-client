@@ -14,6 +14,7 @@ const ListOfReview = ({ id, title, description, rating, audibleId }) => {
           marginRight: "100px",
           width: "90%",
           height: "auto",
+          fontFamily: "monospace",
         }}
       >
         <Card.Body className="card text-center">
@@ -36,7 +37,7 @@ const ListOfReview = ({ id, title, description, rating, audibleId }) => {
           </Card.Text>
           <hr />
           <Link
-            className="btn btn-warning mr-1 btn-lg btn-block"
+            className="btn btn-primary mr-1 btn-lg btn-block"
             to={`/editReview/${id}`}
             onClick={scroll.scrollToTop()}
           >

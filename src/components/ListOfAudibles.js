@@ -73,7 +73,7 @@ export const ListOfAudibles = ({
               ))}
               <Link
                 style={{ display: "inline-block" }}
-                className="btn btn-warning mr-1 btn-lg btn-block"
+                className="btn btn-primary mr-1 btn-lg btn-block"
                 to={`/edit/${id}`}
                 >
                 edit
