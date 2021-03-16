@@ -47,7 +47,7 @@ export class EditReview extends Component {
     axios
       .put(`http://localhost:3001/reviews/${id}`, this.state)
       .then((res) => res)
-      .then((data) => this.props.history.push("/review"))
+      .then((data) => this.props.history.push("/"))
       .catch((err) => console.log(err));
   };
 

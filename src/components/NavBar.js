@@ -21,7 +21,7 @@ const NavBar = () => {
           className="col-sm-3"
         />
         <div style={{marginLeft:"25%", marginTop:"10%", }}>
-        <h4>Read By Humans.</h4>
+        <h1 style={{fontFamily: "monospace"}}>Read By Humans.</h1>
 
         </div>
       </ReactBootStrap.Navbar.Brand>
@@ -34,7 +34,7 @@ const NavBar = () => {
         smooth={true}
         offset={110}
         duration={1000}
-        
+        style={{fontSize:"25px"}}
       >
         audible
       </Link>
@@ -47,8 +47,9 @@ const NavBar = () => {
         smooth={true}
         offset={-25}
         duration={2000}
+        style={{fontSize:"25px"}}
       >
-        addaudible
+        Add Audible
       </Link>
             </ReactBootStrap.Navbar.Brand>
             <ReactBootStrap.Navbar.Brand href="/about">
@@ -59,8 +60,9 @@ const NavBar = () => {
         smooth={true}
         offset={69}
         duration={3000}
+        style={{fontSize:"25px"}}
       >
-        about
+        About
       </Link>
             </ReactBootStrap.Navbar.Brand>
             <ReactBootStrap.Navbar.Brand href="/review">
@@ -71,8 +73,9 @@ const NavBar = () => {
         smooth={true}
         offset={-20}
         duration={4000}
+        style={{fontSize:"25px"}}
       >
-        review
+        Review
       </Link>
             </ReactBootStrap.Navbar.Brand>
             <ReactBootStrap.Navbar.Brand href="/addReview">
@@ -83,8 +86,9 @@ const NavBar = () => {
         smooth={true}
         offset={0}
         duration={3000}
+        style={{fontSize:"25px"}}
       >
-        add review
+        Add Review
       </Link>
             </ReactBootStrap.Navbar.Brand>
     </ReactBootStrap.Navbar>

@@ -30,6 +30,7 @@ export const ListOfAudibles = ({
             marginRight: "50%",
             width: "90%",
             height: "auto",
+            fontFamily: "monospace",
           }}
         >
           <Card.Body className="card text-center">
@@ -61,7 +62,7 @@ export const ListOfAudibles = ({
               </audio>
             </Card.Text>
             <hr />
-            <h3>Review's</h3>
+            <h1>Review's</h1>
             <Card.Body>
               {all.reviews.map((review) => (
                 <div style={{ color: "black", padding:"10px" }} key={review.id} >

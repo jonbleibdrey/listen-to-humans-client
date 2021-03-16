@@ -60,7 +60,7 @@ export class AddAudible extends Component {
     axios
       .post("http://localhost:3001/audibles", formData)
       .then((res) => console.log(res, formData))
-      .then((data) => alert("horray it worked"))
+      .then((data) => this.props.history.push("/"))
       .catch((err) => console.log(err));
   };
 
@@ -92,44 +92,48 @@ export class AddAudible extends Component {
             straight from here.
           </p>
         </div>
-        <Container style={{ margin: "3%", marginLeft: "380px" }}>
+        <Container style={{ margin: "3%", marginLeft: "30%" }}>
           <Row>
             <Col xs={12}>
-              <Form onSubmit={this.handleOnSubmit}>
-                <FormGroup>
-                  <FormLabel> Title </FormLabel>
+              <Form  onSubmit={this.handleOnSubmit}>
+                <FormGroup >
+                  
                   <FormControl
                     type="text"
                     placeholder="Enter Title"
                     value={this.state.title}
                     onChange={this.handleOnChange}
                     name="title"
+                    style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
                   ></FormControl>
-                  <FormLabel> By: </FormLabel>
+                  
                   <FormControl
                     type="text"
                     placeholder="Created By"
                     value={this.state.by}
                     onChange={this.handleOnChange}
                     name="by"
+                    style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
                   ></FormControl>
-                  <FormLabel> Language: </FormLabel>
+                 
                   <FormControl
                     type="text"
                     placeholder="Language read in"
                     value={this.state.language}
                     onChange={this.handleOnChange}
                     name="language"
+                    style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
                   ></FormControl>
-                  <FormLabel> Audible: </FormLabel>
+                 
                   <FormControl
                     type="text"
                     placeholder="Delete me after track works"
                     value={this.state.audio_file}
                     onChange={this.handleOnChange}
                     name="audio_file"
+                    style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
                   ></FormControl>
-                  <FormLabel> Tracks: </FormLabel>
+                  
                   <Form.File>
                     <Form.File.Input
                       type="file"
@@ -137,6 +141,7 @@ export class AddAudible extends Component {
                       placeholder="Audio file here"
                       onChange={this.handleFileUpload}
                       name="track"
+                      style={{ margin:"20px"}}
                     />
                   </Form.File>
                 </FormGroup>

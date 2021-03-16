@@ -39,7 +39,7 @@ export class AddReview extends Component {
     axios
       .post("http://localhost:3001/reviews", this.state)
       .then((res) => console.log(res))
-      .then((data) => this.props.history.push("/review"))
+      .then((data) => this.props.history.push("/"))
       .catch((err) => console.log(err));
   };
 
@@ -78,16 +78,18 @@ export class AddReview extends Component {
               freindly so please do so. here is the add review section
             </p>
           </div>
-          <Container style={{ marginBottom:"15%", marginTop:"10%" }}>
+          <Container style={{ marginBottom:"15%", marginTop:"5%", marginLeft:"28%" }}>
             <Row>
               <Col xs={12}>
                 <Form onSubmit={this.handleOnSubmit}>
                   <FormGroup>
                     <FormLabel> audible to review: </FormLabel>
+                    <br/>
                     <Form.Control
                       as="select"
                       onChange={this.handleSelectOnChange}
                       custom
+                      style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
                     >
                       {this.state.audible.map((audible) => (
                         <option key={audible.id} value={audible.id}>
@@ -95,15 +97,16 @@ export class AddReview extends Component {
                         </option>
                       ))}
                     </Form.Control>
-                    <FormLabel> Title </FormLabel>
+                   
                     <FormControl
                       type="text"
                       placeholder="Enter review title"
                       value={this.state.title}
                       onChange={this.handleOnChange}
                       name="title"
+                      style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
                     ></FormControl>
-                    <FormLabel> Description: </FormLabel>
+                   
                     <FormControl
                       as="textarea"
                       rows={5}
@@ -111,15 +114,18 @@ export class AddReview extends Component {
                       value={this.state.description}
                       onChange={this.handleOnChange}
                       name="description"
+                      style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
                     ></FormControl>
-                    <FormLabel> rating: </FormLabel>
+                    
                     <FormControl
                       type="text"
                       placeholder="rating"
                       value={this.state.rating}
                       onChange={this.handleOnChange}
                       name="rating"
+                      style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
                     ></FormControl>
+                    
                     <FormControl
                       className="invisible"
                       type="text"
