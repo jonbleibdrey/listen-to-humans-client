@@ -27,7 +27,7 @@ const Home = () => {
     <>
     
 
-      <div id="home" style={{ backgroundColor: "#f2f2eb", padding: "3%" }}>
+      <div id="home" style={{ backgroundColor: "#ebd078", padding: "3%" }}>
         <Information />
         <input
           type="text"
@@ -36,6 +36,9 @@ const Home = () => {
             marginLeft: "25%",
             marginTop: "5px",
             marginBottom: "40px",
+            boxShadow: "10px 10px",
+            borderRadius: "20px",
+            outline:"none"
           }}
           className="text-center"
           placeholder="search for audible"
@@ -63,6 +66,8 @@ const Home = () => {
                 marginLeft: "100px",
                 marginBottom: "100px",
                 width: "100%",
+                boxShadow: "10px 20px black",
+                borderRadius: "20px",
               }}
               className="btn btn-primary btn-lg "
             >

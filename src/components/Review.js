@@ -51,6 +51,9 @@ const Review = () => {
             marginLeft: "25%",
             marginTop: "50px",
             marginBottom: "40px",
+            boxShadow: "10px 10px",
+            borderRadius: "20px",
+            outline:"none"
           }}
           className="text-center"
           placeholder="search for review"
@@ -76,6 +79,9 @@ const Review = () => {
                 marginLeft: "100px",
                 marginBottom: "100px",
                 width: "100%",
+                boxShadow: "10px 10px black",
+            borderRadius: "20px"
+            
               }}
               className="btn btn-primary btn-lg "
             >

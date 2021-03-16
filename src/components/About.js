@@ -32,7 +32,7 @@ const About = () => {
 
   return (
     <>
-      <div id="about" style={{ backgroundColor: "#f2f2eb", padding: "3%" }}>
+      <div id="about" style={{ backgroundColor: "#ebd078", padding: "3%" }}>
         <Jumbotron
           style={{
             margin: "40px",
@@ -77,7 +77,8 @@ const About = () => {
               }}
             >
               <Card.Body className="card text-center">
-                <Card.Img src={peeps.image} style={{ variant: "top" }} />
+                <Card.Img src={peeps.image} style={{ variant: "top",  boxShadow: "5px 10px ",
+        borderRadius: "20px", }} />
                 <hr />
                 <Card.Title>
                   <h1>Name: {peeps.name}</h1>

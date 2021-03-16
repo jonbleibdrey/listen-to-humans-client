@@ -20,7 +20,7 @@ const NavBar = () => {
           align="left"
           className="col-sm-3"
         />
-        <div style={{marginLeft:"25%", marginTop:"10%"}}>
+        <div style={{marginLeft:"25%", marginTop:"10%", }}>
         <h4>Read By Humans.</h4>
 
         </div>
@@ -34,6 +34,7 @@ const NavBar = () => {
         smooth={true}
         offset={125}
         duration={1000}
+        
       >
         audible
       </Link>

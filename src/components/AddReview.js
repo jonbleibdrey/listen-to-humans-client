@@ -55,7 +55,7 @@ export class AddReview extends Component {
       <>
         <div
           id="addReview"
-          style={{ backgroundColor: "#f2f2eb", padding: "50px"}}
+          style={{ backgroundColor: "#ebd078", padding: "50px"}}
         >
           <div
             style={{

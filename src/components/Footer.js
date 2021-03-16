@@ -10,12 +10,12 @@ const Footer = () => {
     <ReactBootStrap.Navbar expand="lg" bg="dark" variant="dark" >
       <ReactBootStrap.Navbar.Brand href="/">
         Read By Humans
-      <AiOutlineFacebook style={{margin:'5%'}} onClick=/>
-      <AiOutlineInstagram style={{margin:'5%'}}/>
-      <FiTwitter style={{margin:'5%'}}/>
+      <AiOutlineFacebook style={{margin:'5%'}} onClick={()=>{ alert('you went to facebook'); }}/>
+      <AiOutlineInstagram style={{margin:'5%'}} onClick={()=>{ alert('you went to instagram'); }}/>
+      <FiTwitter style={{margin:'5%'}} onClick={()=>{ alert('you went to twitter'); }}/>
      
       </ReactBootStrap.Navbar.Brand>
-      <h6 style={{ marginLeft: "80%", color: "white" }} >
+      <h6 style={{ marginLeft: "71%", color: "white" }} >
         {" "}
         made by: Jonathan Bleibdrey{" "}
       </h6>
