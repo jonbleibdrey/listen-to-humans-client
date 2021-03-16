@@ -60,7 +60,7 @@ export class AddAudible extends Component {
     axios
       .post("http://localhost:3001/audibles", formData)
       .then((res) => console.log(res, formData))
-      .then((data) => this.props.history.push("/"))
+      .then((data) =>  window.location.reload())
       .catch((err) => console.log(err));
   };
 

@@ -36,6 +36,7 @@ const Home = () => {
             marginLeft: "25%",
             marginTop: "5px",
             marginBottom: "40px",
+             outline:"none",
             boxShadow: "10px 10px",
             borderRadius: "20px",
             outline:"none"
