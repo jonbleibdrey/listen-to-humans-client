@@ -14,8 +14,10 @@ import Footer from "./components/Footer";
 import useOutsideClick from "./components/UseOutsideClick";
 import { animateScroll as scroll } from "react-scroll";
 
+
 function App() {
- const ref = useRef()
+  const ref = useRef()
+
 
  useOutsideClick(ref, () => {
   scroll.scrollToTop();

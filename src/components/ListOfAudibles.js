@@ -29,11 +29,11 @@ export const ListOfAudibles = ({
             margin: "40px",
             marginRight: "50%",
             width: "90%",
-            height: "auto",
+            height: "40vw",
             fontFamily: "monospace",
           }}
         >
-          <Card.Body className="card text-center">
+          <Card.Body >
             <Card.Title>
               <h4>Title of book: {title}</h4>
             </Card.Title>
@@ -71,16 +71,25 @@ export const ListOfAudibles = ({
                   </ul>
                 </div>
               ))}
+            </Card.Body>
+          </Card.Body>
+        </Card>
               <Link
-                style={{ display: "inline-block" }}
+                style={{ display: "inline-block",  margin: "4%",
+                padding: "40px",
+                backgroundColor: "white",
+                color:"black",
+                marginLeft: "25%",
+                width: "60%",
+                border: "1px solid gray",
+                fontFamily: "monospace",
+                boxShadow: "10px 20px black",
+              }}
                 className="btn btn-primary mr-1 btn-lg btn-block"
                 to={`/edit/${id}`}
                 >
                 edit
               </Link>
-            </Card.Body>
-          </Card.Body>
-        </Card>
       </Accordion>
     </Col>
   );
