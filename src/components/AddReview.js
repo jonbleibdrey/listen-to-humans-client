@@ -55,7 +55,7 @@ export class AddReview extends Component {
       <>
         <div
           id="addReview"
-          style={{ backgroundColor: "#ebd078", padding: "50px"}}
+          style={{ backgroundColor: "#ebd078", padding: "40px"}}
         >
           <div
             style={{
@@ -129,8 +129,10 @@ export class AddReview extends Component {
                       name="audible_id"
                     ></FormControl>
                   </FormGroup>
-                  <Button type="submit"> Submit </Button>
-                  <Link to="/review" className="btn btn-danger ml-2">
+                  <Button type="submit" style={{boxShadow: "10px 10px black",
+              borderRadius: "20px",}}> Submit </Button>
+                  <Link to="/review" className="btn btn-danger ml-2" style={{boxShadow: "10px 10px black",
+              borderRadius: "20px",}}>
                     Cancel
                   </Link>
                 </Form>

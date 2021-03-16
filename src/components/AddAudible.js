@@ -60,7 +60,7 @@ export class AddAudible extends Component {
     axios
       .post("http://localhost:3001/audibles", formData)
       .then((res) => console.log(res, formData))
-      .then((data) => this.props.history.push("/"))
+      .then((data) => alert("horray it worked"))
       .catch((err) => console.log(err));
   };
 
@@ -140,8 +140,10 @@ export class AddAudible extends Component {
                     />
                   </Form.File>
                 </FormGroup>
-                <Button type="submit"> Submit </Button>
-                <Link to="/" className="btn btn-danger ml-2">
+                <Button type="submit" style={{boxShadow: "10px 10px black",
+              borderRadius: "20px",}}> Submit </Button>
+                <Link to="/" className="btn btn-danger ml-2" style={{boxShadow: "10px 10px black",
+              borderRadius: "20px",}}>
                   Cancel
                 </Link>
               </Form>

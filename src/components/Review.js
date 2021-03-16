@@ -71,23 +71,6 @@ const Review = () => {
                 audibleId={review.audible_id}
               />
             ))}
-            <Link
-              to="/addReview"
-              style={{
-                display: "flex",
-                margin: "50px",
-                marginLeft: "100px",
-                marginBottom: "100px",
-                width: "100%",
-                boxShadow: "10px 10px black",
-            borderRadius: "20px"
-            
-              }}
-              className="btn btn-primary btn-lg "
-            >
-              {" "}
-              add review{" "}
-            </Link>
           </Row>
         </Container>
       </div>

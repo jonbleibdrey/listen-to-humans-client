@@ -58,22 +58,6 @@ const Home = () => {
                 all={audible}
               />
             ))}
-            <Link
-              to="/add"
-              style={{
-                display: "flex",
-                margin: "50px",
-                marginLeft: "100px",
-                marginBottom: "100px",
-                width: "100%",
-                boxShadow: "10px 20px black",
-                borderRadius: "20px",
-              }}
-              className="btn btn-primary btn-lg "
-            >
-              {" "}
-              add book{" "}
-            </Link>
           </Row>
         </Container>
       </div>

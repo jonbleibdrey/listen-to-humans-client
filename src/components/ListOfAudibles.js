@@ -51,7 +51,7 @@ export const ListOfAudibles = ({
               <audio
                 src={link}
                 style={{
-                  filter: "drop-shadow(2px 3px 3px #333)",
+                  
                   inlineSize: "100%",
                 }}
                 controls
@@ -64,17 +64,17 @@ export const ListOfAudibles = ({
             <h3>Review's</h3>
             <Card.Body>
               {all.reviews.map((review) => (
-                <Link style={{ color: "black" }} key={review.id} to={"/review"}>
+                <div style={{ color: "black", padding:"10px" }} key={review.id} >
                   <ul>
                     <li>{review.title}</li>
                   </ul>
-                </Link>
+                </div>
               ))}
               <Link
                 style={{ display: "inline-block" }}
                 className="btn btn-warning mr-1 btn-lg btn-block"
                 to={`/edit/${id}`}
-              >
+                >
                 edit
               </Link>
             </Card.Body>

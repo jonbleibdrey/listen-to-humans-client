@@ -32,7 +32,7 @@ const NavBar = () => {
         to="home"
         spy={true}
         smooth={true}
-        offset={125}
+        offset={110}
         duration={1000}
         
       >
@@ -45,7 +45,7 @@ const NavBar = () => {
         to="addAudible"
         spy={true}
         smooth={true}
-        offset={-2}
+        offset={-25}
         duration={2000}
       >
         addaudible
@@ -57,7 +57,7 @@ const NavBar = () => {
         to="about"
         spy={true}
         smooth={true}
-        offset={96}
+        offset={69}
         duration={3000}
       >
         about
