@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Jumbotron from "react-bootstrap/Jumbotron";
 import { Card } from "react-bootstrap";
 
 const About = () => {
@@ -46,20 +45,19 @@ const About = () => {
           }}
         >
           <div>
-            <h1>
-              About
-            </h1>
-            <hr/>
+            <h1>About</h1>
+            <hr />
             <h5>
-              I designed this website to help people to record audible to share with others.
-              We differ from audible, in that you the ordinary user could take a book, read it,
-              record it and share it. Where i see this
-              shining mostly is college students, It can be challenging sometimes to
-              find certain books in audible form. Dont take it from me, Here are some testimonials from all walks of life.
+              I designed this website to help people to record audible to share
+              with others. We differ from audible, in that you the ordinary user
+              could take a book, read it, record it and share it. Where i see
+              this shining mostly is college students, It can be challenging
+              sometimes to find certain books in audible form. Dont take it from
+              me, Here are some testimonials from all walks of life.
             </h5>
           </div>
         </div>
-        <div style={{ margin: "10%", marginTop: "1%"}}>
+        <div style={{ margin: "10%", marginTop: "1%" }}>
           {people.map((peo) => (
             <Card
               key={peo.id}
@@ -69,17 +67,22 @@ const About = () => {
                 marginBottom: "25px",
                 width: "60%",
                 height: "auto",
-                
               }}
             >
               <Card.Body className="card">
-                <Card.Img src={peo.image} style={{ variant: "top",  boxShadow: "5px 10px ",
-        borderRadius: "20px", }} />
+                <Card.Img
+                  src={peo.image}
+                  style={{
+                    variant: "top",
+                    boxShadow: "5px 10px ",
+                    borderRadius: "20px",
+                  }}
+                />
                 <hr />
                 <Card.Title>
                   <h1>Name: {peo.name}</h1>
                 </Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
+                <Card.Subtitle>
                   <h4>occupation: {peo.occupation}</h4>
                 </Card.Subtitle>
                 <Card.Text>

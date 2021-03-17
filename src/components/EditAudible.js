@@ -67,7 +67,7 @@ export class EditAudible extends Component {
   render() {
     return (
       <>
-        <div style={{ backgroundColor: "#ebd078", padding:"3%"}}>
+        <div style={{ backgroundColor: "#ebd078", padding: "3%" }}>
           <div
             style={{
               margin: "35px",
@@ -88,49 +88,89 @@ export class EditAudible extends Component {
               <Col xs={12}>
                 <Form onSubmit={this.handleOnSubmit}>
                   <FormGroup>
-                    <FormLabel style={{
-              fontFamily: "monospace",
-               fontSize:"35px"}}> Title: </FormLabel>
+                    <FormLabel
+                      style={{
+                        fontFamily: "monospace",
+                        fontSize: "35px",
+                      }}
+                    >
+                      {" "}
+                      Title:{" "}
+                    </FormLabel>
                     <FormControl
                       type="text"
                       placeholder="Enter Title"
                       value={this.state.title}
                       onChange={this.handleOnChange}
                       name="title"
-                      style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
+                      style={{
+                        margin: "20px",
+                        borderRadius: "20px",
+                        width: "60%",
+                      }}
                     ></FormControl>
-                    <FormLabel style={{
-              fontFamily: "monospace",
-               fontSize:"35px"}}> By: </FormLabel>
+                    <FormLabel
+                      style={{
+                        fontFamily: "monospace",
+                        fontSize: "35px",
+                      }}
+                    >
+                      {" "}
+                      By:{" "}
+                    </FormLabel>
                     <FormControl
                       type="text"
                       placeholder="Created By"
                       value={this.state.by}
                       onChange={this.handleOnChange}
                       name="by"
-                      style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
+                      style={{
+                        margin: "20px",
+                        borderRadius: "20px",
+                        width: "60%",
+                      }}
                     ></FormControl>
-                    <FormLabel style={{
-              fontFamily: "monospace",
-               fontSize:"35px"}}> Language: </FormLabel>
+                    <FormLabel
+                      style={{
+                        fontFamily: "monospace",
+                        fontSize: "35px",
+                      }}
+                    >
+                      {" "}
+                      Language:{" "}
+                    </FormLabel>
                     <FormControl
                       type="text"
                       placeholder="Language read in"
                       value={this.state.language}
                       onChange={this.handleOnChange}
                       name="language"
-                      style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
+                      style={{
+                        margin: "20px",
+                        borderRadius: "20px",
+                        width: "60%",
+                      }}
                     ></FormControl>
-                    <FormLabel style={{
-              fontFamily: "monospace",
-               fontSize:"35px"}}> Audible: </FormLabel>
+                    <FormLabel
+                      style={{
+                        fontFamily: "monospace",
+                        fontSize: "35px",
+                      }}
+                    >
+                      {" "}
+                      Audible:{" "}
+                    </FormLabel>
                     <FormControl
                       type="text"
                       placeholder="Audio file here"
                       value={this.state.audio_file}
                       onChange={this.handleOnChange}
                       name="audio_file"
-                      style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
+                      style={{
+                        margin: "20px",
+                        borderRadius: "20px",
+                        width: "60%",
+                      }}
                     ></FormControl>
                   </FormGroup>
                   <Button type="submit"> Edit </Button>

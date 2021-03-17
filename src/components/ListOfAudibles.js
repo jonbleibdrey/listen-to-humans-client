@@ -19,7 +19,7 @@ export const ListOfAudibles = ({
         style={{
           margin: "40px",
           height: "auto",
-          minHeight: "50vw",
+          minHeight: "40vw",
           fontFamily: "monospace",
         }}
       >

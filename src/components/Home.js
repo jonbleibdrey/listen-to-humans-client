@@ -18,8 +18,6 @@ const Home = () => {
     return aud.title.toLowerCase().includes(search.toLowerCase());
   });
 
- 
-
   return (
     <>
       <div id="home" style={{ backgroundColor: "#ebd078", padding: "3%" }}>
@@ -36,7 +34,7 @@ const Home = () => {
             marginBottom: "40px",
             outline: "none",
             boxShadow: "10px 10px",
-            borderRadius: "20px"
+            borderRadius: "20px",
           }}
         />
         <Row>

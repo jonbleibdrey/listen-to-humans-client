@@ -69,49 +69,52 @@ class AudioP extends Component {
         <h1>Record audio</h1>
         <hr />
         <p>
-          Here we can record our book, press record, say what you have to say and then stop. That easy, lastly press the vertical dots and download!
+          Here we can record our book, press record, say what you have to say
+          and then stop. That easy, lastly press the vertical dots and download!
         </p>
-        <div style={{
-          margin: "10%",
-          padding: "5%",
-          marginLeft: "20%",
-          width: "40%",
-          height: "auto",
-          backgroundColor: "white",
-          inlineSize: "50%",
-          fontFamily: "monospace",
-          boxShadow: "5px 10px",
-          borderRadius: "20px",
-        }}>
-        <audio
-          style={{ marginBottom: "4%", marginLeft:"40px"}}
-          src={this.state.blobURL}
-          controls="controls"
-        />
-        <br />
-        <button
+        <div
           style={{
-            boxShadow: "10px 10px black",
-            borderRadius: "20px",
+            margin: "10%",
+            padding: "5%",
             marginLeft: "20%",
-          }}
-          onClick={this.start}
-          disabled={this.state.isRecording}
-        >
-          Record!
-        </button>
-
-        <button
-          style={{
-            boxShadow: "10px 10px black",
+            width: "40%",
+            height: "auto",
+            backgroundColor: "white",
+            inlineSize: "50%",
+            fontFamily: "monospace",
+            boxShadow: "5px 10px",
             borderRadius: "20px",
-            marginLeft: "15%",
           }}
-          onClick={this.stop}
-          disabled={!this.state.isRecording}
         >
-          Stop!
-        </button>
+          <audio
+            style={{ marginBottom: "4%", marginLeft: "40px" }}
+            src={this.state.blobURL}
+            controls="controls"
+          />
+          <br />
+          <button
+            style={{
+              boxShadow: "10px 10px black",
+              borderRadius: "20px",
+              marginLeft: "20%",
+            }}
+            onClick={this.start}
+            disabled={this.state.isRecording}
+          >
+            Record!
+          </button>
+
+          <button
+            style={{
+              boxShadow: "10px 10px black",
+              borderRadius: "20px",
+              marginLeft: "15%",
+            }}
+            onClick={this.stop}
+            disabled={!this.state.isRecording}
+          >
+            Stop!
+          </button>
         </div>
       </div>
     );

@@ -64,7 +64,7 @@ export class EditReview extends Component {
   render() {
     return (
       <>
-        <div style={{ backgroundColor: "#ebd078", padding:"3%" }}>
+        <div style={{ backgroundColor: "#ebd078", padding: "3%" }}>
           <div
             style={{
               margin: "35px",
@@ -85,39 +85,68 @@ export class EditReview extends Component {
               <Col xs={12}>
                 <Form onSubmit={this.handleOnSubmit}>
                   <FormGroup>
-                    <FormLabel style={{
-              fontFamily: "monospace",
-               fontSize:"35px"}}> Title: </FormLabel>
+                    <FormLabel
+                      style={{
+                        fontFamily: "monospace",
+                        fontSize: "35px",
+                      }}
+                    >
+                      {" "}
+                      Title:{" "}
+                    </FormLabel>
                     <FormControl
                       type="text"
                       placeholder="Enter Title"
                       value={this.state.title}
                       onChange={this.handleOnChange}
                       name="title"
-                      style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
+                      style={{
+                        margin: "20px",
+                        borderRadius: "20px",
+                        width: "60%",
+                      }}
                     ></FormControl>
                     <FormLabel
-                    style={{
-                      fontFamily: "monospace",
-                       fontSize:"35px"}}> description: </FormLabel>
+                      style={{
+                        fontFamily: "monospace",
+                        fontSize: "35px",
+                      }}
+                    >
+                      {" "}
+                      description:{" "}
+                    </FormLabel>
                     <FormControl
                       type="text"
                       placeholder="description"
                       value={this.state.description}
                       onChange={this.handleOnChange}
                       name="description"
-                      style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
+                      style={{
+                        margin: "20px",
+                        borderRadius: "20px",
+                        width: "60%",
+                      }}
                     ></FormControl>
-                    <FormLabel style={{
-              fontFamily: "monospace",
-               fontSize:"35px"}}> rating: </FormLabel>
+                    <FormLabel
+                      style={{
+                        fontFamily: "monospace",
+                        fontSize: "35px",
+                      }}
+                    >
+                      {" "}
+                      rating:{" "}
+                    </FormLabel>
                     <FormControl
                       type="text"
                       placeholder="rating"
                       value={this.state.rating}
                       onChange={this.handleOnChange}
                       name="rating"
-                      style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
+                      style={{
+                        margin: "20px",
+                        borderRadius: "20px",
+                        width: "60%",
+                      }}
                     ></FormControl>
                   </FormGroup>
                   <Button type="submit"> Edit </Button>
