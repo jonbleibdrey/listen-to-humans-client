@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import {
   Form,
   FormGroup,
-  FormLabel,
   FormControl,
   Button,
   Container,
@@ -12,8 +11,6 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import AudioP from "./AudioP";
-
-//import DropZone from "./DropZone";
 
 export class AddAudible extends Component {
   state = {
@@ -39,18 +36,8 @@ export class AddAudible extends Component {
 
   handleOnSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.track);
 
-    // let data = {
-    //   title: this.state.title,
-    //   by: this.state.by,
-    //   language: this.state.language,
-    //   audio_file: this.state.audio_file,
-    //   track: this.state.track,
-    // };
-    //formData.append("audible", JSON.stringify(data));
     const formData = new FormData();
-
     formData.append("audible[title]", this.state.title);
     formData.append("audible[by]", this.state.by);
     formData.append("audible[language]", this.state.language);
@@ -60,7 +47,7 @@ export class AddAudible extends Component {
     axios
       .post("http://localhost:3001/audibles", formData)
       .then((res) => console.log(res, formData))
-      .then((data) =>  window.location.reload())
+      .then((data) => window.location.reload())
       .catch((err) => console.log(err));
   };
 
@@ -70,71 +57,85 @@ export class AddAudible extends Component {
         <div
           id="addAudible"
           style={{
-            margin: "40px",
             padding: "3%",
             marginLeft: "20%",
-            marginTop:"9%",
+            marginTop: "8%",
             width: "60%",
-            height: "100%",
+            height: "auto",
             backgroundColor: "white",
-            border: "1px solid gray",
+            border: "1px solid black",
             fontFamily: "monospace",
             boxShadow: "10px 20px",
             borderRadius: "20px",
           }}
         >
-          <h1 className="animate__animated animate__bounceInDown">
-            Add Audible
-          </h1>
-          <p>
-            {" "}
-            Here we clearly, add new audibles. its simple you can either import
-            one that you have recorded else where. BUT, you can also record
-            straight from here.
-          </p>
+          <h1>Add Audible</h1>
+          <hr />
+          <h6>
+            Here is where the magic happens, we can add, new, audibles! It's
+            simple you can either import one that you have recorded already. OR,
+            you can record straight from the record section, download it, and
+            put in the file section.
+          </h6>
         </div>
+
         <Container style={{ margin: "3%", marginLeft: "30%" }}>
           <Row>
             <Col xs={12}>
-              <Form  onSubmit={this.handleOnSubmit}>
-                <FormGroup >
-                  
+              <Form onSubmit={this.handleOnSubmit}>
+                <FormGroup>
                   <FormControl
                     type="text"
                     placeholder="Enter Title"
                     value={this.state.title}
                     onChange={this.handleOnChange}
                     name="title"
-                    style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
+                    style={{
+                      margin: "20px",
+                      borderRadius: "20px",
+                      width: "60%",
+                    }}
                   ></FormControl>
-                  
+
                   <FormControl
                     type="text"
                     placeholder="Created By"
                     value={this.state.by}
                     onChange={this.handleOnChange}
                     name="by"
-                    style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
+                    style={{
+                      margin: "20px",
+                      borderRadius: "20px",
+                      width: "60%",
+                    }}
                   ></FormControl>
-                 
+
                   <FormControl
                     type="text"
                     placeholder="Language read in"
                     value={this.state.language}
                     onChange={this.handleOnChange}
                     name="language"
-                    style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
+                    style={{
+                      margin: "20px",
+                      borderRadius: "20px",
+                      width: "60%",
+                    }}
                   ></FormControl>
-                 
+
                   <FormControl
                     type="text"
                     placeholder="Delete me after track works"
                     value={this.state.audio_file}
                     onChange={this.handleOnChange}
                     name="audio_file"
-                    style={{ margin:"20px", borderRadius:"20px", width:"60%" }}
+                    style={{
+                      margin: "20px",
+                      borderRadius: "20px",
+                      width: "60%",
+                    }}
                   ></FormControl>
-                  
+
                   <Form.File>
                     <Form.File.Input
                       type="file"
@@ -142,46 +143,28 @@ export class AddAudible extends Component {
                       placeholder="Audio file here"
                       onChange={this.handleFileUpload}
                       name="track"
-                      style={{ margin:"20px"}}
+                      style={{ margin: "20px" }}
                     />
                   </Form.File>
                 </FormGroup>
-                <Button type="submit" style={{boxShadow: "10px 10px black",
-              borderRadius: "20px",}}> Submit </Button>
-                <Link to="/" className="btn btn-danger ml-2" style={{boxShadow: "10px 10px black",
-              borderRadius: "20px",}}>
+                <Button
+                  type="submit"
+                  style={{ boxShadow: "10px 10px black", borderRadius: "20px" }}
+                >
+                  Submit
+                </Button>
+                <Link
+                  to="/"
+                  className="btn btn-danger ml-2"
+                  style={{ boxShadow: "10px 10px black", borderRadius: "20px" }}
+                >
                   Cancel
                 </Link>
               </Form>
             </Col>
           </Row>
         </Container>
-        <div
-          style={{
-            margin: "40px",
-            padding: "3%",
-            marginLeft: "20%",
-            marginBottom: "9%",
-            width: "60%",
-            height: "100%",
-            backgroundColor: "white",
-            border: "1px solid gray",
-            fontFamily: "monospace",
-            boxShadow: "5px 10px",
-            borderRadius: "20px",
-          }}
-        >
-          <h1 className="animate__animated animate__bounceInDown">
-            Record audio
-          </h1>
-          <p>
-            {" "}
-            Here we can record our book, then simply add to the new audible.
-            This feature is coming soon!
-          </p>
-          <AudioP />
-          {/* <DropZone/> */}
-        </div>
+        <AudioP />
       </>
     );
   }

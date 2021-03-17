@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Card, Col, Container } from "react-bootstrap";
-import Accordion from "react-bootstrap/Accordion";
 
 export const ListOfAudibles = ({
   title,
@@ -20,6 +19,7 @@ export const ListOfAudibles = ({
         style={{
           margin: "40px",
           height: "auto",
+          minHeight: "50vw",
           fontFamily: "monospace",
         }}
       >
@@ -75,21 +75,17 @@ export const ListOfAudibles = ({
       </Card>
       <Link
         style={{
-          display: "inline-block",
-          margin: "4%",
-          padding: "40px",
           backgroundColor: "white",
           color: "black",
-          marginLeft: "25%",
+          marginLeft: "20%",
           width: "60%",
-          border: "1px solid gray",
           fontFamily: "monospace",
           boxShadow: "10px 20px black",
         }}
-        className="btn btn-primary mr-1 btn-lg btn-block"
+        className="btn"
         to={`/edit/${id}`}
       >
-        edit
+        Edit
       </Link>
     </Col>
   );

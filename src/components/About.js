@@ -33,7 +33,7 @@ const About = () => {
   return (
     <>
       <div id="about" style={{ backgroundColor: "#ebd078", padding: "3%" }}>
-        <Jumbotron
+        <div
           style={{
             margin: "40px",
             padding: "2%",
@@ -41,7 +41,7 @@ const About = () => {
             width: "60%",
             height: "auto",
             backgroundColor: "white",
-            border: "1px solid gray",
+            //border: "1px solid gray",
             fontFamily: "monospace",
             boxShadow: "10px 20px",
             borderRadius: "20px",
@@ -52,6 +52,7 @@ const About = () => {
               {" "}
               About page
             </h1>
+            <hr/>
             <p>
               {" "}
               This is a page to hear about some testimonials. We differ from
@@ -62,7 +63,7 @@ const About = () => {
               below.{" "}
             </p>
           </div>
-        </Jumbotron>
+        </div>
         <div style={{ margin: "10%", marginTop: "1%" }}>
           {people.map((peeps) => (
             <Card

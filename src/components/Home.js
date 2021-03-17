@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { ListOfAudibles } from "./ListOfAudibles";
 import { Row } from "react-bootstrap";
@@ -36,8 +36,7 @@ const Home = () => {
             marginBottom: "40px",
             outline: "none",
             boxShadow: "10px 10px",
-            borderRadius: "20px",
-            outline: "none",
+            borderRadius: "20px"
           }}
         />
         <Row>

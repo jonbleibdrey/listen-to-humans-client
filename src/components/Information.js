@@ -30,7 +30,6 @@ const Information = () => {
         A website to listen and create audio books, even if you don't sound like
         morgan freeman.
       </h1>
-      <br />
       <hr />
       <h6>
         We got audible books! If you're a college student trying to find a book
