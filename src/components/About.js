@@ -35,61 +35,56 @@ const About = () => {
       <div id="about" style={{ backgroundColor: "#ebd078", padding: "3%" }}>
         <div
           style={{
-            margin: "40px",
             padding: "2%",
             marginLeft: "20%",
             width: "60%",
             height: "auto",
             backgroundColor: "white",
-            //border: "1px solid gray",
             fontFamily: "monospace",
             boxShadow: "10px 20px",
             borderRadius: "20px",
           }}
         >
           <div>
-            <h1 className="animate__animated animate__bounceInLeft">
-              {" "}
-              About page
+            <h1>
+              About
             </h1>
             <hr/>
-            <p>
-              {" "}
-              This is a page to hear about some testimonials. We differ from
-              audible in that you the ordinary user could take a book, read it,
-              and record it. Then share it with other people. where i see this
-              shining is college students, It can be challenging sometimes to
-              find certain books in audible form. Dont take it from me read
-              below.{" "}
-            </p>
+            <h5>
+              I designed this website to help people to record audible to share with others.
+              We differ from audible, in that you the ordinary user could take a book, read it,
+              record it and share it. Where i see this
+              shining mostly is college students, It can be challenging sometimes to
+              find certain books in audible form. Dont take it from me, Here are some testimonials from all walks of life.
+            </h5>
           </div>
         </div>
-        <div style={{ margin: "10%", marginTop: "1%" }}>
-          {people.map((peeps) => (
+        <div style={{ margin: "10%", marginTop: "1%"}}>
+          {people.map((peo) => (
             <Card
-              key={peeps.id}
+              key={peo.id}
               style={{
-                display: "flex",
                 margin: "50px",
                 marginLeft: "19%",
                 marginBottom: "25px",
                 width: "60%",
-                height: "25%",
+                height: "auto",
+                
               }}
             >
-              <Card.Body className="card text-center">
-                <Card.Img src={peeps.image} style={{ variant: "top",  boxShadow: "5px 10px ",
+              <Card.Body className="card">
+                <Card.Img src={peo.image} style={{ variant: "top",  boxShadow: "5px 10px ",
         borderRadius: "20px", }} />
                 <hr />
                 <Card.Title>
-                  <h1>Name: {peeps.name}</h1>
+                  <h1>Name: {peo.name}</h1>
                 </Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
-                  <h4>occupation: {peeps.occupation}</h4>
+                  <h4>occupation: {peo.occupation}</h4>
                 </Card.Subtitle>
                 <Card.Text>
                   <h6>Testimonial:</h6>
-                  <p>{peeps.bio}</p>
+                  <p>{peo.bio}</p>
                 </Card.Text>
               </Card.Body>
             </Card>
