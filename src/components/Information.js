@@ -9,7 +9,6 @@ const Information = () => {
         backgroundColor: "white",
         marginLeft: "22%",
         width: "60%",
-        border: "1px solid gray",
         fontFamily: "monospace",
         boxShadow: "10px 20px",
         borderRadius: "20px",
@@ -24,21 +23,21 @@ const Information = () => {
             width: "15%",
             height: "auto",
             float: "left",
-            margin: "20px",
-            marginRight: "50px",
           }}
         />
       </div>
-      <h2 className="animate__animated animate__bounceInDown">
+      <h1 className="animate__animated animate__bounceInDown">
         A website to listen and create audio books, even if you don't sound like
         morgan freeman.
-      </h2>
+      </h1>
       <br />
-      <p>
-        if you're a college student trying to find a book, if your a doctor
-        trying to find a book on how to do surgery WE GOT IT and if your a tech
-        guy looking for how to do something we have it!
-      </p>
+      <hr />
+      <h6>
+        We got audible books! If you're a college student trying to find a book
+        for your next exam, If your a doctor trying to find a book on how to do
+        surgery, even If your a tech guy looking for how to do data and
+        algorithms, WE GOT IT!
+      </h6>
     </div>
   );
 };

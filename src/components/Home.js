@@ -1,11 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-
-import { Link } from "react-router-dom";
 import { ListOfAudibles } from "./ListOfAudibles";
-import { Container, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import Information from "./Information";
-
 
 const Home = () => {
   const [audible, setAudible] = useState([]);
@@ -21,46 +18,42 @@ const Home = () => {
     return aud.title.toLowerCase().includes(search.toLowerCase());
   });
 
-  
+ 
 
   return (
     <>
-    
-
       <div id="home" style={{ backgroundColor: "#ebd078", padding: "3%" }}>
         <Information />
         <input
           type="text"
+          className="text-center"
+          placeholder="Search for Audible"
+          onChange={(e) => setSearch(e.target.value)}
           style={{
             width: "50%",
             marginLeft: "25%",
             marginTop: "5px",
             marginBottom: "40px",
-             outline:"none",
+            outline: "none",
             boxShadow: "10px 10px",
             borderRadius: "20px",
-            outline:"none"
+            outline: "none",
           }}
-          className="text-center"
-          placeholder="search for audible"
-          onChange={(e) => setSearch(e.target.value)}
         />
-        <Container>
-          <Row>
-            {filteredAudibles.map((audible) => (
-              <ListOfAudibles
-                key={audible.id}
-                id={audible.id}
-                title={audible.title}
-                by={audible.by}
-                language={audible.language}
-                audio={audible.audio_file}
-                track={audible.track}
-                all={audible}
-              />
-            ))}
-          </Row>
-        </Container>
+        <Row>
+          {filteredAudibles.map((audible) => (
+            <ListOfAudibles
+              key={audible.id}
+              id={audible.id}
+              title={audible.title}
+              by={audible.by}
+              language={audible.language}
+              audio={audible.audio_file}
+              track={audible.track}
+              all={audible}
+            />
+          ))}
+        </Row>
       </div>
     </>
   );
