@@ -46,7 +46,7 @@ export class AddReview extends Component {
     axios
       .post("http://localhost:3001/reviews", this.state)
       .then((res) => console.log(res))
-      .then((data) => window.location.reload())
+      .then((data) => console.log(data))
       .catch((err) => console.log(err));
   };
 

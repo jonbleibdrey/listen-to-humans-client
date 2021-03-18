@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ListOfReviews from "./ListOfReviews";
-import { Container, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
 const Review = () => {
   const [review, setReview] = useState([]);
@@ -57,7 +57,7 @@ const Review = () => {
         />
         <Row>
           {filteredReview.map((review) => (
-            <ListOfReviews
+              <ListOfReviews
               key={review.id}
               id={review.id}
               title={review.title}

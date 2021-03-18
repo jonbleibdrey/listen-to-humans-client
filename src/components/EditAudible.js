@@ -18,7 +18,7 @@ export class EditAudible extends Component {
     title: "",
     by: "",
     language: "",
-    audio_file: "",
+    
   };
 
   componentDidMount() {
@@ -30,8 +30,8 @@ export class EditAudible extends Component {
         this.setState({
           title: data.title,
           by: data.by,
-          language: data.language,
-          audio_file: data.audio_file,
+          language: data.language
+          
         })
       );
     scroll.scrollToTop();
@@ -145,27 +145,6 @@ export class EditAudible extends Component {
                       value={this.state.language}
                       onChange={this.handleOnChange}
                       name="language"
-                      style={{
-                        margin: "20px",
-                        borderRadius: "20px",
-                        width: "60%",
-                      }}
-                    ></FormControl>
-                    <FormLabel
-                      style={{
-                        fontFamily: "monospace",
-                        fontSize: "35px",
-                      }}
-                    >
-                      {" "}
-                      Audible:{" "}
-                    </FormLabel>
-                    <FormControl
-                      type="text"
-                      placeholder="Audio file here"
-                      value={this.state.audio_file}
-                      onChange={this.handleOnChange}
-                      name="audio_file"
                       style={{
                         margin: "20px",
                         borderRadius: "20px",
