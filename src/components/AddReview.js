@@ -12,6 +12,7 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+
 export class AddReview extends Component {
   state = {
     title: "",
@@ -44,10 +45,11 @@ export class AddReview extends Component {
   handleOnSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/reviews", this.state)
-      .then((res) => console.log(res))
-      .then((data) => console.log(data))
-      .catch((err) => console.log(err));
+    .post("http://localhost:3001/reviews", this.state)
+    .then((res) => console.log(res))
+    .then((data) => window.location.replace("http://localhost:3000"))
+    .catch((err) => console.log(err));
+      
   };
 
   render() {
@@ -110,6 +112,7 @@ export class AddReview extends Component {
                         width: "60%",
                       }}
                     >
+                      <option disabled selected>Please select value</option>
                       {this.state.audible.map((audible) => (
                         <option key={audible.id} value={audible.id}>
                           {audible.title}

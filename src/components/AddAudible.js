@@ -12,6 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import AudioP from "./AudioP";
 
+
 export class AddAudible extends Component {
   state = {
     title: "",
@@ -48,7 +49,7 @@ export class AddAudible extends Component {
       .post("http://localhost:3001/audibles", formData)
       .then((res) => console.log(res, formData))
       .then((data) => window.location.reload())
-      .catch((err) => console.log(err));
+      .catch((err) => alert("you must add a file"));
   };
 
   render() {
@@ -125,7 +126,7 @@ export class AddAudible extends Component {
 
                   <FormControl
                     type="text"
-                    placeholder="Delete me after track works"
+                    placeholder="Audible file name"
                     value={this.state.audio_file}
                     onChange={this.handleOnChange}
                     name="audio_file"

@@ -20,7 +20,7 @@ const Information = () => {
           src="../logo1.PNG"
           alt="logo"
           style={{
-            width: "15%",
+            width: "15vw",
             height: "auto",
             float: "left",
           }}
