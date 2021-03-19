@@ -56,10 +56,10 @@ export const ListOfAudibles = ({
             ></audio>
           </Card.Text>
           <hr />
-          <h1>Review's</h1>
+          <h1>Top three Review's</h1>
           <Container>
             <Card.Body>
-              {all.reviews.map((review) => (
+              {all.reviews.slice(0, 3).map((review) => (
                 <div
                   style={{ color: "black", padding: "10px" }}
                   key={review.id}

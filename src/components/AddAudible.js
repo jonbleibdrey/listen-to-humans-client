@@ -20,6 +20,7 @@ export class AddAudible extends Component {
     language: "",
     audio_file: "",
     track: "",
+    errors:[]
   };
 
   handleOnChange = (e) => {
@@ -55,10 +56,10 @@ export class AddAudible extends Component {
 
 
   handleError=(error)=>{
-    const s = document.getElementById("error")
-    const err = Object.values(error).map(value => value[0])
-    // const addH1 = document.createElement("h1")
-    return console.log(err)}
+    const err = Object.values(error)
+    this.setState({errors: err}) 
+  }
+   
 
 
   render() {
@@ -158,9 +159,10 @@ export class AddAudible extends Component {
                     />
                   </Form.File>
                 </FormGroup>
-                <ul id="error">
-                  
-                </ul>
+                <div id="error" style={{color:"red"}}>
+                    {this.state.errors.map(e=> <ul><li>{e}</li></ul> )}
+                </div>
+               
                 <Button
                   type="submit"
                   style={{ boxShadow: "10px 10px black", borderRadius: "20px" }}
