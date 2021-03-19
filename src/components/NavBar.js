@@ -12,7 +12,7 @@ const NavBar = () => {
       style={{ padding: "3%", justifyContent: "space-evenly" }}
     >
       <ReactBootStrap.Navbar.Brand href="/">
-        <img alt="logo" src="/logo1.PNG" align="left" className="col-sm-3" style={{width:"1vw"}} />
+        <img alt="logo" src="/logo1.PNG" align="left" className="col-sm-3" />
         <div
           style={{
             marginLeft: "25%",
