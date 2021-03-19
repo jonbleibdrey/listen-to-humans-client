@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import AudioP from "./AudioP";
 
 
+
 export class AddAudible extends Component {
   state = {
     title: "",
@@ -20,7 +21,9 @@ export class AddAudible extends Component {
     language: "",
     audio_file: "",
     track: "",
-    errors:[]
+    errors:[],
+   
+    
   };
 
   handleOnChange = (e) => {
@@ -54,10 +57,13 @@ export class AddAudible extends Component {
     .catch((err) => this.handleError(err.response.data));
   };
 
+  
 
   handleError=(error)=>{
+    console.log(error)
     const err = Object.values(error)
     this.setState({errors: err}) 
+    
   }
    
 
@@ -160,7 +166,7 @@ export class AddAudible extends Component {
                   </Form.File>
                 </FormGroup>
                 <div id="error" style={{color:"red"}}>
-                    {this.state.errors.map(e=> <ul><li>{e}</li></ul> )}
+                    {this.state.errors.map(e=> <ul><li key={this.state.key}>{e}</li></ul> )}
                 </div>
                
                 <Button
