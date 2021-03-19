@@ -38,6 +38,7 @@ export class AddAudible extends Component {
   handleOnSubmit = (e) => {
     e.preventDefault();
 
+    
     const formData = new FormData();
     formData.append("audible[title]", this.state.title);
     formData.append("audible[by]", this.state.by);
@@ -46,11 +47,19 @@ export class AddAudible extends Component {
     formData.append("audible[track]", this.state.track);
 
     axios
-      .post("http://localhost:3001/audibles", formData)
-      .then((res) => console.log(res, formData))
-      .then((data) => window.location.reload())
-      .catch((err) => alert("you must add a file"));
+    .post("http://localhost:3001/audibles", formData)
+    .then((res) => console.log(res, formData))
+    .then((data) => window.location.reload())
+    .catch((err) => this.handleError(err.response.data));
   };
+
+
+  handleError=(error)=>{
+    const s = document.getElementById("error")
+    const err = Object.values(error).map(value => value[0])
+    // const addH1 = document.createElement("h1")
+    return console.log(err)}
+
 
   render() {
     return (
@@ -80,7 +89,7 @@ export class AddAudible extends Component {
           </h6>
         </div>
 
-        <Container style={{ margin: "3%", marginLeft: "30%" }}>
+        <Container id="container" style={{ margin: "3%", marginLeft: "30%" }}>
           <Row>
             <Col xs={12}>
               <Form onSubmit={this.handleOnSubmit}>
@@ -139,6 +148,7 @@ export class AddAudible extends Component {
 
                   <Form.File>
                     <Form.File.Input
+                    
                       type="file"
                       accept=".mp3,audio/*"
                       placeholder="Audio file here"
@@ -148,6 +158,9 @@ export class AddAudible extends Component {
                     />
                   </Form.File>
                 </FormGroup>
+                <ul id="error">
+                  
+                </ul>
                 <Button
                   type="submit"
                   style={{ boxShadow: "10px 10px black", borderRadius: "20px" }}
