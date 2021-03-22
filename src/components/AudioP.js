@@ -34,6 +34,7 @@ class AudioP extends Component {
       Mp3Recorder.start()
         .then(() => {
           this.setState({ isRecording: true });
+          alert("recording")
         })
         .catch((e) => console.error(e));
     }
@@ -45,6 +46,7 @@ class AudioP extends Component {
       .then(([buffer, blob]) => {
         const blobURL = URL.createObjectURL(blob);
         this.setState({ blobURL, isRecording: false });
+        alert("stop recording")
       })
       .catch((e) => console.log(e));
   };
@@ -93,6 +95,7 @@ class AudioP extends Component {
           />
           <br />
           <button
+          id="recording"
             style={{
               boxShadow: "10px 10px black",
               borderRadius: "20px",
@@ -105,6 +108,7 @@ class AudioP extends Component {
           </button>
 
           <button
+          id="stop"
             style={{
               boxShadow: "10px 10px black",
               borderRadius: "20px",
