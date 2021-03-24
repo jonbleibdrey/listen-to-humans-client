@@ -10,7 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/audibles")
+      .get("https://rails-backend-audible-api.herokuapp.com/audibles")
       .then((resp) => setAudible(resp.data));
   }, []);
 

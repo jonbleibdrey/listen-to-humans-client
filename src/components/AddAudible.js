@@ -51,7 +51,7 @@ export class AddAudible extends Component {
     formData.append("audible[track]", this.state.track);
 
     axios
-    .post("http://localhost:3001/audibles", formData)
+    .post("https://rails-backend-audible-api.herokuapp.com/audibles", formData)
     .then((res) => console.log(res, formData))
     .then((data) => window.location.reload())
     .catch((err) => this.handleError(err.response.data));

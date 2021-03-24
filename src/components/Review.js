@@ -9,7 +9,7 @@ const Review = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/reviews")
+      .get("https://rails-backend-audible-api.herokuapp.com/reviews")
       .then((resp) => setReview(resp.data));
   }, []);
 

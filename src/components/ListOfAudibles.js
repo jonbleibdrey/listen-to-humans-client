@@ -11,7 +11,8 @@ export const ListOfAudibles = ({
   all,
   track,
 }) => {
-  const link = `http://localhost:3001${track}`;
+  const link = `https://rails-backend-audible-api.herokuapp${track}`;
+  console.log("linke for audio",link)
 
   return (
     <Col xs={12} lg={3}>
