@@ -47,7 +47,7 @@ export class AddReview extends Component {
     axios
       .post("https://rails-backend-audible-api.herokuapp.com/reviews", this.state)
       .then((res) => console.log(res))
-      .then((data) => window.location.replace("https://sharp-hugle-bba079.netlify.app/audibles"))
+      .then((data) => window.location.reload())
       .catch((err) => this.handleError(err.response.data));
   };
 

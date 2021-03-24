@@ -11,7 +11,8 @@ export const ListOfAudibles = ({
   all,
   track,
 }) => {
-  const link = `https://rails-backend-audible-api.herokuapp${track}`;
+  //const link = `https://rails-backend-audible-api.herokuapp${track}`;
+  const link = `https://rails-backend-audible-api.herokuapp.com${track}`;
   console.log("linke for audio",link)
 
   return (
