@@ -4,16 +4,19 @@ import { ListOfAudibles } from "./ListOfAudibles";
 import { Row } from "react-bootstrap";
 import Information from "./Information";
 
+
 const Home = () => {
   const [books, setBooks] = useState([]);
   const [search, setSearch] = useState("");
-
+  const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_KEY
+  
   useEffect(() => {
     axios
-      .get("https://www.googleapis.com/books/v1/volumes?q=javascript&key=AIzaSyAS4RtlZ1i8n73xYbkI2KexiygHxBwbrG8")
+      .get(`https://www.googleapis.com/books/v1/volumes?q=javascript&key=${GOOGLE_KEY}`)
       .then((resp) => setBooks(resp.data.items));
       //.then((resp) => console.log("this is the response data",resp.data))
   }, []);
+
 
   // const filteredBook = books.filter((book) => {
   //   return book.title.toLowerCase().includes(search.toLowerCase());
@@ -48,7 +51,7 @@ const Home = () => {
               language={book.volumeInfo.language}
               categories={book.volumeInfo.categories}
               pageCount={book.volumeInfo.pageCount}
-             price={book.volumeInfo}
+             price={book.volumeInfo.retailPrice}
              buyLink={book.volumeInfo}
              description={book.volumeInfo}
             />

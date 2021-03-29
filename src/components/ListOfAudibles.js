@@ -44,7 +44,7 @@ export const ListOfAudibles = ({
           <Card.Text>
             <h6>Language: {language}</h6>
             <br />
-            <h7>categories: {categories}</h7>
+            <h6>categories: {categories}</h6>
           </Card.Text>
           <hr />
           <Card.Text>
