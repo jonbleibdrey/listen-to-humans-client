@@ -5,18 +5,19 @@ import { Row } from "react-bootstrap";
 import Information from "./Information";
 
 const Home = () => {
-  const [audible, setAudible] = useState([]);
+  const [books, setBooks] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
     axios
-      .get("https://rails-backend-audible-api.herokuapp.com/audibles")
-      .then((resp) => setAudible(resp.data));
+      .get("https://www.googleapis.com/books/v1/volumes?q=javascript&key=AIzaSyAS4RtlZ1i8n73xYbkI2KexiygHxBwbrG8")
+      .then((resp) => setBooks(resp.data.items));
+      //.then((resp) => console.log("this is the response data",resp.data))
   }, []);
 
-  const filteredAudibles = audible.filter((aud) => {
-    return aud.title.toLowerCase().includes(search.toLowerCase());
-  });
+  // const filteredBook = books.filter((book) => {
+  //   return book.title.toLowerCase().includes(search.toLowerCase());
+  // });
 
   return (
     <>
@@ -38,18 +39,20 @@ const Home = () => {
           }}
         />
         <Row>
-          {filteredAudibles.map((audible) => (
+          {books.map((book) => (
             <ListOfAudibles
-              key={audible.id}
-              id={audible.id}
-              title={audible.title}
-              by={audible.by}
-              language={audible.language}
-              audio={audible.audio_file}
-              track={audible.track}
-              all={audible}
+              key={book.id}
+              id={book.id}
+              title={book.volumeInfo.title}
+              by={book.volumeInfo.authors[0]}
+              language={book.volumeInfo.language}
+              categories={book.volumeInfo.categories}
+              pageCount={book.volumeInfo.pageCount}
+             price={book.volumeInfo}
+             buyLink={book.volumeInfo}
+             description={book.volumeInfo}
             />
-          ))}
+          ))} 
         </Row>
       </div>
     </>

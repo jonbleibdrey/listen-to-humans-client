@@ -24,7 +24,7 @@ export class EditAudible extends Component {
   componentDidMount() {
     const id = this.props.match.params.id;
     axios
-      .get(`https://rails-backend-audible-api.herokuapp.com/audibles/${id}`)
+      .get(`http://localhost:3001/audibles/${id}`)
       .then((resp) => resp.data)
       .then((data) =>
         this.setState({
@@ -48,7 +48,7 @@ export class EditAudible extends Component {
     e.preventDefault();
     const id = this.props.match.params.id;
     axios
-      .put(`https://rails-backend-audible-api.herokuapp.com/audibles/${id}`, this.state)
+      .put(`http://localhost:3001/audibles/${id}`, this.state)
       .then((res) => res)
       .then((data) => this.props.history.push("/"))
       .catch((err) => console.log(err));
@@ -58,7 +58,7 @@ export class EditAudible extends Component {
     e.preventDefault();
     const id = this.props.match.params.id;
     axios
-      .delete(`https://rails-backend-audible-api.herokuapp.com/${id}`, this.state)
+      .delete(`http://localhost:3001/audibles/${id}`, this.state)
       .then((res) => res)
       .then((data) => this.props.history.push("/"))
       .catch((err) => console.log(err));

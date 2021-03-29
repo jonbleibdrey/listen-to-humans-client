@@ -23,7 +23,7 @@ export class AddReview extends Component {
   };
 
   componentDidMount = () => {
-    axios.get("https://rails-backend-audible-api.herokuapp.com/audibles").then((resp) => {
+    axios.get("http://localhost:3001/audibles").then((resp) => {
       const audible = resp.data;
       this.setState({ audible });
     });
@@ -45,9 +45,9 @@ export class AddReview extends Component {
   handleOnSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://rails-backend-audible-api.herokuapp.com/reviews", this.state)
+      .post("http://localhost:3001/reviews", this.state)
       .then((res) => console.log(res))
-      .then((data) => window.location.reload())
+      .then((data) => window.location.replace("http://localhost:3000"))
       .catch((err) => this.handleError(err.response.data));
   };
 

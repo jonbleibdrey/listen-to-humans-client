@@ -23,7 +23,7 @@ export class EditReview extends Component {
   componentDidMount() {
     const id = this.props.match.params.id;
     axios
-      .get(`https://rails-backend-audible-api.herokuapp.com/reviews/${id}`)
+      .get(`http://localhost:3001/reviews/${id}`)
       .then((resp) => resp.data)
       .then((data) =>
         this.setState({
@@ -45,7 +45,7 @@ export class EditReview extends Component {
     e.preventDefault();
     const id = this.props.match.params.id;
     axios
-      .put(`https://rails-backend-audible-api.herokuapp.com/reviews/${id}`, this.state)
+      .put(`http://localhost:3001/reviews/${id}`, this.state)
       .then((res) => res)
       .then((data) => this.props.history.push("/"))
       .catch((err) => console.log(err));
@@ -55,7 +55,7 @@ export class EditReview extends Component {
     e.preventDefault();
     const id = this.props.match.params.id;
     axios
-      .delete(`https://rails-backend-audible-api.herokuapp.com/reviews/${id}`, this.state)
+      .delete(`http://localhost:3001/reviews/${id}`, this.state)
       .then((res) => res)
       .then((data) => this.props.history.push("/review"))
       .catch((err) => console.log(err));
