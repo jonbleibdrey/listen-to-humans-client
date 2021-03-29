@@ -22,6 +22,7 @@ const Home = () => {
   //   return book.title.toLowerCase().includes(search.toLowerCase());
   // });
 
+
   return (
     <>
       <div id="home" style={{ backgroundColor: "#ebd078", padding: "3%" }}>
@@ -54,8 +55,7 @@ const Home = () => {
               pageCount={book.volumeInfo.pageCount}
               image={book.volumeInfo.imageLinks.thumbnail}
               bookLink={book.volumeInfo.infoLink}
-              //price={book.saleInfo}
-              //buyLink={book.salesInfo.buyLink}
+              price={book.saleInfo.listPrice}
               description={book.volumeInfo.description}
             />
           ))} 

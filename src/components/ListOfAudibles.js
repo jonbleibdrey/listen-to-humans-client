@@ -9,7 +9,6 @@ export const ListOfAudibles = ({
   categories,
   pageCount,
   price,
-  buyLink,
   description,
   image,
   bookLink
@@ -28,7 +27,7 @@ export const ListOfAudibles = ({
       >
         <Card.Body>
           <Card.Title>
-            <a href={bookLink}>
+            <a href={bookLink} target="_blank">
           <img src={image} alt={image}/>
           </a>
             <h4>
@@ -50,12 +49,13 @@ export const ListOfAudibles = ({
             <br />
             <h6>categories: {categories}</h6>
           </Card.Text>
+          <Card.Text>
+            <h6>price: {price == undefined ? "price not available" : price.amount}</h6>
+            <br />
+          </Card.Text>
           <hr />
           <Card.Text>
             <h6>page count: {pageCount}</h6>
-          </Card.Text>
-          <Card.Text>
-            <h6>buy Link: {console.log(buyLink)}</h6>
           </Card.Text>
           <hr />
           <Card.Text>
