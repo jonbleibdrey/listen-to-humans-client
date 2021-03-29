@@ -14,7 +14,7 @@ const Home = () => {
     axios
       .get(`https://www.googleapis.com/books/v1/volumes?q=javascript&key=${GOOGLE_KEY}`)
       .then((resp) => setBooks(resp.data.items));
-      //.then((resp) => console.log("this is the response data",resp.data))
+      //.then((resp) => console.log("this is the response data",books))
   }, []);
 
 
@@ -42,6 +42,7 @@ const Home = () => {
           }}
         />
         <Row>
+          {console.log(books)}
           {books.map((book) => (
             <ListOfAudibles
               key={book.id}
@@ -51,9 +52,11 @@ const Home = () => {
               language={book.volumeInfo.language}
               categories={book.volumeInfo.categories}
               pageCount={book.volumeInfo.pageCount}
-             price={book.volumeInfo.retailPrice}
-             buyLink={book.volumeInfo}
-             description={book.volumeInfo}
+              image={book.volumeInfo.imageLinks.thumbnail}
+              bookLink={book.volumeInfo.infoLink}
+              //price={book.saleInfo}
+              //buyLink={book.salesInfo.buyLink}
+              description={book.volumeInfo.description}
             />
           ))} 
         </Row>

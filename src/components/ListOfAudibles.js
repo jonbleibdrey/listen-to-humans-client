@@ -1,6 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom"
-import { Card, Col, Container } from "react-bootstrap";
+import { Card, Col} from "react-bootstrap";
 
 export const ListOfAudibles = ({
   id,
@@ -11,7 +10,9 @@ export const ListOfAudibles = ({
   pageCount,
   price,
   buyLink,
-  description
+  description,
+  image,
+  bookLink
 }) => {
 
 
@@ -27,6 +28,9 @@ export const ListOfAudibles = ({
       >
         <Card.Body>
           <Card.Title>
+            <a href={bookLink}>
+          <img src={image} alt={image}/>
+          </a>
             <h4>
               Title of Book:
               <br />
@@ -50,22 +54,16 @@ export const ListOfAudibles = ({
           <Card.Text>
             <h6>page count: {pageCount}</h6>
           </Card.Text>
+          <Card.Text>
+            <h6>buy Link: {console.log(buyLink)}</h6>
+          </Card.Text>
+          <hr />
+          <Card.Text>
+            <h6>description: {description}</h6>
+          </Card.Text>
+          <hr />
         </Card.Body>
       </Card>
-      <Link
-        style={{
-          backgroundColor: "white",
-          color: "black",
-          marginLeft: "20%",
-          width: "60%",
-          fontFamily: "monospace",
-          boxShadow: "10px 20px black",
-        }}
-        className="btn"
-        to={`/edit/${id}`}
-      >
-        Edit
-      </Link>
     </Col>
   );
 };
