@@ -10,30 +10,33 @@ const Home = () => {
   const [search, setSearch] = useState("");
   const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_KEY
   
-  useEffect(() => {
+
+  function handleChange (ev) {
+    const book = ev.target.value
+    setSearch(book)
+  }
+  function handleSubmit (ev) {
+    ev.preventDefault()
+
     axios
-      .get(`https://www.googleapis.com/books/v1/volumes?q=javascript&key=${GOOGLE_KEY}`)
+     .get(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${GOOGLE_KEY}&maxResults=20`)
       .then((resp) => setBooks(resp.data.items));
-      //.then((resp) => console.log("this is the response data",books))
-  }, []);
-
-
-  // const filteredBook = books.filter((book) => {
-  //   return book.title.toLowerCase().includes(search.toLowerCase());
-  // });
+  }
 
 
   return (
     <>
       <div id="home" style={{ backgroundColor: "#ebd078", padding: "3%" }}>
         <Information />
+        <form onSubmit={handleSubmit}>
         <input
           type="text"
           className="text-center"
-          placeholder="Search for Audible"
-          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Search for Book"
+          onChange={handleChange}
           style={{
             width: "50%",
+            padding: "10%",
             marginLeft: "25%",
             marginTop: "5px",
             marginBottom: "40px",
@@ -42,6 +45,10 @@ const Home = () => {
             borderRadius: "20px",
           }}
         />
+        <button>
+          click to search
+        </button>
+        </form>
         <Row>
           {console.log(books)}
           {books.map((book) => (
@@ -49,7 +56,7 @@ const Home = () => {
               key={book.id}
               id={book.id}
               title={book.volumeInfo.title}
-              by={book.volumeInfo.authors[0]}
+              by={book.volumeInfo.authors}
               language={book.volumeInfo.language}
               categories={book.volumeInfo.categories}
               pageCount={book.volumeInfo.pageCount}
