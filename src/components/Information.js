@@ -27,13 +27,13 @@ const Information = () => {
         />
       </div>
       <h1 className="animate__animated animate__bounceInDown">
-        A website to search google api for books.
+        A site to search google's massive API of books.
       </h1>
       <hr />
       <h6>
-        We got books! If you're a college student trying to find a book
-        for your next exam, If your a doctor trying to find a book on how to do
-        surgery, even If your a tech guy looking for how to do data and
+        WE GOT BOOKS! If you're a college student trying to find a book
+        for your next exam WE GOT IT, If your a doctor trying to find a book on how to do
+        surgery WE GOT IT, even If your a tech guy looking for how to do data and
         algorithms, WE GOT IT!
       </h6>
     </div>

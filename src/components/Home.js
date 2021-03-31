@@ -32,12 +32,12 @@ const Home = () => {
         <input
           type="text"
           className="text-center"
-          placeholder="Search for Book"
+          placeholder="Search For Book Here"
           onChange={handleChange}
           style={{
-            width: "50%",
+            width: "70%",
             padding: "10%",
-            marginLeft: "25%",
+            marginLeft: "17%",
             marginTop: "5px",
             marginBottom: "40px",
             outline: "none",
@@ -48,7 +48,7 @@ const Home = () => {
             
           }}
         />
-        <button style={{
+        {/* <button style={{
             width: "50%",
             marginLeft: "25%",
             marginTop: "5px",
@@ -59,7 +59,7 @@ const Home = () => {
             
           }} >
           click to search
-        </button>
+        </button> */}
         </form>
         <Row>
           {console.log(books)}
@@ -76,6 +76,7 @@ const Home = () => {
               bookLink={book.volumeInfo.infoLink}
               price={book.saleInfo.listPrice}
               description={book.volumeInfo.description}
+              averageRating={book.volumeInfo.averageRating}
             />
           ))} 
         </Row>
