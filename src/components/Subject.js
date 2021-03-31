@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import ListOfReviews from "./ListOfReviews";
+import ListOfSubject from "./ListOfSubject";
 import { Row } from "react-bootstrap";
 
-const Review = () => {
-  const [authors, setAuthors] = useState([]);
+const Subject = () => {
+  const [subject, setSubject] = useState([]);
   const [search, setSearch] = useState("");
   const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_KEY
 
@@ -16,16 +16,16 @@ const Review = () => {
     ev.preventDefault()
 
     axios
-     .get(`https://www.googleapis.com/books/v1/volumes?q=inauthor:${search}&key=${GOOGLE_KEY}&maxResults=20`)
-      .then((resp) => setAuthors(resp.data.items));
+     .get(`https://www.googleapis.com/books/v1/volumes?q=subject:${search}&key=${GOOGLE_KEY}&maxResults=20`)
+      .then((resp) => setSubject(resp.data.items));
   }
   // const filteredReview = review.filter((rev) => {
   //   return rev.title.toLowerCase().includes(search.toLowerCase());
   // });
-  console.log(authors)
+  console.log(subject)
   return (
     <>
-      <div id="author" style={{ marginBottom: "9%", marginTop: "9%" }}>
+      <div id="subject"style={{ marginBottom: "9%", marginTop: "9%" }}>
        
         <div
           style={{
@@ -40,7 +40,7 @@ const Review = () => {
             borderRadius: "20px",
           }}
         >
-          <h1>Author Section</h1>
+          <h1>Search by Subject</h1>
           <hr />
           <h5>
             We want the books to be great and readable. so we set up a system to
@@ -52,7 +52,7 @@ const Review = () => {
         <input
           type="text"
           className="text-center"
-          placeholder="Search By Author"
+          placeholder="Search By Subject"
           onChange={handleChange}
           style={{
             width: "70%",
@@ -71,20 +71,20 @@ const Review = () => {
         </form>
         
         <Row>
-          {authors.map((aut) => (
-            <ListOfReviews
-              key={aut.id}
-              id={aut.id}
-              author={aut.volumeInfo.authors}
-              title={aut.volumeInfo.title}
-              language={aut.volumeInfo.language}
-              categories={aut.volumeInfo.categories}
-              pageCount={aut.volumeInfo.pageCount}
-              image={aut.volumeInfo.imageLinks}
-              bookLink={aut.volumeInfo.infoLink}
-              price={aut.saleInfo.listPrice}
-              description={aut.volumeInfo.description}
-              averageRating={aut.volumeInfo.averageRating}
+          {subject.map((sub) => (
+            <ListOfSubject
+              key={sub.id}
+              id={sub.id}
+              author={sub.volumeInfo.authors}
+              title={sub.volumeInfo.title}
+              language={sub.volumeInfo.language}
+              categories={sub.volumeInfo.categories}
+              pageCount={sub.volumeInfo.pageCount}
+              image={sub.volumeInfo.imageLinks}
+              bookLink={sub.volumeInfo.infoLink}
+              price={sub.saleInfo.listPrice}
+              description={sub.volumeInfo.description}
+              averageRating={sub.volumeInfo.averageRating}
             />
           ))} 
         </Row>
@@ -92,4 +92,5 @@ const Review = () => {
     </>
   );
 };
-export default Review;
+export default Subject;
+

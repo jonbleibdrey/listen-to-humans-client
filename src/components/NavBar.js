@@ -66,7 +66,7 @@ const NavBar = () => {
       <ReactBootStrap.Navbar.Brand>
         <Link
           activeClass="active"
-          to="addAudible"
+          to="subject"
           spy={true}
           smooth={true}
           offset={-25}

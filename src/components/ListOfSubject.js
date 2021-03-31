@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Col, Accordion, Button } from "react-bootstrap";
 
 
-const ListOfReview = ({
+const ListOfSubject = ({
   id,
   author,
   title,
@@ -28,6 +28,12 @@ const ListOfReview = ({
         }}
       >
         <Card.Body>
+          <Card.Text>
+            <h4>
+              categorie: {categories === undefined ? "not available" : categories}
+              </h4>
+            <br />
+          </Card.Text>
           <Card.Title>
            
             <h2>
@@ -47,12 +53,6 @@ const ListOfReview = ({
             </h4>
           </Card.Title>
           <hr />
-          <Card.Text>
-            <h4>
-              categorie: {categories === undefined ? "not available" : categories}
-              </h4>
-            <br />
-          </Card.Text>
           <hr/>
           <Card.Text>
             <h4>
@@ -92,4 +92,4 @@ const ListOfReview = ({
   );
 };
 
-export default ListOfReview;
+export default ListOfSubject;
