@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col} from "react-bootstrap";
+import { Card, Col, Accordion, Button} from "react-bootstrap";
 
 export const ListOfAudibles = ({
   id,
@@ -18,6 +18,7 @@ export const ListOfAudibles = ({
 
   return (
     <Col xs={12} lg={4}>
+      <Accordion>
       <Card
         style={{
           margin: "40px",
@@ -28,47 +29,63 @@ export const ListOfAudibles = ({
       >
         <Card.Body>
           <Card.Title>
-            <a href={bookLink == undefined ? "not available" : bookLink} target="_blank">
-          <img src={image} alt={image}/>
+            <a href={bookLink === undefined ? "not available" : bookLink} rel="noopener noreferrer" target="_blank" style={{
+              
+            }}>
+          <img src={image === undefined ? "" : `${image.thumbnail}`} alt={image === undefined ? "" : `${image.thumbnail}`} style={{
+        padding: "40px",
+        backgroundColor: "white",
+        marginLeft: "22%",
+        margin:"10%",
+        width: "60%",
+        fontFamily: "monospace",
+        boxShadow: "10px 20px",
+        borderRadius: "20px",}}/>
           </a>
             <h4>
               Title of Book:
               <br />
-              {title == undefined ? "not available" : title}
+              {title === undefined ? "not available" : title}
             </h4>
           </Card.Title>
           <hr />
           <Card.Subtitle>
             <h5>
               Authors:
-              {by == undefined ? "not available" : by}
+              {by === undefined ? "not available" : by}
             </h5>
           </Card.Subtitle>
           <hr />
           <Card.Text>
-            <h6>Language: {language == undefined ? "not available" : language}</h6>
+            <h6>Language: {language === undefined ? "not available" : language}</h6>
             <br />
-            <h6>Categories: {categories == undefined ? "not available" : categories}</h6>
+            <h6>Categories: {categories === undefined ? "not available" : categories}</h6>
           </Card.Text>
           <Card.Text>
-            <h6>Price: {price == undefined ? "not available" : price.amount}</h6>
+            <h6>Price: {price === undefined ? "not available" : price.amount}</h6>
             <br />
           </Card.Text>
           <hr />
           <Card.Text>
-            <h6>Page count: {pageCount == undefined ? "not available" : pageCount}</h6>
+            <h6>Page count: {pageCount === undefined ? "not available" : pageCount}</h6>
           </Card.Text>
           <hr />
           <Card.Text>
-            <h6>Rating: {averageRating == undefined ? "not available" : averageRating}</h6>
+            <h6>Rating: {averageRating === undefined ? "not available" : averageRating}</h6>
           </Card.Text>
           <hr />
+          <Accordion.Toggle as={Button} variant="link" eventKey="0">
+            to read more!
+          </Accordion.Toggle>
+          <Accordion.Collapse eventKey="0">
           <Card.Text>
-            <h6>Description: {description == undefined ? "not available" : description}</h6>
+            <h6>Description: {description === undefined ? "not available" : description}</h6>
           </Card.Text>
+          </Accordion.Collapse>
           <hr />
         </Card.Body>
       </Card>
+      </Accordion>
     </Col>
   );
 };

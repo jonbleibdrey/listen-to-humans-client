@@ -14,18 +14,17 @@ const Information = () => {
         borderRadius: "20px",
       }}
     >
-      <div>
         <img
           className="animate__animated animate__bounceInDown"
           src="../logo1.PNG"
           alt="logo"
           style={{
-            width: "15vw",
-            height: "auto",
+            width: "10vw",
+            height: "10%",
             float: "left",
+            backgroundColor:"white"
           }}
         />
-      </div>
       <h1 className="animate__animated animate__bounceInDown">
         A site to search google's massive API of books.
       </h1>

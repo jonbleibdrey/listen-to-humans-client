@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import axios from "axios";
 import { ListOfAudibles } from "./ListOfAudibles";
 import { Row } from "react-bootstrap";
@@ -72,7 +72,7 @@ const Home = () => {
               language={book.volumeInfo.language}
               categories={book.volumeInfo.categories}
               pageCount={book.volumeInfo.pageCount}
-              image={book.volumeInfo.imageLinks.thumbnail}
+              image={book.volumeInfo.imageLinks}
               bookLink={book.volumeInfo.infoLink}
               price={book.saleInfo.listPrice}
               description={book.volumeInfo.description}
