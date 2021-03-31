@@ -25,7 +25,7 @@ const Review = () => {
   console.log(authors)
   return (
     <>
-      <div id="review" style={{ marginBottom: "9%", marginTop: "9%" }}>
+      <div id="author" style={{ marginBottom: "9%", marginTop: "9%" }}>
        
         <div
           style={{

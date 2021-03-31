@@ -38,9 +38,9 @@ function App() {
           <Route path="/editReview/:id" component={EditReview} />
           <Route path="*" component={NoFlyZone} />
         </Switch>
-        <AddAudible name="addAudible" />
-        <About name="about" />
         <Review name="review" />
+        <About name="about" />
+        <AddAudible name="addAudible" />
         <AddReview name="addReview" />
       </Router>
       <Footer />

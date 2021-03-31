@@ -34,20 +34,7 @@ const NavBar = () => {
           duration={1000}
           style={{ fontSize: "25px", cursor: "pointer" }}
         >
-          Audible
-        </Link>
-      </ReactBootStrap.Navbar.Brand>
-      <ReactBootStrap.Navbar.Brand>
-        <Link
-          activeClass="active"
-          to="addAudible"
-          spy={true}
-          smooth={true}
-          offset={-25}
-          duration={2000}
-          style={{ fontSize: "25px", cursor: "pointer" }}
-        >
-          Add Audible
+          Books
         </Link>
       </ReactBootStrap.Navbar.Brand>
       <ReactBootStrap.Navbar.Brand>
@@ -66,27 +53,27 @@ const NavBar = () => {
       <ReactBootStrap.Navbar.Brand>
         <Link
           activeClass="active"
-          to="review"
+          to="author"
           spy={true}
           smooth={true}
           offset={-20}
           duration={4000}
           style={{ fontSize: "25px", cursor: "pointer" }}
         >
-          Review
+          Author
         </Link>
       </ReactBootStrap.Navbar.Brand>
       <ReactBootStrap.Navbar.Brand>
         <Link
           activeClass="active"
-          to="addReview"
+          to="addAudible"
           spy={true}
           smooth={true}
-          offset={0}
-          duration={3000}
+          offset={-25}
+          duration={2000}
           style={{ fontSize: "25px", cursor: "pointer" }}
         >
-          Add Review
+          Subject
         </Link>
       </ReactBootStrap.Navbar.Brand>
     </ReactBootStrap.Navbar>

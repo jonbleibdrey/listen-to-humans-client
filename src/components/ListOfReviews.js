@@ -1,6 +1,5 @@
 import React from "react";
-import { Card, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Card, Col, Accordion, Button } from "react-bootstrap";
 import { animateScroll as scroll } from "react-scroll";
 
 const ListOfReview = ({
@@ -19,6 +18,7 @@ const ListOfReview = ({
 }) => {
   return (
     <Col xs={12} lg={3}>
+        <Accordion>
       <Card
         style={{
           margin: "40px",
@@ -76,13 +76,18 @@ const ListOfReview = ({
             <h4>price: {price === undefined ? "not available" : price.amount}</h4>
           </Card.Subtitle>
           <hr />
+          <Accordion.Toggle as={Button} variant="link" eventKey="0">
+            click to read more!
+          </Accordion.Toggle>
+          <Accordion.Collapse eventKey="0">
           <Card.Text>
-            description's: {description === undefined ? "not available" : description}
-            <br />
+            <h6>Description: {description === undefined ? "not available" : description}</h6>
           </Card.Text>
+          </Accordion.Collapse>
           <hr />
         </Card.Body>
       </Card>
+      </Accordion>
     </Col>
   );
 };
