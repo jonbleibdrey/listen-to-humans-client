@@ -4,22 +4,29 @@ import ListOfReviews from "./ListOfReviews";
 import { Row } from "react-bootstrap";
 
 const Review = () => {
-  const [review, setReview] = useState([]);
+  const [books, setBooks] = useState([]);
   const [search, setSearch] = useState("");
+  const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_KEY
 
-  useEffect(() => {
+  function handleChange (ev) {
+    const book = ev.target.value
+    setSearch(book)
+  }
+  function handleSubmit (ev) {
+    ev.preventDefault()
+
     axios
-      .get("http://localhost:3001/reviews")
-      .then((resp) => setReview(resp.data));
-  }, []);
-
-  const filteredReview = review.filter((rev) => {
-    return rev.title.toLowerCase().includes(search.toLowerCase());
-  });
-
+     .get(`https://www.googleapis.com/books/v1/volumes?q=inauthor:${search}&key=${GOOGLE_KEY}&maxResults=20`)
+      .then((resp) => setBooks(resp.data.items));
+  }
+  // const filteredReview = review.filter((rev) => {
+  //   return rev.title.toLowerCase().includes(search.toLowerCase());
+  // });
+  console.log(books)
   return (
     <>
       <div id="review" style={{ marginBottom: "9%", marginTop: "9%" }}>
+       
         <div
           style={{
             padding: "2%",
@@ -33,7 +40,7 @@ const Review = () => {
             borderRadius: "20px",
           }}
         >
-          <h1>Review section</h1>
+          <h1>Author Section</h1>
           <hr />
           <h5>
             We want the books to be great and readable. so we set up a system to
@@ -41,32 +48,45 @@ const Review = () => {
             for any review you want with our simple search function.
           </h5>
         </div>
+        <form onSubmit={handleSubmit}>
         <input
           type="text"
+          className="text-center"
+          placeholder="Search By Author"
+          onChange={handleChange}
           style={{
-            width: "50%",
-            marginLeft: "25%",
-            marginTop: "50px",
+            width: "70%",
+            padding: "10%",
+            marginLeft: "17%",
+            marginTop: "5px",
             marginBottom: "40px",
+            outline: "none",
             boxShadow: "10px 10px",
             borderRadius: "20px",
+            fontFamily:"monospace",
+            fontSize:"300%"
+            
           }}
-          className="text-center"
-          placeholder="search for review"
-          onChange={(e) => setSearch(e.target.value)}
         />
+        </form>
+        
         <Row>
-          {filteredReview.map((review) => (
-              <ListOfReviews
-              key={review.id}
-              id={review.id}
-              title={review.title}
-              description={review.description}
-              rating={review.rating}
-              audibleId={review.audible_id}
-              audibleName={review.audible.title}
+          {/* {books.map((book) => (
+            <ListOfAudibles
+              key={book.id}
+              id={book.id}
+              title={book.volumeInfo.title}
+              by={book.volumeInfo.authors}
+              language={book.volumeInfo.language}
+              categories={book.volumeInfo.categories}
+              pageCount={book.volumeInfo.pageCount}
+              image={book.volumeInfo.imageLinks}
+              bookLink={book.volumeInfo.infoLink}
+              price={book.saleInfo.listPrice}
+              description={book.volumeInfo.description}
+              averageRating={book.volumeInfo.averageRating}
             />
-          ))}
+          ))}  */}
         </Row>
       </div>
     </>
