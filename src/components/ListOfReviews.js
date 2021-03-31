@@ -5,11 +5,17 @@ import { animateScroll as scroll } from "react-scroll";
 
 const ListOfReview = ({
   id,
+  author,
   title,
   description,
-  rating,
-  audibleId,
-  audibleName,
+  averageRating,
+  price,
+  bookLink,
+  image,
+  pageCount,
+  categories,
+  language
+  
 }) => {
   return (
     <Col xs={12} lg={3}>
@@ -23,49 +29,60 @@ const ListOfReview = ({
       >
         <Card.Body>
           <Card.Title>
+           
             <h2>
-              Book name:
-              {audibleName.toUpperCase()}
+              Author name:
+              {author}
             </h2>
+           
           </Card.Title>
           <hr />
           <Card.Title>
+          <a href={bookLink === undefined ? "not available" : bookLink}>
+            <img src={image === undefined ? "" : `${image.thumbnail}`} alt={image === undefined ? "" : `${image.thumbnail}`}/>
+            </a>
             <h4>
-              Title of Review:
-              {title.toUpperCase()}
+              Title of Book:
+              {title === undefined ? "not available" : title}
             </h4>
           </Card.Title>
           <hr />
+          <Card.Text>
+            <h4>
+              categorie: {categories === undefined ? "not available" : categories}
+              </h4>
+            <br />
+          </Card.Text>
+          <hr/>
+          <Card.Text>
+            <h4>
+              page count: {pageCount === undefined ? "not available" : pageCount}
+              </h4>
+            <br />
+          </Card.Text>
+          <hr/>
+          <Card.Text>
+            <h4>
+              language: {language === undefined ? "not available" : language}
+              </h4>
+            <br />
+          </Card.Text>
+          <hr/>
           <Card.Subtitle>
-            <h4>rating's: {rating}</h4>
+            <h4>rating's: {averageRating === undefined ? "not available" : averageRating}</h4>
+          </Card.Subtitle>
+          <hr />
+          <Card.Subtitle>
+            <h4>price: {price === undefined ? "not available" : price.amount}</h4>
           </Card.Subtitle>
           <hr />
           <Card.Text>
-            description's: {description}
+            description's: {description === undefined ? "not available" : description}
             <br />
           </Card.Text>
           <hr />
         </Card.Body>
       </Card>
-      <Link
-        style={{
-          display: "inline-block",
-          margin: "4%",
-          padding: "40px",
-          backgroundColor: "white",
-          color: "black",
-          marginLeft: "25%",
-          width: "60%",
-          border: "1px solid gray",
-          fontFamily: "monospace",
-          boxShadow: "10px 20px black",
-        }}
-        className="btn btn-primary mr-1 btn-lg btn-block"
-        to={`/editReview/${id}`}
-        onClick={scroll.scrollToTop()}
-      >
-        edit
-      </Link>
     </Col>
   );
 };

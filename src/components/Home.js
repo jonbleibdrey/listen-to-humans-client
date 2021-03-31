@@ -48,18 +48,6 @@ const Home = () => {
             
           }}
         />
-        {/* <button style={{
-            width: "50%",
-            marginLeft: "25%",
-            marginTop: "5px",
-            marginBottom: "40px",
-            outline: "none",
-            boxShadow: "10px 10px",
-            borderRadius: "20px",
-            
-          }} >
-          click to search
-        </button> */}
         </form>
         <Row>
           {books.map((book) => (

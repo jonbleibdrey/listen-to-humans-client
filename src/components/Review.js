@@ -4,7 +4,7 @@ import ListOfReviews from "./ListOfReviews";
 import { Row } from "react-bootstrap";
 
 const Review = () => {
-  const [books, setBooks] = useState([]);
+  const [authors, setAuthors] = useState([]);
   const [search, setSearch] = useState("");
   const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_KEY
 
@@ -17,12 +17,12 @@ const Review = () => {
 
     axios
      .get(`https://www.googleapis.com/books/v1/volumes?q=inauthor:${search}&key=${GOOGLE_KEY}&maxResults=20`)
-      .then((resp) => setBooks(resp.data.items));
+      .then((resp) => setAuthors(resp.data.items));
   }
   // const filteredReview = review.filter((rev) => {
   //   return rev.title.toLowerCase().includes(search.toLowerCase());
   // });
-  console.log(books)
+  console.log(authors)
   return (
     <>
       <div id="review" style={{ marginBottom: "9%", marginTop: "9%" }}>
@@ -71,22 +71,22 @@ const Review = () => {
         </form>
         
         <Row>
-          {/* {books.map((book) => (
-            <ListOfAudibles
-              key={book.id}
-              id={book.id}
-              title={book.volumeInfo.title}
-              by={book.volumeInfo.authors}
-              language={book.volumeInfo.language}
-              categories={book.volumeInfo.categories}
-              pageCount={book.volumeInfo.pageCount}
-              image={book.volumeInfo.imageLinks}
-              bookLink={book.volumeInfo.infoLink}
-              price={book.saleInfo.listPrice}
-              description={book.volumeInfo.description}
-              averageRating={book.volumeInfo.averageRating}
+          {authors.map((aut) => (
+            <ListOfReviews
+              key={aut.id}
+              id={aut.id}
+              author={aut.volumeInfo.authors}
+              title={aut.volumeInfo.title}
+              language={aut.volumeInfo.language}
+              categories={aut.volumeInfo.categories}
+              pageCount={aut.volumeInfo.pageCount}
+              image={aut.volumeInfo.imageLinks}
+              bookLink={aut.volumeInfo.infoLink}
+              price={aut.saleInfo.listPrice}
+              description={aut.volumeInfo.description}
+              averageRating={aut.volumeInfo.averageRating}
             />
-          ))}  */}
+          ))} 
         </Row>
       </div>
     </>
