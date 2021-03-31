@@ -62,7 +62,6 @@ const Home = () => {
         </button> */}
         </form>
         <Row>
-          {console.log(books)}
           {books.map((book) => (
             <ListOfAudibles
               key={book.id}

@@ -21,26 +21,20 @@ export const ListOfAudibles = ({
       <Accordion>
       <Card
         style={{
-          margin: "40px",
-          height: "auto",
-          minHeight: "40vw",
-          fontFamily: "monospace",
+            color:"black",
+            objectFit:"cover",
+            padding:"10%",
+            marginBottom: "10%",
+            fontFamily: "monospace",
+            boxShadow: "10px 20px",
+            borderRadius: "20px",
+            
         }}
       >
         <Card.Body>
           <Card.Title>
-            <a href={bookLink === undefined ? "not available" : bookLink} rel="noopener noreferrer" target="_blank" style={{
-              
-            }}>
-          <img src={image === undefined ? "" : `${image.thumbnail}`} alt={image === undefined ? "" : `${image.thumbnail}`} style={{
-        padding: "40px",
-        backgroundColor: "white",
-        marginLeft: "22%",
-        margin:"10%",
-        width: "60%",
-        fontFamily: "monospace",
-        boxShadow: "10px 20px",
-        borderRadius: "20px",}}/>
+            <a href={bookLink === undefined ? "not available" : bookLink} rel="noopener noreferrer" target="_blank" >
+          <img src={image === undefined ? "" : `${image.thumbnail}`} alt={image === undefined ? "" : `${image.thumbnail}`} />
           </a>
             <h4>
               Title of Book:
@@ -75,7 +69,7 @@ export const ListOfAudibles = ({
           </Card.Text>
           <hr />
           <Accordion.Toggle as={Button} variant="link" eventKey="0">
-            to read more!
+            click to read more!
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
           <Card.Text>
