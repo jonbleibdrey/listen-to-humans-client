@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <>
-      <div id="home" style={{ backgroundColor: "#ebd078", padding: "3%" }}>
+      <div id="home" style={{ backgroundImage: "url(../books-2.jpg)", backgroundSize:"cover", backgroundPosition:"center center", padding: "3%" }}>
         <Information />
         <form onSubmit={handleSubmit}>
         <input

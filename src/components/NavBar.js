@@ -9,12 +9,11 @@ const NavBar = () => {
       expand="lg"
       bg="dark"
       variant="dark"
-      style={{ padding: "3%", justifyContent: "space-evenly" }}
+      style={{ padding: "1%", justifyContent: "space-around" }}
     >
       <ReactBootStrap.Navbar.Brand href="/">
         <div
           style={{
-            margin:"0",
             marginRight: "50%",
             marginTop: "1%",
             fontFamily: "monospace",
