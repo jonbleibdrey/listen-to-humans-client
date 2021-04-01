@@ -17,7 +17,10 @@ const Subject = () => {
 
     axios
      .get(`https://www.googleapis.com/books/v1/volumes?q=subject:${search}&key=${GOOGLE_KEY}&maxResults=20`)
-      .then((resp) => setSubject(resp.data.items));
+      .then((resp) => setSubject(resp.data.items || []))
+      .catch(error => {
+       alert(error.response.data.error)
+     })
   }
   // const filteredReview = review.filter((rev) => {
   //   return rev.title.toLowerCase().includes(search.toLowerCase());

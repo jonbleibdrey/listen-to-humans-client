@@ -12,14 +12,15 @@ const NavBar = () => {
       style={{ padding: "3%", justifyContent: "space-evenly" }}
     >
       <ReactBootStrap.Navbar.Brand href="/">
-        <img alt="logo" src="/logo1.PNG" align="left" className="col-sm-3" />
         <div
           style={{
-            marginLeft: "25%",
-            marginTop: "10%",
+            margin:"0",
+            marginRight: "50%",
+            marginTop: "1%",
             fontFamily: "monospace",
           }}
         >
+        {/* <img alt="logo" src="/logo1.PNG" align="left" className="col-sm-3" /> */}
           <h1>Read By Humans.</h1>
         </div>
       </ReactBootStrap.Navbar.Brand>

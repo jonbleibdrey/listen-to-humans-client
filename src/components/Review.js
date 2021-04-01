@@ -17,7 +17,7 @@ const Review = () => {
 
     axios
      .get(`https://www.googleapis.com/books/v1/volumes?q=inauthor:${search}&key=${GOOGLE_KEY}&maxResults=20`)
-      .then((resp) => setAuthors(resp.data.items));
+      .then((resp) => setAuthors(resp.data.items || []));
   }
   // const filteredReview = review.filter((rev) => {
   //   return rev.title.toLowerCase().includes(search.toLowerCase());
