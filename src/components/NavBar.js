@@ -40,6 +40,19 @@ const NavBar = () => {
       <ReactBootStrap.Navbar.Brand>
         <Link
           activeClass="active"
+          to="whatHappens"
+          spy={true}
+          smooth={true}
+          offset={110}
+          duration={1500}
+          style={{ fontSize: "25px", cursor: "pointer" }}
+        >
+          How it works
+        </Link>
+      </ReactBootStrap.Navbar.Brand>
+      <ReactBootStrap.Navbar.Brand>
+        <Link
+          activeClass="active"
           to="about"
           spy={true}
           smooth={true}

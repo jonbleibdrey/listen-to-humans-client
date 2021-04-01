@@ -4,27 +4,48 @@ import { Button, Card, CardDeck } from "react-bootstrap";
 const WhatHappens = () => {
   return (
     <>
-      <div style={{ padding: "5%", backgroundColor: "white", marginTop: "9%" }}>
-        <h3
+      <div id="whatHappens" style={{ padding: "10%", backgroundColor: "white", marginTop: "5%", marginBottom:"20%" }}>
+        <div
           style={{
-            marginLeft: "40%",
-            padding:"30px",
-            fontFamily: "initial",
-            color:"#ed945c",
+            padding: "30px",
+            margin:"1%"
           }}
         >
-          What Happens Here
-        </h3>
-        <h1 style={{
-            marginLeft: "29%",
-            padding:"30px",
-            fontFamily: "initial",
-          }}>
-          BOOKS SEARCH FOR ANYTHING
-        </h1>
+          <h3
+            style={{
+              marginLeft: "40%",
+              fontFamily: "initial",
+              color: "#e6a57e",
+            }}
+          >
+            What Happens Here
+          </h3>
+          <h1
+            style={{
+              marginLeft: "26%",
+              padding: "10px",
+              fontFamily: "initial",
+            }}
+          >
+            BOOKS, YOU SEARCH FOR BOOKS.
+          </h1>
+
+          <hr
+            style={{
+              display: "block",
+              height: "1px",
+              width:"50%",
+              border: "0",
+              borderTop: "5px solid #e3c378" /* YOUR COLOR HERE */,
+              margin: "",
+              padding: "0",
+            }}
+          />
+        </div>
 
         <CardDeck>
-          <Card style={{
+          <Card
+            style={{
               padding: "2%",
               width: "60%",
               height: "auto",
@@ -33,7 +54,8 @@ const WhatHappens = () => {
               fontFamily: "monospace",
               boxShadow: "10px 20px",
               borderRadius: "20px",
-            }}>
+            }}
+          >
             <Card.Img variant="top" src="../smallbook4.jpg" />
             <Card.Body>
               <Card.Title>01. Type in search bar</Card.Title>
@@ -45,7 +67,8 @@ const WhatHappens = () => {
               </Card.Text>
             </Card.Body>
           </Card>
-          <Card style={{
+          <Card
+            style={{
               padding: "2%",
               width: "60%",
               height: "auto",
@@ -54,7 +77,8 @@ const WhatHappens = () => {
               fontFamily: "monospace",
               boxShadow: "10px 20px",
               borderRadius: "20px",
-            }}>
+            }}
+          >
             <Card.Img variant="top" src="../smallbook2.jpg" />
             <Card.Body>
               <Card.Title>02. Find book and click</Card.Title>
@@ -66,7 +90,8 @@ const WhatHappens = () => {
               </Card.Text>
             </Card.Body>
           </Card>
-          <Card style={{
+          <Card
+            style={{
               padding: "2%",
               width: "60%",
               height: "auto",
@@ -75,7 +100,8 @@ const WhatHappens = () => {
               fontFamily: "monospace",
               boxShadow: "10px 20px",
               borderRadius: "20px",
-            }}>
+            }}
+          >
             <Card.Img variant="top" src="../smallbook3.jpg" />
             <Card.Body>
               <Card.Title>03. Read till your hearts content</Card.Title>
