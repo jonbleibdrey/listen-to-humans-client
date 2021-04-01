@@ -10,6 +10,7 @@ import NoFlyZone from "./components/NoFlyZone";
 import Footer from "./components/Footer";
 import useOutsideClick from "./components/UseOutsideClick";
 import { animateScroll as scroll } from "react-scroll";
+import WhatHappens from "./components/WhatHappens";
 
 
 function App() {
@@ -30,8 +31,10 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/review" component={Review} />
           <Route path="/subject" component={Subject} />
+          <Route path="/whatHappens" component={WhatHappens} />
           <Route path="*" component={NoFlyZone} />
         </Switch>
+        <WhatHappens name="whatHappens" />
         <Review name="review" />
         <Subject name="subject" />
         <About name="about" />

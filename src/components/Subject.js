@@ -28,7 +28,7 @@ const Subject = () => {
   console.log(subject)
   return (
     <>
-      <div id="subject"style={{ padding: "13%",  marginTop: "9%" }}>
+      <div id="subject"style={{ padding: "13%", backgroundColor:"white",  marginTop: "9%" }}>
        
         <div
           style={{
