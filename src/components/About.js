@@ -31,7 +31,7 @@ const About = () => {
 
   return (
     <>
-      <div id="about" style={{ backgroundColor: "#ebd078", padding: "3%" }}>
+      <div id="about" style={{ backgroundColor:"white", padding: "3%" }}>
         <div
           style={{
             padding: "2%",

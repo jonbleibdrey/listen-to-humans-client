@@ -28,7 +28,7 @@ const Subject = () => {
   console.log(subject)
   return (
     <>
-      <div id="subject"style={{  backgroundImage: "url(../books-3.jpg)", backgroundSize:"cover", backgroundPosition:"center center", padding: "3%",  marginTop: "9%" }}>
+      <div id="subject"style={{ padding: "13%",  marginTop: "9%" }}>
        
         <div
           style={{
@@ -61,7 +61,7 @@ const Subject = () => {
             width: "70%",
             padding: "10%",
             marginLeft: "17%",
-            marginTop: "5px",
+            marginTop: "5%",
             marginBottom: "40px",
             outline: "none",
             boxShadow: "10px 10px",

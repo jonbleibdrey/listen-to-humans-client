@@ -21,12 +21,13 @@ const Home = () => {
     axios
      .get(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${GOOGLE_KEY}&maxResults=20`)
       .then((resp) => setBooks(resp.data.items || []));
+
   }
 
 
   return (
     <>
-      <div id="home" style={{ backgroundImage: "url(../books-2.jpg)", backgroundSize:"cover", backgroundPosition:"center center", padding: "3%" }}>
+      <div id="home" >
         <Information />
         <form onSubmit={handleSubmit}>
         <input

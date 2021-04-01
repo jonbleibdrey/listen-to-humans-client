@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-    <div style={{ margin:"60px", borderWidth:"10px", borderStyle:"inset", borderColor: "#f09759" , marginBottom:"5%"}} ref={ref}>
+    <div style={{ margin:"60px", borderWidth:"10px", borderStyle:"inset", borderColor: "#f09759" , marginBottom:"5%" , backgroundImage: "url(../books-2.jpg)", backgroundSize:"100% 30%"}} ref={ref}>
       <NavBar />
       <Router>
         <Switch>

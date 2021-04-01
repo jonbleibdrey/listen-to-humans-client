@@ -25,7 +25,7 @@ const Review = () => {
   console.log(authors)
   return (
     <>
-      <div id="author" style={{ marginBottom: "9%", marginTop: "9%" }}>
+      <div id="author" style={{ marginBottom: "9%", marginTop: "9%", backgroundColor:"white", padding: "13%"}}>
        
         <div
           style={{
@@ -57,8 +57,8 @@ const Review = () => {
           style={{
             width: "70%",
             padding: "10%",
-            marginLeft: "17%",
-            marginTop: "5px",
+            marginLeft: "15%",
+            marginTop: "5%",
             marginBottom: "40px",
             outline: "none",
             boxShadow: "10px 10px",
