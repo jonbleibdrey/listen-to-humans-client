@@ -31,7 +31,6 @@ const Information = () => {
       <h6 style={{
         margin: "1%",
         marginLeft: "22%",
-        marginTop:'3%',
         marginBottom:"5%",
         color:"white",
         width: "60%",

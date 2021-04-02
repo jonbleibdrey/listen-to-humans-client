@@ -40,32 +40,6 @@ const NavBar = () => {
       <ReactBootStrap.Navbar.Brand>
         <Link
           activeClass="active"
-          to="author"
-          spy={true}
-          smooth={true}
-          offset={20}
-          duration={3000}
-          style={{ fontSize: "25px", cursor: "pointer" }}
-        >
-          Author
-        </Link>
-      </ReactBootStrap.Navbar.Brand>
-      <ReactBootStrap.Navbar.Brand>
-        <Link
-          activeClass="active"
-          to="subject"
-          spy={true}
-          smooth={true}
-          offset={20}
-          duration={2000}
-          style={{ fontSize: "25px", cursor: "pointer" }}
-        >
-          Subject
-        </Link>
-      </ReactBootStrap.Navbar.Brand>
-      <ReactBootStrap.Navbar.Brand>
-        <Link
-          activeClass="active"
           to="whatHappens"
           spy={true}
           smooth={true}
@@ -79,6 +53,19 @@ const NavBar = () => {
       <ReactBootStrap.Navbar.Brand>
         <Link
           activeClass="active"
+          to="author"
+          spy={true}
+          smooth={true}
+          offset={20}
+          duration={3000}
+          style={{ fontSize: "25px", cursor: "pointer" }}
+        >
+          Author
+        </Link>
+      </ReactBootStrap.Navbar.Brand>
+      <ReactBootStrap.Navbar.Brand>
+        <Link
+          activeClass="active"
           to="googleApi"
           spy={true}
           smooth={true}
@@ -87,6 +74,19 @@ const NavBar = () => {
           style={{ fontSize: "25px", cursor: "pointer" }}
         >
           Google api
+        </Link>
+      </ReactBootStrap.Navbar.Brand>
+      <ReactBootStrap.Navbar.Brand>
+        <Link
+          activeClass="active"
+          to="subject"
+          spy={true}
+          smooth={true}
+          offset={20}
+          duration={2000}
+          style={{ fontSize: "25px", cursor: "pointer" }}
+        >
+          Subject
         </Link>
       </ReactBootStrap.Navbar.Brand>
       <ReactBootStrap.Navbar.Brand>
