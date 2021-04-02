@@ -13,6 +13,7 @@ const Home = () => {
     const book = ev.target.value;
     setSearch(book);
   }
+
   function handleSubmit(ev) {
     ev.preventDefault();
 
@@ -53,7 +54,7 @@ const Home = () => {
             }}
           />
         </form>
-        <Row>
+        <Row lg={2}>
           {books.map((book) => (
             <ListOfAudibles
               key={book.id}

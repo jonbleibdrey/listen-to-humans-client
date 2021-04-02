@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -8,23 +8,15 @@ import Home from "./components/Home";
 import Review from "./components/Review";
 import NoFlyZone from "./components/NoFlyZone";
 import Footer from "./components/Footer";
-import useOutsideClick from "./components/UseOutsideClick";
-import { animateScroll as scroll } from "react-scroll";
 import WhatHappens from "./components/WhatHappens";
 import GoogleApi from "./components/GoogleApi";
 
 
 function App() {
-  const ref = useRef()
-
-
- useOutsideClick(ref, () => {
-  scroll.scrollToTop();
-});
+  
 
   return (
     <>
-    <div style={{ margin:"60px", borderWidth:"10px", borderStyle:"inset", borderColor: "#f09759" , marginBottom:"5%" }} ref={ref}>
       <NavBar />
       <Router>
         <Switch>
@@ -43,7 +35,6 @@ function App() {
         <About name="about" />
       </Router>
       <Footer />
-      </div>
     </>
   );
 }
