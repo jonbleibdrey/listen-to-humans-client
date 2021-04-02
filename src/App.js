@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import useOutsideClick from "./components/UseOutsideClick";
 import { animateScroll as scroll } from "react-scroll";
 import WhatHappens from "./components/WhatHappens";
+import GoogleApi from "./components/GoogleApi";
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
 
   return (
     <>
-    <div style={{ margin:"60px", borderWidth:"10px", borderStyle:"inset", borderColor: "#f09759" , marginBottom:"5%" , backgroundImage: "url(../books-2.jpg)", backgroundSize:"100% 30%"}} ref={ref}>
+    <div style={{ margin:"60px", borderWidth:"10px", borderStyle:"inset", borderColor: "#f09759" , marginBottom:"5%" }} ref={ref}>
       <NavBar />
       <Router>
         <Switch>
@@ -32,10 +33,12 @@ function App() {
           <Route path="/review" component={Review} />
           <Route path="/subject" component={Subject} />
           <Route path="/whatHappens" component={WhatHappens} />
+          <Route path="/googleApi" component={GoogleApi} />
           <Route path="*" component={NoFlyZone} />
         </Switch>
         <WhatHappens name="whatHappens" />
         <Review name="review" />
+        <GoogleApi name="googleApi" />
         <Subject name="subject" />
         <About name="about" />
       </Router>

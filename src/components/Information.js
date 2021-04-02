@@ -3,7 +3,7 @@ import Jumbotron from "react-bootstrap"
 
 const Information = () => {
   return (
-    <div
+    <div 
     >
         <img
           className="animate__animated animate__fadeIn"

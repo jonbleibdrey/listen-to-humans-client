@@ -53,6 +53,19 @@ const NavBar = () => {
       <ReactBootStrap.Navbar.Brand>
         <Link
           activeClass="active"
+          to="googleApi"
+          spy={true}
+          smooth={true}
+          offset={110}
+          duration={1000}
+          style={{ fontSize: "25px", cursor: "pointer" }}
+        >
+          Google api
+        </Link>
+      </ReactBootStrap.Navbar.Brand>
+      <ReactBootStrap.Navbar.Brand>
+        <Link
+          activeClass="active"
           to="about"
           spy={true}
           smooth={true}

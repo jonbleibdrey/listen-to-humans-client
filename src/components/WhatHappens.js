@@ -4,7 +4,7 @@ import { Button, Card, CardDeck } from "react-bootstrap";
 const WhatHappens = () => {
   return (
     <>
-      <div id="whatHappens" style={{ padding: "10%", backgroundColor: "white", marginTop: "5%", marginBottom:"20%" }}>
+      <div id="whatHappens" style={{ padding: "10%", backgroundColor: "white", marginTop: "5%", marginBottom:"10%" }}>
         <div
           style={{
             padding: "30px",
@@ -22,12 +22,12 @@ const WhatHappens = () => {
           </h3>
           <h1
             style={{
-              marginLeft: "26%",
+              marginLeft: "30%",
               padding: "10px",
               fontFamily: "initial",
             }}
           >
-            BOOKS, YOU SEARCH FOR BOOKS.
+            YOU SEARCH FOR BOOKS.
           </h1>
 
           <hr

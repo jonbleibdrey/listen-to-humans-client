@@ -25,7 +25,7 @@ const Review = () => {
   console.log(authors)
   return (
     <>
-      <div id="author" style={{ marginBottom: "9%", marginTop: "10%",  padding: "13%"}}>
+      <div id="author" style={{ marginBottom: "9%", marginTop: "10%",  padding: "10%", backgroundImage: "url(../books-2.jpg)", backgroundSize:"100% 100%"}}>
        
         <div
           style={{

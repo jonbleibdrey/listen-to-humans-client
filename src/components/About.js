@@ -31,7 +31,7 @@ const About = () => {
 
   return (
     <>
-      <div id="about" style={{ padding: "3%" }}>
+      <div id="about" style={{ padding: "3%", backgroundImage: "url(../books-2.jpg)", backgroundSize:"100% 100%"}}>
         <div
           style={{
             padding: "2%",

@@ -17,14 +17,17 @@ const ListOfSubject = ({
   
 }) => {
   return (
-    <Col xs={12} lg={3}>
+    <Col xs={12} lg={4}>
         <Accordion>
       <Card
         style={{
-          margin: "40px",
-          height: "auto",
-          minHeight: "40vw",
+          color:"black",
+          objectFit:"cover",
+          padding:"10%",
+          marginBottom: "10%",
           fontFamily: "monospace",
+          boxShadow: "10px 20px",
+          borderRadius: "20px",
         }}
       >
         <Card.Body>
