@@ -31,7 +31,7 @@ const About = () => {
 
   return (
     <>
-      <div id="about" style={{ padding: "3%", backgroundImage: "url(../books-2.jpg)", backgroundSize:"100% 100%"}}>
+      <div id="about" style={{ padding: "3%"}}>
         <div
           style={{
             padding: "2%",
@@ -45,7 +45,7 @@ const About = () => {
           }}
         >
           <div>
-            <h1>About</h1>
+            <h1>Testimonials</h1>
             <hr />
             <h5>
               I designed this website to help people to record audible to share
