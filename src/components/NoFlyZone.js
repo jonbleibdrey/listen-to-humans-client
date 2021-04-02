@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 const NoFlyZone = () => {
   return (
     <div
@@ -23,26 +22,35 @@ const NoFlyZone = () => {
           marginLeft: "37%",
         }}
       />
-      <h1 style={{
+      <h1
+        style={{
           height: "5%",
           float: "center",
           marginLeft: "10%",
-          fontSize:"100px",
-          color:"black",
+          fontSize: "100px",
+          color: "black",
           fontFamily: "monospace",
-            boxShadow: "10px 20px",
-            borderRadius: "20px",
-            backgroundColor:"white",
-            textAlign:"center"
-        }}>NO FLY ZONE!</h1>
+          boxShadow: "10px 20px",
+          borderRadius: "20px",
+          backgroundColor: "white",
+          textAlign: "center",
+        }}
+      >
+        NO FLY ZONE!
+      </h1>
       <hr />
-      <Link style={{
+      <Link
+        style={{
           width: "30%",
           height: "5%",
           float: "center",
           marginLeft: "37%",
-          color:"black"
-        }}to="/">...would you like to go back to the home page?</Link>
+          color: "black",
+        }}
+        to="/"
+      >
+        ...would you like to go back to the home page?
+      </Link>
     </div>
   );
 };

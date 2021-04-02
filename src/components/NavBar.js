@@ -19,7 +19,6 @@ const NavBar = () => {
             fontFamily: "monospace",
           }}
         >
-          {/* <img alt="logo" src="/logo1.PNG" align="left" className="col-sm-3" /> */}
           <h1>Read By Humans.</h1>
         </div>
       </ReactBootStrap.Navbar.Brand>

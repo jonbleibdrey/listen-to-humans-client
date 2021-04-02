@@ -1,10 +1,8 @@
 import React from "react";
 import { Card, CardDeck } from "react-bootstrap";
 
-const WhatHappens = () => {
 
-  
-  
+const WhatHappens = () => {
   return (
     <>
       <div
@@ -47,12 +45,13 @@ const WhatHappens = () => {
               height: "1px",
               width: "50%",
               border: "0",
-              borderTop: "5px solid #e3c378" /* YOUR COLOR HERE */,
+              borderTop: "5px solid #e3c378",
               margin: "",
               padding: "0",
             }}
           />
         </div>
+
         <CardDeck id="card">
           <Card
             style={{

@@ -40,7 +40,7 @@ const ListOfSubject = ({
   return (
     <Col xs={12} lg={4}>
       <Card
-      className="mx-auto"
+        className="mx-auto"
         style={{
           color: "black",
           objectFit: "cover",
@@ -52,7 +52,7 @@ const ListOfSubject = ({
           fontFamily: "monospace",
           boxShadow: "10px 20px",
           borderRadius: "20px",
-          textAlign:"center"
+          textAlign: "center",
         }}
       >
         <Card.Body>
@@ -72,7 +72,7 @@ const ListOfSubject = ({
           <hr />
           <Card.Title>
             <a href={bookLink === undefined ? "not available" : bookLink}>
-              <img 
+              <img
                 src={image === undefined ? "" : `${image.thumbnail}`}
                 alt={image === undefined ? "" : `${image.thumbnail}`}
               />
