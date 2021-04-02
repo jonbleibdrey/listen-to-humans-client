@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Accordion, Button } from "react-bootstrap";
+import { Card, Col, Accordion, Modal, Button } from "react-bootstrap";
 
 const ListOfReview = ({
   id,
@@ -14,13 +14,40 @@ const ListOfReview = ({
   categories,
   language,
 }) => {
+
+  const [modalShow, setModalShow] = React.useState(false);
+
+  function MyVerticallyCenteredModal(props) {
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter"></Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <h4>{description === undefined ? "not available" : description}</h4>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={props.onHide}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
+
   return (
     <Col xs={12} lg={4}>
-      <Accordion>
+     
         <Card
           style={{
             color: "black",
             objectFit: "cover",
+            margin: "5%",
+            minHeight: "1000px",
+            maxHeight: "1200px",
             padding: "10%",
             marginBottom: "10%",
             fontFamily: "monospace",
@@ -85,21 +112,17 @@ const ListOfReview = ({
               </h4>
             </Card.Subtitle>
             <hr />
-            <Accordion.Toggle as={Button} variant="link" eventKey="0">
-              click to read more!
-            </Accordion.Toggle>
-            <Accordion.Collapse eventKey="0">
-              <Card.Text>
-                <h6>
-                  Description:{" "}
-                  {description === undefined ? "not available" : description}
-                </h6>
-              </Card.Text>
-            </Accordion.Collapse>
+            <Button variant="primary" onClick={() => setModalShow(true)}>
+            Read description
+          </Button>
+
+          <MyVerticallyCenteredModal
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+          />
             <hr />
           </Card.Body>
         </Card>
-      </Accordion>
     </Col>
   );
 };

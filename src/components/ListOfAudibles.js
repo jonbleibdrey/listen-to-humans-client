@@ -38,7 +38,7 @@ export const ListOfAudibles = ({
   }
 
   return (
-    <Col lg={4}>
+    <Col xs={12} lg={4}>
       <Card
         style={{
           color: "black",

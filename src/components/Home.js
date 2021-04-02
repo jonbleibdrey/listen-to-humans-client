@@ -54,7 +54,7 @@ const Home = () => {
             }}
           />
         </form>
-        <Row lg={2}>
+        <Row>
           {books.map((book) => (
             <ListOfAudibles
               key={book.id}

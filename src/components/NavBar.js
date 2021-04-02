@@ -30,7 +30,7 @@ const NavBar = () => {
           to="home"
           spy={true}
           smooth={true}
-          offset={0}
+          offset={10}
           duration={1000}
           style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
