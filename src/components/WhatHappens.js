@@ -2,6 +2,9 @@ import React from "react";
 import { Card, CardDeck } from "react-bootstrap";
 
 const WhatHappens = () => {
+
+  
+  
   return (
     <>
       <div
@@ -50,8 +53,7 @@ const WhatHappens = () => {
             }}
           />
         </div>
-
-        <CardDeck>
+        <CardDeck id="card">
           <Card
             style={{
               padding: "2%",

@@ -40,6 +40,7 @@ export const ListOfAudibles = ({
   return (
     <Col xs={12} lg={4}>
       <Card
+      className="p-3"
         style={{
           color: "black",
           objectFit: "cover",
@@ -51,6 +52,7 @@ export const ListOfAudibles = ({
           fontFamily: "monospace",
           boxShadow: "10px 20px",
           borderRadius: "20px",
+          textAlign:"center"
         }}
       >
         <Card.Body>

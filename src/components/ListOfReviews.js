@@ -42,6 +42,7 @@ const ListOfReview = ({
     <Col xs={12} lg={4}>
      
         <Card
+        className="p-3"
           style={{
             color: "black",
             objectFit: "cover",
@@ -53,6 +54,7 @@ const ListOfReview = ({
             fontFamily: "monospace",
             boxShadow: "10px 20px",
             borderRadius: "20px",
+            textAlign:"center",
           }}
         >
           <Card.Body>
