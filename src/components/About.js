@@ -1,101 +1,119 @@
 import React, { useState } from "react";
-import { Card } from "react-bootstrap";
+import { Card, Carousel } from "react-bootstrap";
+
 
 const About = () => {
   const [people] = useState([
     {
       id: 1,
-      image: "../face2.jpg",
+      image: "../face4.jpg",
       name: "tiffany",
       occupation: "student",
       bio:
-        " i really like this website it helps me share my college books with others",
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut debitis quia eligendi eaque tenetur maxime assumenda laboriosam voluptate, expedita totam! Voluptas quaerat iusto accusantium quas neque odio pariatur cumque officiis.",
     },
     {
       id: 2,
-      image: "../face1.jpg",
+      image: "../face5.jpg",
       name: "franky",
       occupation: "lawyer",
       bio:
-        " I use this sight to help my peers learn all the law books in our library.",
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut debitis quia eligendi eaque tenetur maxime assumenda laboriosam voluptate, expedita totam! Voluptas quaerat iusto accusantium quas neque odio pariatur cumque officiis.",
     },
     {
       id: 3,
-      image: "../face3.jpg",
+      image: "../face6.jpg",
       name: "lang",
       occupation: "doctor",
       bio:
-        " i come back and forth to this website to listen to all the medical books others have recorded before me.",
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut debitis quia eligendi eaque tenetur maxime assumenda laboriosam voluptate, expedita totam! Voluptas quaerat iusto accusantium quas neque odio pariatur cumque officiis.",
     },
   ]);
 
   return (
     <>
-      <div id="about" style={{ padding: "3%"}}>
-        <div
-          style={{
-            padding: "2%",
-            marginLeft: "20%",
-            width: "60%",
-            height: "auto",
-            backgroundColor: "white",
-            fontFamily: "monospace",
-            boxShadow: "10px 20px",
-            borderRadius: "20px",
-          }}
-        >
-          <div>
-            <h1>Testimonials</h1>
-            <hr />
-            <h5>
-              I designed this website to help people to record audible to share
-              with others. We differ from audible, in that you the ordinary user
-              could take a book, read it, record it and share it. Where i see
-              this shining mostly is college students, It can be challenging
-              sometimes to find certain books in audible form. Dont take it from
-              me, Here are some testimonials from all walks of life.
-            </h5>
-          </div>
-        </div>
-        <div style={{ margin: "10%", marginTop: "1%" }}>
+    <div id="about">
+     <h3
+            style={{
+              marginLeft: "45%",
+              fontFamily: "initial",
+              color: "#e6a57e",
+              marginTop:"5%",
+              
+            }}
+          >
+            Testimonials
+          </h3>
+          <h1
+            style={{
+              marginLeft: "35%",
+              padding: "10px",
+              fontFamily: "initial",
+            }}
+          >
+            WHAT PEOPLE HAVE TO SAY
+          </h1>
+
+          <hr
+            style={{
+              display: "block",
+              height: "1px",
+              width:"40%",
+              border: "0",
+              borderTop: "5px solid #e3c378",
+              margin: "",
+           
+            }}
+          />
+      
+      <div style={{ padding: "3%", marginBottom:"5%", marginLeft:"18%", marginTop:"5%",
+              width: "60%",
+              height: "auto",
+              backgroundColor: "white",
+              border: "1px solid gray",
+              fontFamily: "monospace",
+              boxShadow: "10px 20px",
+              borderRadius: "20px", }}>
+     
+        <Carousel>
           {people.map((peo) => (
-            <Card
-              key={peo.id}
-              style={{
-                margin: "50px",
-                marginLeft: "19%",
-                marginBottom: "25px",
-                width: "60%",
-                height: "auto",
-              }}
-            >
-              <Card.Body className="card">
-                <Card.Img
-                  src={peo.image}
-                  style={{
-                    variant: "top",
-                    boxShadow: "5px 10px ",
-                    borderRadius: "20px",
-                  }}
-                />
-                <hr />
-                <Card.Title>
-                  <h1>Name: {peo.name}</h1>
-                </Card.Title>
-                <Card.Subtitle>
-                  <h4>occupation: {peo.occupation}</h4>
-                </Card.Subtitle>
-                <Card.Text>
-                  <h6>Testimonial:</h6>
-                  <p>{peo.bio}</p>
-                </Card.Text>
-              </Card.Body>
-            </Card>
+            <Carousel.Item key={peo.id} interval={6500}>
+              <img
+                className="d-block w-100"
+                src={peo.image}
+                alt="First slide"
+                style={{
+                  width: "200px",
+                  height: "500px",
+                  objectFit: "contain",
+                }}
+              />
+              <Carousel.Caption
+                style={{
+                  width: "20%",
+                  color: "black",
+                  fontFamily: "monospace",
+                }}
+              >
+                <h3>Name: {peo.name}</h3>
+                <p>
+                  occupation: {peo.occupation}
+                  <br />
+                  <br />
+                  Testimonial:
+                  {peo.bio}
+                </p>
+              </Carousel.Caption>
+            </Carousel.Item>
           ))}
-        </div>
+        </Carousel>
+      </div>
       </div>
     </>
   );
 };
 
 export default About;
+
+
+

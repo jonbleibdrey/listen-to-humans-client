@@ -4,7 +4,7 @@ import { Button, Card, CardDeck } from "react-bootstrap";
 const WhatHappens = () => {
   return (
     <>
-      <div id="whatHappens" style={{ padding: "10%", backgroundColor: "white", marginTop: "5%", marginBottom:"10%" }}>
+      <div id="whatHappens" style={{ padding: "10%", backgroundColor: "white", marginTop: "1%", marginBottom:"10%" }}>
         <div
           style={{
             padding: "30px",
