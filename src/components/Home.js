@@ -1,54 +1,57 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { ListOfAudibles } from "./ListOfAudibles";
 import { Row } from "react-bootstrap";
 import Information from "./Information";
 
-
 const Home = () => {
   const [books, setBooks] = useState([]);
   const [search, setSearch] = useState("");
-  const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_KEY
-  
+  const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_KEY;
 
-  function handleChange (ev) {
-    const book = ev.target.value
-    setSearch(book)
+  function handleChange(ev) {
+    const book = ev.target.value;
+    setSearch(book);
   }
-  function handleSubmit (ev) {
-    ev.preventDefault()
+  function handleSubmit(ev) {
+    ev.preventDefault();
 
     axios
-     .get(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${GOOGLE_KEY}&maxResults=20`)
+      .get(
+        `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${GOOGLE_KEY}&maxResults=20`
+      )
       .then((resp) => setBooks(resp.data.items || []));
-
   }
-
 
   return (
     <>
-      <div id="home" style={{backgroundImage: "url(../books-2.jpg)", backgroundSize:"100% 100%"}}>
+      <div
+        id="home"
+        style={{
+          backgroundImage: "url(../hallway.jpg)",
+          backgroundSize: "contain",
+        }}
+      >
         <Information />
         <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          className="text-center"
-          placeholder="Search For Book Here"
-          onChange={handleChange}
-          style={{
-            width: "70%",
-            padding: "10%",
-            marginLeft: "17%",
-            marginTop: "5%",
-            marginBottom: "40px",
-            outline: "none",
-            boxShadow: "10px 10px",
-            borderRadius: "20px",
-            fontFamily:"monospace",
-            fontSize:"300%"
-            
-          }}
-        />
+          <input
+            type="text"
+            className="text-center"
+            placeholder="Search For Book Here"
+            onChange={handleChange}
+            style={{
+              width: "70%",
+              padding: "10%",
+              marginLeft: "17%",
+              marginTop: "5%",
+              marginBottom: "40px",
+              outline: "none",
+              boxShadow: "10px 10px",
+              borderRadius: "20px",
+              fontFamily: "monospace",
+              fontSize: "300%",
+            }}
+          />
         </form>
         <Row>
           {books.map((book) => (
@@ -66,7 +69,7 @@ const Home = () => {
               description={book.volumeInfo.description}
               averageRating={book.volumeInfo.averageRating}
             />
-          ))} 
+          ))}
         </Row>
       </div>
     </>

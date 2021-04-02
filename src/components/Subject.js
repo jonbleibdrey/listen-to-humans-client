@@ -6,30 +6,37 @@ import { Row } from "react-bootstrap";
 const Subject = () => {
   const [subject, setSubject] = useState([]);
   const [search, setSearch] = useState("");
-  const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_KEY
+  const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_KEY;
 
-  function handleChange (ev) {
-    const book = ev.target.value
-    setSearch(book)
+  function handleChange(ev) {
+    const book = ev.target.value;
+    setSearch(book);
   }
-  function handleSubmit (ev) {
-    ev.preventDefault()
+  function handleSubmit(ev) {
+    ev.preventDefault();
 
     axios
-     .get(`https://www.googleapis.com/books/v1/volumes?q=subject:${search}&key=${GOOGLE_KEY}&maxResults=20`)
+      .get(
+        `https://www.googleapis.com/books/v1/volumes?q=subject:${search}&key=${GOOGLE_KEY}&maxResults=20`
+      )
       .then((resp) => setSubject(resp.data.items || []))
-      .catch(error => {
-       alert(error.response.data.error)
-     })
+      .catch((error) => {
+        alert(error.response.data.error);
+      });
   }
-  // const filteredReview = review.filter((rev) => {
-  //   return rev.title.toLowerCase().includes(search.toLowerCase());
-  // });
-  console.log(subject)
+
+  console.log(subject);
   return (
     <>
-      <div id="subject"style={{ padding: "13%",  marginTop: "9%" , backgroundImage: "url(../books-2.jpg)", backgroundSize:"100% 100%"}}>
-       
+      <div
+        id="subject"
+        style={{
+          padding: "13%",
+          marginTop: "9%",
+          backgroundImage: "url(../hallway.jpg)",
+          backgroundSize: "contain",
+        }}
+      >
         <div
           style={{
             padding: "2%",
@@ -52,27 +59,26 @@ const Subject = () => {
           </h5>
         </div>
         <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          className="text-center"
-          placeholder="Search By Subject"
-          onChange={handleChange}
-          style={{
-            width: "70%",
-            padding: "10%",
-            marginLeft: "17%",
-            marginTop: "5%",
-            marginBottom: "40px",
-            outline: "none",
-            boxShadow: "10px 10px",
-            borderRadius: "20px",
-            fontFamily:"monospace",
-            fontSize:"300%"
-            
-          }}
-        />
+          <input
+            type="text"
+            className="text-center"
+            placeholder="Search By Subject"
+            onChange={handleChange}
+            style={{
+              width: "70%",
+              padding: "10%",
+              marginLeft: "17%",
+              marginTop: "5%",
+              marginBottom: "40px",
+              outline: "none",
+              boxShadow: "10px 10px",
+              borderRadius: "20px",
+              fontFamily: "monospace",
+              fontSize: "300%",
+            }}
+          />
         </form>
-        
+
         <Row>
           {subject.map((sub) => (
             <ListOfSubject
@@ -89,11 +95,10 @@ const Subject = () => {
               description={sub.volumeInfo.description}
               averageRating={sub.volumeInfo.averageRating}
             />
-          ))} 
+          ))}
         </Row>
       </div>
     </>
   );
 };
 export default Subject;
-

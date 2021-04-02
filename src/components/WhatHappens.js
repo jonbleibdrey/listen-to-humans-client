@@ -1,14 +1,22 @@
 import React from "react";
-import { Button, Card, CardDeck } from "react-bootstrap";
+import { Card, CardDeck } from "react-bootstrap";
 
 const WhatHappens = () => {
   return (
     <>
-      <div id="whatHappens" style={{ padding: "10%", backgroundColor: "white", marginTop: "1%", marginBottom:"10%" }}>
+      <div
+        id="whatHappens"
+        style={{
+          padding: "10%",
+          backgroundColor: "white",
+          marginTop: "1%",
+          marginBottom: "10%",
+        }}
+      >
         <div
           style={{
             padding: "30px",
-            margin:"1%"
+            margin: "1%",
           }}
         >
           <h3
@@ -34,7 +42,7 @@ const WhatHappens = () => {
             style={{
               display: "block",
               height: "1px",
-              width:"50%",
+              width: "50%",
               border: "0",
               borderTop: "5px solid #e3c378" /* YOUR COLOR HERE */,
               margin: "",

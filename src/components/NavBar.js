@@ -19,7 +19,7 @@ const NavBar = () => {
             fontFamily: "monospace",
           }}
         >
-        {/* <img alt="logo" src="/logo1.PNG" align="left" className="col-sm-3" /> */}
+          {/* <img alt="logo" src="/logo1.PNG" align="left" className="col-sm-3" /> */}
           <h1>Read By Humans.</h1>
         </div>
       </ReactBootStrap.Navbar.Brand>
@@ -32,7 +32,7 @@ const NavBar = () => {
           smooth={true}
           offset={0}
           duration={1000}
-          style={{ fontSize: "25px", cursor: "pointer" }}
+          style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
           Books
         </Link>
@@ -45,7 +45,7 @@ const NavBar = () => {
           smooth={true}
           offset={110}
           duration={2000}
-          style={{ fontSize: "25px", cursor: "pointer" }}
+          style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
           How it works
         </Link>
@@ -58,7 +58,7 @@ const NavBar = () => {
           smooth={true}
           offset={20}
           duration={3000}
-          style={{ fontSize: "25px", cursor: "pointer" }}
+          style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
           Author
         </Link>
@@ -71,7 +71,7 @@ const NavBar = () => {
           smooth={true}
           offset={-275}
           duration={2000}
-          style={{ fontSize: "25px", cursor: "pointer" }}
+          style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
           Google api
         </Link>
@@ -84,7 +84,7 @@ const NavBar = () => {
           smooth={true}
           offset={20}
           duration={2000}
-          style={{ fontSize: "25px", cursor: "pointer" }}
+          style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
           Subject
         </Link>
@@ -97,9 +97,9 @@ const NavBar = () => {
           smooth={true}
           offset={-50}
           duration={3000}
-          style={{ fontSize: "25px", cursor: "pointer" }}
+          style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
-         Testimonials
+          Testimonials
         </Link>
       </ReactBootStrap.Navbar.Brand>
     </ReactBootStrap.Navbar>
