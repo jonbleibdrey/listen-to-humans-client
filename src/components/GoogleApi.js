@@ -35,7 +35,7 @@ const GoogleApi = () => {
               border: "0",
               borderTop: "5px solid #e3c378",
               margin: "",
-              padding: "5%",
+              padding: "3%",
             }}
           />
 
@@ -45,7 +45,7 @@ const GoogleApi = () => {
             <CardDeck>
           <Card
             style={{
-              padding: "2%",
+              padding: "1%",
               marginRight:"20%",
               width: "60%",
               height: "auto",

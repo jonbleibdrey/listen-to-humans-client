@@ -30,7 +30,7 @@ const NavBar = () => {
           to="home"
           spy={true}
           smooth={true}
-          offset={110}
+          offset={0}
           duration={1000}
           style={{ fontSize: "25px", cursor: "pointer" }}
         >
@@ -43,8 +43,8 @@ const NavBar = () => {
           to="author"
           spy={true}
           smooth={true}
-          offset={-20}
-          duration={4000}
+          offset={20}
+          duration={3000}
           style={{ fontSize: "25px", cursor: "pointer" }}
         >
           Author
@@ -56,7 +56,7 @@ const NavBar = () => {
           to="subject"
           spy={true}
           smooth={true}
-          offset={-25}
+          offset={20}
           duration={2000}
           style={{ fontSize: "25px", cursor: "pointer" }}
         >
@@ -70,7 +70,7 @@ const NavBar = () => {
           spy={true}
           smooth={true}
           offset={110}
-          duration={1500}
+          duration={2000}
           style={{ fontSize: "25px", cursor: "pointer" }}
         >
           How it works
@@ -82,8 +82,8 @@ const NavBar = () => {
           to="googleApi"
           spy={true}
           smooth={true}
-          offset={110}
-          duration={1000}
+          offset={-275}
+          duration={2000}
           style={{ fontSize: "25px", cursor: "pointer" }}
         >
           Google api
@@ -95,7 +95,7 @@ const NavBar = () => {
           to="about"
           spy={true}
           smooth={true}
-          offset={69}
+          offset={-50}
           duration={3000}
           style={{ fontSize: "25px", cursor: "pointer" }}
         >
