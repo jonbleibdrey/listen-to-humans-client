@@ -21,10 +21,7 @@ const Review = () => {
       )
       .then((resp) => setAuthors(resp.data.items || []));
   }
-  // const filteredReview = review.filter((rev) => {
-  //   return rev.title.toLowerCase().includes(search.toLowerCase());
-  // });
-  console.log(authors);
+
   return (
     <>
       <div

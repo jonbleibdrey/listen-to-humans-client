@@ -25,7 +25,7 @@ const Subject = () => {
       });
   }
 
-  console.log(subject);
+
   return (
     <>
       <div
