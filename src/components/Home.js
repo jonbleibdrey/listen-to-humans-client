@@ -7,7 +7,7 @@ import Information from "./Information";
 const Home = () => {
   const [books, setBooks] = useState([]);
   const [search, setSearch] = useState("");
-  const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_KEY;
+  const API_KEY = process.env.REACT_APP_GOOGLE_KEY;
 
   function handleChange(ev) {
     const book = ev.target.value;
@@ -19,7 +19,7 @@ const Home = () => {
 
     axios
       .get(
-        `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${process.env.REACT_APP_GOOGLE_KEY}&maxResults=20`
+        `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${API_KEY}&maxResults=20`
       )
       .then((resp) => setBooks(resp.data.items || []));
   }

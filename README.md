@@ -1,7 +1,7 @@
 Project Name:
 Read by Humans
 
-An website used to filter data form Twitter based on user preference, built with React, Redux, JavaScript, and CSS.
+An website used to filter data Google Book API built with React, npm, JavaScript, and CSS.
 
 Project Status
 (only necessary if incomplete)
