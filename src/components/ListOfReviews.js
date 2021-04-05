@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Accordion, Modal, Button } from "react-bootstrap";
+import { Card, Col, Modal, Button } from "react-bootstrap";
 
 const ListOfReview = ({
   id,
