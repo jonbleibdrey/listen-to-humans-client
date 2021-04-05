@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import ListOfReviews from "./ListOfReviews";
+import ListOfAuthors from "./ListOfAuthors";
 import { Row } from "react-bootstrap";
 
 const Review = () => {
@@ -78,7 +78,7 @@ const Review = () => {
 
         <Row>
           {authors.map((aut) => (
-            <ListOfReviews
+            <ListOfAuthors
               key={aut.id}
               id={aut.id}
               author={aut.volumeInfo.authors}

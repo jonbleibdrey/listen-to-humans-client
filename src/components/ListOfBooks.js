@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Col, Button, Modal } from "react-bootstrap";
 
-export const ListOfAudibles = ({
+const ListOfBooks = ({
   id,
   title,
   by,
@@ -45,8 +45,8 @@ export const ListOfAudibles = ({
           color: "black",
           objectFit: "cover",
           margin: "5%",
-          minHeight: "800px",
-          maxHeight: "900px",
+          minHeight: "40vw",
+          maxHeight: "120vw",
           padding: "10%",
           marginBottom: "10%",
           fontFamily: "monospace",
@@ -63,8 +63,9 @@ export const ListOfAudibles = ({
               target="_blank"
             >
               <img
-                src={image === undefined ? "" : `${image.thumbnail}`}
-                alt={image === undefined ? "" : `${image.thumbnail}`}
+              style={{height:"200px", width:"128px", objectFit:"contain"}}
+                src={image === undefined ? "../logo1.PNG" : `${image.thumbnail}`}
+                alt={image === undefined ? "../logo1.PNG" : `${image.thumbnail}`}
               />
             </a>
             <h4>
@@ -126,3 +127,6 @@ export const ListOfAudibles = ({
     </Col>
   );
 };
+
+
+export default ListOfBooks;

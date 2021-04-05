@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./components/About";
 import Subject from "./components/Subject";
 import Home from "./components/Home";
-import Review from "./components/Review";
+import Author from "./components/Author";
 import NoFlyZone from "./components/NoFlyZone";
 import Footer from "./components/Footer";
 import WhatHappens from "./components/WhatHappens";
@@ -22,14 +22,14 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/review" component={Review} />
+          <Route path="/author" component={Author} />
           <Route path="/subject" component={Subject} />
           <Route path="/whatHappens" component={WhatHappens} />
           <Route path="/googleApi" component={GoogleApi} />
           <Route path="*" component={NoFlyZone} />
         </Switch>
         <WhatHappens name="whatHappens" />
-        <Review name="review" />
+        <Author name="author" />
         <GoogleApi name="googleApi" />
         <Subject name="subject" />
         <About name="about" />

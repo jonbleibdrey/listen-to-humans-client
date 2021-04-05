@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { ListOfAudibles } from "./ListOfAudibles";
+import ListOfBooks from "./ListOfBooks";
 import { Row } from "react-bootstrap";
 import Information from "./Information";
 
@@ -56,7 +56,7 @@ const Home = () => {
         </form>
         <Row>
           {books.map((book) => (
-            <ListOfAudibles
+            <ListOfBooks
               key={book.id}
               id={book.id}
               title={book.volumeInfo.title}

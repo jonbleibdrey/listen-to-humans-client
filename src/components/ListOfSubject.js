@@ -40,7 +40,7 @@ const ListOfSubject = ({
   return (
     <Col xs={12} lg={4}>
       <Card
-        className="mx-auto"
+        className="p-3"
         style={{
           color: "black",
           objectFit: "cover",
@@ -73,7 +73,7 @@ const ListOfSubject = ({
           <Card.Title>
             <a href={bookLink === undefined ? "not available" : bookLink}>
               <img
-              style={{height:"200px", width:"128px"}}
+              style={{height:"200px", width:"128px", objectFit:"contain"}}
                 src={image === undefined ? "../logo1.PNG" : `${image.thumbnail}`}
                 alt={image === undefined ? "../logo1.PNG" : `${image.thumbnail}`}
               />

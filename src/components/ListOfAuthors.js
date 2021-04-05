@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Col, Modal, Button } from "react-bootstrap";
 
-const ListOfReview = ({
+const ListOfAuthors = ({
   id,
   author,
   title,
@@ -45,8 +45,8 @@ const ListOfReview = ({
           color: "black",
           objectFit: "cover",
           margin: "5%",
-          minHeight: "1000px",
-          maxHeight: "1200px",
+          minHeight: "40vw",
+          maxHeight: "120vw",
           padding: "10%",
           marginBottom: "10%",
           fontFamily: "monospace",
@@ -66,8 +66,9 @@ const ListOfReview = ({
           <Card.Title>
             <a href={bookLink === undefined ? "not available" : bookLink}>
               <img
-                src={image === undefined ? "" : `${image.thumbnail}`}
-                alt={image === undefined ? "" : `${image.thumbnail}`}
+              style={{height:"200px", width:"128px", objectFit:"contain"}}
+                src={image === undefined ? "../logo1.PNG" : `${image.thumbnail}`}
+                alt={image === undefined ? "../logo1.PNG" : `${image.thumbnail}`}
               />
             </a>
             <h4>
@@ -127,4 +128,4 @@ const ListOfReview = ({
   );
 };
 
-export default ListOfReview;
+export default ListOfAuthors;
