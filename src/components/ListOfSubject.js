@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Accordion, Button, Modal } from "react-bootstrap";
+import { Card, Col, Button, Modal } from "react-bootstrap";
 
 const ListOfSubject = ({
   id,
