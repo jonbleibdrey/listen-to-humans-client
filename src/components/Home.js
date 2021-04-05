@@ -19,7 +19,7 @@ const Home = () => {
 
     axios
       .get(
-        `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${GOOGLE_KEY}&maxResults=20`
+        `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${process.env.REACT_APP_GOOGLE_KEY}&maxResults=20`
       )
       .then((resp) => setBooks(resp.data.items || []));
   }
