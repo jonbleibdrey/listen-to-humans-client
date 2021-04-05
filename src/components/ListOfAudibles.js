@@ -120,7 +120,7 @@ export const ListOfAudibles = ({
             show={modalShow}
             onHide={() => setModalShow(false)}
           />
-          <hr />
+          
         </Card.Body>
       </Card>
     </Col>

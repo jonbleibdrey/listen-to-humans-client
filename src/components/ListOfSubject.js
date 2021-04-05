@@ -45,8 +45,8 @@ const ListOfSubject = ({
           color: "black",
           objectFit: "cover",
           margin: "5%",
-          minHeight: "900px",
-          maxHeight: "1200px",
+          minHeight: "40vw",
+          maxHeight: "120vw",
           padding: "10%",
           marginBottom: "10%",
           fontFamily: "monospace",
@@ -73,8 +73,9 @@ const ListOfSubject = ({
           <Card.Title>
             <a href={bookLink === undefined ? "not available" : bookLink}>
               <img
-                src={image === undefined ? "" : `${image.thumbnail}`}
-                alt={image === undefined ? "" : `${image.thumbnail}`}
+              style={{height:"200px", width:"128px"}}
+                src={image === undefined ? "../logo1.PNG" : `${image.thumbnail}`}
+                alt={image === undefined ? "../logo1.PNG" : `${image.thumbnail}`}
               />
             </a>
             <h4>
@@ -82,7 +83,6 @@ const ListOfSubject = ({
               {title === undefined ? "not available" : title}
             </h4>
           </Card.Title>
-          <hr />
           <hr />
           <Card.Text>
             <h4>
