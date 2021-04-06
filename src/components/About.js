@@ -59,7 +59,6 @@ const About = () => {
             width: "40%",
             border: "0",
             borderTop: "5px solid #e3c378",
-            margin: "",
           }}
         />
 
@@ -86,16 +85,17 @@ const About = () => {
                   src={peo.image}
                   alt="First slide"
                   style={{
-                    width: "200px",
-                    height: "500px",
+                    width: "30vw",
+                    height: "30vw",
                     objectFit: "contain",
                   }}
                 />
                 <Carousel.Caption
                   style={{
-                    width: "20%",
                     color: "black",
                     fontFamily: "monospace",
+                    objectFit:'contain',
+                    fontSize:"10px"
                   }}
                 >
                   <h3>Name: {peo.name}</h3>
@@ -108,7 +108,7 @@ const About = () => {
                   </p>
                 </Carousel.Caption>
               </Carousel.Item>
-            ))}
+              ))}
           </Carousel>
         </div>
       </div>
