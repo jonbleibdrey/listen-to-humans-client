@@ -40,7 +40,6 @@ const ListOfSubject = ({
   return (
     <Col xs={12} lg={4}>
       <Card
-        className="p-3"
         style={{
           color: "black",
           objectFit: "cover",
@@ -56,22 +55,8 @@ const ListOfSubject = ({
         }}
       >
         <Card.Body>
-          <Card.Text>
-            <h4>
-              categorie:{" "}
-              {categories === undefined ? "not available" : categories}
-            </h4>
-            <br />
-          </Card.Text>
           <Card.Title>
-            <h2>
-              Author name:
-              {author}
-            </h2>
-          </Card.Title>
-          <hr />
-          <Card.Title>
-            <a href={bookLink === undefined ? "not available" : bookLink}>
+          <a href={bookLink === undefined ? "not available" : bookLink}>
               <img
                 style={{
                   height: "200px",
@@ -86,39 +71,57 @@ const ListOfSubject = ({
                 }
               />
             </a>
+            <br/>
+            <h2 style={{fontSize:"1vw"}}>
+              category:{" "}
+              {categories === undefined ? "not available" : categories}
+            </h2>
+            <hr/>
+            <br />
+          </Card.Title>
+          <Card.Title>
+            <h2 style={{ fontSize: "1vw" }}>
+              Author name:
+              <br/>
+              {author}
+            </h2>
+          </Card.Title>
+          <hr />
+          <Card.Title>
             <h4>
               Title of Book:
+              <br/>
               {title === undefined ? "not available" : title}
             </h4>
           </Card.Title>
           <hr />
           <Card.Text>
-            <h4>
+            <h6>
               page count:{" "}
               {pageCount === undefined ? "not available" : pageCount}
-            </h4>
+            </h6>
             <br />
           </Card.Text>
           <hr />
           <Card.Text>
-            <h4>
+            <h6>
               language: {language === undefined ? "not available" : language}
-            </h4>
+            </h6>
             <br />
           </Card.Text>
           <hr />
-          <Card.Subtitle>
-            <h4>
+          <Card.Text>
+            <h6>
               rating's:{" "}
               {averageRating === undefined ? "not available" : averageRating}
-            </h4>
-          </Card.Subtitle>
+            </h6>
+          </Card.Text>
           <hr />
-          <Card.Subtitle>
-            <h4>
+          <Card.Text>
+            <h6>
               price: {price === undefined ? "not available" : price.amount}
-            </h4>
-          </Card.Subtitle>
+            </h6>
+          </Card.Text>
           <hr />
           <Button variant="primary" onClick={() => setModalShow(true)}>
             Read description
@@ -128,7 +131,6 @@ const ListOfSubject = ({
             show={modalShow}
             onHide={() => setModalShow(false)}
           />
-          <hr />
         </Card.Body>
       </Card>
     </Col>

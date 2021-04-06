@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import ListOfAuthors from "./ListOfAuthors";
 import { Row } from "react-bootstrap";
+import InformationAuthor from "./InformationAuthor"
 
 const Review = () => {
   const [authors, setAuthors] = useState([]);
@@ -27,34 +28,14 @@ const Review = () => {
       <div
         id="author"
         style={{
-          marginBottom: "9%",
-          marginTop: "10%",
-          padding: "10%",
+          marginBottom: "5%",
           backgroundImage: "url(../hallway.jpg)",
           backgroundSize: "contain",
         }}
-      >
-        <div
-          style={{
-            padding: "2%",
-            marginLeft: "20%",
-            width: "60%",
-            height: "auto",
-            backgroundColor: "white",
-            border: "1px solid gray",
-            fontFamily: "monospace",
-            boxShadow: "10px 20px",
-            borderRadius: "20px",
-          }}
         >
-          <h1>Author Section</h1>
-          <hr />
-          <h5>
-            We want the books to be great and readable. so we set up a system to
-            do just that. You can review any book you want. You can also search
-            for any review you want with our simple search function.
-          </h5>
-        </div>
+       <div style={{padding:'10%'}}>
+        <InformationAuthor/>
+         </div> 
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -65,8 +46,7 @@ const Review = () => {
               width: "70%",
               padding: "10%",
               marginLeft: "15%",
-              marginTop: "5%",
-              marginBottom: "40px",
+              marginBottom: "100px",
               outline: "none",
               boxShadow: "10px 10px",
               borderRadius: "20px",

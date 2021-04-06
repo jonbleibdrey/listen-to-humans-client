@@ -38,14 +38,14 @@ const Home = () => {
           <input
             type="text"
             className="text-center"
-            placeholder="Search For Book Here"
+            placeholder="Search For A Book Here"
             onChange={handleChange}
             style={{
               width: "70%",
               padding: "10%",
               marginLeft: "17%",
-              marginTop: "5%",
-              marginBottom: "40px",
+              marginTop: "9%",
+              marginBottom: "5%",
               outline: "none",
               boxShadow: "10px 10px",
               borderRadius: "20px",

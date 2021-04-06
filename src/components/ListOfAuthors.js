@@ -57,14 +57,11 @@ const ListOfAuthors = ({
       >
         <Card.Body>
           <Card.Title>
-            <h2>
-              Author name:
-              {author}
-            </h2>
-          </Card.Title>
-          <hr />
-          <Card.Title>
-            <a href={bookLink === undefined ? "not available" : bookLink}>
+          <a
+              href={bookLink === undefined ? "not available" : bookLink}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <img
                 style={{
                   height: "200px",
@@ -79,47 +76,59 @@ const ListOfAuthors = ({
                 }
               />
             </a>
-            <h4>
+            <br/>
+            <h2 style={{ fontSize: "1vw" }}>
+              Author name:
+              <br/>
+              {author}
+            </h2>
+          </Card.Title>
+
+          <hr />
+          <Card.Title>
+            
+            <h4 style={{fontSize:"1vw"}}>
               Title of Book:
+              <br/>
               {title === undefined ? "not available" : title}
             </h4>
           </Card.Title>
           <hr />
           <Card.Text>
-            <h4>
-              categorie:{" "}
+            <h6>
+              category:{" "}
               {categories === undefined ? "not available" : categories}
-            </h4>
+            </h6>
             <br />
           </Card.Text>
           <hr />
           <Card.Text>
-            <h4>
+            <h6>
               page count:{" "}
               {pageCount === undefined ? "not available" : pageCount}
-            </h4>
+            </h6>
             <br />
           </Card.Text>
           <hr />
           <Card.Text>
-            <h4>
+            <h6>
               language: {language === undefined ? "not available" : language}
-            </h4>
+            </h6>
             <br />
           </Card.Text>
           <hr />
-          <Card.Subtitle>
-            <h4>
+          <Card.Text>
+            <h6>
               rating's:{" "}
               {averageRating === undefined ? "not available" : averageRating}
-            </h4>
-          </Card.Subtitle>
+            </h6>
+          </Card.Text>
           <hr />
-          <Card.Subtitle>
-            <h4>
+          <Card.Text>
+            <h6>
               price: {price === undefined ? "not available" : price.amount}
-            </h4>
-          </Card.Subtitle>
+            </h6>
+          </Card.Text>
           <hr />
           <Button variant="primary" onClick={() => setModalShow(true)}>
             Read description
@@ -129,7 +138,6 @@ const ListOfAuthors = ({
             show={modalShow}
             onHide={() => setModalShow(false)}
           />
-          <hr />
         </Card.Body>
       </Card>
     </Col>

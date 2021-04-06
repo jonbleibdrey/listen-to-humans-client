@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import ListOfSubject from "./ListOfSubject";
 import { Row } from "react-bootstrap";
+import InformationSubject from "./InformationSubject"
 
 const Subject = () => {
   const [subject, setSubject] = useState([]);
@@ -30,33 +31,15 @@ const Subject = () => {
       <div
         id="subject"
         style={{
-          padding: "13%",
           marginTop: "9%",
           backgroundImage: "url(../hallway.jpg)",
           backgroundSize: "contain",
         }}
       >
-        <div
-          style={{
-            padding: "2%",
-            marginLeft: "20%",
-            width: "60%",
-            height: "auto",
-            backgroundColor: "white",
-            border: "1px solid gray",
-            fontFamily: "monospace",
-            boxShadow: "10px 20px",
-            borderRadius: "20px",
-          }}
-        >
-          <h1>Search by Subject</h1>
-          <hr />
-          <h5>
-            We want the books to be great and readable. so we set up a system to
-            do just that. You can review any book you want. You can also search
-            for any review you want with our simple search function.
-          </h5>
+        <div style={{padding:'10%'}}>
+          <InformationSubject/>
         </div>
+      
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -66,9 +49,8 @@ const Subject = () => {
             style={{
               width: "70%",
               padding: "10%",
-              marginLeft: "17%",
-              marginTop: "5%",
-              marginBottom: "40px",
+              marginLeft: "15%",
+              marginBottom: "100px",
               outline: "none",
               boxShadow: "10px 10px",
               borderRadius: "20px",

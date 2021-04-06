@@ -96,7 +96,7 @@ const ListOfBooks = ({
             </h6>
             <br />
             <h6>
-              Categories:{" "}
+              category:{" "}
               {categories === undefined ? "not available" : categories}
             </h6>
           </Card.Text>
