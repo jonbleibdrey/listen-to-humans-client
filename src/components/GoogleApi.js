@@ -33,7 +33,6 @@ const GoogleApi = () => {
           width: "30%",
           border: "0",
           borderTop: "5px solid #e3c378",
-          margin: "",
           padding: "3%",
         }}
       />

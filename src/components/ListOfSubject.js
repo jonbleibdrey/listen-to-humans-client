@@ -56,7 +56,7 @@ const ListOfSubject = ({
       >
         <Card.Body>
           <Card.Title>
-          <a href={bookLink === undefined ? "not available" : bookLink}>
+            <a href={bookLink === undefined ? "not available" : bookLink}>
               <img
                 style={{
                   height: "200px",
@@ -71,18 +71,18 @@ const ListOfSubject = ({
                 }
               />
             </a>
-            <br/>
-            <h2 style={{fontSize:"1vw"}}>
+            <br />
+            <h2 style={{ fontSize: "1vw" }}>
               category:{" "}
               {categories === undefined ? "not available" : categories}
             </h2>
-            <hr/>
+            <hr />
             <br />
           </Card.Title>
           <Card.Title>
             <h2 style={{ fontSize: "1vw" }}>
               Author name:
-              <br/>
+              <br />
               {author}
             </h2>
           </Card.Title>
@@ -90,7 +90,7 @@ const ListOfSubject = ({
           <Card.Title>
             <h4>
               Title of Book:
-              <br/>
+              <br />
               {title === undefined ? "not available" : title}
             </h4>
           </Card.Title>

@@ -42,7 +42,7 @@ const NavBar = () => {
           to="whatHappens"
           spy={true}
           smooth={true}
-          offset={110}
+          offset={170}
           duration={2000}
           style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
@@ -55,8 +55,8 @@ const NavBar = () => {
           to="author"
           spy={true}
           smooth={true}
-          offset={20}
-          duration={3000}
+          offset={185}
+          duration={2000}
           style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
           Author
@@ -81,7 +81,7 @@ const NavBar = () => {
           to="subject"
           spy={true}
           smooth={true}
-          offset={20}
+          offset={190}
           duration={2000}
           style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
@@ -94,7 +94,7 @@ const NavBar = () => {
           to="about"
           spy={true}
           smooth={true}
-          offset={-50}
+          offset={-10}
           duration={3000}
           style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >

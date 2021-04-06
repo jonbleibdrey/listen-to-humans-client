@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import ListOfAuthors from "./ListOfAuthors";
 import { Row } from "react-bootstrap";
-import InformationAuthor from "./InformationAuthor"
+import InformationAuthor from "./InformationAuthor";
 
 const Review = () => {
   const [authors, setAuthors] = useState([]);
@@ -32,10 +32,10 @@ const Review = () => {
           backgroundImage: "url(../hallway.jpg)",
           backgroundSize: "contain",
         }}
-        >
-       <div style={{padding:'10%'}}>
-        <InformationAuthor/>
-         </div> 
+      >
+        <div style={{ padding: "10%" }}>
+          <InformationAuthor />
+        </div>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -45,7 +45,7 @@ const Review = () => {
             style={{
               width: "70%",
               padding: "10%",
-              marginLeft: "15%",
+              marginLeft: "17%",
               marginBottom: "100px",
               outline: "none",
               boxShadow: "10px 10px",

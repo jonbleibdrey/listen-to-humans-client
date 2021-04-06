@@ -57,7 +57,7 @@ const ListOfAuthors = ({
       >
         <Card.Body>
           <Card.Title>
-          <a
+            <a
               href={bookLink === undefined ? "not available" : bookLink}
               rel="noopener noreferrer"
               target="_blank"
@@ -76,20 +76,19 @@ const ListOfAuthors = ({
                 }
               />
             </a>
-            <br/>
+            <br />
             <h2 style={{ fontSize: "1vw" }}>
               Author name:
-              <br/>
+              <br />
               {author}
             </h2>
           </Card.Title>
 
           <hr />
           <Card.Title>
-            
-            <h4 style={{fontSize:"1vw"}}>
+            <h4 style={{ fontSize: "1vw" }}>
               Title of Book:
-              <br/>
+              <br />
               {title === undefined ? "not available" : title}
             </h4>
           </Card.Title>

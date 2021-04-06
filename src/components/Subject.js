@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import ListOfSubject from "./ListOfSubject";
 import { Row } from "react-bootstrap";
-import InformationSubject from "./InformationSubject"
+import InformationSubject from "./InformationSubject";
 
 const Subject = () => {
   const [subject, setSubject] = useState([]);
@@ -36,10 +36,10 @@ const Subject = () => {
           backgroundSize: "contain",
         }}
       >
-        <div style={{padding:'10%'}}>
-          <InformationSubject/>
+        <div style={{ padding: "10%" }}>
+          <InformationSubject />
         </div>
-      
+
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -49,8 +49,8 @@ const Subject = () => {
             style={{
               width: "70%",
               padding: "10%",
-              marginLeft: "15%",
-              marginBottom: "100px",
+              marginLeft: "17%",
+              marginBottom: "5%",
               outline: "none",
               boxShadow: "10px 10px",
               borderRadius: "20px",
