@@ -66,9 +66,17 @@ const ListOfAuthors = ({
           <Card.Title>
             <a href={bookLink === undefined ? "not available" : bookLink}>
               <img
-              style={{height:"200px", width:"128px", objectFit:"contain"}}
-                src={image === undefined ? "../logo1.PNG" : `${image.thumbnail}`}
-                alt={image === undefined ? "../logo1.PNG" : `${image.thumbnail}`}
+                style={{
+                  height: "200px",
+                  width: "128px",
+                  objectFit: "contain",
+                }}
+                src={
+                  image === undefined ? "../logo1.PNG" : `${image.thumbnail}`
+                }
+                alt={
+                  image === undefined ? "../logo1.PNG" : `${image.thumbnail}`
+                }
               />
             </a>
             <h4>

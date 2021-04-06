@@ -25,7 +25,6 @@ const Subject = () => {
       });
   }
 
-
   return (
     <>
       <div
