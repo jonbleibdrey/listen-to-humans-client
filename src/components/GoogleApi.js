@@ -95,6 +95,7 @@ const GoogleApi = () => {
                 className="animate__animated animate__slideInRight"
                 src="../google.JPG"
                 alt="google"
+            
               />
             </div>
           </Col>
