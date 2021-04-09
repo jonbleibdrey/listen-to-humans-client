@@ -15,7 +15,7 @@ const NavBar = () => {
       expand="lg"
       bg="dark"
       variant="dark"
-      style={{ padding: "1%", justifyContent: "space-around",boxShadow: "-3px 20px 20px  #ccc",marginBottom:"5%" }}
+      style={{ padding: "1%", justifyContent: "space-evenly",boxShadow: "-3px 20px 20px  #ccc",marginBottom:"5%" }}
     >
       <ReactBootStrap.Navbar.Brand href="/">
         <div
@@ -38,7 +38,7 @@ const NavBar = () => {
           smooth={true}
           offset={10}
           duration={1000}
-          style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
+          style={{ cursor: "pointer" }}
         >
           <span title="Search any Book">
             <ImBooks />
@@ -53,7 +53,7 @@ const NavBar = () => {
           smooth={true}
           offset={170}
           duration={2000}
-          style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
+          style={{ cursor: "pointer"}}
         >
           <span title="How it works?">
             <IoCogOutline />
@@ -68,7 +68,7 @@ const NavBar = () => {
           smooth={true}
           offset={135}
           duration={2000}
-          style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
+          style={{  cursor: "pointer"}}
         >
           <span title="Search by Authors">
             <RiContactsBook2Line />
@@ -83,7 +83,7 @@ const NavBar = () => {
           smooth={true}
           offset={-275}
           duration={2000}
-          style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
+          style={{  cursor: "pointer", }}
         >
           <span title="Google API">
             <SiGooglecloud />
@@ -98,7 +98,7 @@ const NavBar = () => {
           smooth={true}
           offset={150}
           duration={2000}
-          style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
+          style={{  cursor: "pointer", }}
         >
           <span title="Search by Subject">
             <BiBookHeart />
@@ -113,7 +113,7 @@ const NavBar = () => {
           smooth={true}
           offset={-30}
           duration={3000}
-          style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
+          style={{  cursor: "pointer", }}
         >
           <span title="Testimonials">
             <RiKakaoTalkLine />
