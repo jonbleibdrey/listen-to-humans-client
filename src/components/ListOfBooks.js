@@ -94,13 +94,13 @@ const ListOfBooks = ({
             <h6>
               Language: {language === undefined ? "not available" : language}
             </h6>
-            <hr/>
+            <hr />
             <h6>
               category:{" "}
               {categories === undefined ? "not available" : categories}
             </h6>
           </Card.Text>
-          <hr/>
+          <hr />
           <Card.Text>
             <h6>
               Price: {price === undefined ? "not available" : price.amount}

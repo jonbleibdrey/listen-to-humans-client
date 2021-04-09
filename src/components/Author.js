@@ -27,11 +27,6 @@ const Review = () => {
     <>
       <div
         id="author"
-        style={{
-          marginBottom: "5%",
-          backgroundImage: "url(../hallway.jpg)",
-          backgroundSize: "contain",
-        }}
       >
         <div style={{ padding: "10%" }}>
           <InformationAuthor />
@@ -48,7 +43,8 @@ const Review = () => {
               marginLeft: "17%",
               marginBottom: "100px",
               outline: "none",
-              boxShadow: "10px 10px",
+              boxShadow: "-13px 20px 15px 19px #ccc",
+              border:"1px white",
               borderRadius: "20px",
               fontFamily: "monospace",
               fontSize: "300%",

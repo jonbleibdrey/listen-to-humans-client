@@ -48,9 +48,8 @@ const GoogleApi = () => {
                   width: "60%",
                   height: "auto",
                   backgroundColor: "white",
-                  border: "1px solid gray",
                   fontFamily: "monospace",
-                  boxShadow: "10px 20px",
+                  boxShadow: "-13px 20px 15px 13px #ccc",
                   borderRadius: "20px",
                 }}
               >
@@ -95,7 +94,6 @@ const GoogleApi = () => {
                 className="animate__animated animate__slideInRight"
                 src="../google.JPG"
                 alt="google"
-            
               />
             </div>
           </Col>

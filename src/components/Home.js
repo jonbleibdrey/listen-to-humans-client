@@ -28,10 +28,7 @@ const Home = () => {
     <>
       <div
         id="home"
-        style={{
-          backgroundImage: "url(../hallway.jpg)",
-          backgroundSize: "contain",
-        }}
+        
       >
         <Information />
         <form onSubmit={handleSubmit}>
@@ -46,8 +43,9 @@ const Home = () => {
               marginLeft: "17%",
               marginTop: "9%",
               marginBottom: "5%",
-              outline: "none",
-              boxShadow: "10px 10px",
+              outline:'none',
+              border:"white",
+              boxShadow: "-13px 20px 15px 19px #ccc",
               borderRadius: "20px",
               fontFamily: "monospace",
               fontSize: "300%",
@@ -72,6 +70,16 @@ const Home = () => {
             />
           ))}
         </Row>
+        <hr
+          style={{
+            display: "block",
+            height: "1px",
+            width: "100%",
+            border: "0",
+            marginTop:"5%",
+            borderTop: "5px solid #e3c378",
+          }}
+        />
       </div>
     </>
   );

@@ -58,9 +58,9 @@ const WhatHappens = () => {
               width: "60%",
               height: "auto",
               backgroundColor: "white",
-              border: "1px solid gray",
+              border:"10px white",
               fontFamily: "monospace",
-              boxShadow: "10px 20px",
+              boxShadow: "-13px 20px 15px 10px #ccc",
               borderRadius: "20px",
             }}
           >
@@ -81,9 +81,9 @@ const WhatHappens = () => {
               width: "60%",
               height: "auto",
               backgroundColor: "white",
-              border: "1px solid gray",
+              border:"10px white",
               fontFamily: "monospace",
-              boxShadow: "10px 20px",
+              boxShadow: "-13px 20px 15px 10px #ccc",
               borderRadius: "20px",
             }}
           >
@@ -104,9 +104,9 @@ const WhatHappens = () => {
               width: "60%",
               height: "auto",
               backgroundColor: "white",
-              border: "1px solid gray",
+              border:"10px white",
               fontFamily: "monospace",
-              boxShadow: "10px 20px",
+              boxShadow: "-13px 20px 15px 10px #ccc",
               borderRadius: "20px",
             }}
           >

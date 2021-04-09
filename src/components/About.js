@@ -71,9 +71,8 @@ const About = () => {
             width: "60%",
             height: "auto",
             backgroundColor: "white",
-            border: "1px solid gray",
             fontFamily: "monospace",
-            boxShadow: "10px 20px",
+            boxShadow: "-21px 27px 15px 25px #ccc",
             borderRadius: "20px",
           }}
         >
@@ -94,8 +93,8 @@ const About = () => {
                   style={{
                     color: "black",
                     fontFamily: "monospace",
-                    objectFit:'contain',
-                    fontSize:"10px"
+                    objectFit: "contain",
+                    fontSize: "10px",
                   }}
                 >
                   <h3>Name: {peo.name}</h3>
@@ -108,7 +107,7 @@ const About = () => {
                   </p>
                 </Carousel.Caption>
               </Carousel.Item>
-              ))}
+            ))}
           </Carousel>
         </div>
       </div>

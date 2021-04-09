@@ -30,11 +30,6 @@ const Subject = () => {
     <>
       <div
         id="subject"
-        style={{
-          marginTop: "9%",
-          backgroundImage: "url(../hallway.jpg)",
-          backgroundSize: "contain",
-        }}
       >
         <div style={{ padding: "10%" }}>
           <InformationSubject />
@@ -52,7 +47,8 @@ const Subject = () => {
               marginLeft: "17%",
               marginBottom: "5%",
               outline: "none",
-              boxShadow: "10px 10px",
+              border:"10px white",
+              boxShadow: "-15px 20px 15px 19px #ccc",
               borderRadius: "20px",
               fontFamily: "monospace",
               fontSize: "300%",
