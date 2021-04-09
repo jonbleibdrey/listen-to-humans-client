@@ -75,6 +75,16 @@ const Subject = () => {
           ))}
         </Row>
       </div>
+      <hr
+          style={{
+            display: "block",
+            height: "1px",
+            width: "100%",
+            border: "0",
+            marginTop:"5%",
+            borderTop: "5px solid #f29161",
+          }}
+          />
     </>
   );
 };

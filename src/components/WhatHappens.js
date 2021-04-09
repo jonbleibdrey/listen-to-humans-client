@@ -22,17 +22,17 @@ const WhatHappens = () => {
           <h3
             style={{
               marginLeft: "40%",
-              fontFamily: "initial",
-              color: "#e6a57e",
+              fontFamily: "monospace",
+              color: "#e3c378",
             }}
           >
             What Happens Here
           </h3>
           <h1
             style={{
-              marginLeft: "30%",
+              marginLeft: "35%",
               padding: "10px",
-              fontFamily: "initial",
+              fontFamily: "monospace",
             }}
           >
             YOU SEARCH FOR BOOKS.
@@ -44,7 +44,7 @@ const WhatHappens = () => {
               height: "1px",
               width: "50%",
               border: "0",
-              borderTop: "5px solid #e3c378",
+              borderTop: "5px solid #f29161",
               margin: "",
               padding: "0",
             }}
@@ -123,6 +123,16 @@ const WhatHappens = () => {
           </Card>
         </CardDeck>
       </div>
+      <hr
+          style={{
+            display: "block",
+            height: "1px",
+            width: "100%",
+            border: "0",
+            marginTop:"5%",
+            borderTop: "5px solid #f29161",
+          }}
+          />
     </>
   );
 };

@@ -31,11 +31,11 @@ const Information = () => {
       <h6
         style={{
           margin: "1%",
-          marginLeft: "34%",
+          marginLeft: "26%",
           marginBottom: "5%",
           color: "black",
           width: "60%",
-          fontFamily: "initial",
+          fontFamily: "monospace",
           fontSize: "2vw",
         }}
       >

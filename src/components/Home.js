@@ -77,7 +77,7 @@ const Home = () => {
             width: "100%",
             border: "0",
             marginTop:"5%",
-            borderTop: "5px solid #e3c378",
+            borderTop: "5px solid #f29161",
           }}
         />
       </div>

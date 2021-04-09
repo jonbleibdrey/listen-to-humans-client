@@ -35,8 +35,8 @@ const About = () => {
         <h3
           style={{
             marginLeft: "45%",
-            fontFamily: "initial",
-            color: "#e6a57e",
+            fontFamily: "monospace",
+            color: "#e3c378",
             marginTop: "5%",
           }}
         >
@@ -44,9 +44,9 @@ const About = () => {
         </h3>
         <h1
           style={{
-            marginLeft: "35%",
+            marginLeft: "37%",
             padding: "10px",
-            fontFamily: "initial",
+            fontFamily: "monospace",
           }}
         >
           WHAT PEOPLE HAVE TO SAY
@@ -58,7 +58,7 @@ const About = () => {
             height: "1px",
             width: "40%",
             border: "0",
-            borderTop: "5px solid #e3c378",
+            borderTop: "5px solid #f29161",
           }}
         />
 

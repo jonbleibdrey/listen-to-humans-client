@@ -10,17 +10,17 @@ const GoogleApi = () => {
       <h3
         style={{
           marginLeft: "43%",
-          fontFamily: "initial",
-          color: "#e6a57e",
+          fontFamily: "monospace",
+          color: "#e3c378",
         }}
       >
         How the API actually works
       </h3>
       <h1
         style={{
-          marginLeft: "35%",
+          marginLeft: "38%",
           padding: "10px",
-          fontFamily: "initial",
+          fontFamily: "monospace",
         }}
       >
         IT GOES TO SPACE AND BACK
@@ -30,9 +30,9 @@ const GoogleApi = () => {
         style={{
           display: "block",
           height: "1px",
-          width: "30%",
+          width: "35%",
           border: "0",
-          borderTop: "5px solid #e3c378",
+          borderTop: "5px solid #f29161",
           padding: "3%",
         }}
       />
@@ -99,6 +99,16 @@ const GoogleApi = () => {
           </Col>
         </Row>
       </Container>
+      <hr
+          style={{
+            display: "block",
+            height: "1px",
+            width: "100%",
+            border: "0",
+            marginTop:"10%",
+            borderTop: "5px solid #f29161",
+          }}
+          />
     </>
   );
 };
