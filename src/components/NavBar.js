@@ -1,6 +1,12 @@
 import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
 import { Link } from "react-scroll";
+import { ImBooks } from "react-icons/im";
+import { IoCogOutline } from "react-icons/io5";
+import { RiContactsBook2Line } from "react-icons/ri";
+import { SiGooglecloud } from "react-icons/si";
+import { BiBookHeart} from "react-icons/bi";
+import { RiKakaoTalkLine} from "react-icons/ri";
 
 const NavBar = () => {
   return (
@@ -33,7 +39,9 @@ const NavBar = () => {
           duration={1000}
           style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
-          Books
+           <span title="Search any Book">
+          <ImBooks/>
+           </span>
         </Link>
       </ReactBootStrap.Navbar.Brand>
       <ReactBootStrap.Navbar.Brand>
@@ -46,7 +54,9 @@ const NavBar = () => {
           duration={2000}
           style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
-          How it works
+           <span title="How it works?">
+          <IoCogOutline/>
+           </span>
         </Link>
       </ReactBootStrap.Navbar.Brand>
       <ReactBootStrap.Navbar.Brand>
@@ -59,7 +69,9 @@ const NavBar = () => {
           duration={2000}
           style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
-          Author
+           <span title="Search by Authors">
+          <RiContactsBook2Line/>
+           </span>
         </Link>
       </ReactBootStrap.Navbar.Brand>
       <ReactBootStrap.Navbar.Brand>
@@ -72,7 +84,9 @@ const NavBar = () => {
           duration={2000}
           style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
-          Google api
+           <span title="Google API">
+          <SiGooglecloud/>
+           </span>
         </Link>
       </ReactBootStrap.Navbar.Brand>
       <ReactBootStrap.Navbar.Brand>
@@ -85,7 +99,9 @@ const NavBar = () => {
           duration={2000}
           style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
-          Subject
+           <span title="Search by Subject">
+          <BiBookHeart/>
+           </span>
         </Link>
       </ReactBootStrap.Navbar.Brand>
       <ReactBootStrap.Navbar.Brand>
@@ -98,7 +114,9 @@ const NavBar = () => {
           duration={3000}
           style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
-          Testimonials
+          <span title="Testimonials">
+          <RiKakaoTalkLine/>
+          </span>
         </Link>
       </ReactBootStrap.Navbar.Brand>
     </ReactBootStrap.Navbar>
