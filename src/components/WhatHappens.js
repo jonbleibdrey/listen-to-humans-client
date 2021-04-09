@@ -4,6 +4,14 @@ import { Card, CardDeck } from "react-bootstrap";
 const WhatHappens = () => {
   return (
     <>
+      <hr
+        style={{
+          width: "98%",
+          border: "20px solid white",
+          marginTop: "5%",
+          boxShadow: "-3px 10px 20px  #ccc",
+        }}
+      />
       <div
         id="whatHappens"
         style={{
@@ -37,7 +45,6 @@ const WhatHappens = () => {
           >
             YOU SEARCH FOR BOOKS.
           </h1>
-
           <hr
             style={{
               display: "block",
@@ -58,7 +65,7 @@ const WhatHappens = () => {
               width: "60%",
               height: "auto",
               backgroundColor: "white",
-              border:"10px white",
+              border: "10px white",
               fontFamily: "monospace",
               boxShadow: "-13px 20px 15px 10px #ccc",
               borderRadius: "20px",
@@ -81,7 +88,7 @@ const WhatHappens = () => {
               width: "60%",
               height: "auto",
               backgroundColor: "white",
-              border:"10px white",
+              border: "10px white",
               fontFamily: "monospace",
               boxShadow: "-13px 20px 15px 10px #ccc",
               borderRadius: "20px",
@@ -104,7 +111,7 @@ const WhatHappens = () => {
               width: "60%",
               height: "auto",
               backgroundColor: "white",
-              border:"10px white",
+              border: "10px white",
               fontFamily: "monospace",
               boxShadow: "-13px 20px 15px 10px #ccc",
               borderRadius: "20px",
@@ -124,15 +131,13 @@ const WhatHappens = () => {
         </CardDeck>
       </div>
       <hr
-          style={{
-            display: "block",
-            height: "1px",
-            width: "100%",
-            border: "0",
-            marginTop:"5%",
-            borderTop: "5px solid #f29161",
-          }}
-          />
+        style={{
+          width: "98%",
+          border: "20px solid white",
+          marginTop: "5%",
+          boxShadow: "-3px 10px 20px  #ccc",
+        }}
+      />
     </>
   );
 };

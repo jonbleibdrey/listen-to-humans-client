@@ -15,7 +15,7 @@ const NavBar = () => {
       expand="lg"
       bg="dark"
       variant="dark"
-      style={{ padding: "1%", justifyContent: "space-around" }}
+      style={{ padding: "1%", justifyContent: "space-around",boxShadow: "-3px 20px 20px  #ccc",marginBottom:"5%" }}
     >
       <ReactBootStrap.Navbar.Brand href="/">
         <div
@@ -23,10 +23,10 @@ const NavBar = () => {
             marginRight: "50%",
             marginTop: "1%",
             fontFamily: "monospace",
+            color: "#fac54b",
           }}
         >
           <h1>Read By Humans.</h1>
-          
         </div>
       </ReactBootStrap.Navbar.Brand>
 
@@ -66,7 +66,7 @@ const NavBar = () => {
           to="author"
           spy={true}
           smooth={true}
-          offset={185}
+          offset={135}
           duration={2000}
           style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
@@ -96,7 +96,7 @@ const NavBar = () => {
           to="subject"
           spy={true}
           smooth={true}
-          offset={190}
+          offset={150}
           duration={2000}
           style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >
@@ -111,7 +111,7 @@ const NavBar = () => {
           to="about"
           spy={true}
           smooth={true}
-          offset={-10}
+          offset={-30}
           duration={3000}
           style={{ fontSize: "25px", cursor: "pointer", fontFamily: "initial" }}
         >

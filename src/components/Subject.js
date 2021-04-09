@@ -28,9 +28,7 @@ const Subject = () => {
 
   return (
     <>
-      <div
-        id="subject"
-      >
+      <div id="subject">
         <div style={{ padding: "10%" }}>
           <InformationSubject />
         </div>
@@ -47,7 +45,7 @@ const Subject = () => {
               marginLeft: "17%",
               marginBottom: "5%",
               outline: "none",
-              border:"10px white",
+              border: "10px white",
               boxShadow: "-15px 20px 15px 19px #ccc",
               borderRadius: "20px",
               fontFamily: "monospace",
@@ -76,15 +74,13 @@ const Subject = () => {
         </Row>
       </div>
       <hr
-          style={{
-            display: "block",
-            height: "1px",
-            width: "100%",
-            border: "0",
-            marginTop:"5%",
-            borderTop: "5px solid #f29161",
-          }}
-          />
+        style={{
+          width: "98%",
+          border: "20px solid white",
+          marginTop: "5%",
+          boxShadow: "-3px 10px 20px  #ccc",
+        }}
+      />
     </>
   );
 };

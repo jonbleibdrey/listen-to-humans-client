@@ -26,10 +26,7 @@ const Home = () => {
 
   return (
     <>
-      <div
-        id="home"
-        
-      >
+      <div id="home">
         <Information />
         <form onSubmit={handleSubmit}>
           <input
@@ -43,8 +40,8 @@ const Home = () => {
               marginLeft: "17%",
               marginTop: "9%",
               marginBottom: "5%",
-              outline:'none',
-              border:"white",
+              outline: "none",
+              border: "white",
               boxShadow: "-13px 20px 15px 19px #ccc",
               borderRadius: "20px",
               fontFamily: "monospace",
@@ -70,16 +67,6 @@ const Home = () => {
             />
           ))}
         </Row>
-        <hr
-          style={{
-            display: "block",
-            height: "1px",
-            width: "100%",
-            border: "0",
-            marginTop:"5%",
-            borderTop: "5px solid #f29161",
-          }}
-        />
       </div>
     </>
   );

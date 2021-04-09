@@ -25,9 +25,7 @@ const Review = () => {
 
   return (
     <>
-      <div
-        id="author"
-      >
+      <div id="author">
         <div style={{ padding: "10%" }}>
           <InformationAuthor />
         </div>
@@ -44,7 +42,7 @@ const Review = () => {
               marginBottom: "100px",
               outline: "none",
               boxShadow: "-13px 20px 15px 19px #ccc",
-              border:"1px white",
+              border: "1px white",
               borderRadius: "20px",
               fontFamily: "monospace",
               fontSize: "300%",
@@ -72,16 +70,14 @@ const Review = () => {
         </Row>
       </div>
       <hr
-          style={{
-            display: "block",
-            height: "1px",
-            width: "100%",
-            border: "0",
-            marginTop:"5%",
-            marginBottom:"10%",
-            borderTop: "5px solid #f29161",
-          }}
-          />
+        style={{
+          width: "98%",
+          border: "20px solid white",
+          marginTop: "5%",
+          marginBottom: "5%",
+          boxShadow: "-3px 10px 20px  #ccc",
+        }}
+      />
     </>
   );
 };

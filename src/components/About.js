@@ -72,7 +72,7 @@ const About = () => {
             height: "auto",
             backgroundColor: "white",
             fontFamily: "monospace",
-            boxShadow: "-21px 27px 15px 25px #ccc",
+            boxShadow: "-23px 27px 15px 25px #ccc",
             borderRadius: "20px",
           }}
         >

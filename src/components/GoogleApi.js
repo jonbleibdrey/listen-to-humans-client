@@ -100,15 +100,13 @@ const GoogleApi = () => {
         </Row>
       </Container>
       <hr
-          style={{
-            display: "block",
-            height: "1px",
-            width: "100%",
-            border: "0",
-            marginTop:"10%",
-            borderTop: "5px solid #f29161",
-          }}
-          />
+        style={{
+          width: "98%",
+          border: "20px solid white",
+          marginTop: "5%",
+          boxShadow: "-3px 10px 20px  #ccc",
+        }}
+      />
     </>
   );
 };

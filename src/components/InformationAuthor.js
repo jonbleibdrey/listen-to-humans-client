@@ -12,7 +12,7 @@ const InformationAuthor = () => {
           height: "auto",
           backgroundColor: "white",
           fontFamily: "monospace",
-          boxShadow: "-13px 20px 15px 10px #ccc",
+          boxShadow: "-10px 12px 15px 10px #ccc",
           borderRadius: "20px",
         }}
       >
