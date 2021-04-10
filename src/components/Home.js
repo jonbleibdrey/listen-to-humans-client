@@ -46,6 +46,7 @@ const Home = () => {
               borderRadius: "20px",
               fontFamily: "monospace",
               fontSize: "300%",
+              backgroundColor: "white"
             }}
           />
         </form>

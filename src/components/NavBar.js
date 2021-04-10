@@ -10,12 +10,16 @@ import { RiKakaoTalkLine } from "react-icons/ri";
 
 const NavBar = () => {
   return (
+    <div style={{padding:"1%"}}>
     <ReactBootStrap.Navbar
       collapseOnSelect
       expand="lg"
-      bg="dark"
+      bg="white"
       variant="dark"
-      style={{ padding: "1%", justifyContent: "space-evenly",boxShadow: "-3px 20px 20px  #ccc",marginBottom:"5%" }}
+      style={{ padding: "1%", justifyContent: "space-evenly", boxShadow: "-9px 10px 20px 7px #ccc",
+      borderRadius: "20px",
+      margin: "1%",
+      marginBottom:"5%" }}
     >
       <ReactBootStrap.Navbar.Brand href="/">
         <div
@@ -41,7 +45,7 @@ const NavBar = () => {
           style={{ cursor: "pointer" }}
         >
           <span title="Search any Book">
-            <ImBooks />
+            <ImBooks style={{color: "black", fontSize:"30px"}}/>
           </span>
         </Link>
       </ReactBootStrap.Navbar.Brand>
@@ -56,7 +60,7 @@ const NavBar = () => {
           style={{ cursor: "pointer"}}
         >
           <span title="How it works?">
-            <IoCogOutline />
+            <IoCogOutline style={{color: "black", fontSize:"30px"}}/>
           </span>
         </Link>
       </ReactBootStrap.Navbar.Brand>
@@ -71,7 +75,7 @@ const NavBar = () => {
           style={{  cursor: "pointer"}}
         >
           <span title="Search by Authors">
-            <RiContactsBook2Line />
+            <RiContactsBook2Line style={{color: "black", fontSize:"30px"}}/>
           </span>
         </Link>
       </ReactBootStrap.Navbar.Brand>
@@ -86,7 +90,7 @@ const NavBar = () => {
           style={{  cursor: "pointer", }}
         >
           <span title="Google API">
-            <SiGooglecloud />
+            <SiGooglecloud style={{color: "black", fontSize:"30px"}}/>
           </span>
         </Link>
       </ReactBootStrap.Navbar.Brand>
@@ -101,7 +105,7 @@ const NavBar = () => {
           style={{  cursor: "pointer", }}
         >
           <span title="Search by Subject">
-            <BiBookHeart />
+            <BiBookHeart style={{color: "black", fontSize:"30px"}}/>
           </span>
         </Link>
       </ReactBootStrap.Navbar.Brand>
@@ -116,11 +120,12 @@ const NavBar = () => {
           style={{  cursor: "pointer", }}
         >
           <span title="Testimonials">
-            <RiKakaoTalkLine />
+            <RiKakaoTalkLine style={{color: "black", fontSize:"30px"}}/>
           </span>
         </Link>
       </ReactBootStrap.Navbar.Brand>
     </ReactBootStrap.Navbar>
+    </div>
   );
 };
 export default NavBar;

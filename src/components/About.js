@@ -31,10 +31,23 @@ const About = () => {
 
   return (
     <>
-      <div id="about">
+      <div id="about" >
+        <div style={{
+            padding: "2%",
+            margin:"5%",
+            marginLeft:"18%",
+            width: "60%",
+            height: "auto",
+            backgroundColor: "white",
+            border: "10px white",
+            fontFamily: "monospace",
+            boxShadow: "-11px 13px 15px 10px #ccc",
+            borderRadius: "25px",
+          }}>
+
         <h3
           style={{
-            marginLeft: "45%",
+            marginLeft: "39%",
             fontFamily: "monospace",
             color: "#e3c378",
             marginTop: "5%",
@@ -44,7 +57,7 @@ const About = () => {
         </h3>
         <h1
           style={{
-            marginLeft: "37%",
+            marginLeft: "25%",
             padding: "10px",
             fontFamily: "monospace",
           }}
@@ -56,11 +69,12 @@ const About = () => {
           style={{
             display: "block",
             height: "1px",
-            width: "40%",
+            width: "50%",
             border: "0",
             borderTop: "5px solid #f29161",
           }}
         />
+        </div>
 
         <div
           style={{
@@ -72,8 +86,8 @@ const About = () => {
             height: "auto",
             backgroundColor: "white",
             fontFamily: "monospace",
-            boxShadow: "-23px 27px 15px 25px #ccc",
-            borderRadius: "20px",
+            boxShadow: "-23px 30px 18px 29px #ccc",
+            borderRadius: "40px",
           }}
         >
           <Carousel>

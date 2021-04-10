@@ -7,9 +7,23 @@ import { FaBook } from "react-icons/fa";
 const GoogleApi = () => {
   return (
     <>
+    <div style={{
+            padding: "2%",
+            margin:"5%",
+            marginLeft:"20%",
+            marginBottom:"5%",
+            width: "60%",
+            height: "auto",
+            backgroundColor: "white",
+            border: "10px white",
+            fontFamily: "monospace",
+            boxShadow: "-11px 13px 15px 10px #ccc",
+            borderRadius: "25px",
+          }}>
+
       <h3
         style={{
-          marginLeft: "43%",
+          marginLeft: "30%",
           fontFamily: "monospace",
           color: "#e3c378",
         }}
@@ -18,7 +32,7 @@ const GoogleApi = () => {
       </h3>
       <h1
         style={{
-          marginLeft: "38%",
+          marginLeft: "23%",
           padding: "10px",
           fontFamily: "monospace",
         }}
@@ -36,6 +50,7 @@ const GoogleApi = () => {
           padding: "3%",
         }}
       />
+    </div>
 
       <Container>
         <Row>
@@ -43,13 +58,13 @@ const GoogleApi = () => {
             <CardDeck>
               <Card
                 style={{
-                  padding: "1%",
+                  padding: "5%",
                   marginRight: "20%",
                   width: "60%",
                   height: "auto",
                   backgroundColor: "white",
                   fontFamily: "monospace",
-                  boxShadow: "-13px 20px 15px 13px #ccc",
+                  boxShadow: "-13px 20px 12px 13px #ccc",
                   borderRadius: "20px",
                 }}
               >
@@ -92,7 +107,7 @@ const GoogleApi = () => {
             <div id="googleApi">
               <img
                 className="animate__animated animate__slideInRight"
-                src="../google.JPG"
+                src="../googlepng.PNG"
                 alt="google"
               />
             </div>

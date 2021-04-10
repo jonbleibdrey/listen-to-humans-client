@@ -23,13 +23,21 @@ const WhatHappens = () => {
       >
         <div
           style={{
-            padding: "30px",
-            margin: "1%",
+            padding: "2%",
+            margin:"5%",
+            marginLeft:"20%",
+            width: "60%",
+            height: "auto",
+            backgroundColor: "white",
+            border: "10px white",
+            fontFamily: "monospace",
+            boxShadow: "-12px 13px 15px 10px #ccc",
+            borderRadius: "20px",
           }}
         >
           <h3
             style={{
-              marginLeft: "40%",
+              marginLeft: "35%",
               fontFamily: "monospace",
               color: "#e3c378",
             }}
@@ -38,7 +46,7 @@ const WhatHappens = () => {
           </h3>
           <h1
             style={{
-              marginLeft: "35%",
+              marginLeft: "23%",
               padding: "10px",
               fontFamily: "monospace",
             }}
