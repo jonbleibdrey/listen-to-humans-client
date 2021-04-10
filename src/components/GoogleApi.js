@@ -64,8 +64,8 @@ const GoogleApi = () => {
                   height: "auto",
                   backgroundColor: "white",
                   fontFamily: "monospace",
-                  boxShadow: "-13px 20px 12px 13px #ccc",
-                  borderRadius: "20px",
+                  boxShadow: "-13px 20px 15px 19px #ccc",
+              borderRadius: "50px",
                 }}
               >
                 <Card.Body>

@@ -44,14 +44,14 @@ const ListOfAuthors = ({
         style={{
           color: "black",
           objectFit: "cover",
-          margin: "5%",
+          margin: "9%",
           minHeight: "40vw",
           maxHeight: "120vw",
           padding: "10%",
           marginBottom: "10%",
           fontFamily: "monospace",
-          boxShadow: "-11px 10px 15px 5px #ccc",
-          borderRadius: "20px",
+          boxShadow: "11px 17px 11px 10px #ccc",
+          borderRadius: "40px",
           textAlign: "center",
         }}
       >

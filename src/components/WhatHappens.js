@@ -18,7 +18,7 @@ const WhatHappens = () => {
           padding: "10%",
           backgroundColor: "white",
           marginTop: "1%",
-          marginBottom: "10%",
+          marginBottom: "5%",
         }}
       >
         <div
@@ -75,8 +75,9 @@ const WhatHappens = () => {
               backgroundColor: "white",
               border: "10px white",
               fontFamily: "monospace",
-              boxShadow: "-13px 20px 15px 10px #ccc",
-              borderRadius: "20px",
+              margin:"1%",
+              boxShadow: "-13px 12px 13px 10px #ccc",
+              borderRadius: "25px",
             }}
           >
             <Card.Img variant="top" src="../smallbook4.jpg" />
@@ -98,8 +99,9 @@ const WhatHappens = () => {
               backgroundColor: "white",
               border: "10px white",
               fontFamily: "monospace",
-              boxShadow: "-13px 20px 15px 10px #ccc",
-              borderRadius: "20px",
+              margin:"1%",
+              boxShadow: "-13px 12px 13px 10px #ccc",
+              borderRadius: "25px",
             }}
           >
             <Card.Img variant="top" src="../smallbook2.jpg" />
@@ -121,8 +123,9 @@ const WhatHappens = () => {
               backgroundColor: "white",
               border: "10px white",
               fontFamily: "monospace",
-              boxShadow: "-13px 20px 15px 10px #ccc",
-              borderRadius: "20px",
+              margin:"1%",
+              boxShadow: "-13px 12px 13px 10px #ccc",
+              borderRadius: "25px",
             }}
           >
             <Card.Img variant="top" src="../smallbook3.jpg" />

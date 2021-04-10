@@ -46,8 +46,8 @@ const Subject = () => {
               marginBottom: "5%",
               outline: "none",
               border: "10px white",
-              boxShadow: "-15px 20px 15px 19px #ccc",
-              borderRadius: "20px",
+              boxShadow: "-13px 20px 15px 19px #ccc",
+              borderRadius: "50px",
               fontFamily: "monospace",
               fontSize: "300%",
             }}

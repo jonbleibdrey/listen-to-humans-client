@@ -86,8 +86,8 @@ const About = () => {
             height: "auto",
             backgroundColor: "white",
             fontFamily: "monospace",
-            boxShadow: "-23px 30px 18px 29px #ccc",
-            borderRadius: "40px",
+            boxShadow: "-13px 20px 15px 19px #ccc",
+            borderRadius: "50px",
           }}
         >
           <Carousel>

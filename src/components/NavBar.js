@@ -16,8 +16,8 @@ const NavBar = () => {
       expand="lg"
       bg="white"
       variant="dark"
-      style={{ padding: "1%", justifyContent: "space-evenly", boxShadow: "-9px 10px 20px 7px #ccc",
-      borderRadius: "20px",
+      style={{ padding: "1%", justifyContent: "space-evenly", boxShadow: "-9px 10px 17px 7px #ccc",
+      borderRadius: "25px",
       margin: "1%",
       marginBottom:"5%" }}
     >
@@ -55,12 +55,12 @@ const NavBar = () => {
           to="whatHappens"
           spy={true}
           smooth={true}
-          offset={170}
+          offset={250}
           duration={2000}
           style={{ cursor: "pointer"}}
         >
           <span title="How it works?">
-            <IoCogOutline style={{color: "black", fontSize:"30px"}}/>
+            <IoCogOutline style={{color: "black", fontSize:"39px"}}/>
           </span>
         </Link>
       </ReactBootStrap.Navbar.Brand>
@@ -70,7 +70,7 @@ const NavBar = () => {
           to="author"
           spy={true}
           smooth={true}
-          offset={135}
+          offset={180}
           duration={2000}
           style={{  cursor: "pointer"}}
         >
@@ -85,12 +85,12 @@ const NavBar = () => {
           to="googleApi"
           spy={true}
           smooth={true}
-          offset={-275}
+          offset={-400}
           duration={2000}
           style={{  cursor: "pointer", }}
         >
           <span title="Google API">
-            <SiGooglecloud style={{color: "black", fontSize:"30px"}}/>
+            <SiGooglecloud style={{color: "black", fontSize:"25px"}}/>
           </span>
         </Link>
       </ReactBootStrap.Navbar.Brand>
@@ -100,7 +100,7 @@ const NavBar = () => {
           to="subject"
           spy={true}
           smooth={true}
-          offset={150}
+          offset={180}
           duration={2000}
           style={{  cursor: "pointer", }}
         >
@@ -115,7 +115,7 @@ const NavBar = () => {
           to="about"
           spy={true}
           smooth={true}
-          offset={-30}
+          offset={-10}
           duration={3000}
           style={{  cursor: "pointer", }}
         >

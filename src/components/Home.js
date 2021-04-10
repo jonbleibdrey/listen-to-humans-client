@@ -43,7 +43,7 @@ const Home = () => {
               outline: "none",
               border: "white",
               boxShadow: "-13px 20px 15px 19px #ccc",
-              borderRadius: "20px",
+              borderRadius: "50px",
               fontFamily: "monospace",
               fontSize: "300%",
               backgroundColor: "white"

@@ -42,8 +42,8 @@ const Review = () => {
               marginBottom: "100px",
               outline: "none",
               boxShadow: "-13px 20px 15px 19px #ccc",
+              borderRadius: "50px",
               border: "1px white",
-              borderRadius: "20px",
               fontFamily: "monospace",
               fontSize: "300%",
             }}
