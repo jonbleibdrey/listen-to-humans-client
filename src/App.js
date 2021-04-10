@@ -10,10 +10,7 @@ import Footer from "./components/Footer";
 import WhatHappens from "./components/WhatHappens";
 import GoogleApi from "./components/GoogleApi";
 
-
 function App() {
-  
-
   return (
     <>
       <NavBar />

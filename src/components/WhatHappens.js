@@ -24,8 +24,8 @@ const WhatHappens = () => {
         <div
           style={{
             padding: "2%",
-            margin:"5%",
-            marginLeft:"20%",
+            margin: "5%",
+            marginLeft: "20%",
             width: "60%",
             height: "auto",
             backgroundColor: "white",
@@ -75,7 +75,7 @@ const WhatHappens = () => {
               backgroundColor: "white",
               border: "10px white",
               fontFamily: "monospace",
-              margin:"1%",
+              margin: "1%",
               boxShadow: "-13px 12px 13px 10px #ccc",
               borderRadius: "25px",
             }}
@@ -99,7 +99,7 @@ const WhatHappens = () => {
               backgroundColor: "white",
               border: "10px white",
               fontFamily: "monospace",
-              margin:"1%",
+              margin: "1%",
               boxShadow: "-13px 12px 13px 10px #ccc",
               borderRadius: "25px",
             }}
@@ -123,7 +123,7 @@ const WhatHappens = () => {
               backgroundColor: "white",
               border: "10px white",
               fontFamily: "monospace",
-              margin:"1%",
+              margin: "1%",
               boxShadow: "-13px 12px 13px 10px #ccc",
               borderRadius: "25px",
             }}

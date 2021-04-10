@@ -20,20 +20,11 @@ const Footer = () => {
       />
       <ReactBootStrap.Navbar.Brand href="/">
         Read By Humans
-        <AiOutlineFacebook
-          style={{ margin: "3%", fontSize:'100%' }}
-          
-        />
-        <AiOutlineInstagram
-          style={{ margin: "3%", fontSize:'100%' }}
-          
-        />
-        <FiTwitter
-          style={{ margin: "3%", fontSize:'100%' }}
-          
-        />
+        <AiOutlineFacebook style={{ margin: "3%", fontSize: "100%" }} />
+        <AiOutlineInstagram style={{ margin: "3%", fontSize: "100%" }} />
+        <FiTwitter style={{ margin: "3%", fontSize: "100%" }} />
       </ReactBootStrap.Navbar.Brand>
-      <h6 style={{ marginLeft: "50%", color:'#e3e3e3' }}>
+      <h6 style={{ marginLeft: "50%", color: "#e3e3e3" }}>
         Copyright © 2020-Jonathan Bleibdrey. All Rights Reserved.
       </h6>
     </ReactBootStrap.Navbar>

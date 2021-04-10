@@ -53,7 +53,6 @@ const ListOfBooks = ({
           boxShadow: "11px 17px 13px 10px #ccc",
           borderRadius: "40px",
           textAlign: "center",
-          
         }}
       >
         <Card.Body>

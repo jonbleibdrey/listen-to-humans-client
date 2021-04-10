@@ -7,50 +7,51 @@ import { FaBook } from "react-icons/fa";
 const GoogleApi = () => {
   return (
     <>
-    <div style={{
-            padding: "2%",
-            margin:"5%",
-            marginLeft:"20%",
-            marginBottom:"5%",
-            width: "60%",
-            height: "auto",
-            backgroundColor: "white",
-            border: "10px white",
+      <div
+        style={{
+          padding: "2%",
+          margin: "5%",
+          marginLeft: "20%",
+          marginBottom: "5%",
+          width: "60%",
+          height: "auto",
+          backgroundColor: "white",
+          border: "10px white",
+          fontFamily: "monospace",
+          boxShadow: "-11px 13px 15px 10px #ccc",
+          borderRadius: "25px",
+        }}
+      >
+        <h3
+          style={{
+            marginLeft: "30%",
             fontFamily: "monospace",
-            boxShadow: "-11px 13px 15px 10px #ccc",
-            borderRadius: "25px",
-          }}>
+            color: "#e3c378",
+          }}
+        >
+          How the API actually works
+        </h3>
+        <h1
+          style={{
+            marginLeft: "23%",
+            padding: "10px",
+            fontFamily: "monospace",
+          }}
+        >
+          IT GOES TO SPACE AND BACK
+        </h1>
 
-      <h3
-        style={{
-          marginLeft: "30%",
-          fontFamily: "monospace",
-          color: "#e3c378",
-        }}
-      >
-        How the API actually works
-      </h3>
-      <h1
-        style={{
-          marginLeft: "23%",
-          padding: "10px",
-          fontFamily: "monospace",
-        }}
-      >
-        IT GOES TO SPACE AND BACK
-      </h1>
-
-      <hr
-        style={{
-          display: "block",
-          height: "1px",
-          width: "35%",
-          border: "0",
-          borderTop: "5px solid #f29161",
-          padding: "3%",
-        }}
-      />
-    </div>
+        <hr
+          style={{
+            display: "block",
+            height: "1px",
+            width: "35%",
+            border: "0",
+            borderTop: "5px solid #f29161",
+            padding: "3%",
+          }}
+        />
+      </div>
 
       <Container>
         <Row>
@@ -65,7 +66,7 @@ const GoogleApi = () => {
                   backgroundColor: "white",
                   fontFamily: "monospace",
                   boxShadow: "-13px 20px 15px 19px #ccc",
-              borderRadius: "50px",
+                  borderRadius: "50px",
                 }}
               >
                 <Card.Body>

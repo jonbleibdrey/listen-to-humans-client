@@ -31,11 +31,12 @@ const About = () => {
 
   return (
     <>
-      <div id="about" >
-        <div style={{
+      <div id="about">
+        <div
+          style={{
             padding: "2%",
-            margin:"5%",
-            marginLeft:"18%",
+            margin: "5%",
+            marginLeft: "18%",
             width: "60%",
             height: "auto",
             backgroundColor: "white",
@@ -43,37 +44,37 @@ const About = () => {
             fontFamily: "monospace",
             boxShadow: "-11px 13px 15px 10px #ccc",
             borderRadius: "25px",
-          }}>
-
-        <h3
-          style={{
-            marginLeft: "39%",
-            fontFamily: "monospace",
-            color: "#e3c378",
-            marginTop: "5%",
           }}
         >
-          Testimonials
-        </h3>
-        <h1
-          style={{
-            marginLeft: "25%",
-            padding: "10px",
-            fontFamily: "monospace",
-          }}
-        >
-          WHAT PEOPLE HAVE TO SAY
-        </h1>
+          <h3
+            style={{
+              marginLeft: "39%",
+              fontFamily: "monospace",
+              color: "#e3c378",
+              marginTop: "5%",
+            }}
+          >
+            Testimonials
+          </h3>
+          <h1
+            style={{
+              marginLeft: "25%",
+              padding: "10px",
+              fontFamily: "monospace",
+            }}
+          >
+            WHAT PEOPLE HAVE TO SAY
+          </h1>
 
-        <hr
-          style={{
-            display: "block",
-            height: "1px",
-            width: "50%",
-            border: "0",
-            borderTop: "5px solid #f29161",
-          }}
-        />
+          <hr
+            style={{
+              display: "block",
+              height: "1px",
+              width: "50%",
+              border: "0",
+              borderTop: "5px solid #f29161",
+            }}
+          />
         </div>
 
         <div
