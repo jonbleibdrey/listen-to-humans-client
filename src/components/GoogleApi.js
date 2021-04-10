@@ -55,7 +55,7 @@ const GoogleApi = () => {
 
       <Container>
         <Row>
-          <Col xs={6}>
+          <Col xs={10} lg={6}>
             <CardDeck>
               <Card
                 style={{
@@ -104,12 +104,13 @@ const GoogleApi = () => {
               </Card>
             </CardDeck>
           </Col>
-          <Col xs={6}>
-            <div id="googleApi">
-              <img
+          <Col xs={2} lg={6}>
+            <div id="googleApi" style={{width:"1vw", height:'1vw'}}>
+              <img 
                 className="animate__animated animate__slideInRight"
                 src="../googlepng.PNG"
                 alt="google"
+                
               />
             </div>
           </Col>
