@@ -6,12 +6,9 @@ An website used to filter data Google Book API built with React, npm, JavaScript
 Project Status:
 complete
 
-Example:
 This project is currently in production. Users can filter through books by book name, author and subject. Functionality to sort by additional parameters is in progress.
 
-Project Screen Shot(s)
-Example:
-![Read by Humans](../public/screenShot.png?raw=true "homepage")
+![Read by Humans](../screenShot.png?raw=true "homepage")
 
 
 Reflection
