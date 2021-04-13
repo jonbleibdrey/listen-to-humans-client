@@ -8,8 +8,6 @@ complete
 
 This project is currently in production. Users can filter through books by book name, author and subject. Functionality to sort by additional parameters is in progress.
 
-![Read by Humans](../screenShot.png?raw=true "homepage")
-
 
 Reflection
 What was the context for this project? 
