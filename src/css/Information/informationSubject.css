@@ -1,0 +1,11 @@
+.informationSubject__div {
+  padding: 2%;
+  margin-left: 20%;
+  margin-top: 10%;
+  width: 60%;
+  height: auto;
+  background-color: white;
+  font-family: monospace;
+  box-shadow: -16px 17px 15px 17px #ccc;
+  border-radius: 20px;
+}

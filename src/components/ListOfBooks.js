@@ -51,10 +51,14 @@ const ListOfBooks = ({
               <img
                 className="books__img"
                 src={
-                  image === undefined ? "../logo1.PNG" : `${image.thumbnail}`
+                  image === undefined
+                    ? "../photos/logo1.PNG"
+                    : `${image.thumbnail}`
                 }
                 alt={
-                  image === undefined ? "../logo1.PNG" : `${image.thumbnail}`
+                  image === undefined
+                    ? "../photos/logo1.PNG"
+                    : `${image.thumbnail}`
                 }
               />
             </a>

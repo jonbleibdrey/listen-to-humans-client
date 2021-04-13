@@ -1,0 +1,17 @@
+.footer__img{
+    width: 5%;
+    height: 3%;
+    float: left;
+    margin: 20px;
+    margin-right: 50px;
+}
+
+.footer__icons{
+    margin: 3%;
+    font-size: 100%;
+}
+
+.footer__copy{
+    margin-left: 50%;
+     color: #e3e3e3;
+}

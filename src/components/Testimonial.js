@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
+import InformationTestimonial from "../components/InformationTestimonial";
+import "../css/Testimonial/testimonial.css";
 
-const About = () => {
+const Testimonial = () => {
   const [people] = useState([
     {
       id: 1,
@@ -31,66 +33,9 @@ const About = () => {
 
   return (
     <>
-      <div id="about">
-        <div
-          style={{
-            padding: "2%",
-            margin: "5%",
-            marginLeft: "18%",
-            width: "60%",
-            height: "auto",
-            backgroundColor: "white",
-            border: "10px white",
-            fontFamily: "monospace",
-            boxShadow: "-11px 13px 15px 10px #ccc",
-            borderRadius: "25px",
-          }}
-        >
-          <h3
-            style={{
-              marginLeft: "39%",
-              fontFamily: "monospace",
-              color: "#e3c378",
-              marginTop: "5%",
-            }}
-          >
-            Testimonials
-          </h3>
-          <h1
-            style={{
-              marginLeft: "25%",
-              padding: "10px",
-              fontFamily: "monospace",
-            }}
-          >
-            WHAT PEOPLE HAVE TO SAY
-          </h1>
-
-          <hr
-            style={{
-              display: "block",
-              height: "1px",
-              width: "50%",
-              border: "0",
-              borderTop: "5px solid #f29161",
-            }}
-          />
-        </div>
-
-        <div
-          style={{
-            padding: "3%",
-            marginBottom: "5%",
-            marginLeft: "18%",
-            marginTop: "5%",
-            width: "60%",
-            height: "auto",
-            backgroundColor: "white",
-            fontFamily: "monospace",
-            boxShadow: "-13px 20px 15px 19px #ccc",
-            borderRadius: "50px",
-          }}
-        >
+      <div id="testimonial">
+        <InformationTestimonial />
+        <div className="testimonial__div">
           <Carousel>
             {people.map((peo) => (
               <Carousel.Item key={peo.id} interval={6000}>
@@ -98,11 +43,7 @@ const About = () => {
                   className="d-block w-100"
                   src={peo.image}
                   alt="First slide"
-                  style={{
-                    width: "30vw",
-                    height: "30vw",
-                    objectFit: "contain",
-                  }}
+                  id="testimonial__img"
                 />
                 <Carousel.Caption
                   style={{
@@ -130,4 +71,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Testimonial;

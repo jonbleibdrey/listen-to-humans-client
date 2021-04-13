@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import About from "./components/About";
+import Testimonial from "./components/Testimonial";
 import Subject from "./components/Subject";
 import Home from "./components/Home";
 import Author from "./components/Author";
@@ -17,7 +17,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
+          <Route path="/testimonial" component={Testimonial} />
           <Route path="/author" component={Author} />
           <Route path="/subject" component={Subject} />
           <Route path="/whatHappens" component={WhatHappens} />
@@ -28,7 +28,7 @@ function App() {
         <Author name="author" />
         <GoogleApi name="googleApi" />
         <Subject name="subject" />
-        <About name="about" />
+        <Testimonial name="testimonial" />
       </Router>
       <Footer />
     </>

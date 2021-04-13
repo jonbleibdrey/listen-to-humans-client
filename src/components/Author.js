@@ -3,11 +3,12 @@ import axios from "axios";
 import ListOfAuthors from "./ListOfAuthors";
 import { Row } from "react-bootstrap";
 import InformationAuthor from "./InformationAuthor";
+import "../css/Author/author.css";
 
 const Review = () => {
   const [authors, setAuthors] = useState([]);
   const [search, setSearch] = useState("");
-  const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_KEY;
+  const API_KEY = process.env.REACT_APP_GOOGLE_KEY;
 
   function handleChange(ev) {
     const book = ev.target.value;
@@ -18,7 +19,7 @@ const Review = () => {
 
     axios
       .get(
-        `https://www.googleapis.com/books/v1/volumes?q=inauthor:${search}&key=${GOOGLE_KEY}&maxResults=20`
+        `https://www.googleapis.com/books/v1/volumes?q=inauthor:${search}&key=${API_KEY}&maxResults=20`
       )
       .then((resp) => setAuthors(resp.data.items || []));
   }
@@ -26,7 +27,7 @@ const Review = () => {
   return (
     <>
       <div id="author">
-        <div style={{ padding: "10%" }}>
+        <div className="author__header">
           <InformationAuthor />
         </div>
         <form onSubmit={handleSubmit}>
@@ -35,21 +36,9 @@ const Review = () => {
             className="text-center"
             placeholder="Search By Author"
             onChange={handleChange}
-            style={{
-              width: "70%",
-              padding: "10%",
-              marginLeft: "17%",
-              marginBottom: "300px",
-              outline: "none",
-              boxShadow: "-13px 20px 15px 19px #ccc",
-              borderRadius: "50px",
-              border: "1px white",
-              fontFamily: "monospace",
-              fontSize: "300%",
-            }}
+            id="author__inputField"
           />
         </form>
-
         <Row>
           {authors.map((aut) => (
             <ListOfAuthors

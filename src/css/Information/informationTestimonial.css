@@ -1,0 +1,33 @@
+.testimonial__header {
+  padding: 2%;
+  margin: 5%;
+  margin-left: 18%;
+  width: 60%;
+  height: auto;
+  background-color: white;
+  border: 10px white;
+  font-family: monospace;
+  box-shadow: -11px 13px 15px 10px #ccc;
+  border-radius: 25px;
+}
+
+.testimonial__headerText {
+  margin-left: 39%;
+  font-family: monospace;
+  color: #e3c378;
+  margin-top: 5%;
+}
+
+.testimonial__headerh1 {
+  margin-left: 25%;
+  padding: 10px;
+  font-family: monospace;
+}
+
+.testimonial__headerHr {
+  display: block;
+  height: 1px;
+  width: 50%;
+  border: 0;
+  border-top: 5px solid #f29161;
+}

@@ -1,4 +1,4 @@
-#books__card {
+#authors__card {
   color: black;
   object-fit: cover;
   margin: 9%;
@@ -12,8 +12,15 @@
   text-align: center;
 }
 
-.books__img {
+.authors__img {
   height: 200px;
   width: 128px;
   object-fit: contain;
+}
+
+.authors__h2 {
+  font-size: 1vw;
+}
+.authors__h5 {
+  font-size: 1vw;
 }

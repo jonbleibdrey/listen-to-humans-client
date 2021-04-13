@@ -3,7 +3,7 @@ import axios from "axios";
 import ListOfBooks from "./ListOfBooks";
 import { Row } from "react-bootstrap";
 import Information from "./Information";
-import "../css/Home/home.css"
+import "../css/Home/home.css";
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -26,36 +26,36 @@ const Home = () => {
   }
 
   return (
-      <div id="home">
-        <Information />
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            className="text-center"
-            placeholder="Search For A Book Here"
-            onChange={handleChange}
-            id="home__inputField"
+    <div id="home">
+      <Information />
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          className="text-center"
+          placeholder="Search For A Book Here"
+          onChange={handleChange}
+          id="home__inputField"
+        />
+      </form>
+      <Row>
+        {books.map((book) => (
+          <ListOfBooks
+            key={book.id}
+            id={book.id}
+            title={book.volumeInfo.title}
+            by={book.volumeInfo.authors}
+            language={book.volumeInfo.language}
+            categories={book.volumeInfo.categories}
+            pageCount={book.volumeInfo.pageCount}
+            image={book.volumeInfo.imageLinks}
+            bookLink={book.volumeInfo.infoLink}
+            price={book.saleInfo.listPrice}
+            description={book.volumeInfo.description}
+            averageRating={book.volumeInfo.averageRating}
           />
-        </form>
-        <Row>
-          {books.map((book) => (
-            <ListOfBooks
-              key={book.id}
-              id={book.id}
-              title={book.volumeInfo.title}
-              by={book.volumeInfo.authors}
-              language={book.volumeInfo.language}
-              categories={book.volumeInfo.categories}
-              pageCount={book.volumeInfo.pageCount}
-              image={book.volumeInfo.imageLinks}
-              bookLink={book.volumeInfo.infoLink}
-              price={book.saleInfo.listPrice}
-              description={book.volumeInfo.description}
-              averageRating={book.volumeInfo.averageRating}
-            />
-          ))}
-        </Row>
-      </div>
+        ))}
+      </Row>
+    </div>
   );
 };
 

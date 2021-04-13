@@ -3,28 +3,19 @@ import * as ReactBootStrap from "react-bootstrap";
 import { AiOutlineFacebook } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { FiTwitter } from "react-icons/fi";
+import "../css/Footer.css";
 
 const Footer = () => {
   return (
     <ReactBootStrap.Navbar expand="lg" bg="dark" variant="dark">
-      <img
-        src="../logo1.PNG"
-        alt="logo"
-        style={{
-          width: "5%",
-          height: "auto",
-          float: "left",
-          margin: "20px",
-          marginRight: "50px",
-        }}
-      />
+      <img className="footer__img" src="../photos/logo1.PNG" alt="logo" />
       <ReactBootStrap.Navbar.Brand href="/">
         Read By Humans
-        <AiOutlineFacebook style={{ margin: "3%", fontSize: "100%" }} />
-        <AiOutlineInstagram style={{ margin: "3%", fontSize: "100%" }} />
-        <FiTwitter style={{ margin: "3%", fontSize: "100%" }} />
+        <AiOutlineFacebook className="footer__icons" />
+        <AiOutlineInstagram className="footer__icons" />
+        <FiTwitter className="footer__icons" />
       </ReactBootStrap.Navbar.Brand>
-      <h6 style={{ marginLeft: "50%", color: "#e3e3e3" }}>
+      <h6 className="footer__copy">
         Copyright © 2020-Jonathan Bleibdrey. All Rights Reserved.
       </h6>
     </ReactBootStrap.Navbar>

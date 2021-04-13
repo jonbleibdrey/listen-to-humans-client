@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col, Modal, Button } from "react-bootstrap";
+import "../css/List/author.css";
 
 const ListOfAuthors = ({
   id,
@@ -39,22 +40,7 @@ const ListOfAuthors = ({
 
   return (
     <Col xs={12} lg={4}>
-      <Card
-        className="p-3"
-        style={{
-          color: "black",
-          objectFit: "cover",
-          margin: "9%",
-          minHeight: "40vw",
-          maxHeight: "120vw",
-          padding: "10%",
-          marginBottom: "10%",
-          fontFamily: "monospace",
-          boxShadow: "11px 17px 11px 10px #ccc",
-          borderRadius: "40px",
-          textAlign: "center",
-        }}
-      >
+      <Card className="p-3" id="authors__card">
         <Card.Body>
           <Card.Title>
             <a
@@ -63,34 +49,34 @@ const ListOfAuthors = ({
               target="_blank"
             >
               <img
-                style={{
-                  height: "200px",
-                  width: "128px",
-                  objectFit: "contain",
-                }}
+                className="authors__img"
                 src={
-                  image === undefined ? "../logo1.PNG" : `${image.thumbnail}`
+                  image === undefined
+                    ? "../photos/logo1.PNG"
+                    : `${image.thumbnail}`
                 }
                 alt={
-                  image === undefined ? "../logo1.PNG" : `${image.thumbnail}`
+                  image === undefined
+                    ? "../photos/logo1.PNG"
+                    : `${image.thumbnail}`
                 }
               />
             </a>
             <br />
-            <h2 style={{ fontSize: "1vw" }}>
+            <h4 className="authors__h2">
               Author name:
               <br />
               {author}
-            </h2>
+            </h4>
           </Card.Title>
 
           <hr />
           <Card.Title>
-            <h4 style={{ fontSize: "1vw" }}>
+            <h5 className="authors__h5">
               Title of Book:
               <br />
               {title === undefined ? "not available" : title}
-            </h4>
+            </h5>
           </Card.Title>
           <hr />
           <Card.Text>

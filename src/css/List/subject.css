@@ -1,4 +1,4 @@
-#books__card {
+.subject__card {
   color: black;
   object-fit: cover;
   margin: 9%;
@@ -8,12 +8,18 @@
   margin-bottom: 10%;
   font-family: monospace;
   box-shadow: 11px 17px 13px 10px #ccc;
-  border-radius: 40px;
   text-align: center;
 }
 
-.books__img {
+.subject__img {
   height: 200px;
   width: 128px;
   object-fit: contain;
+}
+
+.subject__h2 {
+  font-size: 1vw;
+}
+.subject__h5 {
+  font-size: 1vw;
 }

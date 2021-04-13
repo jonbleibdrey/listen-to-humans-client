@@ -1,0 +1,37 @@
+.no__div {
+  background-color: white;
+  background-size: contain;
+  padding: 5%;
+  font-size: 100%;
+}
+
+#no__img {
+  width: 30%;
+  height: 5%;
+  margin-left: 37%;
+}
+
+.no__header {
+  box-shadow: -13px 20px 15px 19px #ccc;
+  height: 5%;
+  float: center;
+  margin-left: 10%;
+  font-size: 100px;
+  color: black;
+  font-family: monospace;
+  border-radius: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.no__linkDiv {
+  margin: 50px;
+}
+
+.no__link {
+  width: 30%;
+  height: 5%;
+  float: center;
+  margin-left: 37%;
+  color: black;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col, Button, Modal } from "react-bootstrap";
+import "../css/List/subject.css";
 
 const ListOfSubject = ({
   id,
@@ -39,60 +40,46 @@ const ListOfSubject = ({
 
   return (
     <Col xs={12} lg={4}>
-      <Card
-        style={{
-          color: "black",
-          objectFit: "cover",
-          margin: "9%",
-          minHeight: "40vw",
-          maxHeight: "120vw",
-          padding: "10%",
-          marginBottom: "10%",
-          fontFamily: "monospace",
-          boxShadow: "11px 17px 13px 10px #ccc",
-          borderRadius: "40px",
-          textAlign: "center",
-        }}
-      >
+      <Card className="subject__card" style={{ borderRadius: "40px" }}>
         <Card.Body>
           <Card.Title>
             <a href={bookLink === undefined ? "not available" : bookLink}>
               <img
-                style={{
-                  height: "200px",
-                  width: "128px",
-                  objectFit: "contain",
-                }}
+                className="subject__img"
                 src={
-                  image === undefined ? "../logo1.PNG" : `${image.thumbnail}`
+                  image === undefined
+                    ? "../photos/logo1.PNG"
+                    : `${image.thumbnail}`
                 }
                 alt={
-                  image === undefined ? "../logo1.PNG" : `${image.thumbnail}`
+                  image === undefined
+                    ? "../photos/logo1.PNG"
+                    : `${image.thumbnail}`
                 }
               />
             </a>
             <br />
-            <h2 style={{ fontSize: "1vw" }}>
+            <h4 className="subject__h2">
               category:{" "}
               {categories === undefined ? "not available" : categories}
-            </h2>
+            </h4>
             <hr />
             <br />
           </Card.Title>
           <Card.Title>
-            <h2 style={{ fontSize: "1vw" }}>
+            <h5 className="subject__h2">
               Author name:
               <br />
               {author}
-            </h2>
+            </h5>
           </Card.Title>
           <hr />
           <Card.Title>
-            <h4>
+            <h6>
               Title of Book:
               <br />
               {title === undefined ? "not available" : title}
-            </h4>
+            </h6>
           </Card.Title>
           <hr />
           <Card.Text>

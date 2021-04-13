@@ -51,7 +51,7 @@ const NavBar = () => {
             className="navBar__link"
           >
             <span title="How it works?">
-              <IoCogOutline className="navBar__logo" />
+              <IoCogOutline className="navBar__logo2" />
             </span>
           </Link>
         </ReactBootStrap.Navbar.Brand>
@@ -76,7 +76,7 @@ const NavBar = () => {
             to="googleApi"
             spy={true}
             smooth={true}
-            offset={-400}
+            offset={0}
             duration={2000}
             className="navBar__link"
           >
@@ -103,7 +103,7 @@ const NavBar = () => {
         <ReactBootStrap.Navbar.Brand>
           <Link
             activeClass="active"
-            to="about"
+            to="testimonial"
             spy={true}
             smooth={true}
             offset={-10}

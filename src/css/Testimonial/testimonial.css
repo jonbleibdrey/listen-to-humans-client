@@ -1,0 +1,18 @@
+.testimonial__div {
+  padding: 3%;
+  margin-bottom: 5%;
+  margin-left: 18%;
+  margin-top: 5%;
+  width: 60%;
+  height: auto;
+  background-color: white;
+  font-family: monospace;
+  box-shadow: -13px 20px 15px 19px #ccc;
+  border-radius: 50px;
+}
+
+.testimonial__img {
+  width: 30vw;
+  height: 30vw;
+  object-fit: contain;
+}

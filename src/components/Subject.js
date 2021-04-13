@@ -3,6 +3,7 @@ import axios from "axios";
 import ListOfSubject from "./ListOfSubject";
 import { Row } from "react-bootstrap";
 import InformationSubject from "./InformationSubject";
+import "../css/Subject/subject.css";
 
 const Subject = () => {
   const [subject, setSubject] = useState([]);
@@ -29,31 +30,18 @@ const Subject = () => {
   return (
     <>
       <div id="subject">
-        <div style={{ padding: "10%" }}>
+        <div className="subject__div">
           <InformationSubject />
         </div>
-
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             className="text-center"
             placeholder="Search By Subject"
             onChange={handleChange}
-            style={{
-              width: "70%",
-              padding: "10%",
-              marginLeft: "17%",
-              marginBottom: "15%",
-              outline: "none",
-              border: "10px white",
-              boxShadow: "-13px 20px 15px 19px #ccc",
-              borderRadius: "50px",
-              fontFamily: "monospace",
-              fontSize: "300%",
-            }}
+            id="subject__inputField"
           />
         </form>
-
         <Row>
           {subject.map((sub) => (
             <ListOfSubject
@@ -73,7 +61,6 @@ const Subject = () => {
           ))}
         </Row>
       </div>
-      
     </>
   );
 };

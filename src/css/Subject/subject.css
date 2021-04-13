@@ -1,0 +1,16 @@
+.subject__div {
+  padding: 10%;
+}
+
+#subject__inputField {
+  width: 70%;
+  padding: 10%;
+  margin-left: 17%;
+  margin-bottom: 15%;
+  outline: none;
+  border: 10px white;
+  box-shadow: -13px 20px 15px 19px #ccc;
+  border-radius: 50px;
+  font-family: monospace;
+  font-size: 300%;
+}
