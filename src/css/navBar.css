@@ -2,6 +2,11 @@
   padding: 1%;
 }
 
+.navbar__iconGroup {
+  padding-left: 48%;
+  margin: 30px;
+}
+
 .navBar__container {
   padding: 1%;
   box-shadow: -9px 10px 17px 7px #ccc;
@@ -20,7 +25,7 @@
 
 .navBar__link {
   cursor: pointer;
-  margin-right: 190px;
+  padding: 10px;
 }
 
 .navBar__logo {

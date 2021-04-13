@@ -5,7 +5,7 @@ import InformationWhatHappens from "./informationWhatHappens";
 
 const WhatHappens = () => {
   return (
-    <div id="whatHappens">
+    <div id="whatHappens" className="whatHappens__completeDiv">
       <InformationWhatHappens />
       <div className="whatHappens__cardWrap">
         <Card

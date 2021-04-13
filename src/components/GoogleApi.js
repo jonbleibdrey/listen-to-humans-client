@@ -9,7 +9,7 @@ import InformationGoogleApi from "./InformationGoogleApi";
 const GoogleApi = () => {
   return (
     <>
-      <div id="googleApi">
+      <div id="googleApi" className="googleApi__completeDiv">
         <InformationGoogleApi />
         <Container>
           <Row>

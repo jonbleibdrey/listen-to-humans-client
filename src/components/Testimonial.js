@@ -7,7 +7,7 @@ const Testimonial = () => {
   const [people] = useState([
     {
       id: 1,
-      image: "../photos/face4.jpg",
+      image: "../photos/face9.jpg",
       name: "tiffany",
       occupation: "student",
       bio:

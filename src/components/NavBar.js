@@ -24,97 +24,98 @@ const NavBar = () => {
             <h1>Read By Humans.</h1>
           </div>
         </ReactBootStrap.Navbar.Brand>
-
-        <ReactBootStrap.Navbar.Brand>
-          <Link
-            activeClass="active"
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={10}
-            duration={1000}
-            className="navBar__link"
-          >
-            <span title="Search any Book">
-              <ImBooks className="navBar__logo" />
-            </span>
-          </Link>
-        </ReactBootStrap.Navbar.Brand>
-        <ReactBootStrap.Navbar.Brand>
-          <Link
-            activeClass="active"
-            to="whatHappens"
-            spy={true}
-            smooth={true}
-            offset={250}
-            duration={2000}
-            className="navBar__link"
-          >
-            <span title="How it works?">
-              <IoCogOutline className="navBar__logo2" />
-            </span>
-          </Link>
-        </ReactBootStrap.Navbar.Brand>
-        <ReactBootStrap.Navbar.Brand>
-          <Link
-            activeClass="active"
-            to="author"
-            spy={true}
-            smooth={true}
-            offset={180}
-            duration={2000}
-            className="navBar__link"
-          >
-            <span title="Search by Authors">
-              <RiContactsBook2Line className="navBar__logo" />
-            </span>
-          </Link>
-        </ReactBootStrap.Navbar.Brand>
-        <ReactBootStrap.Navbar.Brand>
-          <Link
-            activeClass="active"
-            to="googleApi"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={2000}
-            className="navBar__link"
-          >
-            <span title="Google API">
-              <SiGooglecloud className="navBar__logo" />
-            </span>
-          </Link>
-        </ReactBootStrap.Navbar.Brand>
-        <ReactBootStrap.Navbar.Brand>
-          <Link
-            activeClass="active"
-            to="subject"
-            spy={true}
-            smooth={true}
-            offset={340}
-            duration={2000}
-            className="navBar__link"
-          >
-            <span title="Search by Subject">
-              <BiBookHeart className="navBar__logo" />
-            </span>
-          </Link>
-        </ReactBootStrap.Navbar.Brand>
-        <ReactBootStrap.Navbar.Brand>
-          <Link
-            activeClass="active"
-            to="testimonial"
-            spy={true}
-            smooth={true}
-            offset={-10}
-            duration={3000}
-            className="navBar__link"
-          >
-            <span title="Testimonials">
-              <RiKakaoTalkLine className="navBar__logo" />
-            </span>
-          </Link>
-        </ReactBootStrap.Navbar.Brand>
+        <div className="navbar__iconGroup">
+          <ReactBootStrap.Navbar.Brand>
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={10}
+              duration={1000}
+              className="navBar__link"
+            >
+              <span title="Search any Book">
+                <ImBooks className="navBar__logo" />
+              </span>
+            </Link>
+          </ReactBootStrap.Navbar.Brand>
+          <ReactBootStrap.Navbar.Brand>
+            <Link
+              activeClass="active"
+              to="whatHappens"
+              spy={true}
+              smooth={true}
+              offset={200}
+              duration={2000}
+              className="navBar__link"
+            >
+              <span title="How it works?">
+                <IoCogOutline className="navBar__logo2" />
+              </span>
+            </Link>
+          </ReactBootStrap.Navbar.Brand>
+          <ReactBootStrap.Navbar.Brand>
+            <Link
+              activeClass="active"
+              to="author"
+              spy={true}
+              smooth={true}
+              offset={180}
+              duration={2000}
+              className="navBar__link"
+            >
+              <span title="Search by Authors">
+                <RiContactsBook2Line className="navBar__logo" />
+              </span>
+            </Link>
+          </ReactBootStrap.Navbar.Brand>
+          <ReactBootStrap.Navbar.Brand>
+            <Link
+              activeClass="active"
+              to="googleApi"
+              spy={true}
+              smooth={true}
+              offset={-10}
+              duration={2000}
+              className="navBar__link"
+            >
+              <span title="Google API">
+                <SiGooglecloud className="navBar__logo" />
+              </span>
+            </Link>
+          </ReactBootStrap.Navbar.Brand>
+          <ReactBootStrap.Navbar.Brand>
+            <Link
+              activeClass="active"
+              to="subject"
+              spy={true}
+              smooth={true}
+              offset={340}
+              duration={2000}
+              className="navBar__link"
+            >
+              <span title="Search by Subject">
+                <BiBookHeart className="navBar__logo" />
+              </span>
+            </Link>
+          </ReactBootStrap.Navbar.Brand>
+          <ReactBootStrap.Navbar.Brand>
+            <Link
+              activeClass="active"
+              to="testimonial"
+              spy={true}
+              smooth={true}
+              offset={-10}
+              duration={3000}
+              className="navBar__link"
+            >
+              <span title="Testimonials">
+                <RiKakaoTalkLine className="navBar__logo" />
+              </span>
+            </Link>
+          </ReactBootStrap.Navbar.Brand>
+        </div>
       </ReactBootStrap.Navbar>
     </div>
   );
