@@ -1,75 +1,17 @@
 import React from "react";
-import { Card, CardDeck } from "react-bootstrap";
+import { Card, CardDeck, Container } from "react-bootstrap";
+import "../css/WhatHappens/whatHappens.css";
+import InformationWhatHappens from "./informationWhatHappens";
 
 const WhatHappens = () => {
   return (
-    <>
-     
-      <div
-        id="whatHappens"
-        style={{
-          padding: "10%",
-          backgroundColor: "white",
-          marginTop: "1%",
-          marginBottom: "5%",
-        }}
-      >
-        <div
-          style={{
-            padding: "2%",
-            margin: "5%",
-            marginLeft: "20%",
-            width: "60%",
-            height: "auto",
-            backgroundColor: "white",
-            border: "10px white",
-            fontFamily: "monospace",
-            boxShadow: "-12px 13px 15px 10px #ccc",
-            borderRadius: "20px",
-          }}
-        >
-          <h3
-            style={{
-              marginLeft: "35%",
-              fontFamily: "monospace",
-              color: "#e3c378",
-            }}
-          >
-            What Happens Here
-          </h3>
-          <h1
-            style={{
-              marginLeft: "23%",
-              padding: "10px",
-              fontFamily: "monospace",
-            }}
-          >
-            YOU SEARCH FOR BOOKS.
-          </h1>
-          <hr
-            style={{
-              display: "block",
-              height: "1px",
-              width: "50%",
-              border: "0",
-              borderTop: "5px solid #f29161",
-              margin: "",
-              padding: "0",
-            }}
-          />
-        </div>
-
-        <CardDeck id="card">
+    <div id="whatHappens">
+      <InformationWhatHappens />
+      <CardDeck id="card">
+        <div className="whatHappens__cardWrap">
           <Card
+            className="whatHappens__card"
             style={{
-              padding: "2%",
-              width: "60%",
-              height: "auto",
-              backgroundColor: "white",
-              border: "10px white",
-              fontFamily: "monospace",
-              margin: "1%",
-              boxShadow: "-13px 12px 13px 10px #ccc",
               borderRadius: "25px",
             }}
           >
@@ -85,15 +27,8 @@ const WhatHappens = () => {
             </Card.Body>
           </Card>
           <Card
+            className="whatHappens__card"
             style={{
-              padding: "2%",
-              width: "60%",
-              height: "auto",
-              backgroundColor: "white",
-              border: "10px white",
-              fontFamily: "monospace",
-              margin: "1%",
-              boxShadow: "-13px 12px 13px 10px #ccc",
               borderRadius: "25px",
             }}
           >
@@ -109,15 +44,8 @@ const WhatHappens = () => {
             </Card.Body>
           </Card>
           <Card
+            className="whatHappens__card"
             style={{
-              padding: "2%",
-              width: "60%",
-              height: "auto",
-              backgroundColor: "white",
-              border: "10px white",
-              fontFamily: "monospace",
-              margin: "1%",
-              boxShadow: "-13px 12px 13px 10px #ccc",
               borderRadius: "25px",
             }}
           >
@@ -132,10 +60,9 @@ const WhatHappens = () => {
               </Card.Text>
             </Card.Body>
           </Card>
-        </CardDeck>
-      </div>
-      
-    </>
+        </div>
+      </CardDeck>
+    </div>
   );
 };
 

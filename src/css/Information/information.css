@@ -1,0 +1,26 @@
+#information__img {
+  width: 30%;
+  height: 5%;
+  float: center;
+  margin-left: 37%;
+}
+
+#information__header {
+  margin: 1%;
+  padding: 40px;
+  margin-left: 27%;
+  color: black;
+  width: 60%;
+  font-family: monospace;
+  font-size: 5vw;
+}
+
+.information__headerText {
+  margin: 1%;
+  margin-left: 26%;
+  margin-bottom: 5%;
+  color: black;
+  width: 60%;
+  font-family: monospace;
+  font-size: 2vw;
+}

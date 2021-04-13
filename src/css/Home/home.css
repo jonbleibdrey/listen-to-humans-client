@@ -1,0 +1,14 @@
+#home__inputField {
+  width: 70%;
+  padding: 10%;
+  margin-left: 17%;
+  margin-top: 9%;
+  margin-bottom: 5%;
+  outline: none;
+  border: white;
+  box-shadow: -13px 20px 15px 19px #ccc;
+  border-radius: 50px;
+  font-family: monospace;
+  font-size: 300%;
+  background-color: white;
+}

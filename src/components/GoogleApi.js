@@ -105,7 +105,7 @@ const GoogleApi = () => {
             </CardDeck>
           </Col>
           <Col xs={2} lg={6}>
-            <div id="googleApi" style={{width:"1vw", height:'1vw'}}>
+            <div id="googleApi" style={{width:"1px", height:'1px'}}>
               <img 
                 className="animate__animated animate__slideInRight"
                 src="../photos/googlepng.PNG"

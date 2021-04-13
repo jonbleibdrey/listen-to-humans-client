@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/Information/information.css";
 
 const Information = () => {
   return (
@@ -7,38 +8,15 @@ const Information = () => {
         className="animate__animated animate__fadeIn"
         src="../photos/logo1.PNG"
         alt="logo"
-        style={{
-          width: "30%",
-          height: "5%",
-          float: "center",
-          marginLeft: "37%",
-        }}
+        id="information__img"
       />
       <h1
         className="animate__animated animate__fadeIn"
-        style={{
-          margin: "1%",
-          padding: "40px",
-          marginLeft: "27%",
-          color: "black",
-          width: "60%",
-          fontFamily: "monospace",
-          fontSize: "5vw",
-        }}
+        id="information__header"
       >
         READ BY HUMANS.
       </h1>
-      <h6
-        style={{
-          margin: "1%",
-          marginLeft: "26%",
-          marginBottom: "5%",
-          color: "black",
-          width: "60%",
-          fontFamily: "monospace",
-          fontSize: "2vw",
-        }}
-      >
+      <h6 className="information__headerText">
         A site to search google's API for books.
       </h6>
     </div>

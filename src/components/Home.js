@@ -3,6 +3,7 @@ import axios from "axios";
 import ListOfBooks from "./ListOfBooks";
 import { Row } from "react-bootstrap";
 import Information from "./Information";
+import "../css/Home/home.css"
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -25,7 +26,6 @@ const Home = () => {
   }
 
   return (
-    <>
       <div id="home">
         <Information />
         <form onSubmit={handleSubmit}>
@@ -34,20 +34,7 @@ const Home = () => {
             className="text-center"
             placeholder="Search For A Book Here"
             onChange={handleChange}
-            style={{
-              width: "70%",
-              padding: "10%",
-              marginLeft: "17%",
-              marginTop: "9%",
-              marginBottom: "5%",
-              outline: "none",
-              border: "white",
-              boxShadow: "-13px 20px 15px 19px #ccc",
-              borderRadius: "50px",
-              fontFamily: "monospace",
-              fontSize: "300%",
-              backgroundColor: "white",
-            }}
+            id="home__inputField"
           />
         </form>
         <Row>
@@ -69,7 +56,6 @@ const Home = () => {
           ))}
         </Row>
       </div>
-    </>
   );
 };
 

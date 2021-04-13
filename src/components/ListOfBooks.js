@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col, Button, Modal } from "react-bootstrap";
+import "../css/List/books.css";
 
 const ListOfBooks = ({
   id,
@@ -39,22 +40,7 @@ const ListOfBooks = ({
 
   return (
     <Col xs={12} lg={4}>
-      <Card
-        className="p-3"
-        style={{
-          color: "black",
-          objectFit: "cover",
-          margin: "9%",
-          minHeight: "40vw",
-          maxHeight: "120vw",
-          padding: "10%",
-          marginBottom: "10%",
-          fontFamily: "monospace",
-          boxShadow: "11px 17px 13px 10px #ccc",
-          borderRadius: "40px",
-          textAlign: "center",
-        }}
-      >
+      <Card className="p-3" id="books__card">
         <Card.Body>
           <Card.Title>
             <a
@@ -63,11 +49,7 @@ const ListOfBooks = ({
               target="_blank"
             >
               <img
-                style={{
-                  height: "200px",
-                  width: "128px",
-                  objectFit: "contain",
-                }}
+                className="books__img"
                 src={
                   image === undefined ? "../logo1.PNG" : `${image.thumbnail}`
                 }
