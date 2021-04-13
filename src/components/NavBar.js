@@ -106,7 +106,7 @@ const NavBar = () => {
             to="subject"
             spy={true}
             smooth={true}
-            offset={180}
+            offset={340}
             duration={2000}
             style={{ cursor: "pointer" }}
           >

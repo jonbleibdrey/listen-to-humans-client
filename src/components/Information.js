@@ -5,7 +5,7 @@ const Information = () => {
     <div>
       <img
         className="animate__animated animate__fadeIn"
-        src="../logo1.PNG"
+        src="../photos/logo1.PNG"
         alt="logo"
         style={{
           width: "30%",

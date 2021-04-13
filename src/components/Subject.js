@@ -43,7 +43,7 @@ const Subject = () => {
               width: "70%",
               padding: "10%",
               marginLeft: "17%",
-              marginBottom: "5%",
+              marginBottom: "15%",
               outline: "none",
               border: "10px white",
               boxShadow: "-13px 20px 15px 19px #ccc",
@@ -73,14 +73,7 @@ const Subject = () => {
           ))}
         </Row>
       </div>
-      <hr
-        style={{
-          width: "98%",
-          border: "20px solid white",
-          marginTop: "5%",
-          boxShadow: "-3px 10px 20px  #ccc",
-        }}
-      />
+      
     </>
   );
 };

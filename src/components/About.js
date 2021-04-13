@@ -5,7 +5,7 @@ const About = () => {
   const [people] = useState([
     {
       id: 1,
-      image: "../face4.jpg",
+      image: "../photos/face4.jpg",
       name: "tiffany",
       occupation: "student",
       bio:
@@ -13,7 +13,7 @@ const About = () => {
     },
     {
       id: 2,
-      image: "../face5.jpg",
+      image: "../photos/face5.jpg",
       name: "franky",
       occupation: "lawyer",
       bio:
@@ -21,7 +21,7 @@ const About = () => {
     },
     {
       id: 3,
-      image: "../face6.jpg",
+      image: "../photos/face6.jpg",
       name: "lang",
       occupation: "doctor",
       bio:

@@ -39,7 +39,7 @@ const Review = () => {
               width: "70%",
               padding: "10%",
               marginLeft: "17%",
-              marginBottom: "100px",
+              marginBottom: "300px",
               outline: "none",
               boxShadow: "-13px 20px 15px 19px #ccc",
               borderRadius: "50px",
@@ -69,15 +69,6 @@ const Review = () => {
           ))}
         </Row>
       </div>
-      <hr
-        style={{
-          width: "98%",
-          border: "20px solid white",
-          marginTop: "5%",
-          marginBottom: "5%",
-          boxShadow: "-3px 10px 20px  #ccc",
-        }}
-      />
     </>
   );
 };

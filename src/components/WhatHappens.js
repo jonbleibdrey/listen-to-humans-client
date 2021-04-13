@@ -4,14 +4,7 @@ import { Card, CardDeck } from "react-bootstrap";
 const WhatHappens = () => {
   return (
     <>
-      <hr
-        style={{
-          width: "98%",
-          border: "20px solid white",
-          marginTop: "5%",
-          boxShadow: "-3px 10px 20px  #ccc",
-        }}
-      />
+     
       <div
         id="whatHappens"
         style={{
@@ -80,7 +73,7 @@ const WhatHappens = () => {
               borderRadius: "25px",
             }}
           >
-            <Card.Img variant="top" src="../smallbook4.jpg" />
+            <Card.Img variant="top" src="../photos/smallbook4.jpg" />
             <Card.Body>
               <Card.Title>01. Type in search bar</Card.Title>
               <Card.Text>
@@ -104,7 +97,7 @@ const WhatHappens = () => {
               borderRadius: "25px",
             }}
           >
-            <Card.Img variant="top" src="../smallbook2.jpg" />
+            <Card.Img variant="top" src="../photos/smallbook2.jpg" />
             <Card.Body>
               <Card.Title>02. Find book and click</Card.Title>
               <Card.Text>
@@ -128,7 +121,7 @@ const WhatHappens = () => {
               borderRadius: "25px",
             }}
           >
-            <Card.Img variant="top" src="../smallbook3.jpg" />
+            <Card.Img variant="top" src="../photos/smallbook3.jpg" />
             <Card.Body>
               <Card.Title>03. Read till your hearts content</Card.Title>
               <Card.Text>
@@ -141,14 +134,7 @@ const WhatHappens = () => {
           </Card>
         </CardDeck>
       </div>
-      <hr
-        style={{
-          width: "98%",
-          border: "20px solid white",
-          marginTop: "5%",
-          boxShadow: "-3px 10px 20px  #ccc",
-        }}
-      />
+      
     </>
   );
 };

@@ -108,7 +108,7 @@ const GoogleApi = () => {
             <div id="googleApi" style={{width:"1vw", height:'1vw'}}>
               <img 
                 className="animate__animated animate__slideInRight"
-                src="../googlepng.PNG"
+                src="../photos/googlepng.PNG"
                 alt="google"
                 
               />
@@ -116,14 +116,14 @@ const GoogleApi = () => {
           </Col>
         </Row>
       </Container>
-      <hr
+      {/* <hr
         style={{
           width: "98%",
           border: "20px solid white",
           marginTop: "5%",
           boxShadow: "-3px 10px 20px  #ccc",
         }}
-      />
+      /> */}
     </>
   );
 };

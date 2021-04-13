@@ -7,6 +7,7 @@ const InformationSubject = () => {
         style={{
           padding: "2%",
           marginLeft: "20%",
+          marginTop: "10%",
           width: "60%",
           height: "auto",
           backgroundColor: "white",
