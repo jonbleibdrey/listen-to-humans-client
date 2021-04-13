@@ -7,33 +7,20 @@ import { RiContactsBook2Line } from "react-icons/ri";
 import { SiGooglecloud } from "react-icons/si";
 import { BiBookHeart } from "react-icons/bi";
 import { RiKakaoTalkLine } from "react-icons/ri";
+import "../css/navBar.css";
 
 const NavBar = () => {
   return (
-    <div style={{ padding: "1%" }}>
+    <div className="navBar__div">
       <ReactBootStrap.Navbar
         collapseOnSelect
         expand="lg"
         bg="white"
         variant="dark"
-        style={{
-          padding: "1%",
-          justifyContent: "space-evenly",
-          boxShadow: "-9px 10px 17px 7px #ccc",
-          borderRadius: "25px",
-          margin: "1%",
-          marginBottom: "5%",
-        }}
+        className="navBar__container"
       >
         <ReactBootStrap.Navbar.Brand href="/">
-          <div
-            style={{
-              marginRight: "50%",
-              marginTop: "1%",
-              fontFamily: "monospace",
-              color: "#fac54b",
-            }}
-          >
+          <div className="navBar__header">
             <h1>Read By Humans.</h1>
           </div>
         </ReactBootStrap.Navbar.Brand>
@@ -46,10 +33,10 @@ const NavBar = () => {
             smooth={true}
             offset={10}
             duration={1000}
-            style={{ cursor: "pointer" }}
+            className="navBar__link"
           >
             <span title="Search any Book">
-              <ImBooks style={{ color: "black", fontSize: "30px" }} />
+              <ImBooks className="navBar__logo" />
             </span>
           </Link>
         </ReactBootStrap.Navbar.Brand>
@@ -61,10 +48,10 @@ const NavBar = () => {
             smooth={true}
             offset={250}
             duration={2000}
-            style={{ cursor: "pointer" }}
+            className="navBar__link"
           >
             <span title="How it works?">
-              <IoCogOutline style={{ color: "black", fontSize: "39px" }} />
+              <IoCogOutline className="navBar__logo" />
             </span>
           </Link>
         </ReactBootStrap.Navbar.Brand>
@@ -76,12 +63,10 @@ const NavBar = () => {
             smooth={true}
             offset={180}
             duration={2000}
-            style={{ cursor: "pointer" }}
+            className="navBar__link"
           >
             <span title="Search by Authors">
-              <RiContactsBook2Line
-                style={{ color: "black", fontSize: "30px" }}
-              />
+              <RiContactsBook2Line className="navBar__logo" />
             </span>
           </Link>
         </ReactBootStrap.Navbar.Brand>
@@ -93,10 +78,10 @@ const NavBar = () => {
             smooth={true}
             offset={-400}
             duration={2000}
-            style={{ cursor: "pointer" }}
+            className="navBar__link"
           >
             <span title="Google API">
-              <SiGooglecloud style={{ color: "black", fontSize: "25px" }} />
+              <SiGooglecloud className="navBar__logo" />
             </span>
           </Link>
         </ReactBootStrap.Navbar.Brand>
@@ -108,10 +93,10 @@ const NavBar = () => {
             smooth={true}
             offset={340}
             duration={2000}
-            style={{ cursor: "pointer" }}
+            className="navBar__link"
           >
             <span title="Search by Subject">
-              <BiBookHeart style={{ color: "black", fontSize: "30px" }} />
+              <BiBookHeart className="navBar__logo" />
             </span>
           </Link>
         </ReactBootStrap.Navbar.Brand>
@@ -123,10 +108,10 @@ const NavBar = () => {
             smooth={true}
             offset={-10}
             duration={3000}
-            style={{ cursor: "pointer" }}
+            className="navBar__link"
           >
             <span title="Testimonials">
-              <RiKakaoTalkLine style={{ color: "black", fontSize: "30px" }} />
+              <RiKakaoTalkLine className="navBar__logo" />
             </span>
           </Link>
         </ReactBootStrap.Navbar.Brand>

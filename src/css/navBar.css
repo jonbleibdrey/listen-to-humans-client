@@ -1,0 +1,30 @@
+.navBar__div {
+  padding: 1%;
+}
+
+.navBar__container {
+  padding: 1%;
+  box-shadow: -9px 10px 17px 7px #ccc;
+  border-radius: 25px;
+  margin: 1%;
+  margin-bottom: 5%;
+}
+
+.navBar__header {
+  margin-right: 50%;
+  margin-top: 1%;
+  font-family: monospace;
+  color: #fac54b;
+}
+
+.navBar__link {
+  cursor: pointer;
+  margin-right: 220px;
+}
+
+.navBar__logo {
+  color: black;
+  font-size: 30px;
+  margin: 4px;
+  
+}
